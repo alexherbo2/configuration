@@ -1,0 +1,301 @@
+# Extensions ───────────────────────────────────────────────────────────────────
+
+declare-option str github %sh(echo ~/repositories/github.com)
+
+source "%opt(github)/alexherbo2/pathogen.kak/rc/pathogen.kak"
+
+pathogen-infect "%opt(github)/alexherbo2/auto-pairs.kak"
+pathogen-infect "%opt(github)/alexherbo2/distraction-free.kak"
+pathogen-infect "%opt(github)/alexherbo2/move-line.kak"
+pathogen-infect "%opt(github)/alexherbo2/search-highlighter.kak"
+pathogen-infect "%opt(github)/alexherbo2/shell.kak"
+pathogen-infect "%opt(github)/alexherbo2/snippets.kak"
+pathogen-infect "%opt(github)/alexherbo2/toggle-highlighter.kak"
+pathogen-infect "%opt(github)/alexherbo2/volatile-highlighter.kak"
+
+# Color scheme ─────────────────────────────────────────────────────────────────
+
+colorscheme dracula
+
+# Options ──────────────────────────────────────────────────────────────────────
+
+set-option global ui_options ncurses_status_on_top=yes:ncurses_assistant=cat
+set-option global autoreload yes
+set-option global scrolloff 3,5
+set-option global indentwidth 2
+set-option global makecmd 'make --jobs=8'
+set-option global grepcmd 'rg --column --with-filename'
+
+set-option global snippets %{{
+  "->": "→",
+  "<-": "←",
+  "^": "↑",
+  "v": "↓"
+}}
+
+hook global WinCreate .* %{
+  add-highlighter window number_lines
+  add-highlighter window show_matching
+  add-highlighter window show_whitespaces
+  search-highlighter-enable
+  volatile-highlighter-enable
+  auto-pairs-enable
+  snippets-enable
+}
+
+# Status line ──────────────────────────────────────────────────────────────────
+
+set-option global modelinefmt '{{mode_info}} {default+b}%opt{block_auto_pairs}{default} {magenta}%val{client}{default} at {yellow}%val{session}{default} on {green}%val{bufname}{default} {{context_info}} {cyan}%val{cursor_line}{default}:{cyan}%val{cursor_char_column}{default}'
+
+# Auto-pairs
+
+declare-option -hidden str block_auto_pairs
+
+define-command -hidden block-update-auto-pairs %{ %sh{
+  if [ $kak_opt_auto_pairs_surround_enabled = true ]; then
+    text=surround
+  else
+    text="''"
+  fi
+  echo set-option window block_auto_pairs $text
+}}
+
+hook global WinCreate .* %{
+  hook window ModeChange 'normal:insert|insert:normal' block-update-auto-pairs
+}
+
+# Commands ─────────────────────────────────────────────────────────────────────
+
+define-command find -params 1 -shell-candidates 'find -type f' 'edit %arg(1)'
+
+define-command git-edit -params 1 -shell-candidates 'git ls-files' 'edit %arg(1)'
+
+define-command gist -params .. %{ echo %sh{
+  printf %s "$kak_selection" | gist --open $@
+}}
+
+# Capitalize
+
+declare-option str-list capitalize_selections
+
+define-command capitalize -docstring 'Capitalize selections' %{
+  set-option window capitalize_selections %val(selections_desc)
+  execute-keys -draft '<a-;>L`h~'
+  select %opt(capitalize_selections)
+}
+
+define-command math-command %{
+  prompt 'Math:' 'execute-keys "a%val(text)<esc>|bc<ret>"'
+}
+
+define-command terminal -params .. %{
+  shell \
+    -export session \
+    -export client \
+    %sh(echo $TERMINAL) -e %arg(@) \
+    %sh(test $# = 0 &&
+      echo $SHELL
+    )
+}
+
+# Aliases ──────────────────────────────────────────────────────────────────────
+
+alias global f find
+alias global ge git-edit
+alias global t terminal
+alias global df distraction-free-toggle
+
+define-command ek -docstring 'Open Kakoune configuration file' 'edit ~/.config/kak/kakrc'
+
+# Mappings ─────────────────────────────────────────────────────────────────────
+
+# Type <character><character> to leave insert mode.
+# ['jj', 'kk']
+hook global InsertChar '[jk]' %{ try %{
+  execute-keys -draft "hH<a-k>%val(hook_param)%val(hook_param)<ret>d"
+  execute-keys <esc>
+}}
+
+hook global InsertChar \t %{
+  execute-keys -draft -itersel h@
+}
+
+map global normal <ret> :
+map global normal <backspace> ';'
+map global normal <tab> '<a-;>'
+map global normal <a-tab> '<a-:>'
+
+map global normal <c-a> ga
+map global normal <c-n> :buffer-next<ret>
+map global normal <c-p> :buffer-previous<ret>
+
+map global normal ( ':move-line-above %val(count)<ret>'
+map global normal ) ':move-line-below %val(count)<ret>'
+
+map global normal '#' :comment-line<ret>
+
+map global normal <a-`> :capitalize<ret>
+
+map global normal = :math-command<ret>
+map global normal + :math-command<ret><up><ret>
+
+# User mappings
+
+map global normal , <space>
+map global normal <space> ,
+
+map global user b -docstring 'Open Chrome' '<a-|>xargs --replace chromium {}<ret>'
+map global user s -docstring 'Surround' :auto-pairs-surround<ret>
+map global user | -docstring 'Sort' '|sort<ret>'
+
+# Paste
+map global user p -docstring 'Paste (After)' '<a-!>xclip -out -selection clipboard<ret>'
+map global user P -docstring 'Paste (Before)' '!xclip -out -selection clipboard<ret>'
+map global user R -docstring 'Replace' '|xclip -out -selection clipboard<ret>'
+
+# Highlighters
+map global user l -docstring 'Line numbers' ':toggle-highlighter window number_lines<ret>'
+map global user w -docstring 'Wrap' ':toggle-highlighter window wrap -word<ret>'
+
+# Hooks ────────────────────────────────────────────────────────────────────────
+
+# Auto-mkdir
+hook global BufWritePre .* %{ %sh{
+  directory=$(dirname "$kak_hook_param")
+  mkdir --parents "$directory"
+}}
+
+# Clipboard
+hook global NormalKey '[ydc]' %{ %sh{
+  (printf '%s' "$kak_reg_dquote" | xclip -filter | xclip -selection clipboard) < /dev/null > /dev/null 2>&1 &
+}}
+
+# File-types ───────────────────────────────────────────────────────────────────
+
+# Kakoune
+
+hook global WinSetOption filetype=kak %{
+  set-option window snippets %{{
+    "def": "define-command X %{X}<esc><a-/>X<ret><a-n>c"
+  }}
+}
+
+# Highlighters ─────────────────────────────────────────────────────────────────
+
+hook global WinSetOption filetype=.+ %{ try %{
+  # Works with show_whitespaces highlighter
+  # Only show EOL
+  # Whitespace characters still visible when selecting a region
+  # RGB colors correspond to Dracula color scheme:
+  # Background: Black
+  # Background (Dimmed): Gray
+  add-highlighter window regex ' +' 0:rgb:282a36 # Whitespaces
+  add-highlighter window regex '\n+' 0:rgb:44475a # New lines
+  add-highlighter window regex '\h+$' 0:red # Trailing whitespaces
+  add-highlighter window regex ' +' 0:red # Non-breaking spaces
+  add-highlighter window regex '(?<=[?!.])\h(\h{2,})?(?=\w)' 0:red # A sentence not followed by exactly two spaces
+  add-highlighter window regex '(?<=\w)\h{2,}' 0:red # A word character followed by more than two spaces
+  add-highlighter window regex "(?<=\w)'(?=\w)" 0:red # Apostrophe
+  add-highlighter window regex '‐+' 0:red # Césures
+  add-highlighter window regex '‑+' 0:green # Range of values
+  add-highlighter window regex '–+' 0:green # Unicode 2013
+  add-highlighter window regex '—+' 0:yellow # Unicode 2014
+  add-highlighter window regex '―+' 0:red # Unicode 2015
+  add-highlighter window regex '−+' 0:cyan # Subtractions
+  add-highlighter window regex '×+' 0:cyan # Multiplications
+}}
+
+# Modes ────────────────────────────────────────────────────────────────────────
+
+# GTD ──────────────────────────────────────────────────────────────────────────
+
+add-highlighter shared/ regions -default code gtd \
+  action '^(To do|Done|Cancelled|Aborted|Waiting|Try)' '$' '' \
+  state '^(Status|Rule|Constat|Habits|Fixed point)' '$' '' \
+  time '^(Scheduled|Deadline)' '$' ''
+
+add-highlighter shared/gtd/code regex '^[A-Z][a-z]+(?=:)' 0:variable
+add-highlighter shared/gtd/code regex '\b(How to|Fix(es)?)\b' 0:value
+
+add-highlighter shared/gtd/action regex 'To do|[A-Z][a-z]+' 0:value
+add-highlighter shared/gtd/action regex '(To do|[A-Z][a-z]+) ([A-Z][a-z]+|Go to)' 2:comment
+add-highlighter shared/gtd/action regex '(To do|[A-Z][a-z]+) (Now)' 2:type
+add-highlighter shared/gtd/action regex 'Done|Cancelled|Aborted|Waiting' 0:comment
+add-highlighter shared/gtd/action regex 'Postponed' 0:type
+
+add-highlighter shared/gtd/state regex 'Fixed point|[A-Z][a-z]+' 0:value
+
+add-highlighter shared/gtd/time regex 'Scheduled|Deadline' 0:comment
+
+define-command -hidden switch-to-do-done %{ try %{
+  execute-keys "<space>;<a-x>sTo do<ret>cDone(%sh(date +'%F %H:%M:%S'))<esc>h<a-a>b"
+}}
+
+define-command -hidden switch-to-do-cancelled %{ try %{
+  execute-keys "<space>;<a-x>sTo do<ret>cCancelled(%sh(date +'%F %H:%M:%S'))<esc>"
+  execute-keys 'o<ret>Reason:<space>'
+}}
+
+define-command gtd-grep -params 3.. %{ %sh{
+  activity=$1
+  format=$2
+  shift 2
+  range=$@
+  regex=$(
+    for count in $(seq $range); do
+      date --date "$count days" +"$activity.+$format"
+    done |
+    tr '\n' '|' |
+    sed 's/|$//'
+  )
+  printf "grep '%s'" "$regex"
+}}
+
+define-command gtd-grep-to-do-daily %(gtd-grep 'To do' '%Y-%m-%d' 0 0)
+define-command gtd-grep-to-do-weekly %(gtd-grep 'To do' '%Y-%m-%d' 0 7)
+
+# Hyphens are not allowed in user-mode names
+# https://github.com/mawww/kakoune/issues/1921
+
+declare-user-mode GTDGrep
+
+map global GTDGrep t -docstring 'To do' ":grep 'To do'<ret>"
+map global GTDGrep s -docstring 'Scheduled' ":grep Scheduled<ret>"
+map global GTDGrep u -docstring 'Deadline' ":grep Deadline<ret>"
+map global GTDGrep h -docstring '+Hour' ":grep '\+\d+H'<ret>"
+map global GTDGrep d -docstring '+Day' ":grep '\+\d+D'<ret>"
+map global GTDGrep w -docstring '+Week' ":grep '\+\d+W'<ret>"
+map global GTDGrep m -docstring '+Month' ":grep '\+\d+M'<ret>"
+map global GTDGrep y -docstring '+Year' ":grep '\+\d+Y'<ret>"
+
+hook global WinCreate '.*/diary/\d{4}\.md' %{
+  add-highlighter window ref gtd
+}
+
+hook global BufOpenFile '.*/diary/\d{4}\.md' %{
+  set-option buffer snippets %{{
+    "td": "To do ",
+    "tb": "To do Buy ",
+    "tc": "To do Call ",
+    "tg": "To do Go to ",
+    "tr": "To do Read ",
+    "tw": "To do Watch "
+  }}
+  alias buffer td gtd-grep-to-do-daily
+  alias buffer tw gtd-grep-to-do-weekly
+  map buffer normal <a-d> ":execute-keys -save-regs '' '/%sh(date +%F.%a)<lt>ret<gt>:set-register / ^#<lt>ret<gt>'<ret>"
+  map buffer normal <c-d> :switch-to-do-done<ret>
+  map buffer normal <c-u> :switch-to-do-cancelled<ret>
+  map buffer normal <a-g> ':enter-user-mode GTDGrep<ret>'
+  map buffer insert <c-y> '<a-;>|date +%F<ret>'
+  map buffer insert <c-u> '<a-;>|date +%H:%M<ret>'
+}
+
+hook global BufOpenFile ".*/diary/%sh(date +%Y)\.md" %{
+  hook -group open-diary buffer NormalIdle .* %{
+    %sh(printf "execute-keys '/^# %s$<ret>'" $(date +%F.%a))
+    execute-keys '<a-i><a-w>vv'
+    set-register / '^#'
+    remove-hooks buffer open-diary
+  }
+}
