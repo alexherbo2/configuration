@@ -1,0 +1,30 @@
+# Pry default environment variables:
+ENV['PAGER'] = nil
+
+Pry.config.prompt = -> (target, nest, pry) do
+  '❯ '
+end
+
+Pry.config.output_prefix = '→ '
+
+Pry.config.editor = -> (file, line) do
+  "kak -e 'edit #{file} #{line}'"
+end
+
+# Commands
+
+# Hit Enter to repeat last command
+Pry.commands.command /^$/, 'Repeat last command' do
+  Pry.run_command Pry.history.to_a.last
+end
+
+# Aliases
+
+Pry.commands.alias_command 'e', 'edit'
+
+if defined? PryByebug
+  Pry.commands.alias_command 'c', 'continue'
+  Pry.commands.alias_command 's', 'step'
+  Pry.commands.alias_command 'n', 'next'
+  Pry.commands.alias_command 'f', 'finish'
+end
