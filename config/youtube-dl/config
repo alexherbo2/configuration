@@ -1,0 +1,9 @@
+--all-subs
+
+# Avoid bandwidth throttling
+--external-downloader aria2c
+
+# Continue on download errors
+# Example:
+# Skip unavailable videos in a playlist
+--ignore-errors
