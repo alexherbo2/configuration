@@ -254,19 +254,16 @@ define-command gtd-grep -params 3.. %{ %sh{
 define-command gtd-grep-to-do-daily %(gtd-grep 'To do' '%Y-%m-%d' 0 0)
 define-command gtd-grep-to-do-weekly %(gtd-grep 'To do' '%Y-%m-%d' 0 7)
 
-# Hyphens are not allowed in user-mode names
-# https://github.com/mawww/kakoune/issues/1921
+declare-user-mode gtd-grep
 
-declare-user-mode GTDGrep
-
-map global GTDGrep t -docstring 'To do' ":grep 'To do'<ret>"
-map global GTDGrep s -docstring 'Scheduled' ":grep Scheduled<ret>"
-map global GTDGrep u -docstring 'Deadline' ":grep Deadline<ret>"
-map global GTDGrep h -docstring '+Hour' ":grep '\+\d+H'<ret>"
-map global GTDGrep d -docstring '+Day' ":grep '\+\d+D'<ret>"
-map global GTDGrep w -docstring '+Week' ":grep '\+\d+W'<ret>"
-map global GTDGrep m -docstring '+Month' ":grep '\+\d+M'<ret>"
-map global GTDGrep y -docstring '+Year' ":grep '\+\d+Y'<ret>"
+map global gtd-grep t -docstring 'To do' ":grep 'To do'<ret>"
+map global gtd-grep s -docstring 'Scheduled' ":grep Scheduled<ret>"
+map global gtd-grep u -docstring 'Deadline' ":grep Deadline<ret>"
+map global gtd-grep h -docstring '+Hour' ":grep '\+\d+H'<ret>"
+map global gtd-grep d -docstring '+Day' ":grep '\+\d+D'<ret>"
+map global gtd-grep w -docstring '+Week' ":grep '\+\d+W'<ret>"
+map global gtd-grep m -docstring '+Month' ":grep '\+\d+M'<ret>"
+map global gtd-grep y -docstring '+Year' ":grep '\+\d+Y'<ret>"
 
 hook global WinCreate '.*/diary/\d{4}\.md' %{
   add-highlighter window ref gtd
@@ -286,7 +283,7 @@ hook global BufOpenFile '.*/diary/\d{4}\.md' %{
   map buffer normal <a-d> ":execute-keys -save-regs '' '/%sh(date +%F.%a)<lt>ret<gt>:set-register / ^#<lt>ret<gt>'<ret>"
   map buffer normal <c-d> :switch-to-do-done<ret>
   map buffer normal <c-u> :switch-to-do-cancelled<ret>
-  map buffer normal <a-g> ':enter-user-mode GTDGrep<ret>'
+  map buffer normal <a-g> ':enter-user-mode gtd-grep<ret>'
   map buffer insert <c-y> '<a-;>|date +%F<ret>'
   map buffer insert <c-u> '<a-;>|date +%H:%M<ret>'
 }
