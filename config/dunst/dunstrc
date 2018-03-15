@@ -1,0 +1,44 @@
+[global]
+
+  # Display
+  follow = mouse
+  geometry = "300x5-30-30"
+  transparency = 10
+  separator_height = 0
+  padding = 8
+  horizontal_padding = 8
+
+  # Text
+  font = Monospace 8
+  format = "<b>%s</b>\n%b"
+
+  # Icons
+  icon_position = left
+  max_icon_size = 32
+
+  # Advanced
+  dmenu = rofi -dmenu -p Dunst
+  browser = chromium
+
+[shortcuts]
+  close = ctrl+space
+  history = ctrl+shift+space
+  context = ctrl+slash
+
+[urgency_low]
+  background = "#eaeaea"
+  foreground = "#202020"
+  timeout = 3
+  icon = ""
+
+[urgency_normal]
+  background = "#eaeaea"
+  foreground = "#202020"
+  timeout = 3
+  icon = ""
+
+[urgency_critical]
+  background = "#ff5555"
+  foreground = "#202020"
+  timeout = 0
+  icon = ""
