@@ -1,0 +1,13 @@
+[database]
+path = /home/alex/mail
+
+[user]
+name = Alex Leferry 2>
+primary_email = alexherbo2@gmail.com
+
+[new]
+tags = unread;inbox
+ignore = .git
+
+[search]
+exclude_tags = deleted;spam
