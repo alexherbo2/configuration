@@ -1,0 +1,13 @@
+rofi.fullscreen: true
+rofi.padding: 300
+rofi.line-margin: 5
+rofi.separator-style: solid
+
+! Colors (Dracula)
+! https://draculatheme.com
+
+! Background | Foreground | Background (Alternate) | Background (Highlighted) | Foreground (Highlighted)
+rofi.color-normal: argb:00282a36, #f8f8f2, argb:00282a36, #44475a, #f8f8f2
+
+! Background | Border | Separator
+rofi.color-window: argb:ee282a36, #282a36, #f1fa8c
