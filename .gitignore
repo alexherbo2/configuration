@@ -1,3 +1,5 @@
+home/ssh/id_rsa
+home/ssh/known_hosts
 home/netrc
 home/icons
 config/mpv/socket

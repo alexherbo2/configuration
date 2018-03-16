@@ -1,0 +1,7 @@
+Host mawww
+  User alex
+  HostName mawww.uni.cx
+
+Host paris8
+  User ili900
+  HostName cs.univ-paris8.fr
