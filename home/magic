@@ -1,2 +1,5 @@
+# Compiling
+# file --compile --magic-file ~/.magic
+
 0 search/1 #!/usr/bin/env\ node JavaScript
 !:mime application/javascript
