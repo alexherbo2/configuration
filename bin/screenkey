@@ -1,0 +1,3 @@
+#!/bin/sh
+
+python2.7 $GIT_HUB/github.com/wavexx/screenkey/screenkey
