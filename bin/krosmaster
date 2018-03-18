@@ -1,0 +1,3 @@
+#!/bin/sh
+
+wine start 'C:\Program Files\Krosmaster Arena\game\Krosmaster'

@@ -1,0 +1,3 @@
+#!/bin/sh
+
+wine start 'C:\Program Files\Dofus\app\Dofus'
