@@ -1,0 +1,9 @@
+#!/bin/sh
+
+case $1 in
+  -4) version=v4; shift ;;
+  -6) version=v6; shift ;;
+  *) version=v6 ;;
+esac
+
+curl $version.ifconfig.co/$@
