@@ -1,0 +1,7 @@
+#!/bin/sh
+
+cd ~/repositories/github.com/SirCmpwn/receptor
+git pull
+git submodule update --init --recursive
+npm install
+npm start
