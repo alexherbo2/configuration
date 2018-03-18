@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+
+string =
+
+if STDIN.tty?
+  ARGV.join
+else
+  STDIN.read
+end
+
+string.chars.each do |character|
+  puts character.ord.to_s(16)
+end
