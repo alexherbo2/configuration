@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# Original idea from mawww
+# https://github.com/mawww
+
+play --null synth brownnoise vol 0.3
