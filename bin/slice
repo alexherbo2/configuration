@@ -1,0 +1,3 @@
+#!/bin/sh
+
+cut --zero-terminated --characters $1

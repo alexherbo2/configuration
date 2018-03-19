@@ -1,0 +1,3 @@
+#!/bin/sh
+
+shasum --algorithm 512 | base64

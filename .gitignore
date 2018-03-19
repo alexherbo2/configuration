@@ -2,5 +2,6 @@ home/ssh/id_rsa
 home/ssh/known_hosts
 home/netrc
 home/icons
+config/passwords.yml
 config/mpv/socket
 config/mpv/watch_later
