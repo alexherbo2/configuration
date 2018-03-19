@@ -1,0 +1,5 @@
+#!/bin/sh
+
+file=${1:--}
+
+youtube-dl --batch-file $file --output '%(autonumber)02d.%(ext)s'
