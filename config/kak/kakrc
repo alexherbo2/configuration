@@ -242,9 +242,8 @@ define-command gtd-grep -params 3.. %{ %sh{
   shift 2
   range=$@
   regex=$(
-    for count in $(seq $range); do
-      date --date "$count days" +"$activity.+$format"
-    done |
+    seq $range |
+    xargs --replace date --date "{} days" +"$activity.+$format" |
     paste --serial --delimiters '|'
   )
   printf "grep '%s'" "$regex"
