@@ -1,0 +1,21 @@
+#!/bin/sh
+
+# Defaults
+XDG_DATA_HOME=${XDG_DATA_HOME:-~/.local/share}
+
+data=$XDG_DATA_HOME/Cockatrice/Cockatrice
+
+deck="$data/decks/$@.cod"
+
+test -e "$deck" || {
+  echo 'No deck found' > /dev/stderr
+  exit 1
+}
+
+regex=$(
+  pcregrep --only-matching=1 '<card number="[0-9]+" name="(.+)"/>' "$deck" |
+  paste --serial --delimiters '|'
+)
+
+find $data/pics/downloadedPics |
+pcregrep "$regex"
