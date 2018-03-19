@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# Create an empty diary for whole year
+# diary-init [year = now] [format = YYYY-MM-DD DDDD]
+# diary-init 2018 > 2018.txt
+
+year=${1:-$(date +%Y)}
+format=${2:-%F %A}
+
+seq 0 365 |
+xargs --replace date --date "$year-01-01 + {} days" +"$format"
