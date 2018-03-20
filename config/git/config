@@ -1,0 +1,102 @@
+[user]
+  name = Alex Leferry 2>
+  email = alexherbo2@gmail.com
+
+[core]
+  pager = diff-so-fancy | less --tabs=4 --RAW-CONTROL-CHARS --quit-if-one-screen --no-init
+
+[pull]
+  ff = only
+
+[push]
+  default = current
+
+[log]
+  date = relative
+
+[format]
+  ; Hash | Date (Committer) | Author | References | Subject
+  pretty = %C(yellow)%h %C(blue)%cd %C(green)%an %C(red)%d %C(reset)%s
+
+[pretty]
+  ; Hash | Subject | (Date (Relative) (Committer) by Author) | References
+  graph = %C(green)%h %C(reset)%s %C(blue)(%cr by %an) %C(yellow bold)%d %n
+
+[diff-so-fancy]
+  markEmptyLines = false
+
+[color]
+  ui = true
+
+[color "diff-highlight"]
+  oldNormal = red bold
+  oldHighlight = red bold 52
+  newNormal = green bold
+  newHighlight = green bold 52
+
+[color "diff"]
+  meta = yellow
+  frag = magenta bold
+  commit = yellow bold
+  old = red bold
+  new = green bold
+  whitespace = red reverse
+
+[alias]
+
+  w = add
+  st = status
+  b = branch
+  d = diff
+  ci = commit
+  cm = commit --message
+  co = checkout
+  l = ! clear && git log -18
+  g = ! clear && git graph -12
+
+  ; Information
+  root = rev-parse --show-toplevel
+
+  ; Listing
+  tags = tag --list
+  branches = branch --all
+  remotes = remote --verbose
+  stashes = stash list
+
+  ; Log
+  graph = log --graph --pretty=graph
+
+  ; Commit
+  amend = commit --amend
+  pick = commit --amend --no-edit
+
+  ; Undo
+  undo = reset
+  discard = reset --hard
+
+  ; Merge
+  ; Explicit is better than implicit.
+  ; If we want to merge, we should do so ourselves.
+  ; •     │ o
+  ;  \    │ o
+  ;   o   │ o
+  ;   o   │ •
+  ;   o   │ •
+  ;  /    │
+  ; •     │
+  ; •     │
+  ; no-ff │ ff-only
+  update = merge --ff-only
+  join = merge --no-ff
+
+  ; Fork
+  fork = checkout -b
+
+  ; Shelve
+  shelve = stash push
+  unshelve = stash pop
+  shelves = stash list
+
+  ; Branch
+  branch-delete = branch --delete --force
+  branch-delete-remote = push origin --delete
