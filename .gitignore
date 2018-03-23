@@ -2,6 +2,7 @@ home/ssh/id_rsa
 home/ssh/known_hosts
 home/netrc
 home/icons
+home/elvish/db
 config/passwords.yml
 config/mpv/socket
 config/mpv/watch_later
