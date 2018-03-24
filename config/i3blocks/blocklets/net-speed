@@ -1,0 +1,12 @@
+#!/bin/sh
+
+interface=$1
+container=/sys/class/net/$interface
+mode=$(cat $container/link_mode)
+
+[ $mode = 1 ] &&
+
+net-speed measure $interface |
+sed \
+  --expression s/'\.[0-9]\+'//g \
+  --expression s/'[0-9]\+ B'/'0 KB'/g

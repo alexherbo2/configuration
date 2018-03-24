@@ -1,0 +1,29 @@
+#!/bin/sh
+
+channel=$1
+
+case $BLOCK_BUTTON in
+  1) amixer --quiet set $channel toggle ;;
+  4) amixer --quiet set $channel 5%+ ;;
+  5) amixer --quiet set $channel 5%- ;;
+esac
+
+data=$(amixer get $channel)
+volume=$(echo $data | pcregrep --only-matching=1 '([0-9]+)%')
+echo $data | grep --quiet --fixed-strings [off]
+muted=$?
+
+if test $muted = 0 -o $volume = 0; then
+  symbol=
+elif test $volume -gt 90; then
+  symbol=
+else
+  symbol=
+fi
+
+echo "$symbol $volume%"
+
+# Icons
+# https://fontawesome.com/icons/volume-off
+# https://fontawesome.com/icons/volume-up
+# https://fontawesome.com/icons/volume-down

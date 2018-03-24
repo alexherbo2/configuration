@@ -1,0 +1,206 @@
+# Options ──────────────────────────────────────────────────────────────────────
+
+font pango:DejaVu
+gaps inner 10
+workspace_layout tabbed
+default_border pixel
+default_floating_border pixel
+floating_modifier Mod4
+
+# Colors ───────────────────────────────────────────────────────────────────────
+
+# Mac
+# Dracula
+# https://draculatheme.com
+set $black #202020
+set $red #ff5555
+set $blue #caa9fa
+set $magenta #ff79c6
+set $white #eaeaea
+
+# Color class | Border | Background | Text | Indicator | Child border
+client.focused $white $white $black $blue
+client.focused_inactive $black $black $white $black
+client.unfocused $black $black $white $black
+client.urgent $red $red $white $black
+
+# Bar ──────────────────────────────────────────────────────────────────────────
+
+bar {
+  position top
+  status_command i3blocks
+  colors {
+    background $white
+    statusline $black
+    separator $white
+    # Color class | Border | Background | Text
+    focused_workspace 0 $black $white
+    active_workspace 0 $black $white
+    inactive_workspace 0 $white $black
+    urgent_workspace 0 $red $white
+  }
+}
+
+# Key-bindings ─────────────────────────────────────────────────────────────────
+
+# Terminal
+bindsym Mod4+Return exec alacritty
+bindsym Mod4+Shift+Return exec alacritty --working-directory $(window-working-directory)
+
+# Drop-down terminal
+bindsym Mod4+Shift+p exec "alacritty --command sh -c 'i3-msg --quiet mark Drop-down \; move scratchpad \; [con_mark = Drop-down] scratchpad show ; elvish'"
+bindsym Mod4+p [con_mark = Drop-down] scratchpad show
+
+# Mouse
+bindsym --release button2 kill
+bindsym --release button3 exec alacritty
+
+bindsym --whole-window Mod4+button4 focus left
+bindsym --whole-window Mod4+button5 focus right
+bindsym --whole-window Mod4+Shift+button4 move left
+bindsym --whole-window Mod4+Shift+button5 move right
+
+# Layouts
+bindsym Mod4+a layout tabbed
+bindsym Mod4+s layout stacking
+bindsym Mod4+d layout toggle split
+bindsym Mod4+f fullscreen toggle
+
+# Tiling / Floating
+bindsym Mod4+Shift+space floating toggle
+bindsym Mod4+space focus mode_toggle
+
+# Reload
+bindsym Mod4+Escape reload
+bindsym Mod4+Shift+Escape restart
+
+# Containers ───────────────────────────────────────────────────────────────────
+
+# Kill
+bindsym Mod4+w kill
+
+# Split
+bindsym Mod4+o split vertical
+bindsym Mod4+Shift+o split horizontal
+
+# Parent / Child
+bindsym Mod4+u focus parent
+bindsym Mod4+i focus child
+
+# Focus
+bindsym Mod4+h focus left
+bindsym Mod4+j focus down
+bindsym Mod4+k focus up
+bindsym Mod4+l focus right
+
+# Move
+bindsym Mod4+Shift+h move left
+bindsym Mod4+Shift+j move down
+bindsym Mod4+Shift+k move up
+bindsym Mod4+Shift+l move right
+
+# Resize in these directions
+# ╭────╮ →
+# │    │ →
+# │    │ →
+# │    │ →
+# ╰────╯ →
+# ↓ ↓ ↓  ↘
+bindsym Mod4+Control+h resize shrink width
+bindsym Mod4+Control+j resize grow height
+bindsym Mod4+Control+k resize shrink height
+bindsym Mod4+Control+l resize grow width
+
+# Gaps
+bindsym Mod4+g exec i3-msg gaps inner current set $(rofi -dmenu -p Gaps)
+
+# Borders
+bindsym Mod4+b border toggle
+bindsym Mod4+Shift+b border pixel
+
+# Search
+bindsym Mod4+slash exec i3-window-commander focus "rofi -dmenu -p 'Search window'"
+bindsym Mod4+Shift+slash exec i3-window-commander 'move workspace current' "rofi -dmenu -p 'Bring window'"
+
+# Rename
+bindsym Mod4+r exec xdotool getactivewindow set_window --name "$(rofi -dmenu -p 'Window name')"
+
+# Marks
+bindsym Mod4+Shift+m exec i3-msg mark $(rofi -dmenu -p Mark)
+bindsym Mod4+m exec i3-msg [con_mark = '"'$(i3-msg -t get_marks | jq --raw-output .[] | rofi -dmenu -p 'Focus mark')'"'] focus
+
+# Workspaces ───────────────────────────────────────────────────────────────────
+
+# Next / Previous
+bindsym Mod4+n workspace next
+bindsym Mod4+Shift+n workspace prev
+
+# Last
+bindsym Mod4+Tab workspace back_and_forth
+bindsym Mod4+Shift+Tab move container to workspace back_and_forth
+
+# Focus
+bind Mod4+49 scratchpad show
+bind Mod4+10 workspace number 1
+bind Mod4+11 workspace number 2
+bind Mod4+12 workspace number 3
+bind Mod4+13 workspace number 4
+bind Mod4+14 workspace number 5
+bind Mod4+15 workspace number 6
+bind Mod4+16 workspace number 7
+bind Mod4+17 workspace number 8
+bind Mod4+18 workspace number 9
+bind Mod4+19 workspace number 10
+bind Mod4+20 workspace number 11
+bind Mod4+21 workspace number 12
+
+# Move
+bind Mod4+Shift+49 move scratchpad
+bind Mod4+Shift+10 move container to workspace number 1
+bind Mod4+Shift+11 move container to workspace number 2
+bind Mod4+Shift+12 move container to workspace number 3
+bind Mod4+Shift+13 move container to workspace number 4
+bind Mod4+Shift+14 move container to workspace number 5
+bind Mod4+Shift+15 move container to workspace number 6
+bind Mod4+Shift+16 move container to workspace number 7
+bind Mod4+Shift+17 move container to workspace number 8
+bind Mod4+Shift+18 move container to workspace number 9
+bind Mod4+Shift+19 move container to workspace number 10
+bind Mod4+Shift+20 move container to workspace number 11
+bind Mod4+Shift+21 move container to workspace number 12
+
+# Monitors
+bindsym Mod4+Mod1+h move workspace to output left
+bindsym Mod4+Mod1+j move workspace to output down
+bindsym Mod4+Mod1+k move workspace to output up
+bindsym Mod4+Mod1+l move workspace to output right
+
+# Rename
+bindsym Mod4+Shift+r exec i3-msg rename workspace to '"'$(rofi -dmenu -p 'Workspace name')'"'
+
+# Desktop ──────────────────────────────────────────────────────────────────────
+
+# Transparency
+bindsym Mod4+Shift+t exec transset --actual
+
+# Password manager
+bindsym Mod4+Shift+y exec menu-password $(menu-password | rofi -dmenu -p Password) | xclip -filter -selection primary | xclip -in -selection clipboard
+
+# Capture
+bindsym Print exec capture image window
+bindsym Shift+Print exec capture image desktop
+
+# Resume
+bindsym Mod4+z exec window-signal -19 && notify-send "$(xdotool getactivewindow getwindowname)" Stopped
+bindsym Mod4+Shift+z exec window-signal -18 && notify-send "$(xdotool getactivewindow getwindowname)" Resumed
+
+# Multimedia-keys ──────────────────────────────────────────────────────────────
+
+bindsym XF86AudioMute exec amixer set Master toggle && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioRaiseVolume exec amixer set Master 5%+ && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioLowerVolume exec amixer set Master 5%- && pkill -RTMIN+1 i3blocks
+
+bindsym XF86AudioPlay exec echo cycle pause | socat - ~/.config/mpv/socket
+bindsym XF86AudioPause exec echo cycle pause | socat - ~/.config/mpv/socket
+bindsym XF86AudioNext exec echo playlist-next | socat - ~/.config/mpv/socket
+bindsym XF86AudioPrev exec echo playlist-prev | socat - ~/.config/mpv/socket

@@ -1,0 +1,3 @@
+#!/bin/sh
+
+df --output=avail --human-readable "$@" | tail +2 | tr --delete ' '
