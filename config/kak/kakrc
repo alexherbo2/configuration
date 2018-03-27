@@ -129,8 +129,8 @@ map global normal <c-a> ga
 map global normal <c-n> :buffer-next<ret>
 map global normal <c-p> :buffer-previous<ret>
 
-map global normal ( ':move-line-above %val(count)<ret>'
-map global normal ) ':move-line-below %val(count)<ret>'
+map global normal "'" ':move-line-below %val(count)<ret>'
+map global normal "<a-'>" ':move-line-above %val(count)<ret>'
 
 map global normal '#' :comment-line<ret>
 
