@@ -80,7 +80,7 @@ declare-option str-list capitalize_selections
 
 define-command capitalize -docstring 'Capitalize selections' %{
   set-option window capitalize_selections %val(selections_desc)
-  execute-keys -draft '<a-;>L`h~'
+  execute-keys -draft '<a-:><a-;>L`h~'
   select %opt(capitalize_selections)
 }
 
