@@ -47,7 +47,7 @@ E:FZF_DEFAULT_OPTS = '--multi --reverse'
 
 # Prompt ───────────────────────────────────────────────────────────────────────
 
-# ❯ echo Tchou                                 alex at othala in ~/configuration
+# ❯ echo Tchou                       alex at othala in ~/configuration on master
 
 edit:prompt = {
   put '❯ '
@@ -59,6 +59,19 @@ edit:rprompt = {
   put (edit:styled (hostname) yellow)
   put ' in '
   put (edit:styled (tilde-abbr $pwd) green)
+  try {
+    branch = (git rev-parse --abbrev-ref HEAD)
+    status = (git status --porcelain | slurp)
+    put ' on '
+    put (edit:styled $branch magenta)
+    # [?] → Unstaged changes
+    # [!] → Ready to commit
+    if (re:match '(?m)^.\S' $status) {
+      put (edit:styled '?' green)
+    } elif (re:match '(?m)^.\s' $status) {
+      put (edit:styled '!' green)
+    }
+  } except error { } 2> /dev/null
 }
 
 # Hooks ────────────────────────────────────────────────────────────────────────
