@@ -1,5 +1,6 @@
 # Modules ──────────────────────────────────────────────────────────────────────
 
+use re
 use command-duration
 use git-hub
 
