@@ -14,7 +14,7 @@ label=
 interval=30
 
 [disk /]
-label=
+label=
 interval=30
 
 [volume Master]
@@ -35,4 +35,4 @@ interval=5
 # https://unicode-table.com/en/2325/
 # https://fontawesome.com/icons/wifi
 # https://fontawesome.com/icons/thermometer-three-quarters
-# https://fontawesome.com/icons/hdd
+# https://fontawesome.com/icons/home
