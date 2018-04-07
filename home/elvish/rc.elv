@@ -200,6 +200,9 @@ fn ma [@arguments]{ mpv -profile audio $@arguments }
 fn y [@arguments]{ youtube-dl $@arguments }
 fn v2g [@arguments]{ video-to-gif $@arguments }
 
+# Brown noise
+fn i { isolate }
+
 # Key-bindings ─────────────────────────────────────────────────────────────────
 
 # Navigation
