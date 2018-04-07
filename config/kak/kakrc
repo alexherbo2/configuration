@@ -105,7 +105,15 @@ alias global ge git-edit
 alias global t terminal
 alias global df distraction-free-toggle
 
+# Quick editing
 define-command ek -docstring 'Open Kakoune configuration file' 'edit ~/.config/kak/kakrc'
+define-command eg -docstring 'Open Git configuration file' 'edit ~/.config/git/config'
+define-command e3 -docstring 'Open i3 configuration file' 'edit ~/.config/i3/config'
+define-command elv -docstring 'Open Elvish configuration file' 'edit ~/.elvish/rc.elv'
+define-command ea -docstring 'Open Alacritty configuration file' 'edit ~/.config/alacritty/alacritty.yml'
+define-command em -docstring 'Open mpv configuration file' 'edit ~/.config/mpv/mpv.conf'
+define-command emi -docstring 'Open mpv input configuration file' 'edit ~/.config/mpv/input.conf'
+define-command ep -docstring 'Open passwords file' 'edit ~/.config/passwords.yml'
 
 # Mappings ─────────────────────────────────────────────────────────────────────
 
