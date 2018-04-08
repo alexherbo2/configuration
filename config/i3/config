@@ -112,7 +112,7 @@ bindsym Mod4+Control+k resize shrink height
 bindsym Mod4+Control+l resize grow width
 
 # Gaps
-bindsym Mod4+g exec i3-msg gaps inner current set $(rofi -dmenu -p Gaps)
+bindsym Mod4+g exec "$(printf 'i3-msg gaps inner current set %d, gaps outer current set %d' $(rofi -dmenu -p Gaps))"
 
 # Borders
 bindsym Mod4+b border toggle
