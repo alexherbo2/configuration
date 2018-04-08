@@ -177,7 +177,7 @@ hook global BufWritePre .* %{ %sh{
 
 # Clipboard
 hook global NormalKey '[ydc]' %{ %sh{
-  (printf '%s' "$kak_reg_dquote" | xclip -filter | xclip -selection clipboard) < /dev/null > /dev/null 2>&1 &
+  (printf '%s' "$kak_reg_dquote" | xclip-selection) < /dev/null > /dev/null 2>&1 &
 }}
 
 # File-types ───────────────────────────────────────────────────────────────────

@@ -1,0 +1,4 @@
+#!/bin/sh
+
+xclip -selection primary -filter |
+xclip -selection clipboard

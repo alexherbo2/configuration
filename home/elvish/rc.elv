@@ -117,8 +117,7 @@ fn launch [@commands]{
 # YouTube
 fn youtube-stream {
   echo 'https://youtube.com/channel/UCv9nzkds34PnGOu6u_QvVBQ/live' |
-  xclip -filter -selection primary |
-  xclip -filter -selection clipboard
+  xclip-selection
   capture video window rtmp://a.rtmp.youtube.com/live2/(get-password alexherbo2@live.youtube.com) flv
 }
 

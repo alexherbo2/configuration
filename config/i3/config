@@ -184,7 +184,7 @@ bindsym Mod4+Shift+r exec i3-msg rename workspace to '"'$(rofi -dmenu -p 'Worksp
 bindsym Mod4+Shift+t exec transset --actual
 
 # Password manager
-bindsym Mod4+Shift+y exec menu-password $(menu-password | rofi -dmenu -p Password) | xclip -filter -selection primary | xclip -in -selection clipboard
+bindsym Mod4+Shift+y exec menu-password $(menu-password | rofi -dmenu -p Password) | xclip-selection
 
 # Capture
 bindsym Print exec capture image window
