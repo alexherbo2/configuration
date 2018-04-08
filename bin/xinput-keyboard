@@ -1,0 +1,16 @@
+#!/bin/sh
+
+name='AT Translated Set 2 keyboard'
+
+identifier=$(
+  xinput |
+  pcregrep --only-matching=1 "$name.+id=([0-9]+)"
+)
+
+if xinput | grep --quiet "↳ $name"; then
+  echo Float
+  xinput float $identifier
+else
+  echo Reattach
+  xinput reattach $identifier 3
+fi
