@@ -1,6 +1,5 @@
 xrdb .Xresources
-xkbcomp repositories/github.com/fabi1cazenave/qwerty-lafayette/dist/qwerty-l.xkb $DISPLAY
-xmodmap .Xmodmap
+lafayette
 setroot --restore
 xcompmgr &
 i3
