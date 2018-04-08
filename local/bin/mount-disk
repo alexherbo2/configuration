@@ -1,0 +1,5 @@
+#!/bin/sh
+
+sudo fsck /dev/disk/by-label/Disk
+sudo mount /dev/disk/by-label/Disk ~/Disk/Disk
+exa ~/Disk/Disk

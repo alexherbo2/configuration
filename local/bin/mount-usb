@@ -1,0 +1,5 @@
+#!/bin/sh
+
+sudo fsck /dev/disk/by-label/USB
+sudo mount /dev/disk/by-label/USB ~/Disk/USB
+exa ~/Disk/USB

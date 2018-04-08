@@ -1,0 +1,3 @@
+#!/bin/sh
+
+clone -null ~/root ~/downstream ~/Disk/Disk
