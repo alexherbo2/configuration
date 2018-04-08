@@ -9,6 +9,7 @@ use git-hub
 paths = [
   ~/configuration/bin
   ~/configuration/local/bin
+  ~/configuration/install/bin
   ~/.bin
   ~/.local/bin
   ~/.gem/ruby/(ruby -e 'puts RUBY_VERSION')/bin
