@@ -1,0 +1,5 @@
+#!/bin/sh
+
+printf '' |
+xclip -selection primary -filter |
+xclip -selection clipboard
