@@ -5,7 +5,7 @@ interval=once
 label=⌥
 interval=5
 
-[net-speed wlp0s20u3]
+[net-speed wlp0s20u2]
 label=
 interval=5
 
