@@ -239,11 +239,11 @@ add-highlighter shared/gtd/state regex 'Fixed point|[A-Z][a-z]+' 0:value
 add-highlighter shared/gtd/time regex 'Scheduled|Deadline' 0:comment
 
 define-command -hidden switch-to-do-done %{ try %{
-  execute-keys "<space>;<a-x>sTo do<ret>cDone(%sh(date +'%F %H:%M:%S'))<esc>h<a-a>b"
+  execute-keys "<space>;<a-x>sTo do<ret>cDone(%sh(date +'%F %T'))<esc>h<a-a>b"
 }}
 
 define-command -hidden switch-to-do-cancelled %{ try %{
-  execute-keys "<space>;<a-x>sTo do<ret>cCancelled(%sh(date +'%F %H:%M:%S'))<esc>"
+  execute-keys "<space>;<a-x>sTo do<ret>cCancelled(%sh(date +'%F %T'))<esc>"
   execute-keys 'o<ret>Reason:<space>'
 }}
 
@@ -260,8 +260,8 @@ define-command gtd-grep -params 3.. %{ %sh{
   printf "grep '%s'" "$regex"
 }}
 
-define-command gtd-grep-to-do-daily %(gtd-grep 'To do' '%Y-%m-%d' 0 0)
-define-command gtd-grep-to-do-weekly %(gtd-grep 'To do' '%Y-%m-%d' 0 7)
+define-command gtd-grep-to-do-daily %(gtd-grep 'To do' '%F' 0 0)
+define-command gtd-grep-to-do-weekly %(gtd-grep 'To do' '%F' 0 7)
 
 declare-user-mode gtd-grep
 
@@ -294,7 +294,7 @@ hook global BufOpenFile '.*/diary/\d{4}\.md' %{
   map buffer normal <c-u> :switch-to-do-cancelled<ret>
   map buffer normal <a-g> ':enter-user-mode gtd-grep<ret>'
   map buffer insert <c-y> '<a-;>|date +%F<ret>'
-  map buffer insert <c-u> '<a-;>|date +%H:%M<ret>'
+  map buffer insert <c-u> '<a-;>|date +%R<ret>'
 }
 
 hook global BufOpenFile ".*/diary/%sh(date +%Y)\.md" %{
