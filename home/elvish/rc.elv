@@ -12,7 +12,7 @@ paths = [
   ~/configuration/install/bin
   ~/.bin
   ~/.local/bin
-  ~/.gem/ruby/(ruby -e 'puts RUBY_VERSION')/bin
+  (ruby -e 'puts Gem.user_dir')/bin
   ~/.cargo/bin
   ~/.cabal/bin
   ~/go/bin
