@@ -179,6 +179,7 @@ fn l [@arguments]{ exa $@arguments }
 fn ll [@arguments]{ exa --long $@arguments }
 fn la [@arguments]{ exa --all $@arguments }
 fn lla [@arguments]{ exa --long --all $@arguments }
+fn t [@arguments]{ exa --tree $@arguments }
 
 # Browser
 fn b [@arguments]{ launch chromium $@arguments }
