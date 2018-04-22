@@ -9,12 +9,13 @@ floating_modifier Mod4
 
 # Colors ───────────────────────────────────────────────────────────────────────
 
+# Default
 # Mac
 # Dracula
 # https://draculatheme.com
 set $black #202020
 set $red #ff5555
-set $blue #caa9fa
+set $blue #2e9ef4
 set $white #eaeaea
 
 # Color class | Border | Background | Text | Indicator | Child border
