@@ -15,7 +15,6 @@ floating_modifier Mod4
 set $black #202020
 set $red #ff5555
 set $blue #caa9fa
-set $magenta #ff79c6
 set $white #eaeaea
 
 # Color class | Border | Background | Text | Indicator | Child border
