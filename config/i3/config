@@ -106,10 +106,10 @@ bindsym Mod4+Shift+l move right
 # │    │ →
 # ╰────╯ →
 # ↓ ↓ ↓  ↘
-bindsym Mod4+Control+h resize shrink width
-bindsym Mod4+Control+j resize grow height
-bindsym Mod4+Control+k resize shrink height
-bindsym Mod4+Control+l resize grow width
+bindsym Mod4+Control+h resize shrink right
+bindsym Mod4+Control+j resize grow down
+bindsym Mod4+Control+k resize shrink down
+bindsym Mod4+Control+l resize grow right
 
 # Gaps
 bindsym Mod4+g exec "$(printf 'i3-msg gaps inner current set %d, gaps outer current set %d' $(rofi -dmenu -p Gaps))"
