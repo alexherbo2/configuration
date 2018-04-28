@@ -158,6 +158,7 @@ map global user b -docstring 'Open Chrome' '<a-|>xargs --replace chromium {}<ret
 map global user c -docstring 'Chronic (YYYY-MM-DD)' '|chronic %F<ret>'
 map global user C -docstring 'Chronic (Replace)' '|chronic<space>'
 map global user s -docstring 'Surround' :auto-pairs-surround<ret>
+map global user t -docstring 'Translate' '|deepl translate --targetLanguage=FR<ret>'
 map global user | -docstring 'Sort' '|sort<ret>'
 
 # Paste
