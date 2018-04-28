@@ -115,6 +115,7 @@ define-command em -docstring 'Open mpv configuration file' 'edit ~/.config/mpv/m
 define-command emi -docstring 'Open mpv input configuration file' 'edit ~/.config/mpv/input.conf'
 define-command ed -docstring 'Open diary file' "edit ~/documents/diary/%sh(date +%Y).md"
 define-command ep -docstring 'Open passwords file' 'edit ~/.config/passwords.yml'
+define-command ew -docstring 'Open words file' 'edit ~/documents/words'
 
 # Mappings ─────────────────────────────────────────────────────────────────────
 
