@@ -141,6 +141,7 @@ fn diary {
 # Hijack
 fn ipd { e:ipd -4 }
 fn kak [@arguments]{ kak-connect $@arguments }
+fn cat [@arguments]{ bat $@arguments }
 fn ls [@arguments]{ exa $@arguments }
 fn tree [@arguments]{ exa --tree $@arguments }
 fn cp [@arguments]{ clone $@arguments }
