@@ -128,6 +128,12 @@ fn youtube-dl-source {
   youtube-dl-serie
 }
 
+# synapse
+fn synapse-unfinished {
+  sycli list |
+  rg '\b\d{1,2}\.\d{2}%'
+}
+
 # GTD
 fn diary {
   try {
@@ -209,6 +215,9 @@ fn ma [@arguments]{ mpv -profile audio $@arguments }
 fn y [@arguments]{ youtube-dl $@arguments }
 fn dls { youtube-dl-source }
 fn v2g [@arguments]{ video-to-gif $@arguments }
+
+# synapse
+fn scu { synapse-unfinished }
 
 # Brown noise
 fn i { isolate }
