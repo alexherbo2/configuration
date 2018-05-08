@@ -291,7 +291,7 @@ hook global BufOpenFile '.*/diary/\d{4}\.md' %{
   }}
   alias buffer td gtd-grep-to-do-daily
   alias buffer tw gtd-grep-to-do-weekly
-  map buffer normal <a-d> ":execute-keys -save-regs '' '/%sh(date +%F.%a)<lt>ret<gt>:set-register / ^#<lt>ret<gt>'<ret>"
+  map buffer normal <a-d> '/%sh(date +%F.%a)<a-!><ret>:set-register / ^#<ret>'
   map buffer normal <c-d> :switch-to-do-done<ret>
   map buffer normal <c-u> :switch-to-do-cancelled<ret>
   map buffer normal <a-g> ':enter-user-mode gtd-grep<ret>'
