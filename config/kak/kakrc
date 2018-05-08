@@ -101,9 +101,17 @@ define-command terminal -params .. %{
 # Aliases ──────────────────────────────────────────────────────────────────────
 
 alias global f find
+alias global g git
 alias global ge git-edit
 alias global t terminal
 alias global df distraction-free-toggle
+
+# Git
+define-command gw -docstring 'git add' 'git add'
+define-command gs -docstring 'git diff' 'git diff %val(buffile)'
+define-command gc -docstring 'git commit' 'git commit'
+define-command gr -docstring 'git amend' 'git commit --amend'
+define-command gE -docstring 'git checkout' 'git checkout'
 
 # Quick editing
 define-command ek -docstring 'Open Kakoune configuration file' 'edit ~/.config/kak/kakrc'
