@@ -195,6 +195,9 @@ fn la [@arguments]{ exa --all $@arguments }
 fn lla [@arguments]{ exa --long --all $@arguments }
 fn t [@arguments]{ exa --tree $@arguments }
 
+# Attach
+fn a [@arguments]{ attach $@arguments }
+
 # Browser
 fn b [@arguments]{ launch chromium $@arguments }
 
