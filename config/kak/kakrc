@@ -74,6 +74,10 @@ define-command gist -params .. %{ echo %sh{
   printf %s "$kak_selection" | gist --open $@
 }}
 
+define-command chmod -params .. %{ echo %sh{
+  chmod $@ $kak_buffile
+}}
+
 # Capitalize
 
 declare-option str-list capitalize_selections
