@@ -13,6 +13,8 @@ pathogen-infect "%opt(github)/alexherbo2/snippets.kak"
 pathogen-infect "%opt(github)/alexherbo2/toggle-highlighter.kak"
 pathogen-infect "%opt(github)/alexherbo2/volatile-highlighter.kak"
 
+%sh(kak-lsp --kakoune)
+
 # Color scheme ─────────────────────────────────────────────────────────────────
 
 colorscheme dracula
