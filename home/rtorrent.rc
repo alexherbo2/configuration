@@ -1,0 +1,2 @@
+session.path.set = ~/.local/share/rtorrent
+directory.default.set = ~/torrents

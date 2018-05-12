@@ -158,6 +158,7 @@ fn attach [@arguments]{ e:attach -filter 'fzf --query $path' $@arguments }
 fn synapse { attach synapse }
 fn axon { attach axon }
 fn receptor { attach receptor }
+fn rtorrent { attach rtorrent }
 
 fn mpv [@arguments]{
   try {
