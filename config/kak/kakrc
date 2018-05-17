@@ -277,8 +277,8 @@ define-command gtd-grep -params 3.. %{ %sh{
   printf "grep '%s'" "$regex"
 }}
 
-define-command gtd-grep-to-do-daily %(gtd-grep 'To do' '%F' 0 0)
-define-command gtd-grep-to-do-weekly %(gtd-grep 'To do' '%F' 0 7)
+define-command gtd-grep-daily %(gtd-grep 'To do' '%F' 0 0)
+define-command gtd-grep-weekly %(gtd-grep 'To do' '%F' 0 7)
 
 declare-user-mode gtd-grep
 
@@ -304,8 +304,8 @@ hook global BufOpenFile '.*/diary/\d{4}\.md' %{
     "tr": "To do Read ",
     "tw": "To do Watch "
   }}
-  alias buffer td gtd-grep-to-do-daily
-  alias buffer tw gtd-grep-to-do-weekly
+  alias buffer td gtd-grep-daily
+  alias buffer tw gtd-grep-weekly
   map buffer normal <a-d> '/%sh(date +%F.%a)<a-!><ret>:set-register / ^#<ret>'
   map buffer normal <c-d> :switch-to-do-done<ret>
   map buffer normal <c-u> :switch-to-do-cancelled<ret>
