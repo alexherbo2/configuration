@@ -104,6 +104,21 @@ define-command terminal -params .. %{
     )
 }
 
+define-command grep-period -params 4.. -docstring 'grep-period <pattern> <format> <time-start> <time-end> [argument…]: Grep period' %{ %sh{
+  pattern=$1
+  format=$2
+  start=$3
+  end=$4
+  shift 4
+  factory=day
+  format="($pattern.+$format)|($format.+$pattern)"
+  regex=$(
+    chronic-period "$format" "$start" "$end" "$factory" |
+    paste --serial --delimiters '|'
+  )
+  printf "grep '%s' %s" "$regex" "$@"
+}}
+
 # Aliases ──────────────────────────────────────────────────────────────────────
 
 alias global f find
@@ -264,21 +279,8 @@ define-command -hidden switch-to-do-cancelled %{ try %{
   execute-keys 'o<ret>Reason:<space>'
 }}
 
-define-command gtd-grep -params 3.. %{ %sh{
-  activity=$1
-  format=$2
-  shift 2
-  range=$@
-  regex=$(
-    seq $range |
-    xargs --replace date --date "{} days" +"$activity.+$format" |
-    paste --serial --delimiters '|'
-  )
-  printf "grep '%s'" "$regex"
-}}
-
-define-command gtd-grep-daily %(gtd-grep 'To do' '%F' 0 0)
-define-command gtd-grep-weekly %(gtd-grep 'To do' '%F' 0 7)
+define-command gtd-grep-daily %(grep-period 'To do' '%F' today today)
+define-command gtd-grep-weekly %(grep-period 'To do' '%F' today week)
 
 declare-user-mode gtd-grep
 
