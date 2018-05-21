@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# Cache
+TMP=$(mktemp --directory)
+trap "rm --recursive $TMP" EXIT
+
+ffmpeg -i $1 -map 0:s:0 $TMP/sub.srt 2> /dev/null
+cat $TMP/sub.srt
