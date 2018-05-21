@@ -204,3 +204,7 @@ bindsym XF86AudioPlay exec echo cycle pause | socat - ~/.config/mpv/socket
 bindsym XF86AudioPause exec echo cycle pause | socat - ~/.config/mpv/socket
 bindsym XF86AudioNext exec echo playlist-next | socat - ~/.config/mpv/socket
 bindsym XF86AudioPrev exec echo playlist-prev | socat - ~/.config/mpv/socket
+
+# Rules ────────────────────────────────────────────────────────────────────────
+
+for_window [instance=dofus] border normal
