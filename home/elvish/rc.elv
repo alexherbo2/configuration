@@ -82,7 +82,11 @@ edit:before-readline = [
   $@edit:before-readline
   {
     if (> $command-duration:value 1) {
-      echo (edit:styled (friendly-duration (* $command-duration:value 1000)) cyan) > /dev/tty
+      echo (edit:styled (
+        printf 'Finished in %s (%s)' \
+          (friendly-duration (* $command-duration:value 1000)) \
+          (date +'%a %b %-d %-I:%M %p') \
+      ) cyan) > /dev/tty
     }
   }
 ]
