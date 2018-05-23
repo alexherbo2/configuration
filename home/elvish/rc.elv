@@ -1,8 +1,8 @@
 # Modules ──────────────────────────────────────────────────────────────────────
 
 use re
-use command-duration
-use git-hub
+use github.com/alexherbo2/command-duration.elv/lib/command-duration
+use github.com/alexherbo2/git-hub/contrib/elvish/lib/git-hub
 
 # Environment variables ────────────────────────────────────────────────────────
 
