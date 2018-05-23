@@ -3,6 +3,7 @@
 use re
 use github.com/alexherbo2/command-duration.elv/lib/command-duration
 use github.com/alexherbo2/git-hub/contrib/elvish/lib/git-hub
+use github.com/zzamboni/elvish-modules/alias
 
 # Environment variables ────────────────────────────────────────────────────────
 
@@ -149,20 +150,20 @@ fn diary {
 }
 
 # Hijack
-fn ipd { e:ipd -4 }
-fn kak [@arguments]{ kak-connect $@arguments }
-fn cat [@arguments]{ bat $@arguments }
-fn ls [@arguments]{ exa $@arguments }
-fn tree [@arguments]{ exa --tree $@arguments }
-fn cp [@arguments]{ clone $@arguments }
-fn rm [@arguments]{ trash $@arguments }
-fn grep [@arguments]{ rg $@arguments }
-fn gist [@arguments]{ e:gist --open $@arguments }
-fn attach [@arguments]{ e:attach -filter 'fzf --query $path' $@arguments }
-fn synapse { attach synapse }
-fn axon { attach axon }
-fn receptor { attach receptor }
-fn rtorrent { attach rtorrent }
+alias:new ipd e:ipd -4
+alias:new kak kak-connect
+alias:new cat bat
+alias:new ls exa
+alias:new tree exa --tree
+alias:new cp clone
+alias:new rm trash
+alias:new grep rg
+alias:new gist e:gist --open
+alias:new attach e:attach -filter "'fzf --query $path'"
+alias:new synapse attach synapse
+alias:new axon attach axon
+alias:new receptor attach receptor
+alias:new rtorrent attach rtorrent
 
 fn mpv [@arguments]{
   try {
@@ -186,49 +187,49 @@ fn weechat {
 
 # Aliases ──────────────────────────────────────────────────────────────────────
 
-fn md [@arguments]{ mkdir --parents $@arguments }
-fn c [@arguments]{ clone $@arguments }
-fn d [@arguments]{ trash $@arguments }
-fn _ [@arguments]{ trash -null $@arguments }
-fn x [@arguments]{ extract $@arguments }
-fn ft [@arguments]{ file-type $@arguments }
+alias:new md mkdir --parents
+alias:new c clone
+alias:new d trash
+alias:new _ trash -null
+alias:new x extract
+alias:new ft file-type
 
 # Listing
-fn l [@arguments]{ exa $@arguments }
-fn ll [@arguments]{ exa --long $@arguments }
-fn la [@arguments]{ exa --all $@arguments }
-fn lla [@arguments]{ exa --long --all $@arguments }
-fn t [@arguments]{ exa --tree $@arguments }
+alias:new l exa
+alias:new ll exa --long
+alias:new la exa --all
+alias:new lla exa --long --all
+alias:new t exa --tree
 
 # Attach
-fn a [@arguments]{ attach $@arguments }
+alias:new a attach
 
 # Browser
-fn b [@arguments]{ launch chromium $@arguments }
+alias:new b launch chromium
 
 # Kakoune
-fn k [@arguments]{ kak-connect $@arguments }
+alias:new k kak-connect
 
 # Git
-fn g [@arguments]{ git $@arguments }
-fn G [@arguments]{ tig $@arguments }
+alias:new g git
+alias:new G tig
 fn gh [@arguments]{ git-hub $@arguments }
 fn gcd { git-hub:change-directory . }
 
 # mpv
-fn m [@arguments]{ mpv $@arguments }
-fn mi [@arguments]{ mpv -profile image $@arguments }
-fn ma [@arguments]{ mpv -profile audio $@arguments }
+alias:new m mpv
+alias:new mi mpv -profile image
+alias:new ma mpv -profile audio
 
-fn y [@arguments]{ youtube-dl $@arguments }
-fn dls { youtube-dl-source }
-fn v2g [@arguments]{ video-to-gif $@arguments }
+alias:new y youtube-dl
+alias:new dls youtube-dl-source
+alias:new v2g video-to-gif
 
 # synapse
-fn scu { synapse-unfinished }
+alias:new scu synapse-unfinished
 
 # Brown noise
-fn i { isolate }
+alias:new i isolate
 
 # Key-bindings ─────────────────────────────────────────────────────────────────
 
@@ -248,3 +249,5 @@ edit:history:binding[Ctrl-n] = { edit:history:down }
 
 edit:insert:binding[Ctrl-p] = { edit:history:start }
 edit:history:binding[Ctrl-p] = { edit:history:up }
+
+-exports- = (alias:export)
