@@ -1,0 +1,5 @@
+#!/bin/sh
+
+yaml-to-json < info.yml |
+jq --raw-output .Source |
+youtube-dl-serie

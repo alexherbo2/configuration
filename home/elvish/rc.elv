@@ -126,13 +126,6 @@ fn youtube-stream {
   capture video window rtmp://a.rtmp.youtube.com/live2/(get-password alexherbo2@live.youtube.com) flv
 }
 
-# YouTube Downloader
-fn youtube-dl-source {
-  yaml-to-json < info.yml |
-  jq --raw-output .Source |
-  youtube-dl-serie
-}
-
 # GTD
 fn diary {
   try {
