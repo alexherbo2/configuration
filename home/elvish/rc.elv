@@ -114,11 +114,6 @@ fn project {
   attach -tag Editor kak
 }
 
-# Launcher
-fn launch [@commands]{
-  (external $@commands) > /dev/null 2> /dev/null &
-}
-
 # GTD
 fn diary {
   try {
