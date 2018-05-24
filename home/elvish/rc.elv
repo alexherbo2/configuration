@@ -119,13 +119,6 @@ fn launch [@commands]{
   (external $@commands) > /dev/null 2> /dev/null &
 }
 
-# YouTube
-fn youtube-stream {
-  echo 'https://youtube.com/channel/UCv9nzkds34PnGOu6u_QvVBQ/live' |
-  xclip-selection
-  capture video window rtmp://a.rtmp.youtube.com/live2/(get-password alexherbo2@live.youtube.com) flv
-}
-
 # GTD
 fn diary {
   try {
