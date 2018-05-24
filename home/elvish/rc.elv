@@ -133,12 +133,6 @@ fn youtube-dl-source {
   youtube-dl-serie
 }
 
-# synapse
-fn synapse-unfinished {
-  sycli list |
-  rg '\b\d{1,2}\.\d{2}%'
-}
-
 # GTD
 fn diary {
   try {
