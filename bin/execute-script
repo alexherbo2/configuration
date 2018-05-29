@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+require 'json'
+
+command = ARGV.shift
+arguments = ARGV
+
+system command % arguments.map(&:to_json)
