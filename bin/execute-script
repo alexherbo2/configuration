@@ -5,4 +5,4 @@ require 'json'
 command = ARGV.shift
 arguments = ARGV
 
-system command % arguments.map(&:to_json)
+system command % arguments.map.with_index(1) { |value, index| [index.to_s.to_sym, value.to_json] }.to_h
