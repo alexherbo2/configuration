@@ -170,10 +170,20 @@ bind Mod4+Shift+20 move container to workspace number 11
 bind Mod4+Shift+21 move container to workspace number 12
 
 # Monitors
-bindsym Mod4+Mod1+h move workspace to output left
-bindsym Mod4+Mod1+j move workspace to output down
-bindsym Mod4+Mod1+k move workspace to output up
-bindsym Mod4+Mod1+l move workspace to output right
+bindsym Mod4+Mod1+h focus output left
+bindsym Mod4+Mod1+j focus output down
+bindsym Mod4+Mod1+k focus output up
+bindsym Mod4+Mod1+l focus output right
+
+bindsym Mod4+Mod1+Shift+h move container to output left
+bindsym Mod4+Mod1+Shift+j move container to output down
+bindsym Mod4+Mod1+Shift+k move container to output up
+bindsym Mod4+Mod1+Shift+l move container to output right
+
+bindsym Mod4+Mod1+Control+h move workspace to output left
+bindsym Mod4+Mod1+Control+j move workspace to output down
+bindsym Mod4+Mod1+Control+k move workspace to output up
+bindsym Mod4+Mod1+Control+l move workspace to output right
 
 # Rename
 bindsym Mod4+Shift+r exec i3-msg rename workspace to '"'$(rofi -dmenu -p 'Workspace name')'"'
