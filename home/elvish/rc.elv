@@ -82,7 +82,7 @@ edit:rprompt = {
 edit:before-readline = [
   $@edit:before-readline
   {
-    if (> $command-duration:value 1) {
+    if (> $command-duration:value 60) {
       echo (edit:styled (
         printf 'Finished in %s (%s)' \
           (friendly-duration (* $command-duration:value 1000)) \
