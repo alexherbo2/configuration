@@ -13,7 +13,7 @@ pathogen-infect "%opt(github)/alexherbo2/snippets.kak"
 pathogen-infect "%opt(github)/alexherbo2/toggle-highlighter.kak"
 pathogen-infect "%opt(github)/alexherbo2/volatile-highlighter.kak"
 
-%sh(kak-lsp --kakoune)
+evaluate-commands %sh(kak-lsp --kakoune)
 
 # Color scheme ─────────────────────────────────────────────────────────────────
 
@@ -21,7 +21,7 @@ colorscheme dracula
 
 # Options ──────────────────────────────────────────────────────────────────────
 
-set-option global ui_options ncurses_status_on_top=yes:ncurses_assistant=cat
+set-option global ui_options ncurses_status_on_top=yes ncurses_assistant=cat
 set-option global autoreload yes
 set-option global scrolloff 3,5
 set-option global indentwidth 2
@@ -36,9 +36,9 @@ set-option global snippets %{{
 }}
 
 hook global WinCreate .* %{
-  add-highlighter window number_lines
-  add-highlighter window show_matching
-  add-highlighter window show_whitespaces
+  add-highlighter window/ number-lines
+  add-highlighter window/ show-matching
+  add-highlighter window/ show-whitespaces
   search-highlighter-enable
   volatile-highlighter-enable
   auto-pairs-enable
@@ -53,7 +53,7 @@ set-option global modelinefmt '{{mode_info}} {default+b}%opt{block_auto_pairs}{d
 
 declare-option -hidden str block_auto_pairs
 
-define-command -hidden block-update-auto-pairs %{ %sh{
+define-command -hidden block-update-auto-pairs %{ evaluate-commands %sh{
   if [ $kak_opt_auto_pairs_surround_enabled = true ]; then
     text=surround
   else
@@ -104,7 +104,7 @@ define-command terminal -params .. %{
     )
 }
 
-define-command grep-period -params 4.. -docstring 'grep-period <pattern> <format> <time-start> <time-end> [argument…]: Grep period' %{ %sh{
+define-command grep-period -params 4.. -docstring 'grep-period <pattern> <format> <time-start> <time-end> [argument…]: Grep period' %{ evaluate-commands %sh{
   pattern=$1
   format=$2
   start=$3
@@ -197,21 +197,25 @@ map global user P -docstring 'Paste (Before)' '!xclip -out -selection clipboard<
 map global user R -docstring 'Replace' '|xclip -out -selection clipboard<ret>'
 
 # Highlighters
-map global user l -docstring 'Line numbers' ':toggle-highlighter window number_lines<ret>'
-map global user w -docstring 'Wrap' ':toggle-highlighter window wrap -word<ret>'
+map global user l -docstring 'Line numbers' ':toggle-highlighter window/ number-lines<ret>'
+map global user w -docstring 'Wrap' ':toggle-highlighter window/ wrap -word<ret>'
 
 # Hooks ────────────────────────────────────────────────────────────────────────
 
 # Auto-mkdir
-hook global BufWritePre .* %{ %sh{
-  directory=$(dirname "$kak_hook_param")
-  mkdir --parents "$directory"
-}}
+hook global BufWritePre .* %{
+  nop %sh{
+    directory=$(dirname "$kak_hook_param")
+    mkdir --parents "$directory"
+  }
+}
 
 # Clipboard
-hook global NormalKey '[ydc]' %{ %sh{
-  (printf '%s' "$kak_reg_dquote" | xclip-selection) < /dev/null > /dev/null 2>&1 &
-}}
+hook global NormalKey '[ydc]' %{
+  nop %sh{
+    (printf '%s' "$kak_main_reg_dquote" | xclip-selection) < /dev/null > /dev/null 2>&1 &
+  }
+}
 
 # File-types ───────────────────────────────────────────────────────────────────
 
@@ -226,49 +230,50 @@ hook global WinSetOption filetype=kak %{
 # Highlighters ─────────────────────────────────────────────────────────────────
 
 hook global WinSetOption filetype=.+ %{ try %{
-  # Works with show_whitespaces highlighter
+  # Works with show-whitespaces highlighter
   # Only show EOL
   # Whitespace characters still visible when selecting a region
   # RGB colors correspond to Dracula color scheme:
   # Background: Black
   # Background (Dimmed): Gray
-  add-highlighter window regex ' +' 0:rgb:282a36 # Whitespaces
-  add-highlighter window regex '\n+' 0:rgb:44475a # New lines
-  add-highlighter window regex '\h+$' 0:red # Trailing whitespaces
-  add-highlighter window regex ' +' 0:red # Non-breaking spaces
-  add-highlighter window regex '(?<=[?!.…])\h(\h{2,})?(?=\w)' 0:red # A sentence not followed by exactly two spaces
-  add-highlighter window regex '(?<=\w)\h{2,}' 0:red # A word character followed by more than two spaces
-  add-highlighter window regex "(?<=\w)'(?=\w)" 0:red # Apostrophe
-  add-highlighter window regex '‐+' 0:red # Césures
-  add-highlighter window regex '‑+' 0:green # Range of values
-  add-highlighter window regex '–+' 0:green # Unicode 2013
-  add-highlighter window regex '—+' 0:yellow # Unicode 2014
-  add-highlighter window regex '―+' 0:red # Unicode 2015
-  add-highlighter window regex '−+' 0:cyan # Subtractions
-  add-highlighter window regex '×+' 0:cyan # Multiplications
+  add-highlighter window/ regex ' +' 0:rgb:282a36 # Whitespaces
+  add-highlighter window/ regex '\n+' 0:rgb:44475a # New lines
+  add-highlighter window/ regex '\h+$' 0:red # Trailing whitespaces
+  add-highlighter window/ regex ' +' 0:red # Non-breaking spaces
+  add-highlighter window/ regex '(?<=[?!.…])\h(\h{2,})?(?=\w)' 0:red # A sentence not followed by exactly two spaces
+  add-highlighter window/ regex '(?<=\w)\h{2,}' 0:red # A word character followed by more than two spaces
+  add-highlighter window/ regex "(?<=\w)'(?=\w)" 0:red # Apostrophe
+  add-highlighter window/ regex '‐+' 0:red # Césures
+  add-highlighter window/ regex '‑+' 0:green # Range of values
+  add-highlighter window/ regex '–+' 0:green # Unicode 2013
+  add-highlighter window/ regex '—+' 0:yellow # Unicode 2014
+  add-highlighter window/ regex '―+' 0:red # Unicode 2015
+  add-highlighter window/ regex '−+' 0:cyan # Subtractions
+  add-highlighter window/ regex '×+' 0:cyan # Multiplications
 }}
 
 # Modes ────────────────────────────────────────────────────────────────────────
 
 # GTD ──────────────────────────────────────────────────────────────────────────
 
-add-highlighter shared/ regions -default code gtd \
-  action '^(To do|Done|Cancelled|Aborted|Waiting|Try)' '$' '' \
-  state '^(Status|Rule|Constat|Habits|Fixed point)' '$' '' \
-  time '^(Scheduled|Deadline)' '$' ''
+add-highlighter shared/gtd regions
+add-highlighter shared/gtd/code default-region group
+add-highlighter shared/gtd/action region '^(To do|Done|Cancelled|Aborted|Waiting|Try)' '$' group
+add-highlighter shared/gtd/state region '^(Status|Rule|Constat|Habits|Fixed point)' '$' group
+add-highlighter shared/gtd/time region '^(Scheduled|Deadline)' '$' group
 
-add-highlighter shared/gtd/code regex '^[A-Z][a-z]+(?=:)' 0:variable
-add-highlighter shared/gtd/code regex '\b(How to|Fix(es)?)\b' 0:value
+add-highlighter shared/gtd/code/ regex '^[A-Z][a-z]+(?=:)' 0:variable
+add-highlighter shared/gtd/code/ regex '\b(How to|Fix(es)?)\b' 0:value
 
-add-highlighter shared/gtd/action regex 'To do|[A-Z][a-z]+' 0:value
-add-highlighter shared/gtd/action regex '(To do|[A-Z][a-z]+) ([A-Z][a-z]+|Go to)' 2:comment
-add-highlighter shared/gtd/action regex '(To do|[A-Z][a-z]+) (Now)' 2:type
-add-highlighter shared/gtd/action regex 'Done|Cancelled|Aborted|Waiting' 0:comment
-add-highlighter shared/gtd/action regex 'Postponed' 0:type
+add-highlighter shared/gtd/action/ regex 'To do|[A-Z][a-z]+' 0:value
+add-highlighter shared/gtd/action/ regex '(To do|[A-Z][a-z]+) ([A-Z][a-z]+|Go to)' 2:comment
+add-highlighter shared/gtd/action/ regex '(To do|[A-Z][a-z]+) (Now)' 2:type
+add-highlighter shared/gtd/action/ regex 'Done|Cancelled|Aborted|Waiting' 0:comment
+add-highlighter shared/gtd/action/ regex 'Postponed' 0:type
 
-add-highlighter shared/gtd/state regex 'Fixed point|[A-Z][a-z]+' 0:value
+add-highlighter shared/gtd/state/ regex 'Fixed point|[A-Z][a-z]+' 0:value
 
-add-highlighter shared/gtd/time regex 'Scheduled|Deadline' 0:comment
+add-highlighter shared/gtd/time/ regex 'Scheduled|Deadline' 0:comment
 
 define-command -hidden switch-to-do-done %{ try %{
   execute-keys "<space>;<a-x>sTo do<ret>cDone(%sh(date +'%F %T'))<esc>h<a-a>b"
@@ -294,7 +299,7 @@ map global gtd-grep m -docstring '+Month' ":grep '\+\d+M'<ret>"
 map global gtd-grep y -docstring '+Year' ":grep '\+\d+Y'<ret>"
 
 hook global WinCreate '.*/diary/\d{4}\.md' %{
-  add-highlighter window ref gtd
+  add-highlighter window/ ref gtd
 }
 
 hook global BufOpenFile '.*/diary/\d{4}\.md' %{
@@ -318,7 +323,7 @@ hook global BufOpenFile '.*/diary/\d{4}\.md' %{
 
 hook global BufOpenFile ".*/diary/%sh(date +%Y)\.md" %{
   hook -group open-diary buffer NormalIdle .* %{
-    %sh(printf "execute-keys '/^# %s$<ret>'" $(date +%F.%a))
+    evaluate-commands %sh(printf "execute-keys '/^# %s$<ret>'" $(date +%F.%a))
     execute-keys '<a-i><a-w>vv'
     set-register / '^#'
     remove-hooks buffer open-diary
