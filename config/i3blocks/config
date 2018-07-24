@@ -1,6 +1,10 @@
 command=$XDG_CONFIG_HOME/i3blocks/blocklets/$BLOCK_NAME
 interval=once
 
+[clipboard]
+label=
+interval=5
+
 [net-speed enp8s0]
 label=⌥
 interval=5
@@ -33,6 +37,7 @@ interval=5
 
 # Icons
 # https://unicode-table.com/en/2325/
+# https://fontawesome.com/icons/clipboard
 # https://fontawesome.com/icons/wifi
 # https://fontawesome.com/icons/thermometer-three-quarters
 # https://fontawesome.com/icons/home

@@ -1,0 +1,13 @@
+#!/bin/sh
+
+selection=${1:-clipboard}
+
+get() { xclip -out -selection $selection; }
+
+case $BLOCK_BUTTON in
+  1) notify-send Clipboard "$(get)" ;;
+  2) xclip-clear ;;
+esac
+
+get |
+slice 1-7
