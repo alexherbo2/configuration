@@ -1,0 +1,13 @@
+#!/bin/sh
+
+case $BLOCK_BUTTON in
+  1) gmail > /dev/null ;;
+esac
+
+response=$(curl --silent --user "$user:$password" https://mail.google.com/mail/feed/atom)
+
+[ $? = 0 ] &&
+
+# Count
+echo "$response" |
+pcregrep --only-matching=1 '<fullcount>(\d+)</fullcount>'
