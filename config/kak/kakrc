@@ -6,6 +6,7 @@ source "%opt(github)/alexherbo2/pathogen.kak/rc/pathogen.kak"
 
 pathogen-infect "%opt(github)/alexherbo2/auto-pairs.kak"
 pathogen-infect "%opt(github)/alexherbo2/distraction-free.kak"
+pathogen-infect "%opt(github)/alexherbo2/flag.kak"
 pathogen-infect "%opt(github)/alexherbo2/move-line.kak"
 pathogen-infect "%opt(github)/alexherbo2/search-highlighter.kak"
 pathogen-infect "%opt(github)/alexherbo2/shell.kak"
@@ -47,7 +48,23 @@ hook global WinCreate .* %{
 
 # Status line ──────────────────────────────────────────────────────────────────
 
-set-option global modelinefmt '{{mode_info}} {default+b}%opt{block_auto_pairs}{default} {magenta}%val{client}{default} at {yellow}%val{session}{default} on {green}%val{bufname}{default} {{context_info}} {cyan}%val{cursor_line}{default}:{cyan}%val{cursor_char_column}{default}'
+set-option global modelinefmt '{{mode_info}} {default+b}%opt{block_auto_pairs}{default} {blue}%opt{block_flags}{default} {magenta}%val{client}{default} at {yellow}%val{session}{default} on {green}%val{bufname}{default} {{context_info}} {cyan}%val{cursor_line}{default}:{cyan}%val{cursor_char_column}{default}'
+
+# Flags
+
+declare-option -hidden str block_flags
+
+define-command -hidden block-update-flags %{ evaluate-commands %sh{
+  eval "set -- $kak_opt_flags"
+  if test $# != 0; then
+    text=[$@]
+  else
+    text="''"
+  fi
+  echo set-option window block_flags "'$text'"
+}}
+
+hook global WinSetOption flags=.+ block-update-flags
 
 # Auto-pairs
 
@@ -195,6 +212,13 @@ map global user | -docstring 'Sort' '|sort<ret>'
 map global user p -docstring 'Paste (After)' '<a-!>xclip -out -selection clipboard<ret>'
 map global user P -docstring 'Paste (Before)' '!xclip -out -selection clipboard<ret>'
 map global user R -docstring 'Replace' '|xclip -out -selection clipboard<ret>'
+
+# Flag
+map global user f -docstring 'Flag buffer' ':set-option buffer flags <tab><space>'
+map global user I -docstring 'Mark as important' ':set-option buffer flags important<ret>'
+map global user i -docstring 'Delete buffers not marked as important' ':evaluate-commands-flag \A(?!important) delete-buffer<ret>'
+map global user Q -docstring 'Mark buffer' ':set-option buffer flags marked<ret>'
+map global user q -docstring 'Play macro on marked buffers' ':execute-keys-flag marked q<ret>'
 
 # Highlighters
 map global user l -docstring 'Line numbers' ':toggle-highlighter window/ number-lines<ret>'
