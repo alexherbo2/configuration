@@ -2,6 +2,7 @@
 
 case $BLOCK_BUTTON in
   1) gmail > /dev/null ;;
+  3) fdm fetch -q ;;
 esac
 
 response=$(curl --silent --user "$user:$password" https://mail.google.com/mail/feed/atom)
