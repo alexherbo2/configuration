@@ -9,5 +9,23 @@ case $BLOCK_BUTTON in
   2) xclip-clear ;;
 esac
 
-get |
-slice 1-7
+export selection=$(get)
+
+password_key=$(
+  yaml-to-json < $XDG_CONFIG_HOME/passwords.yml |
+  jq --raw-output 'to_entries[] | select(.value[-1] == env.selection).key'
+)
+
+if test "$password_key"; then
+  symbol=
+  text=$password_key
+else
+  symbol=
+  text=$(get | slice 1-7)
+fi
+
+echo "$symbol $text"
+
+# Icons
+# https://fontawesome.com/icons/clipboard
+# https://fontawesome.com/icons/lock
