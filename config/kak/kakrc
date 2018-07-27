@@ -337,7 +337,7 @@ hook global BufOpenFile '.*/diary/\d{4}\.md' %{
   }}
   alias buffer td gtd-grep-daily
   alias buffer tw gtd-grep-weekly
-  map buffer normal <a-d> '/%sh(date +%F.%a)<a-!><ret>:set-register / ^#<ret>'
+  map buffer normal <a-d> '/%sh(date +%F.%a)<a-!><ret>:set-register / "^# \K\d{4}-\d{2}-\d{2}\.\w{3}"<ret>'
   map buffer normal <c-d> :switch-to-do-done<ret>
   map buffer normal <c-u> :switch-to-do-cancelled<ret>
   map buffer normal <a-g> ':enter-user-mode gtd-grep<ret>'
@@ -349,7 +349,7 @@ hook global BufOpenFile ".*/diary/%sh(date +%Y)\.md" %{
   hook -group open-diary buffer NormalIdle .* %{
     evaluate-commands %sh(printf "execute-keys '/^# %s$<ret>'" $(date +%F.%a))
     execute-keys '<a-i><a-w>vv'
-    set-register / '^#'
+    set-register / '^# \K\d{4}-\d{2}-\d{2}\.\w{3}'
     remove-hooks buffer open-diary
   }
 }
