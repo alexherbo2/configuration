@@ -32,7 +32,7 @@ signal=1
 interval=30
 
 [date]
-command=date +'%a %b %-d'
+command=date +'%a %b %-d %Y'
 interval=30
 
 [time]
