@@ -22,7 +22,7 @@ colorscheme dracula
 
 # Options ──────────────────────────────────────────────────────────────────────
 
-set-option global ui_options ncurses_status_on_top=yes ncurses_assistant=cat
+set-option global ui_options ncurses_status_on_top=yes ncurses_assistant=cat ncurses_enable_mouse=no
 set-option global autoreload yes
 set-option global scrolloff 3,5
 set-option global indentwidth 2
