@@ -65,6 +65,7 @@ bindsym Mod4+a layout tabbed
 bindsym Mod4+s layout stacking
 bindsym Mod4+d layout toggle split
 bindsym Mod4+f fullscreen toggle
+bindsym Mod4+Mod1+space sticky toggle
 
 # Tiling / Floating
 bindsym Mod4+Shift+space floating toggle
