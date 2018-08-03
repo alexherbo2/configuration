@@ -100,6 +100,9 @@ bindsym Mod4+Shift+j move down
 bindsym Mod4+Shift+k move up
 bindsym Mod4+Shift+l move right
 
+# Swap
+bindsym Mod4+y swap container with mark marked
+
 # Resize in these directions
 # ╭────╮ →
 # │    │ →
@@ -127,6 +130,7 @@ bindsym Mod4+Shift+slash exec i3-window-commander 'move workspace current' "rofi
 bindsym Mod4+r exec xdotool getactivewindow set_window --name "$(rofi -dmenu -p 'Window name')"
 
 # Marks
+bindsym Mod4+x mark --add --toggle marked
 bindsym Mod4+Shift+m exec i3-msg mark $(rofi -dmenu -p Mark)
 bindsym Mod4+m exec i3-msg [con_mark = '"'$(i3-msg -t get_marks | jq --raw-output .[] | rofi -dmenu -p 'Focus mark')'"'] focus
 
