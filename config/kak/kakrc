@@ -25,6 +25,7 @@ colorscheme dracula
 set-option global ui_options ncurses_status_on_top=yes ncurses_assistant=cat ncurses_enable_mouse=no
 set-option global autoreload yes
 set-option global scrolloff 3,5
+set-option global tabstop 2
 set-option global indentwidth 2
 set-option global makecmd 'make --jobs=8'
 set-option global grepcmd 'rg --column --with-filename'
@@ -173,9 +174,9 @@ hook global InsertChar '[jk]' %{ try %{
   execute-keys <esc>
 }}
 
-hook global InsertChar \t %{
-  execute-keys -draft -itersel h@
-}
+hook global InsertChar \t %{ try %{
+  execute-keys -draft 'h<a-h><a-k>\A\h+\z<ret><a-;>;@'
+}}
 
 map global normal <ret> :
 map global normal <backspace> ';'
