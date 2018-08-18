@@ -5,6 +5,8 @@ trap "rm --recursive $TMP" EXIT
 
 FILTER=${FILTER:-fzf}
 
+format=${1:-'#{item.enclosure.url}'}
+
 curl --silent --location radiokawa.com/les-archives/ |
 pcregrep --only-matching=1 'radiokawa.com/([a-z-]+/[a-z-]+)/' |
 egrep --invert-match '^(comments|voix|wp)' |
@@ -19,6 +21,6 @@ test $? = 0 || {
 while read emission; do
   echo $emission > $TMP/emission
   IFS=/ read category name < $TMP/emission
-  rss-get http://feeds.radiokawa.com/podcast_$name.xml '#{item.enclosure.url}' |
+  rss-get http://feeds.radiokawa.com/podcast_$name.xml "$format" |
   tac
 done < $TMP/emissions
