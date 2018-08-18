@@ -23,5 +23,5 @@ test $? = 0 || {
 while read emission; do
   echo $emission > $TMP/emission
   IFS=/ read category name < $TMP/emission
-  rss-get -reverse http://feeds.radiokawa.com/podcast_$name.xml "$format" "$separator"
+  rss-get -reverse -- http://feeds.radiokawa.com/podcast_$name.xml "$format" "$separator"
 done < $TMP/emissions
