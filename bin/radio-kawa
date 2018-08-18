@@ -4,9 +4,11 @@ TMP=$(mktemp --directory)
 trap "rm --recursive $TMP" EXIT
 
 FILTER=${FILTER:-cat}
+GREPER=${GREPER:-grep}
 
-format=${1:-'#{item.enclosure.url} #{item.title}'}
-separator=${2:-'
+pattern=${1:-.}
+format=${2:-'#{item.enclosure.url} #{item.title}'}
+separator=${3:-'
 '}
 
 curl --silent --location radiokawa.com/les-archives/ |
@@ -14,6 +16,7 @@ pcregrep --only-matching=1 'radiokawa.com/([a-z-]+/[a-z-]+)/' |
 egrep --invert-match '^(comments|voix|wp)' |
 sort |
 uniq |
+$GREPER "$pattern" |
 $FILTER > $TMP/emissions
 
 test $? = 0 || {
