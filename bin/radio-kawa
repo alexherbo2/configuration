@@ -2,7 +2,7 @@
 
 FILTER=${FILTER:-fzf}
 
-emission=$(
+emissions=$(
   curl --silent --location radiokawa.com/les-archives/ |
   pcregrep --only-matching=1 'radiokawa.com/([a-z-]+/[a-z-]+)/' |
   egrep --invert-match '^(comments|voix|wp)' |
@@ -15,9 +15,10 @@ test $? = 0 || {
   exit 1
 }
 
-IFS=/ read category name <<EOF
-  $emission
+for emission in $emissions; do
+  IFS=/ read category name <<EOF
+    $emission
 EOF
-
-rss-get http://feeds.radiokawa.com/podcast_$name.xml '#{item.enclosure.url}' |
-tac
+  rss-get http://feeds.radiokawa.com/podcast_$name.xml '#{item.enclosure.url}' |
+  tac
+done
