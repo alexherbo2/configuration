@@ -3,7 +3,7 @@
 TMP=$(mktemp --directory)
 trap "rm --recursive $TMP" EXIT
 
-FILTER=${FILTER:-fzf}
+FILTER=${FILTER:-cat}
 
 format=${1:-'#{item.enclosure.url}'}
 separator=${2:-'
