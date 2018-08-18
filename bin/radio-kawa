@@ -5,7 +5,7 @@ trap "rm --recursive $TMP" EXIT
 
 FILTER=${FILTER:-cat}
 
-format=${1:-'#{item.enclosure.url}'}
+format=${1:-'#{item.enclosure.url} #{item.title}'}
 separator=${2:-'
 '}
 
