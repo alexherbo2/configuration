@@ -1,0 +1,22 @@
+#!/bin/sh
+
+test $# = 0 && {
+  echo 'Usage: countdown {future}' > /dev/stderr
+  echo 'Prefix @{future} for epoch' > /dev/stderr
+  exit 1
+}
+
+now() { date +%s; }
+
+future=$(date --date "$1" +%s) || exit 1
+
+while :
+do
+  count=$(( $future - $(now) ))
+  test $count -le 0 && {
+    break
+  }
+  duration=$(friendly-duration $(( $count * 1000 )))
+  printf '%s\r' "$duration"
+  sleep 1
+done
