@@ -1,0 +1,15 @@
+#!/bin/sh
+
+game=~/games/windows/dofus
+page=https://dofus.com/en/mmorpg/download
+source=https://download.dofus.com/zip/win/
+download=http://dl.ak.ankama.com/games/dofus2/manual/dofus-windows.zip
+archive=$game/$(basename $download)
+
+rm --force --recursive $game
+mkdir --parents $game
+cd $game
+echo $page → $source → $download
+wget $download
+extract $archive
+rm $archive
