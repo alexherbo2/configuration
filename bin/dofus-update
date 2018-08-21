@@ -6,13 +6,15 @@ source=https://download.dofus.com/zip/win/
 download=http://dl.ak.ankama.com/games/dofus2/manual/dofus-windows.zip
 archive=$game/$(basename $download)
 
-echo Regenerating $game
-rm --force --recursive $game
-mkdir --parents $game
+test -f $archive || {
+  echo Regenerating $game
+  rm --force --recursive $game
+  mkdir --parents $game
+}
 echo Entering $game
 cd $game
 echo Downloading $page → $source → $download → $archive
-wget $download
+wget --continue $download
 echo Extracting $archive
 extract $archive
 echo Removing $archive
