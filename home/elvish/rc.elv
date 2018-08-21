@@ -133,6 +133,8 @@ alias:new tree exa --tree
 alias:new cp clone
 alias:new rm trash
 alias:new grep rg
+# Configure curl to be quiet (but not silent)
+alias:new curl e:curl --silent --show-error --location
 alias:new gist e:gist --open
 alias:new attach e:attach -filter "'fzf --query $path'"
 alias:new synapse attach synapse
