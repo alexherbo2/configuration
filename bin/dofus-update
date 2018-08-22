@@ -16,6 +16,6 @@ cd $game
 echo Downloading $page → $source → $download → $archive
 wget --continue $download
 echo Extracting $archive
-extract $archive
+unzip $archive
 echo Removing $archive
 rm $archive
