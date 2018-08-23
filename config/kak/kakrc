@@ -351,10 +351,9 @@ hook global BufOpenFile '.*/diary/\d{4}\.md' %{
 }
 
 hook global BufOpenFile ".*/diary/%sh(date +%Y)\.md" %{
-  hook -group open-diary buffer NormalIdle .* %{
+  hook -once buffer NormalIdle .* %{
     evaluate-commands %sh(printf "execute-keys '/^# %s$<ret>'" $(date +%F.%a))
     execute-keys '<a-i><a-w>vv'
     set-register / '^# \K\d{4}-\d{2}-\d{2}\.\w{3}'
-    remove-hooks buffer open-diary
   }
 }
