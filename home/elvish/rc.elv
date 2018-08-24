@@ -210,10 +210,6 @@ alias:new scu synapse-unfinished
 # Brown noise
 alias:new i isolate
 
-# Abbreviations ────────────────────────────────────────────────────────────────
-
-edit:abbr[rk] = radio-kawa
-
 # Key-bindings ─────────────────────────────────────────────────────────────────
 
 # Navigation
