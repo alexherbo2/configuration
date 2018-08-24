@@ -132,7 +132,7 @@ bindsym Mod4+Shift+b border pixel
 
 # Search
 bindsym Mod4+slash exec i3-window-commander focus "rofi -dmenu -p 'Search window'"
-bindsym Mod4+Shift+slash exec i3-window-commander 'move workspace current' "rofi -dmenu -p 'Bring window'"
+bindsym Mod4+Shift+slash exec "i3-window-commander 'move workspace current, focus' \\"rofi -dmenu -p 'Bring window'\\""
 
 # Rename
 bindsym Mod4+r exec xdotool getactivewindow set_window --name "$(rofi -dmenu -p 'Window name')"
