@@ -174,17 +174,6 @@ hook global InsertChar '[jk]' %{ try %{
   execute-keys <esc>
 }}
 
-map global insert <tab> '<a-;><a-gt>'
-map global insert <s-tab> '<a-;><lt>'
-
-hook global InsertChar \t %{ try %{
-  execute-keys -draft 'h<a-h><a-k>\A\h+\z<ret><a-;>;@'
-}}
-
-hook global InsertDelete ' ' %{ try %{
-  execute-keys -draft 'h<a-h><a-k>\A\h+\z<ret>i<space><esc><lt>'
-}}
-
 map global normal <ret> :
 map global normal <backspace> ';'
 map global normal <tab> '<a-;>'
@@ -231,6 +220,19 @@ map global user q -docstring 'Play macro on marked buffers' ':execute-keys-flag 
 # Highlighters
 map global user l -docstring 'Line numbers' ':toggle-highlighter window/ number-lines<ret>'
 map global user w -docstring 'Wrap' ':toggle-highlighter window/ wrap -word<ret>'
+
+# Indentation
+
+map global insert <tab> '<a-;><a-gt>'
+map global insert <s-tab> '<a-;><lt>'
+
+hook global InsertChar \t %{ try %{
+  execute-keys -draft 'h<a-h><a-k>\A\h+\z<ret><a-;>;@'
+}}
+
+hook global InsertDelete ' ' %{ try %{
+  execute-keys -draft 'h<a-h><a-k>\A\h+\z<ret>i<space><esc><lt>'
+}}
 
 # Hooks ────────────────────────────────────────────────────────────────────────
 
