@@ -1,9 +1,6 @@
 command=$XDG_CONFIG_HOME/i3blocks/blocklets/$BLOCK_NAME
 interval=once
 
-[clipboard]
-interval=5
-
 [net-speed enp8s0]
 label=⌥
 interval=5
