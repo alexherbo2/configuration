@@ -12,11 +12,6 @@ interval=5
 label=
 interval=5
 
-[gmail]
-command=user=alexherbo2 password=$(get-password alexherbo2@gmail.com) $XDG_CONFIG_HOME/i3blocks/blocklets/gmail
-label=
-interval=30
-
 [temperature]
 label=
 interval=30
@@ -42,6 +37,5 @@ interval=5
 # Icons
 # https://unicode-table.com/en/2325/
 # https://fontawesome.com/icons/wifi
-# https://fontawesome.com/icons/envelope
 # https://fontawesome.com/icons/thermometer-three-quarters
 # https://fontawesome.com/icons/home
