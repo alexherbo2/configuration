@@ -34,7 +34,6 @@ E:TERMINAL = alacritty
 E:BROWSER = chromium
 E:EDITOR = kak-connect
 E:KAK_CLIENT = client0
-E:PAGER = kak-pager
 E:MANPAGER = kak-man-pager
 E:GREPER = rg
 E:FILTER = fzf
