@@ -4,7 +4,7 @@ font pango:DejaVu
 gaps inner 10
 workspace_layout tabbed
 default_border pixel
-default_floating_border pixel
+default_floating_border normal
 floating_modifier Mod4
 workspace_auto_back_and_forth yes
 
