@@ -6,7 +6,7 @@ mode=$(cat $container/link_mode)
 
 [ $mode = 1 ] &&
 
-net-speed measure $interface |
+net-speed $interface |
 sed \
   --expression s/'\.[0-9]\+'//g \
   --expression s/'[0-9]\+ B'/'0 KB'/g
