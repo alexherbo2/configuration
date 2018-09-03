@@ -90,6 +90,8 @@ define-command find -params 1 -shell-candidates 'find -type f' 'edit %arg(1)'
 
 define-command git-edit -params 1 -shell-candidates 'git ls-files' 'edit %arg(1)'
 
+define-command git-edit-force 'edit!; git checkout'
+
 define-command gist -params .. %{ echo %sh{
   printf %s "$kak_selection" | gist --open $@
 }}
@@ -142,6 +144,7 @@ define-command grep-period -params 4.. -docstring 'grep-period <pattern> <format
 alias global f find
 alias global g git
 alias global ge git-edit
+alias global ge! git-edit-force
 alias global t terminal
 alias global df distraction-free-toggle
 
