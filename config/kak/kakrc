@@ -30,12 +30,10 @@ set-option global indentwidth 2
 set-option global makecmd 'make --jobs=8'
 set-option global grepcmd 'rg --column --with-filename'
 
-set-option global snippets %{{
-  "->": "→",
-  "<-": "←",
-  "^": "↑",
-  "v": "↓"
-}}
+set-option -add global snippets '->' '→'
+set-option -add global snippets '<-' '←'
+set-option -add global snippets '^' '↑'
+set-option -add global snippets 'v' '↓'
 
 hook global WinCreate .* %{
   add-highlighter window/ number-lines
@@ -261,9 +259,7 @@ hook global NormalKey '[ydc]' %{
 # Kakoune
 
 hook global WinSetOption filetype=kak %{
-  set-option window snippets %{{
-    "def": "define-command X %{X}<esc><a-/>X<ret><a-n>c"
-  }}
+  set-option -add window snippets def 'define-command X %{X}<esc><a-/>X<ret><a-n>c'
 }
 
 # Highlighters ─────────────────────────────────────────────────────────────────
@@ -342,14 +338,12 @@ hook global WinCreate '.*/diary/\d{4}\.md' %{
 }
 
 hook global BufOpenFile '.*/diary/\d{4}\.md' %{
-  set-option buffer snippets %{{
-    "td": "To do ",
-    "tb": "To do Buy ",
-    "tc": "To do Call ",
-    "tg": "To do Go to ",
-    "tr": "To do Read ",
-    "tw": "To do Watch "
-  }}
+  set-option -add buffer snippets td 'To do '
+  set-option -add buffer snippets tb 'To do Buy '
+  set-option -add buffer snippets tc 'To do Call '
+  set-option -add buffer snippets tg 'To do Go to '
+  set-option -add buffer snippets tr 'To do Read '
+  set-option -add buffer snippets tw 'To do Watch '
   alias buffer td gtd-grep-daily
   alias buffer tw gtd-grep-weekly
   map buffer normal <a-d> '/%sh(date +%F.%a)<a-!><ret>:set-register / "^# \K\d{4}-\d{2}-\d{2}\.\w{3}"<ret>'
