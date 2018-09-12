@@ -36,10 +36,11 @@ set-option -add global snippets '<-' '←'
 set-option -add global snippets '^' '↑'
 set-option -add global snippets 'v' '↓'
 
+add-highlighter global/ number-lines
+add-highlighter global/ show-matching
+add-highlighter global/ show-whitespaces
+
 hook global WinCreate .* %{
-  add-highlighter window/ number-lines
-  add-highlighter window/ show-matching
-  add-highlighter window/ show-whitespaces
   phantom-enable
   search-highlighter-enable
   volatile-highlighter-enable
