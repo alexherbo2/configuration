@@ -8,6 +8,7 @@ pathogen-infect "%opt(github)/alexherbo2/auto-pairs.kak"
 pathogen-infect "%opt(github)/alexherbo2/distraction-free.kak"
 pathogen-infect "%opt(github)/alexherbo2/flag.kak"
 pathogen-infect "%opt(github)/alexherbo2/move-line.kak"
+pathogen-infect "%opt(github)/alexherbo2/phantom.kak"
 pathogen-infect "%opt(github)/alexherbo2/search-highlighter.kak"
 pathogen-infect "%opt(github)/alexherbo2/shell.kak"
 pathogen-infect "%opt(github)/alexherbo2/snippets.kak"
@@ -39,6 +40,7 @@ hook global WinCreate .* %{
   add-highlighter window/ number-lines
   add-highlighter window/ show-matching
   add-highlighter window/ show-whitespaces
+  phantom-enable
   search-highlighter-enable
   volatile-highlighter-enable
   auto-pairs-enable
