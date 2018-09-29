@@ -124,6 +124,10 @@
   # bspwm
   services.xserver.windowManager.bspwm.enable = true;
 
+  # Desktop managers
+  # Plasma
+  services.xserver.desktopManager.plasma5.enable = true;
+
   # Compositor for window managers
   services.compton.enable = true;
 
@@ -228,6 +232,7 @@
     pcre
     peek
     peruse
+    plasma-desktop
     polybar
     python37
     qemu
