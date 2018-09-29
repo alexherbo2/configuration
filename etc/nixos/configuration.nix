@@ -171,6 +171,7 @@
     dejavu_fonts
     discord
     docker
+    dolphin
     dolphinEmu
     dtach
     dunst
