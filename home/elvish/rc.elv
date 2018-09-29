@@ -124,6 +124,7 @@ fn diary {
 }
 
 # Hijack
+alias:new sudo e:sudo --login
 alias:new ipd e:ipd -4
 alias:new kak kak-connect
 alias:new cat bat
