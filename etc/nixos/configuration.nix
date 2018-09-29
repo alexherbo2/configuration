@@ -267,7 +267,7 @@
     xorg.xrdb
     yarn
     youtube-dl
-    zathura
+    # zathura
     zip
   ];
 
