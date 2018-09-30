@@ -135,7 +135,7 @@
   services.xserver.desktopManager.plasma5.enable = true;
 
   # Qt
-  programs.qt5ct.enable = true;
+  # programs.qt5ct.enable = true;
 
   # Compositor for window managers
   services.compton.enable = true;
