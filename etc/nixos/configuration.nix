@@ -89,7 +89,7 @@
   # Variables ──────────────────────────────────────────────────────────────────
 
   environment.variables = {
-    XDG_CURRENT_DESKTOP = "kde";
+    # XDG_CURRENT_DESKTOP = "kde";
   };
 
   # Services ───────────────────────────────────────────────────────────────────
@@ -132,7 +132,7 @@
 
   # Desktop managers
   # Plasma
-  services.xserver.desktopManager.plasma5.enable = true;
+  # services.xserver.desktopManager.plasma5.enable = true;
 
   # Qt
   programs.qt5ct.enable = true;
