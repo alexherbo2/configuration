@@ -189,6 +189,7 @@
     dtach
     dunst
     elvish
+    emacs
     exa
     fdm
     ffmpeg
