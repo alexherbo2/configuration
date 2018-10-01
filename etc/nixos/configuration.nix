@@ -193,6 +193,7 @@
     exa
     fdm
     ffmpeg
+    file
     font-awesome_5
     fzf
     gcc
