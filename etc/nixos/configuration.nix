@@ -267,6 +267,7 @@
     sox
     sshfs
     sxhkd
+    tig
     tmux
     tor
     unrar
