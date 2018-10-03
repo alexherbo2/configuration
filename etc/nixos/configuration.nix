@@ -271,6 +271,7 @@
     unzip
     vanilla-dmz
     virtualbox
+    vis
     vscode
     weechat
     wget
