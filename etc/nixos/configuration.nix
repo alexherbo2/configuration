@@ -249,6 +249,7 @@
     polybar
     python37
     qemu
+    ranger
     redshift
     ripgrep
     rofi
