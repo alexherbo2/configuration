@@ -271,6 +271,7 @@
     unzip
     vanilla-dmz
     virtualbox
+    vscode
     weechat
     wget
     wine
