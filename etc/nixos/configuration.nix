@@ -266,6 +266,7 @@
     socat
     sox
     sshfs
+    steam
     sxhkd
     tig
     tmux
