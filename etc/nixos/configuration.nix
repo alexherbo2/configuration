@@ -231,6 +231,7 @@
     mpv
     msmtp
     ncftp
+    neovim
     nettools
     networkmanagerapplet
     nginx
