@@ -222,6 +222,7 @@
     kdeApplications.kdenlive
     leiningen
     lemonbar-xft
+    lf
     libnotify
     lispPackages.quicklisp
     llvm
