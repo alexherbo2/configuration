@@ -206,6 +206,7 @@
     gparted
     gptfdisk
     graphviz
+    gsmartcontrol
     gtkpod
     htop
     hunspell
@@ -258,6 +259,7 @@
     sddm
     setroot
     shards
+    smartmontools
     socat
     sox
     sshfs
