@@ -87,9 +87,9 @@ hook global WinCreate .* %{
 
 # Commands ─────────────────────────────────────────────────────────────────────
 
-define-command find -params 1 -shell-candidates 'find -type f' 'edit %arg(1)'
+define-command find -params 1 -shell-script-candidates 'find -type f' 'edit %arg(1)'
 
-define-command git-edit -params 1 -shell-candidates 'git ls-files' 'edit %arg(1)'
+define-command git-edit -params 1 -shell-script-candidates 'git ls-files' 'edit %arg(1)'
 
 define-command git-edit-force 'edit!; git checkout'
 
