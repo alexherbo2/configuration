@@ -177,6 +177,7 @@
     clang
     cockatrice
     compton
+    cool-retro-term
     crystal
     ctags
     curl
