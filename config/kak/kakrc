@@ -31,6 +31,7 @@ set-option global indentwidth 2
 set-option global makecmd 'make --jobs=8'
 set-option global grepcmd 'rg --column --with-filename'
 
+set-option -add global auto_pairs “ ” ‘ ’ « » ‹ ›
 set-option -add global snippets '->' '→'
 set-option -add global snippets '<-' '←'
 set-option -add global snippets '^' '↑'
