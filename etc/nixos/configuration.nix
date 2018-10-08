@@ -204,6 +204,7 @@
     gitAndTools.diff-so-fancy
     gnumake
     go
+    godot
     gparted
     gptfdisk
     graphviz
