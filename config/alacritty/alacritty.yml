@@ -26,7 +26,7 @@ font:
   italic:
     family: monospace
 
-  size: 10.0
+  size: 9.0
 
   # Extra space around each character.
   # X: Letter spacing
