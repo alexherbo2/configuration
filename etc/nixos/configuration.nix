@@ -114,6 +114,9 @@
   # Sound
   sound.enable = true;
   hardware.pulseaudio.enable = true;
+  # Explicit PulseAudio support in applications
+  # https://nixos.wiki/wiki/PulseAudio#Explicit_PulseAudio_support_in_applications
+  nixpkgs.config.pulseaudio = true;
 
   # X11
   services.xserver.enable = true;
