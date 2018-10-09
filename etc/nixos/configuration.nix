@@ -273,6 +273,7 @@
     sshfs
     steam
     sxhkd
+    sxiv
     tig
     tmux
     tor
