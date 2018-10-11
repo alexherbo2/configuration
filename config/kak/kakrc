@@ -14,6 +14,7 @@ pathogen-infect "%opt(github)/alexherbo2/shell.kak"
 pathogen-infect "%opt(github)/alexherbo2/snippets.kak"
 pathogen-infect "%opt(github)/alexherbo2/toggle-highlighter.kak"
 pathogen-infect "%opt(github)/alexherbo2/volatile-highlighter.kak"
+pathogen-infect "%opt(github)/occivink/kakoune-sudo-write"
 
 evaluate-commands %sh(kak-lsp --kakoune)
 
