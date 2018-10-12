@@ -182,6 +182,10 @@ hook global InsertChar '[jk]' %{ try %{
   execute-keys <esc>
 }}
 
+# Move macros to ^
+map global normal ^ q
+map global normal <a-^> Q
+
 map global normal <ret> :
 map global normal <backspace> ';'
 map global normal <tab> '<a-;>'
