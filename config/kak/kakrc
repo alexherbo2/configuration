@@ -144,6 +144,7 @@ define-command grep-period -params 4.. -docstring 'grep-period <pattern> <format
 
 # Aliases ──────────────────────────────────────────────────────────────────────
 
+alias global bd delete-buffer
 alias global f find
 alias global g git
 alias global ge git-edit
