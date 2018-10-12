@@ -186,6 +186,13 @@ hook global InsertChar '[jk]' %{ try %{
 map global normal ^ q
 map global normal <a-^> Q
 
+# Move b to q, so that
+# q, w, e actions are aligned
+map global normal q b
+map global normal Q B
+map global normal <a-q> <a-b>
+map global normal <a-Q> <a-B>
+
 map global normal <ret> :
 map global normal <backspace> ';'
 map global normal <tab> '<a-;>'
