@@ -119,7 +119,7 @@ define-command capitalize -docstring 'Capitalize selections' %{
 }
 
 define-command math-command %{
-  prompt 'Math:' 'execute-keys "a%val(text)<esc>|bc<ret>"'
+  prompt 'Math:' 'execute-keys "i[<esc>a]<esc>Ha%val(text)<esc>|bc<ret><a-i>ri<backspace><esc>a<del><esc>"'
 }
 
 define-command terminal -params .. %{
