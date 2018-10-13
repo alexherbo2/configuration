@@ -225,8 +225,8 @@ map global normal '#' :comment-line<ret>
 
 map global normal <a-`> :capitalize<ret>
 
-map global normal = :math-command<ret>
-map global normal + :math-command<ret><up><ret>
+map global normal = :<space>math-command<ret>
+map global normal + :<space>math-command<ret><up><ret>
 
 # User mappings
 
