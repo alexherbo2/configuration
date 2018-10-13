@@ -206,6 +206,7 @@
     git
     gitAndTools.diff-so-fancy
     gnumake
+    gnuplot
     go
     godot
     gparted
