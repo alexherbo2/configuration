@@ -15,6 +15,7 @@ pathogen-infect "%opt(github)/alexherbo2/snippets.kak"
 pathogen-infect "%opt(github)/alexherbo2/toggle-highlighter.kak"
 pathogen-infect "%opt(github)/alexherbo2/volatile-highlighter.kak"
 pathogen-infect "%opt(github)/Delapouite/kakoune-buffers"
+pathogen-infect "%opt(github)/Delapouite/kakoune-text-objects"
 pathogen-infect "%opt(github)/occivink/kakoune-sudo-write"
 pathogen-infect "%opt(github)/occivink/kakoune-vertical-selection"
 
