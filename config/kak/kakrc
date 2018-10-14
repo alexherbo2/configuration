@@ -101,6 +101,10 @@ define-command scratch -params .. -docstring 'Create a scratch buffer (Default: 
   edit -scratch %sh(echo "${@:-*scratch*}")
 }
 
+define-command read -params .. -file-completion -docstring 'Create a buffer in read-only mode (Default: Current)' %{
+  edit -readonly %sh(echo "${@:-$kak_bufname}")
+}
+
 define-command find -params 1 -shell-script-candidates 'find -type f' 'edit %arg(1)'
 
 define-command git-edit -params 1 -shell-script-candidates 'git ls-files' 'edit %arg(1)'
@@ -153,6 +157,7 @@ define-command grep-period -params 4.. -docstring 'grep-period <pattern> <format
 # Aliases ──────────────────────────────────────────────────────────────────────
 
 alias global s scratch
+alias global r read
 alias global f find
 alias global g git
 alias global ge git-edit
