@@ -5,6 +5,7 @@ declare-option str github %sh(echo ~/repositories/github.com)
 source "%opt(github)/alexherbo2/pathogen.kak/rc/pathogen.kak"
 
 pathogen-infect "%opt(github)/alexherbo2/auto-pairs.kak"
+pathogen-infect "%opt(github)/alexherbo2/bc.kak"
 pathogen-infect "%opt(github)/alexherbo2/distraction-free.kak"
 pathogen-infect "%opt(github)/alexherbo2/flag.kak"
 pathogen-infect "%opt(github)/alexherbo2/move-line.kak"
@@ -120,10 +121,6 @@ define-command capitalize -docstring 'Capitalize selections' %{
   select %opt(capitalize_selections)
 }
 
-define-command math-command %{
-  prompt 'Math:' 'execute-keys "i[<esc>a]<esc>Ha%val(text)<esc>|bc<ret><a-i>ri<backspace><esc>a<del><esc>"'
-}
-
 define-command terminal -params .. %{
   shell \
     -export session \
@@ -227,8 +224,8 @@ map global normal '#' :comment-line<ret>
 
 map global normal <a-`> :capitalize<ret>
 
-map global normal = :<space>math-command<ret>
-map global normal + :<space>math-command<ret><up><ret>
+map global normal = -docstring 'Prompt for bc' ':<space>bc-prompt<ret>'
+map global normal + -docstring 'Repeat last bc command' ':<space>bc-prompt<ret><up><ret>'
 
 # User mappings
 
