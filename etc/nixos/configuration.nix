@@ -209,6 +209,7 @@
     gnuplot
     go
     godot
+    gource
     gparted
     gptfdisk
     graphviz
