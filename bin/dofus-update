@@ -3,7 +3,7 @@
 game=~/games/windows/dofus
 page=https://dofus.com/en/mmorpg/download
 source=https://download.dofus.com/zip/win/
-download=http://dl.ak.ankama.com/games/dofus2/manual/dofus-windows.zip
+download=https://ankama.akamaized.net/games/dofus2/manual/dofus-windows.zip
 archive=$game/$(basename $download)
 
 test -f $archive || {
