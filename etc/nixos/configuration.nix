@@ -195,6 +195,7 @@
     elvish
     emacs
     exa
+    fd
     fdm
     ffmpeg
     file
