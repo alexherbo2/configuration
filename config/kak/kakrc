@@ -10,6 +10,7 @@ pathogen-infect "%opt(github)/alexherbo2/distraction-free.kak"
 pathogen-infect "%opt(github)/alexherbo2/flag.kak"
 pathogen-infect "%opt(github)/alexherbo2/move-line.kak"
 pathogen-infect "%opt(github)/alexherbo2/phantom.kak"
+pathogen-infect "%opt(github)/alexherbo2/replace.kak"
 pathogen-infect "%opt(github)/alexherbo2/search-highlighter.kak"
 pathogen-infect "%opt(github)/alexherbo2/shell.kak"
 pathogen-infect "%opt(github)/alexherbo2/snippets.kak"
@@ -245,6 +246,7 @@ map global normal <space> ,
 map global user b -docstring 'Open Chrome' '<a-|>xargs --replace chromium {}<ret>'
 map global user c -docstring 'Chronic (YYYY-MM-DD)' '|chronic %F<ret>'
 map global user C -docstring 'Chronic (Replace)' '|chronic<space>'
+map global user r -docstring 'Replace' ':<space>replace<ret>'
 map global user s -docstring 'Surround' ':<space>auto-pairs-surround<ret>'
 map global user S -docstring 'Surround++' ':<space>auto-pairs-surround _ _ * *<ret>'
 map global user t -docstring 'Translate' '|deepl translate --targetLanguage=FR<ret>'
