@@ -270,11 +270,6 @@ map global user q -docstring 'Play macro on marked buffers' ':execute-keys-flag 
 map global user l -docstring 'Line numbers' ':toggle-highlighter window/ number-lines<ret>'
 map global user w -docstring 'Wrap' ':toggle-highlighter window/ wrap -word<ret>'
 
-# Indentation
-
-map global insert <tab> '<a-;><a-gt>'
-map global insert <s-tab> '<a-;><lt>'
-
 # Hooks ────────────────────────────────────────────────────────────────────────
 
 # Auto-mkdir
