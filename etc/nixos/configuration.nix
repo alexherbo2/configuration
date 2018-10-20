@@ -277,6 +277,7 @@
     steam
     sxhkd
     sxiv
+    tectonic
     tig
     tmux
     tor
