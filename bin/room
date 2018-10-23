@@ -1,0 +1,11 @@
+#!/bin/sh
+
+light=${1:-20}
+night=${2:-0.2}
+
+# Float to integer
+current=$(echo "($(xbacklight) + 0.5) / 1" | bc)
+
+test $light = $current && value=$night || value=$light
+
+xbacklight = $value
