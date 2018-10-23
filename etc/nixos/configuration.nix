@@ -216,6 +216,7 @@
     graphviz
     gsmartcontrol
     gtkpod
+    heroku
     htop
     hunspell
     hunspellDicts.en-us
