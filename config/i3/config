@@ -206,6 +206,9 @@ bindsym Mod4+Shift+r exec i3-msg rename workspace to '"'$(rofi -dmenu -p 'Worksp
 # Transparency
 bindsym Mod4+Shift+t exec transset --actual
 
+# Room
+bindsym Mod4+F2 exec room
+
 # Password manager
 bindsym Mod4+Shift+y exec menu-password $(menu-password | rofi -dmenu -p Password) | xclip-selection
 
