@@ -236,6 +236,7 @@
     lispPackages.quicklisp
     llvm
     lxc
+    mgba
     mkvtoolnix
     mosh
     mpv
