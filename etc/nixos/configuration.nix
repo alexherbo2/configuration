@@ -309,6 +309,7 @@
     youtube-dl
     zathura
     zip
+    zsnes
   ];
 
 }
