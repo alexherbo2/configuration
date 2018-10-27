@@ -217,6 +217,7 @@
     gsmartcontrol
     gtkpod
     heroku
+    higan
     htop
     hunspell
     hunspellDicts.en-us
