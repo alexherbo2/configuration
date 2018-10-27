@@ -253,6 +253,7 @@
     pandoc
     pavucontrol
     pcre
+    pcsxr
     peek
     peruse
     plasma-desktop
