@@ -275,6 +275,7 @@
     setroot
     shards
     smartmontools
+    snes9x-gtk
     socat
     sox
     sshfs
