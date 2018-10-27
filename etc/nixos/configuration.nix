@@ -253,6 +253,7 @@
     pandoc
     pavucontrol
     pcre
+    pcsx2
     pcsxr
     peek
     peruse
