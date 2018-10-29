@@ -108,7 +108,7 @@ define-command read -params .. -file-completion -docstring 'Create a buffer in r
   edit -readonly %sh(echo "${@:-$kak_bufname}")
 }
 
-define-command find -params 1 -shell-script-candidates 'find -type f' 'edit %arg(1)'
+define-command find -params 1 -shell-script-candidates 'fd --type file' 'edit %arg(1)'
 
 define-command git-edit -params 1 -shell-script-candidates 'git ls-files' 'edit %arg(1)'
 
