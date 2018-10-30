@@ -114,6 +114,9 @@
   # Sound
   sound.enable = true;
   hardware.pulseaudio.enable = true;
+  # Issue: Enable PulseAudio to work with X11 tools
+  # https://github.com/NixOS/nixpkgs/issues/11970
+  hardware.pulseaudio.package = pkgs.pulseaudioFull;
   # Explicit PulseAudio support in applications
   # https://nixos.wiki/wiki/PulseAudio#Explicit_PulseAudio_support_in_applications
   nixpkgs.config.pulseaudio = true;
