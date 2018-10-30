@@ -183,6 +183,7 @@ alias:new t exa --tree
 
 # Attach
 alias:new a attach
+fn prj { project }
 
 # Browser
 alias:new b launch chromium
