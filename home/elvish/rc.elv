@@ -111,6 +111,7 @@ fn project {
   attach -tag Terminal elvish > /dev/null
   attach -tag Git elvish > /dev/null
   attach -tag Editor kak
+  attach
 }
 
 # GTD
