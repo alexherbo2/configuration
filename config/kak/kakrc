@@ -19,6 +19,7 @@ pathogen-infect "%opt(github)/alexherbo2/toggle-highlighter.kak"
 pathogen-infect "%opt(github)/alexherbo2/volatile-highlighter.kak"
 pathogen-infect "%opt(github)/Delapouite/kakoune-buffers"
 pathogen-infect "%opt(github)/Delapouite/kakoune-text-objects"
+pathogen-infect "%opt(github)/occivink/kakoune-find"
 pathogen-infect "%opt(github)/occivink/kakoune-sudo-write"
 pathogen-infect "%opt(github)/occivink/kakoune-vertical-selection"
 
@@ -167,6 +168,7 @@ alias global fa find-edit-all
 alias global g git
 alias global ge git-edit
 alias global ge! git-edit-force
+alias global fac find-apply-changes
 alias global t terminal
 alias global df distraction-free-toggle
 
