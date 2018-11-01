@@ -108,8 +108,8 @@ define-command read -params .. -file-completion -docstring 'Create a buffer in r
   edit -readonly %sh(echo "${@:-$kak_bufname}")
 }
 
-define-command find -params 1 -shell-script-candidates 'fd --type file' 'edit %arg(1)'
-define-command find-all -params 1 -shell-script-candidates 'fd --no-ignore --type file' 'edit %arg(1)'
+define-command find-edit -params 1 -shell-script-candidates 'fd --type file' 'edit %arg(1)'
+define-command find-edit-all -params 1 -shell-script-candidates 'fd --no-ignore --type file' 'edit %arg(1)'
 
 define-command git-edit -params 1 -shell-script-candidates 'git ls-files' 'edit %arg(1)'
 
@@ -162,8 +162,8 @@ define-command grep-period -params 4.. -docstring 'grep-period <pattern> <format
 
 alias global s scratch
 alias global r read
-alias global f find
-alias global fa find-all
+alias global f find-edit
+alias global fa find-edit-all
 alias global g git
 alias global ge git-edit
 alias global ge! git-edit-force
