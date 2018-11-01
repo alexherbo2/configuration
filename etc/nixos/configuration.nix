@@ -42,7 +42,7 @@
 
   # Automatic Upgrades
   # https://nixos.org/nixos/manual#idm140737316591792
-  system.autoUpgrade.enable = true;
+  # system.autoUpgrade.enable = true;
 
   # Cleaning the Nix Store
   # https://nixos.org/nixos/manual#sec-nix-gc
