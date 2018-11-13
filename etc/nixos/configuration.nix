@@ -292,7 +292,6 @@
     xorg.xkbcomp
     xorg.xmodmap
     xorg.xrdb
-    yarn
     youtube-dl
     zathura
     zip
