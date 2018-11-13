@@ -268,7 +268,6 @@
     sshfs
     steam
     sxhkd
-    sxiv
     tectonic
     tig
     tmux
