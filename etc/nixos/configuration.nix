@@ -26,7 +26,7 @@
   time.timeZone = "Europe/Paris";
 
   # Unfree
-  # Allow Discord, drivers for Wi-Fi…
+  # Allow Discord
   nixpkgs.config.allowUnfree = true;
 
   # Security
@@ -56,16 +56,6 @@
   # UEFI
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-
-  boot.kernelModules = [
-    # Wi-Fi (Unfree)
-    "wl"
-  ];
-
-  boot.extraModulePackages = [
-    # Wi-Fi (Unfree)
-    config.boot.kernelPackages.broadcom_sta
-  ];
 
   # Users ──────────────────────────────────────────────────────────────────────
 
