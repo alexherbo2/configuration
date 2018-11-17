@@ -1,9 +1,3 @@
 #!/bin/sh
 
-while :
-do
-  count=$(( $count + 1 ))
-  duration=$(friendly-duration $(( $count * 1000 )))
-  printf '%s\r' "$duration"
-  sleep 1
-done
+chromium --app=https://google.com/search?q=stopwatch
