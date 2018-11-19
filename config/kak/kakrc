@@ -9,6 +9,7 @@ pathogen-infect "%opt(github)/alexherbo2/bc.kak"
 pathogen-infect "%opt(github)/alexherbo2/distraction-free.kak"
 pathogen-infect "%opt(github)/alexherbo2/flag.kak"
 pathogen-infect "%opt(github)/alexherbo2/move-line.kak"
+pathogen-infect "%opt(github)/alexherbo2/pad-number.kak"
 pathogen-infect "%opt(github)/alexherbo2/phantom.kak"
 pathogen-infect "%opt(github)/alexherbo2/replace.kak"
 pathogen-infect "%opt(github)/alexherbo2/search-highlighter.kak"
@@ -171,6 +172,7 @@ alias global ge! git-edit-force
 alias global fac find-apply-changes
 alias global t terminal
 alias global df distraction-free-toggle
+alias global pn pad-number
 
 # Buffers
 alias global bd delete-buffer
