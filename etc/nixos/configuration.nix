@@ -138,7 +138,7 @@
   services.redshift.longitude = "2.3522";
 
   # Virtualisation
-  virtualisation.docker.enable = true;
+  # virtualisation.docker.enable = true;
   virtualisation.virtualbox.host.enable = true;
 
   # Packages ───────────────────────────────────────────────────────────────────
