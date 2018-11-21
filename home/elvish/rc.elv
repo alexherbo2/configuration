@@ -106,14 +106,6 @@ fn enter {
 # on #elvish the 2018-03-14 at 17:40:20.
 # https://github.com/zzamboni
 
-# Project
-fn project {
-  attach -tag Terminal elvish > /dev/null
-  attach -tag Git elvish > /dev/null
-  attach -tag Editor kak
-  attach
-}
-
 # GTD
 fn diary {
   try {
@@ -121,7 +113,7 @@ fn diary {
     i3-msg --quiet mark Diary
   } except error { }
   cd ~/documents/diary
-  attach kak (date +%Y).md
+  kak (date +%Y).md
 }
 
 # Hijack
@@ -138,11 +130,6 @@ alias:new grep rg
 alias:new curl e:curl --silent --show-error --location
 alias:new wget e:wget --continue
 alias:new gist e:gist --open
-alias:new attach e:attach -filter "'fzf --query $path'"
-alias:new synapse attach synapse
-alias:new axon attach axon
-alias:new receptor attach receptor
-alias:new rtorrent attach rtorrent
 
 fn mpv [@arguments]{
   try {
@@ -158,9 +145,9 @@ fn weechat {
     i3-msg --quiet mark IRC
   } except error { }
   try {
-    ssh mawww -t attach weechat
+    ssh mawww -t weechat
   } except error {
-    attach weechat
+    e:weechat
   }
 }
 
@@ -180,10 +167,6 @@ alias:new ll exa --long
 alias:new la exa --all
 alias:new lla exa --long --all
 alias:new t exa --tree
-
-# Attach
-alias:new a attach
-fn prj { project }
 
 # Browser
 alias:new b launch chromium
