@@ -131,6 +131,14 @@ alias:new curl e:curl --silent --show-error --location
 alias:new wget e:wget --continue
 alias:new gist e:gist --open
 
+fn git-init [directory]{
+  git init $directory
+  cd $directory
+  repository = (basename $directory)
+  git remote add origin git@github.com:alexherbo2/$repository
+  git remotes
+}
+
 fn mpv [@arguments]{
   try {
     socket = (i3 --get-socketpath 2> /dev/null)
@@ -177,6 +185,7 @@ alias:new k kak-connect
 # Git
 alias:new g git
 alias:new G tig
+alias:new gi git-init
 fn gh [@arguments]{ git-hub $@arguments }
 fn gcd { git-hub:change-directory . }
 
