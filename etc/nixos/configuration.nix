@@ -172,6 +172,7 @@
     curl
     dash
     dejavu_fonts
+    desmume
     discord
     docker
     dolphin
