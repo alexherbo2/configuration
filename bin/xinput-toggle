@@ -1,0 +1,31 @@
+#!/bin/sh
+
+device=$1
+
+case $device in
+  keyboard)
+    name='AT Translated Set 2 keyboard'
+    master=3
+  ;;
+  touchpad)
+    name='SynPS/2 Synaptics TouchPad'
+    master=2
+  ;;
+  *)
+    echo 'No such device' > /dev/stderr
+    exit 1
+  ;;
+esac
+
+identifier=$(
+  xinput |
+  pcregrep --only-matching=1 "$name.+id=([0-9]+)"
+)
+
+if xinput | grep --quiet "↳ $name"; then
+  echo Float
+  xinput float $identifier
+else
+  echo Reattach
+  xinput reattach $identifier $master
+fi
