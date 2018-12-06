@@ -17,6 +17,10 @@
   # You should change this only after NixOS release notes say you should.
   system.stateVersion = "18.03";
 
+  # File systems ───────────────────────────────────────────────────────────────
+
+  boot.supportedFilesystems = [ "zfs" ];
+
   # Options ────────────────────────────────────────────────────────────────────
 
   # Page: https://nixos.org/nixos/options.html
