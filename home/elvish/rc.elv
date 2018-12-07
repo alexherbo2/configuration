@@ -33,6 +33,7 @@ E:XDG_DATA_HOME = ~/.local/share
 E:TERMINAL = alacritty
 E:BROWSER = chromium
 E:EDITOR = kak-connect
+E:KAKOUNE_POSIX_SHELL = /run/current-system/sw/bin/dash
 E:KAK_CLIENT = client0
 E:MANPAGER = kak-man-pager
 E:GREPER = rg
