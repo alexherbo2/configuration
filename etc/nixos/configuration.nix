@@ -272,7 +272,7 @@
     socat
     sox
     sshfs
-    steam
+    # steam
     sxhkd
     tectonic
     tig
