@@ -26,6 +26,7 @@
   # Page: https://nixos.org/nixos/options.html
 
   networking.hostName = "othala";
+  networking.hostId = "0338c82e";
 
   time.timeZone = "Europe/Paris";
 
