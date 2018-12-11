@@ -186,7 +186,7 @@ alias:new k kak-connect
 # Git
 alias:new g git
 alias:new G tig
-alias:new gi git-init
+fn gi [@arguments]{ git-init $@arguments }
 fn gh [@arguments]{ git-hub $@arguments }
 fn gcd { git-hub:change-directory . }
 
