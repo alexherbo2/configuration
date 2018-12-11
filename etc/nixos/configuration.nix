@@ -241,7 +241,7 @@
     nginx
     nix-index
     nodejs-10_x
-    notmuch
+    # notmuch
     ntfs3g
     p7zip
     pandoc
