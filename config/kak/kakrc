@@ -267,11 +267,12 @@ map global user P -docstring 'Paste (Before)' '!xclip -out -selection clipboard<
 map global user R -docstring 'Replace' '|xclip -out -selection clipboard<ret>'
 
 # Flag
-map global user f -docstring 'Flag buffer' ':set-option buffer flags <tab><space>'
-map global user I -docstring 'Mark as important' ':set-option buffer flags important<ret>'
-map global user i -docstring 'Delete buffers not marked as important' ':evaluate-commands-flag \A(?!important) delete-buffer<ret>'
-map global user Q -docstring 'Mark buffer' ':set-option buffer flags marked<ret>'
-map global user q -docstring 'Play macro on marked buffers' ':execute-keys-flag marked q<ret>'
+map global user f -docstring 'Flag buffer' ':<space>set-option buffer flags <tab><space>'
+map global user F -docstring 'Unflag buffer' ':<space>unset-option buffer flags<ret>'
+map global user i -docstring 'Mark as important' ':<space>set-option buffer flags important<ret>'
+map global user I -docstring 'Delete buffers not marked as important' ':<space>evaluate-commands-flag \A(?!important) delete-buffer<ret>'
+map global user q -docstring 'Mark buffer' ':<space>set-option buffer flags marked<ret>'
+map global user Q -docstring 'Play macro on marked buffers' ':<space>execute-keys-flag marked q<ret>'
 
 # Highlighters
 map global user l -docstring 'Line numbers' ':toggle-highlighter window/ number-lines<ret>'
