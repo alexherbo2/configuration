@@ -161,6 +161,15 @@ define-command grep-period -params 4.. -docstring 'grep-period <pattern> <format
   printf "grep '%s' %s" "$regex" "$@"
 }}
 
+# Flag
+
+define-command flag -params .. -shell-script-candidates 'eval "set -- $kak_opt_flags"; printf ''%s\n'' $@' -docstring 'Flag buffer' 'set-option buffer flags %arg(@)'
+define-command unflag -docstring 'Unflag buffer' 'unset-option buffer flags'
+define-command pin -docstring 'Pin buffer' 'set-option buffer flags pinned'
+define-command delete-buffer-unpinned -docstring 'Delete unpinned buffers' 'evaluate-commands-flag \A(?!pinned) delete-buffer'
+define-command mark -docstring 'Mark buffer' 'set-option buffer flags marked'
+define-command play-macro-marked -docstring 'Play macro on marked buffers' 'execute-keys-flag marked q'
+
 # Aliases ──────────────────────────────────────────────────────────────────────
 
 alias global s scratch
@@ -181,6 +190,10 @@ alias global bf buffer-first
 alias global bl buffer-last
 alias global bo buffer-only
 alias global bo! buffer-only-force
+
+# Flag
+alias global dbu delete-buffer-unpinned
+alias global pmm play-macro-marked
 
 # Git
 define-command gw -docstring 'git add' 'write; git add'
@@ -265,14 +278,6 @@ map global user | -docstring 'Sort' '|sort<ret>'
 map global user p -docstring 'Paste (After)' '<a-!>xclip -out -selection clipboard<ret>'
 map global user P -docstring 'Paste (Before)' '!xclip -out -selection clipboard<ret>'
 map global user R -docstring 'Replace' '|xclip -out -selection clipboard<ret>'
-
-# Flag
-map global user f -docstring 'Flag buffer' ':<space>set-option buffer flags <tab><space>'
-map global user F -docstring 'Unflag buffer' ':<space>unset-option buffer flags<ret>'
-map global user i -docstring 'Mark as important' ':<space>set-option buffer flags important<ret>'
-map global user I -docstring 'Delete buffers not marked as important' ':<space>evaluate-commands-flag \A(?!important) delete-buffer<ret>'
-map global user q -docstring 'Mark buffer' ':<space>set-option buffer flags marked<ret>'
-map global user Q -docstring 'Play macro on marked buffers' ':<space>execute-keys-flag marked q<ret>'
 
 # Highlighters
 map global user l -docstring 'Line numbers' ':toggle-highlighter window/ number-lines<ret>'
