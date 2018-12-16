@@ -229,6 +229,7 @@
     lispPackages.quicklisp
     llvm
     lxc
+    lzip
     mgba
     mkvtoolnix
     mosh
