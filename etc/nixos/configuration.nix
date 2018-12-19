@@ -185,7 +185,7 @@
     dtach
     dunst
     elvish
-    # emacs
+    emacs
     exa
     fd
     fdm
