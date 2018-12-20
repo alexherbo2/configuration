@@ -262,6 +262,7 @@
     rofi
     rtorrent
     ruby_2_5
+    rustc
     rustup
     sbcl
     screenkey
