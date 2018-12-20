@@ -25,8 +25,9 @@ pathogen-infect "%opt(github)/Delapouite/kakoune-text-objects"
 pathogen-infect "%opt(github)/occivink/kakoune-find"
 pathogen-infect "%opt(github)/occivink/kakoune-sudo-write"
 pathogen-infect "%opt(github)/occivink/kakoune-vertical-selection"
+pathogen-infect "%opt(github)/ul/kak-lsp/rc"
 
-evaluate-commands %sh(kak-lsp --kakoune)
+lsp-enable
 
 # Color scheme ─────────────────────────────────────────────────────────────────
 
@@ -266,6 +267,8 @@ map global normal + -docstring 'Repeat last bc command' ':<space>bc-prompt<ret><
 map global normal , <space>
 map global normal <space> ,
 map global user <space> -docstring 'Clear selections' <space>
+
+map global user <ret> -docstring 'LSP' ':<space>enter-user-mode lsp<ret>'
 
 map global user b -docstring 'Open Chrome' '<a-|>xargs --replace chromium {}<ret>'
 map global user c -docstring 'Chronic (YYYY-MM-DD)' '|chronic %F<ret>'
