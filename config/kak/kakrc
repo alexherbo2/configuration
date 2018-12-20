@@ -265,6 +265,7 @@ map global normal + -docstring 'Repeat last bc command' ':<space>bc-prompt<ret><
 
 map global normal , <space>
 map global normal <space> ,
+map global user <space> -docstring 'Clear selections' <space>
 
 map global user b -docstring 'Open Chrome' '<a-|>xargs --replace chromium {}<ret>'
 map global user c -docstring 'Chronic (YYYY-MM-DD)' '|chronic %F<ret>'
