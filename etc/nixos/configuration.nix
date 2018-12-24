@@ -194,6 +194,7 @@
     font-awesome_5
     fzf
     gcc
+    gdb
     ghc
     gimp
     git
