@@ -182,6 +182,7 @@ alias global g git
 alias global ge git-edit
 alias global ge! git-edit-force
 alias global fac find-apply-changes
+alias global p portal
 alias global t terminal
 alias global df distraction-free-toggle
 alias global pn pad-number
