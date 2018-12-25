@@ -1,0 +1,8 @@
+#!/bin/sh
+
+kak -E '
+  colorscheme default
+  set-option global scrolloff 0,0
+  remove-highlighter global/show-whitespaces
+  remove-hooks global info-buffers
+' "$@"

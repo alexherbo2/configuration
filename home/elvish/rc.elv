@@ -132,6 +132,14 @@ alias:new curl e:curl --silent --show-error --location
 alias:new wget e:wget --continue
 alias:new gist e:gist --open
 
+fn kak [@arguments]{
+  if ?(test $E:KAKOUNE_PROFILE == asciinema) {
+    kak-asciinema $@arguments
+  } else {
+    e:kak $@arguments
+  }
+}
+
 fn git-init [directory]{
   git init $directory
   cd $directory

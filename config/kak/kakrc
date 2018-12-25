@@ -62,7 +62,7 @@ hook global WinCreate .* %{
   snippets-enable
 }
 
-hook global WinDisplay .* %{
+hook -group info-buffers global WinDisplay .* %{
   info-buffers
 }
 
