@@ -241,8 +241,8 @@ map global normal <a-q> <a-b>
 map global normal <a-Q> <a-B>
 
 # Buffers
-map global normal b ':enter-buffers-mode<ret>'
-map global normal B ':enter-user-mode -lock buffers<ret>'
+map global normal b ':<space>enter-buffers-mode<ret>'
+map global normal B ':<space>enter-user-mode -lock buffers<ret>'
 
 map global normal <ret> :
 map global normal <backspace> ';'
