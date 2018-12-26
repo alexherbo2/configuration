@@ -26,6 +26,7 @@ pathogen-infect "%opt(github)/occivink/kakoune-find"
 pathogen-infect "%opt(github)/occivink/kakoune-sudo-write"
 pathogen-infect "%opt(github)/occivink/kakoune-vertical-selection"
 pathogen-infect "%opt(github)/ul/kak-lsp/rc"
+pathogen-infect "%opt(github)/ul/kak-tree"
 
 lsp-enable
 
