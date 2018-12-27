@@ -257,7 +257,7 @@
     notmuch
     ntfs3g
     p7zip
-    pandoc
+    # pandoc
     pavucontrol
     pcre
     pcsx2
