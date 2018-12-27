@@ -156,6 +156,7 @@
     aegisub
     aircrack-ng
     alacritty
+    android-file-transfer
     asciidoc
     asciinema
     bash
