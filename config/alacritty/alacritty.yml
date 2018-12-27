@@ -10,7 +10,7 @@ window:
     x: 2
     y: 2
 
-  decorations: true
+  decorations: full
 
 tabspaces: 8
 
@@ -47,45 +47,43 @@ font:
 
 render_timer: false
 
-custom_cursor_colors: false
-
 # Dracula
 # https://draculatheme.com
 # https://github.com/alexherbo2/alacritty-dracula-theme
 colors:
   primary:
-    background: 0x282a36
-    foreground: 0xf8f8f2
+    background: '0x282a36'
+    foreground: '0xf8f8f2'
   cursor:
-    text: 0x44475a
-    cursor: 0xf8f8f2
+    text: '0x44475a'
+    cursor: '0xf8f8f2'
   normal:
-    black: 0x282a36
-    red: 0xff5555
-    green: 0x50fa7b
-    yellow: 0xf1fa8c
-    blue: 0x6272a4
-    magenta: 0xff79c6
-    cyan: 0x8be9fd
-    white: 0xf8f8f2
+    black: '0x282a36'
+    red: '0xff5555'
+    green: '0x50fa7b'
+    yellow: '0xf1fa8c'
+    blue: '0x6272a4'
+    magenta: '0xff79c6'
+    cyan: '0x8be9fd'
+    white: '0xf8f8f2'
   bright:
-    black: 0x44475a
-    red: 0xff8888
-    green: 0x82fba0
-    yellow: 0xf7fcbd
-    blue: 0x828fb7
-    magenta: 0xffacdc
-    cyan: 0xbdf3fe
-    white: 0xffffff
+    black: '0x44475a'
+    red: '0xff8888'
+    green: '0x82fba0'
+    yellow: '0xf7fcbd'
+    blue: '0x828fb7'
+    magenta: '0xffacdc'
+    cyan: '0xbdf3fe'
+    white: '0xffffff'
   dim:
-    black: 0x14151b
-    red: 0xff2222
-    green: 0x1ef956
-    yellow: 0xebf85b
-    blue: 0x4d5b86
-    magenta: 0xff46b0
-    cyan: 0x59dffc
-    white: 0xe6e6d1
+    black: '0x14151b'
+    red: '0xff2222'
+    green: '0x1ef956'
+    yellow: '0xebf85b'
+    blue: '0x4d5b86'
+    magenta: '0xff46b0'
+    cyan: '0x59dffc'
+    white: '0xe6e6d1'
 
 visual_bell:
   animation: EaseOutExpo
@@ -100,16 +98,17 @@ mouse:
   double_click: { threshold: 300 }
   triple_click: { threshold: 300 }
 
-  faux_scrollback_lines: 1
+  hide_when_typing: false
+
+  faux_scrolling_lines: 1
 
 selection:
   semantic_escape_chars: ",│`|:\"' ()[]{}<>"
 
 dynamic_title: true
 
-hide_cursor_when_typing: false
-
-cursor_style: Block
+cursor:
+  style: Block
 
 live_config_reload: true
 
