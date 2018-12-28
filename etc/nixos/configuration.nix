@@ -242,6 +242,7 @@
     llvm
     lxc
     lzip
+    maim
     mgba
     mkvtoolnix
     mosh
