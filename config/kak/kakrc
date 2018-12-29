@@ -266,6 +266,13 @@ map global normal <a-`> :capitalize<ret>
 map global normal = -docstring 'Prompt for bc' ':<space>bc-prompt<ret>'
 map global normal + -docstring 'Repeat last bc command' ':<space>bc-prompt<ret><up><ret>'
 
+# Tree-sitter
+
+map global normal <up> ':<space>tree-select-parent-node<ret>'
+map global normal <down> ':<space>tree-select-children<ret>'
+map global normal <right> ':<space>tree-select-next-node<ret>'
+map global normal <left> ':<space>tree-select-previous-node<ret>'
+
 # User mappings
 
 map global normal , <space>
