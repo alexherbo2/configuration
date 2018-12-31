@@ -21,6 +21,7 @@ pathogen-infect "%opt(github)/alexherbo2/snippets.kak"
 pathogen-infect "%opt(github)/alexherbo2/space-indent.kak"
 pathogen-infect "%opt(github)/alexherbo2/toggle-highlighter.kak"
 pathogen-infect "%opt(github)/alexherbo2/volatile-highlighter.kak"
+pathogen-infect "%opt(github)/alexherbo2/yank-ring.kak"
 pathogen-infect "%opt(github)/Delapouite/kakoune-buffers"
 pathogen-infect "%opt(github)/Delapouite/kakoune-text-objects"
 pathogen-infect "%opt(github)/eraserhd/parinfer-rust/rc"
@@ -246,6 +247,9 @@ map global normal <a-Q> <a-B>
 # Buffers
 map global normal b ':<space>enter-buffers-mode<ret>'
 map global normal B ':<space>enter-user-mode -lock buffers<ret>'
+
+# Yanks
+map global normal Y ':<space>yank-ring<ret>'
 
 map global normal <ret> :
 map global normal <backspace> ';'
