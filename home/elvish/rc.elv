@@ -21,6 +21,9 @@ paths = [
   $@paths
 ]
 
+# Shell
+E:SHELL = elvish
+
 # Language
 E:LANG = en_US.UTF-8
 
