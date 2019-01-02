@@ -291,6 +291,7 @@
     sxhkd
     tectonic
     tig
+    tldr
     tmux
     tor
     unrar
