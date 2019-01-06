@@ -97,6 +97,13 @@
     XDG_CURRENT_DESKTOP = "kde";
   };
 
+  # Browsers ───────────────────────────────────────────────────────────────────
+
+  nixpkgs.config.chromium = {
+    enablePepperFlash = true;
+    enablePepperPDF = true;
+  };
+
   # Services ───────────────────────────────────────────────────────────────────
 
   # Login
