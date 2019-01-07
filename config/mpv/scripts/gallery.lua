@@ -1,0 +1,1 @@
+/home/alex/repositories/github.com/occivink/mpv-gallery-view/scripts/gallery.lua
