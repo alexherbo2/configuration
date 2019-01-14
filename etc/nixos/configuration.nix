@@ -310,6 +310,7 @@
     weechat
     wget
     wine
+    winetricks
     xboxdrv
     xclip
     xcompmgr
