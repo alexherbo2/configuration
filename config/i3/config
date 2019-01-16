@@ -39,6 +39,7 @@ bar {
     active_workspace 0 $black $white
     inactive_workspace 0 $white $black
     urgent_workspace 0 $red $white
+    binding_mode 0 $black $white
   }
 }
 
