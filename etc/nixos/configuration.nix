@@ -289,6 +289,7 @@
     sddm
     setroot
     shards
+    skim
     smartmontools
     snes9x-gtk
     socat
