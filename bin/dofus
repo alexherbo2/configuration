@@ -1,3 +1,0 @@
-#!/bin/sh
-
-wine start games/windows/dofus/Dofus
