@@ -174,6 +174,8 @@
     aircrack-ng
     alacritty
     android-file-transfer
+    appimagekit
+    appimage-run
     asciidoc
     asciinema
     bash
