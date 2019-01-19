@@ -57,6 +57,7 @@ bindsym Mod4+p [con_mark = Drop-down] scratchpad show
 bindsym --release button2 kill
 bindsym --release button3 exec alacritty
 
+bindsym --whole-window Mod4+button1 exec i3-click-sibling-windows 1
 bindsym --whole-window Mod4+button4 focus left
 bindsym --whole-window Mod4+button5 focus right
 bindsym --whole-window Mod4+Shift+button4 move left

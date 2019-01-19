@@ -1,0 +1,8 @@
+#!/bin/sh
+
+i3-msg -t get_tree |
+jq '
+  recurse(.nodes[]) |
+  select(.nodes[] | .focused == true) |
+  .nodes[]
+'

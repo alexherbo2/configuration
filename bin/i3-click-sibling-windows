@@ -1,0 +1,25 @@
+#!/bin/sh
+
+# Get information about the focused window
+eval $(
+  i3-msg -t get_tree |
+  jq --raw-output '
+    recurse(.nodes[]) |
+    select(.focused == true) |
+    @sh "
+      export name=\(.name)
+      export window=\(.window)
+      export class=\(.window_properties.class)
+      export instance=\(.window_properties.instance)
+    "
+  '
+)
+
+button=$1
+
+windows=$(
+  i3-get-sibling-windows |
+  jq 'select(.window_properties.instance == env.instance and .window_properties.class == env.class).window'
+)
+
+xdotool-mouse-window click $button $windows
