@@ -6,6 +6,7 @@ source "%opt(github)/alexherbo2/pathogen.kak/rc/pathogen.kak"
 
 pathogen-infect "%opt(github)/alexherbo2/auto-pairs.kak"
 pathogen-infect "%opt(github)/alexherbo2/bc.kak"
+pathogen-infect "%opt(github)/alexherbo2/chronic.kak"
 pathogen-infect "%opt(github)/alexherbo2/distraction-free.kak"
 pathogen-infect "%opt(github)/alexherbo2/flag.kak"
 pathogen-infect "%opt(github)/alexherbo2/move-line.kak"
@@ -286,8 +287,8 @@ map global user <space> -docstring 'Clear selections' <space>
 map global user <ret> -docstring 'LSP' ':<space>enter-user-mode lsp<ret>'
 
 map global user b -docstring 'Open Chrome' '<a-|>xargs --replace chromium {}<ret>'
-map global user c -docstring 'Chronic (YYYY-MM-DD)' '|chronic %F<ret>'
-map global user C -docstring 'Chronic (Replace)' '|chronic<space>'
+map global user c -docstring 'Chronic (YYYY-MM-DD)' ':<space>chronic-prompt<ret>%F<ret>'
+map global user C -docstring 'Prompt for Chronic' ':<space>chronic-prompt<ret>'
 map global user r -docstring 'Replace' ':<space>replace<ret>'
 map global user s -docstring 'Surround' ':<space>auto-pairs-surround<ret>'
 map global user S -docstring 'Surround++' ':<space>auto-pairs-surround _ _ * *<ret>'
