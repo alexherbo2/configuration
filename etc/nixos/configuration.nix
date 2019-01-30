@@ -263,6 +263,7 @@
     networkmanagerapplet
     nginx
     nix-index
+    nmap
     nodejs-10_x
     notmuch
     ntfs3g
