@@ -352,6 +352,8 @@ hook global WinSetOption filetype=.+ %{ try %{
   add-highlighter window/ regex '―+' 0:red # Unicode 2015
   add-highlighter window/ regex '−+' 0:cyan # Subtractions
   add-highlighter window/ regex '×+' 0:cyan # Multiplications
+  add-highlighter window/ regex '[“‘]+' 0:cyan # Opening quotation marks
+  add-highlighter window/ regex '[”]+' 0:cyan+u # Closing quotation marks
 }}
 
 # Modes ────────────────────────────────────────────────────────────────────────
