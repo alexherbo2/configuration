@@ -305,6 +305,7 @@
     tldr
     tmux
     tor
+    translate-shell
     unrar
     unzip
     vanilla-dmz
