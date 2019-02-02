@@ -344,6 +344,7 @@ hook global WinSetOption filetype=.+ %{ try %{
   add-highlighter window/ regex ' +' 0:red # Non-breaking spaces
   add-highlighter window/ regex '(?<=[?!.…])\h(\h{2,})?(?=\w)' 0:red # A sentence not followed by exactly two spaces
   add-highlighter window/ regex '(?<=[?!.…])(\h{2})?(?=\w)' 0:green # A sentence followed by exactly two spaces
+  add-highlighter window/ regex '(?<=…)\h(?=[a-z])' 0:green # Suspension points
   add-highlighter window/ regex '(?<=\w)\h{2,}' 0:red # A word character followed by more than two spaces
   add-highlighter window/ regex "(?<=\w)'(?=\w)" 0:red # Apostrophe
   add-highlighter window/ regex '‐+' 0:red # Césures
