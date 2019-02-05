@@ -232,6 +232,7 @@
     heroku
     higan
     htop
+    hugo
     hunspell
     hunspellDicts.en-us
     i3blocks
