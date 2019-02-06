@@ -301,6 +301,7 @@
     sshfs
     steam
     sxhkd
+    tabbed
     tectonic
     tig
     tldr
