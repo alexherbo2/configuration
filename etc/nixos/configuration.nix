@@ -27,6 +27,7 @@
 
   networking.hostName = "othala";
   networking.hostId = "0338c82e";
+  networking.enableIPv6 = false;
 
   time.timeZone = "Europe/Paris";
 
