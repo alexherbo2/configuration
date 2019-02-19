@@ -1,0 +1,37 @@
+# Options ──────────────────────────────────────────────────────────────────────
+
+set shell dash
+
+# [-e] → Exit on error
+# [-u] → Give error for unset variables
+set shellopts -eu
+
+# New-line as IFS and file separator
+# Let’s just pretend file-names can’t contain the new-line character
+set ifs \n
+set filesep \n
+
+# Commands ─────────────────────────────────────────────────────────────────────
+
+# Execute shell command on selection
+cmd embed $$@ $fx
+
+cmd select-fuzzy ${{
+  lf -remote "send $id select $(fd --type file | fzf)"
+}}
+
+cmd cd-fuzzy ${{
+  lf -remote "send $id cd $(fd --type directory | fzf)"
+}}
+
+# Mappings ─────────────────────────────────────────────────────────────────────
+
+map . set hidden!
+map ~ cd ~
+map <enter> $$SHELL
+map <delete> embed trash
+map e embed kak-connect
+map m embed mpv
+map x embed extract
+map s select-fuzzy
+map g cd-fuzzy
