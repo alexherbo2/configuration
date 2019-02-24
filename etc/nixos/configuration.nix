@@ -266,7 +266,7 @@
     nginx
     nix-index
     nmap
-    nodejs-10_x
+    nodejs-11_x
     notmuch
     ntfs3g
     p7zip
