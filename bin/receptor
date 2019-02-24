@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cd ~/repositories/github.com/SirCmpwn/receptor
+cd ~/repositories/github.com/ddevault/receptor
 git pull
 git submodule update --init --recursive
 npm install
