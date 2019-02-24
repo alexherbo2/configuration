@@ -102,7 +102,7 @@
 
   nixpkgs.config.chromium = {
     enablePepperFlash = true;
-    enablePepperPDF = true;
+    # enablePepperPDF = true;
   };
 
   # Services ───────────────────────────────────────────────────────────────────
