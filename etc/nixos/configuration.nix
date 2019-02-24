@@ -286,7 +286,7 @@
     ripgrep
     rofi
     rtorrent
-    ruby_2_5
+    ruby_2_6
     rustc
     rustup
     sbcl
