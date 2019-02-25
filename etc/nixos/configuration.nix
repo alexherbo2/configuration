@@ -175,6 +175,7 @@
     aircrack-ng
     alacritty
     android-file-transfer
+    apacheHttpd
     appimagekit
     appimage-run
     asciidoc
