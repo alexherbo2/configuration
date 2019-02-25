@@ -259,6 +259,7 @@
     mosh
     mpv
     msmtp
+    mysql
     ncftp
     neovim
     nettools
