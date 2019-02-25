@@ -279,6 +279,7 @@
     peruse
     plasma-desktop
     polybar
+    postgresql
     python37
     qemu
     ranger
