@@ -256,6 +256,7 @@
     maim
     mgba
     mkvtoolnix
+    mongodb
     mosh
     mpv
     msmtp
