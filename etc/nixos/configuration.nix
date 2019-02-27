@@ -211,7 +211,7 @@
     exa
     fd
     fdm
-    ffmpeg
+    ffmpeg-full
     file
     font-awesome_5
     fzf
