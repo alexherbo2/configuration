@@ -305,6 +305,7 @@
     sox
     sshfs
     steam
+    sway
     sxhkd
     tabbed
     tectonic
