@@ -8,6 +8,7 @@ pathogen-infect "%opt(github)/alexherbo2/auto-pairs.kak"
 pathogen-infect "%opt(github)/alexherbo2/bc.kak"
 pathogen-infect "%opt(github)/alexherbo2/chronic.kak"
 pathogen-infect "%opt(github)/alexherbo2/distraction-free.kak"
+pathogen-infect "%opt(github)/alexherbo2/explore.kak"
 pathogen-infect "%opt(github)/alexherbo2/flag.kak"
 pathogen-infect "%opt(github)/alexherbo2/move-line.kak"
 pathogen-infect "%opt(github)/alexherbo2/objectify.kak"
@@ -247,7 +248,7 @@ map global normal <a-q> <a-b>
 map global normal <a-Q> <a-B>
 
 # Buffers
-map global normal b ':<space>enter-buffers-mode<ret>'
+map global normal b ':<space>buffer<ret>'
 map global normal B ':<space>enter-user-mode -lock buffers<ret>'
 
 # Yanks
@@ -361,6 +362,12 @@ hook global WinSetOption filetype=.+ %{ try %{
 }}
 
 # Modes ────────────────────────────────────────────────────────────────────────
+
+# Directory ────────────────────────────────────────────────────────────────────
+
+define-command -hidden -override explore-files-recursive -params 0..1 %{
+  explore-files-display "fd %sh(test $kak_opt_explore_show_hidden = true && echo --hidden)" %arg(1)
+}
 
 # GTD ──────────────────────────────────────────────────────────────────────────
 
