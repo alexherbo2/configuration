@@ -319,6 +319,7 @@
     virtualbox
     vis
     vscode
+    wayland
     weechat
     wget
     wine
