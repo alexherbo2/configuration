@@ -136,6 +136,10 @@
   # Display manager
   services.xserver.displayManager.sddm.enable = true;
 
+  # Wayland compositors
+  # Sway
+  programs.sway.enable = true;
+
   # Window managers
   # i3
   services.xserver.windowManager.i3.enable = true;
