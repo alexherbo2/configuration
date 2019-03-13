@@ -7,6 +7,7 @@ source "%opt(github)/alexherbo2/pathogen.kak/rc/pathogen.kak"
 pathogen-infect "%opt(github)/alexherbo2/auto-pairs.kak"
 pathogen-infect "%opt(github)/alexherbo2/bc.kak"
 pathogen-infect "%opt(github)/alexherbo2/chronic.kak"
+pathogen-infect "%opt(github)/alexherbo2/connect.kak"
 pathogen-infect "%opt(github)/alexherbo2/distraction-free.kak"
 pathogen-infect "%opt(github)/alexherbo2/explore.kak"
 pathogen-infect "%opt(github)/alexherbo2/flag.kak"
@@ -49,6 +50,7 @@ set-option global tabstop 2
 set-option global indentwidth 2
 set-option global makecmd 'make --jobs=8'
 set-option global grepcmd 'rg --column --with-filename'
+set-option global connect_shell elvish
 
 set-option -add global auto_pairs “ ” ‘ ’ « » ‹ ›
 set-option -add global snippets '->' '→'
@@ -145,16 +147,6 @@ define-command capitalize -docstring 'Capitalize selections' %{
   select %opt(capitalize_selections)
 }
 
-define-command terminal -params .. %{
-  shell \
-    -export session \
-    -export client \
-    %sh(echo $TERMINAL) -e %arg(@) \
-    %sh(test $# = 0 &&
-      echo $SHELL
-    )
-}
-
 define-command grep-period -params 4.. -docstring 'grep-period <pattern> <format> <time-start> <time-end> [argument…]: Grep period' %{ evaluate-commands %sh{
   pattern=$1
   format=$2
@@ -190,7 +182,7 @@ alias global ge git-edit
 alias global ge! git-edit-force
 alias global fac find-apply-changes
 alias global p portal
-alias global t terminal
+alias global t connect-terminal
 alias global df distraction-free-toggle
 alias global pn pad-number
 
