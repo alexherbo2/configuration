@@ -225,6 +225,7 @@
     gimp
     git
     gitAndTools.diff-so-fancy
+    git-lfs
     gnumake
     gnuplot
     go
