@@ -30,6 +30,7 @@ map . set hidden!
 map ~ cd ~
 map <enter> $$SHELL
 map <delete> embed trash
+map | embed bat
 map e embed kak-connect
 map m embed mpv
 map x embed extract
