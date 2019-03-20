@@ -304,6 +304,7 @@
     sddm
     setroot
     shards
+    shellcheck
     skim
     smartmontools
     snes9x-gtk
