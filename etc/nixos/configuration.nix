@@ -196,6 +196,7 @@
     ccl
     chromium
     clang
+    clojure
     cockatrice
     compton
     crystal
