@@ -1,0 +1,11 @@
+#!/bin/sh
+
+remote=https://ankama.akamaized.net/zaap/installers/production
+destination=~/games/linux/ankama/launcher
+image='Ankama Launcher-Setup-x86_64.AppImage'
+
+mkdir --parents $destination
+cd $destination
+rm --force "$image"
+wget "$remote/$image"
+chmod +x "$image"
