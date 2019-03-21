@@ -302,6 +302,7 @@
     rustc
     rustup
     sbcl
+    scala
     screenkey
     sddm
     setroot
