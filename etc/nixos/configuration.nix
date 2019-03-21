@@ -279,6 +279,7 @@
     nodejs-11_x
     notmuch
     ntfs3g
+    openjdk11
     p7zip
     # pandoc
     pavucontrol
