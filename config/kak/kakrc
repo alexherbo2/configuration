@@ -71,6 +71,12 @@ hook global WinCreate .* %{
   snippets-enable
 }
 
+# Primary cursor face:
+# Normal: Cyan
+# Insert: Green
+hook global ModeChange '.+:normal' %(face global PrimaryCursor 'black,cyan')
+hook global ModeChange '.+:insert' %(face global PrimaryCursor 'black,green')
+
 hook -group info-buffers global WinDisplay .* %{
   info-buffers
 }
