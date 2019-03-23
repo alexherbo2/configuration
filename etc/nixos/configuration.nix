@@ -157,6 +157,9 @@
   # Compositor for window managers
   services.compton.enable = true;
 
+  # Backlight
+  programs.light.enable = true;
+
   # Redshift
   services.redshift.enable = true;
   # Location: Paris
@@ -257,6 +260,7 @@
     lemonbar-xft
     lf
     libnotify
+    light
     lispPackages.quicklisp
     llvm
     lxc
