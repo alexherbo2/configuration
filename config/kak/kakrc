@@ -24,6 +24,7 @@ pathogen-infect "%opt(github)/alexherbo2/snippets.kak"
 pathogen-infect "%opt(github)/alexherbo2/space-indent.kak"
 pathogen-infect "%opt(github)/alexherbo2/toggle-highlighter.kak"
 pathogen-infect "%opt(github)/alexherbo2/volatile-highlighter.kak"
+pathogen-infect "%opt(github)/alexherbo2/word-movement.kak"
 pathogen-infect "%opt(github)/alexherbo2/yank-ring.kak"
 pathogen-infect "%opt(github)/Delapouite/kakoune-buffers"
 pathogen-infect "%opt(github)/Delapouite/kakoune-text-objects"
@@ -241,10 +242,8 @@ map global normal <a-^> Q
 
 # Move b to q, so that
 # q, w, e actions are aligned
-map global normal q b
-map global normal Q B
-map global normal <a-q> <a-b>
-map global normal <a-Q> <a-B>
+word-movement-map previous q
+word-movement-map next w
 
 # Buffers
 map global normal b ':<space>buffer<ret>'
