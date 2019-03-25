@@ -46,16 +46,16 @@ bar {
 # Key-bindings ─────────────────────────────────────────────────────────────────
 
 # Terminal
-bindsym Mod4+Return exec alacritty
-bindsym Mod4+Shift+Return exec alacritty --working-directory $(window-working-directory)
+bindsym Mod4+Return exec kitty
+bindsym Mod4+Shift+Return exec kitty --directory $(window-working-directory)
 
 # Drop-down terminal
-bindsym Mod4+Shift+p exec "alacritty --command sh -c 'i3-msg --quiet mark Drop-down, move scratchpad, [con_mark = Drop-down] scratchpad show; elvish'"
+bindsym Mod4+Shift+p exec "kitty sh -c 'i3-msg --quiet mark Drop-down, move scratchpad, [con_mark = Drop-down] scratchpad show; elvish'"
 bindsym Mod4+p [con_mark = Drop-down] scratchpad show
 
 # Mouse
 bindsym --release button2 kill
-bindsym --release button3 exec alacritty
+bindsym --release button3 exec kitty
 
 bindsym --whole-window Mod4+button1 exec i3-click-sibling-windows 1
 bindsym --whole-window Mod4+button4 focus left
