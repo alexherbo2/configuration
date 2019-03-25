@@ -1,0 +1,7 @@
+#!/bin/sh
+
+i3-msg --quiet "
+  floating enable,
+  resize set $1 $2,
+  move position center
+"
