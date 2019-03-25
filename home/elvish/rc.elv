@@ -191,6 +191,7 @@ alias:new b launch chromium
 
 # Kakoune
 alias:new k kak-connect
+alias:new kl kak-list
 
 # Git
 alias:new g git
