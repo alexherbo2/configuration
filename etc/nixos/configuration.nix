@@ -284,6 +284,7 @@
     notmuch
     ntfs3g
     openjdk11
+    openssl
     p7zip
     # pandoc
     pavucontrol
