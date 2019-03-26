@@ -252,6 +252,7 @@ map global normal <a-^> Q
 # q, w, e actions are aligned
 word-movement-map previous q
 word-movement-map next w
+word-movement-map skip e
 
 # Buffers
 map global normal b ':<space>buffer<ret>'
