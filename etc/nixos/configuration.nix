@@ -95,6 +95,7 @@
   # Variables ──────────────────────────────────────────────────────────────────
 
   environment.variables = {
+    EDITOR = "kak";
     XDG_CURRENT_DESKTOP = "kde";
   };
 
