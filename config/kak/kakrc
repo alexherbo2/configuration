@@ -338,6 +338,13 @@ hook global WinSetOption filetype=kak %{
   set-option -add window snippets def 'define-command X %{X}<esc><a-/>X<ret><a-n>c'
 }
 
+# JavaScript
+
+hook global WinSetOption filetype=javascript %{
+  set-option window lintcmd 'eslint --format eslint-formatter-kakoune'
+  lint-enable
+}
+
 # Highlighters ─────────────────────────────────────────────────────────────────
 
 hook global WinSetOption filetype=.+ %{ try %{
