@@ -50,7 +50,7 @@ cmd cd-fuzzy ${{
 
 map . set hidden!
 map ~ cd ~
-map <enter> $$SHELL
+map w $$SHELL
 map <delete> embed trash
 map | embed bat
 map e embed kak-connect
