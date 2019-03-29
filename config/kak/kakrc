@@ -83,6 +83,11 @@ hook -group info-buffers global WinDisplay .* %{
   info-buffers
 }
 
+# Fix Hugo LiveReload
+hook global BufCreate '.*/site/.*' %{
+  set-option buffer writemethod replace
+}
+
 # Status line ──────────────────────────────────────────────────────────────────
 
 set-option global modelinefmt '{{mode_info}} {default+b}%opt{block_auto_pairs}{default} {blue}%opt{block_flags}{default} {magenta}%val{client}{default} at {yellow}%val{session}{default} on {green}%val{bufname}{default} {{context_info}} {cyan}%val{cursor_line}{default}:{cyan}%val{cursor_char_column}{default}'
