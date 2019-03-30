@@ -334,6 +334,7 @@
     unrar
     unzip
     vanilla-dmz
+    vim
     virtualbox
     vis
     vscode
