@@ -276,6 +276,7 @@
     mysql
     ncftp
     neovim
+    neovim-qt
     nettools
     networkmanagerapplet
     nginx
