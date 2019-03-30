@@ -335,6 +335,7 @@
     unzip
     vanilla-dmz
     vim
+    vimHugeX
     virtualbox
     vis
     vscode
