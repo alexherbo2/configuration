@@ -135,6 +135,12 @@ define-command read -params .. -file-completion -docstring 'Create a buffer in r
   edit -readonly %sh(echo "${@:-$kak_bufname}")
 }
 
+define-command new-window -params .. -command-completion -docstring 'Create a new client in a new window' %{
+  set-option window kitty_window_type os
+  new %arg(@)
+  unset-option window kitty_window_type
+}
+
 define-command lf -params .. -file-completion %(connect lf %arg(@))
 
 define-command fzf-files -params .. -file-completion %(connect edit $(fd . %arg(@) | fzf))
@@ -254,6 +260,10 @@ map global insert <a-h> '<esc><space>i'
 map global insert <a-l> '<esc><space>a'
 map global insert <a-j> '<esc><space>)<space>i'
 map global insert <a-k> '<esc><space>(<space>i'
+
+# Create a new client
+map global normal <c-t> ': new<ret>'
+map global normal <c-n> ': new-window<ret>'
 
 # Move macros to ^
 map global normal ^ q
