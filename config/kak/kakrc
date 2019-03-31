@@ -141,6 +141,12 @@ define-command new-window -params .. -command-completion -docstring 'Create a ne
   unset-option window kitty_window_type
 }
 
+define-command connect-new-window -params .. -shell-completion -docstring 'Create a new terminal connected to the current client in a new window' %{
+  set-option window kitty_window_type os
+  connect %arg(@)
+  unset-option window kitty_window_type
+}
+
 define-command lf -params .. -file-completion %(connect lf %arg(@))
 
 define-command fzf-files -params .. -file-completion %(connect edit $(fd . %arg(@) | fzf))
@@ -264,6 +270,10 @@ map global insert <a-k> '<esc><space>(<space>i'
 # Create a new client
 map global normal <c-t> ': new<ret>'
 map global normal <c-n> ': new-window<ret>'
+
+# Create a new terminal connected to the current client
+map global normal <c-p> ': connect<ret>'
+map global normal <c-w> ': connect-new-window<ret>'
 
 # Move macros to ^
 map global normal ^ q
