@@ -249,6 +249,12 @@ hook global InsertChar '[jk]' %{ try %{
   execute-keys <esc>
 }}
 
+# Iterate phantom selections in insert mode
+map global insert <a-h> '<esc><space>i'
+map global insert <a-l> '<esc><space>a'
+map global insert <a-j> '<esc><space>)<space>i'
+map global insert <a-k> '<esc><space>(<space>i'
+
 # Move macros to ^
 map global normal ^ q
 map global normal <a-^> Q
