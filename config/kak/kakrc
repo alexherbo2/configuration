@@ -84,7 +84,7 @@ hook -group info-buffers global WinDisplay .* %{
 }
 
 # Fix Hugo LiveReload
-hook global BufCreate '.*/site/.*' %{
+hook global BufCreate '.*/(content|layouts|static)/.*|.*/(config.toml)' %{
   set-option buffer writemethod replace
 }
 
