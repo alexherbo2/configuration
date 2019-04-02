@@ -14,6 +14,7 @@ pathogen-infect "%opt(github)/alexherbo2/flag.kak"
 pathogen-infect "%opt(github)/alexherbo2/move-line.kak"
 pathogen-infect "%opt(github)/alexherbo2/objectify.kak"
 pathogen-infect "%opt(github)/alexherbo2/pad-number.kak"
+pathogen-infect "%opt(github)/alexherbo2/palette.kak"
 pathogen-infect "%opt(github)/alexherbo2/phantom.kak"
 pathogen-infect "%opt(github)/alexherbo2/portal.kak"
 pathogen-infect "%opt(github)/alexherbo2/replace.kak"
@@ -71,6 +72,7 @@ hook global WinCreate .* %{
   space-indent-enable
   auto-pairs-enable
   snippets-enable
+  palette-enable
 }
 
 # Primary cursor face:
