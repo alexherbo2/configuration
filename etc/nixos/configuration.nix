@@ -280,6 +280,7 @@
     nettools
     networkmanagerapplet
     nginx
+    nim
     nix-index
     nmap
     nodejs-11_x
