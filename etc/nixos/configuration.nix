@@ -290,6 +290,7 @@
     openssl
     p7zip
     # pandoc
+    par
     pavucontrol
     pcre
     pcsx2
