@@ -61,7 +61,6 @@
   tags = tag --list
   branches = branch --all
   remotes = remote --verbose
-  stashes = stash list
 
   ; Log
   graph = log --graph --pretty=graph
@@ -92,10 +91,9 @@
   ; Fork
   fork = checkout -b
 
-  ; Shelve
-  shelve = stash push
-  unshelve = stash pop
-  shelves = stash list
+  ; Stash
+  unstash = stash pop
+  stashes = stash list
 
   ; Branch
   branch-delete = branch --delete --force
