@@ -252,6 +252,7 @@
     imagemagick
     inkscape
     inotify-tools
+    iproute
     iw
     jq
     kakoune
