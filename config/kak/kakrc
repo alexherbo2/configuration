@@ -151,7 +151,7 @@ define-command connect-new-window -params .. -shell-completion -docstring 'Creat
 
 define-command lf -params .. -file-completion %(connect lf %arg(@))
 
-define-command fzf-files -params .. -file-completion %(connect edit $(fd . %arg(@) | fzf))
+define-command fzf-files -params .. -file-completion %(connect edit $(fd --type file . %arg(@) | fzf))
 define-command fzf-buffers %(connect buffer $(buffer | fzf))
 alias global fzf fzf-files
 
