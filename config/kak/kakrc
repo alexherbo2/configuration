@@ -204,6 +204,13 @@ define-command delete-buffer-unpinned -docstring 'Delete unpinned buffers' 'eval
 define-command mark -docstring 'Mark buffer' 'set-option buffer flags marked'
 define-command play-macro-marked -docstring 'Play macro on marked buffers' 'execute-keys-flag marked q'
 
+# Markdown
+
+define-command markdown-sort-links -docstring 'Sort Markdown link definitions by URL' %{
+  execute-keys '<a-x><a-s>_<a-i><a-w>yI[<c-r>"]<esc><a-x><a-_>|sort<ret><a-s>gimd<a-x><a-_>'
+  echo -markup '{Information}Markdown link definitions have been sorted by URL.'
+}
+
 # Aliases ──────────────────────────────────────────────────────────────────────
 
 alias global s scratch
