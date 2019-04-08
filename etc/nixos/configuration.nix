@@ -29,6 +29,11 @@
   networking.hostId = "0338c82e";
   networking.enableIPv6 = false;
 
+  # Firewall
+  # Allow incoming connections
+  # https://nixos.org/nixos/manual#sec-firewall
+  networking.firewall.allowedTCPPorts = [ 80 443 ];
+
   time.timeZone = "Europe/Paris";
 
   # Unfree
