@@ -23,6 +23,7 @@ pathogen-infect "%opt(github)/alexherbo2/select.kak"
 pathogen-infect "%opt(github)/alexherbo2/shell.kak"
 pathogen-infect "%opt(github)/alexherbo2/snippets.kak"
 pathogen-infect "%opt(github)/alexherbo2/space-indent.kak"
+pathogen-infect "%opt(github)/alexherbo2/split-object.kak"
 pathogen-infect "%opt(github)/alexherbo2/toggle-highlighter.kak"
 pathogen-infect "%opt(github)/alexherbo2/volatile-highlighter.kak"
 pathogen-infect "%opt(github)/alexherbo2/word-movement.kak"
@@ -293,6 +294,8 @@ map global normal <a-^> Q
 word-movement-map previous q
 word-movement-map next w
 word-movement-map skip e
+
+map global normal <a-I> ': enter-user-mode split-object<ret>'
 
 # Buffers
 map global normal b ': buffer<ret>'
