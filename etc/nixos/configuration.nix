@@ -32,7 +32,8 @@
   # Firewall
   # Allow incoming connections
   # https://nixos.org/nixos/manual#sec-firewall
-  networking.firewall.allowedTCPPorts = [ 80 443 ];
+  # The Lounge: 9000
+  networking.firewall.allowedTCPPorts = [ 80 443 9000 ];
 
   time.timeZone = "Europe/Paris";
 
