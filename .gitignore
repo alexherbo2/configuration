@@ -4,6 +4,9 @@ home/netrc
 home/icons
 home/elvish/db
 home/elvish/aliases
+home/thelounge/logs
+home/thelounge/users
+home/thelounge/vapid.json
 config/passwords.yml
 config/mpv/socket
 config/mpv/watch_later
