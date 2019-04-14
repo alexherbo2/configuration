@@ -26,7 +26,10 @@
   # Page: https://nixos.org/nixos/options.html
 
   networking.hostName = "othala";
+  # Generate the 32-bit host ID of the machine with:
+  # head [--bytes -c] 8 /etc/machine-id
   networking.hostId = "0338c82e";
+  # Note: ZFS requires networking.hostId to be set.
   networking.enableIPv6 = false;
 
   # Firewall
