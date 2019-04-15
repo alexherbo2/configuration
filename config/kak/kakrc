@@ -67,7 +67,7 @@ add-highlighter global/ show-matching
 add-highlighter global/ show-whitespaces
 
 hook global WinCreate .* %{
-  phantom-enable
+  phantom-enable -with-maps
   search-highlighter-enable
   volatile-highlighter-enable
   space-indent-enable
