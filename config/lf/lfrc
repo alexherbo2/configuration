@@ -48,6 +48,7 @@ cmd cd-fuzzy ${{
 
 # Mappings ─────────────────────────────────────────────────────────────────────
 
+map <enter> open
 map . set hidden!
 map ~ cd ~
 map w $$SHELL
