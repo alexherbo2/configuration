@@ -3,7 +3,7 @@
   email = alexherbo2@gmail.com
 
 [core]
-  pager = diff-so-fancy | less --tabs=4 --RAW-CONTROL-CHARS --quit-if-one-screen --no-init
+  pager = diff-so-fancy | less --tabs=4 -R -F -X
 
 [pull]
   ff = only

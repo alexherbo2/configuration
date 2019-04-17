@@ -19,10 +19,10 @@ esac
 
 identifier=$(
   xinput |
-  pcregrep --only-matching=1 "$name.+id=([0-9]+)"
+  pcregrep -o1 "$name.+id=([0-9]+)"
 )
 
-if xinput | grep --quiet "↳ $name"; then
+if xinput | grep -q "↳ $name"; then
   echo Float
   xinput float $identifier
 else

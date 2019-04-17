@@ -5,6 +5,6 @@ git pull upstream master
 git push
 cd src
 nix-shell '<nixpkgs>' --attr kakoune --run '
-  make --jobs 8
-  strip --strip-all kak
+  make -j 8
+  strip -s kak
 '

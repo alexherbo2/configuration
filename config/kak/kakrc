@@ -52,7 +52,7 @@ set-option global autoreload yes
 set-option global scrolloff 3,5
 set-option global tabstop 2
 set-option global indentwidth 2
-set-option global makecmd 'make --jobs=8'
+set-option global makecmd 'make -j 8'
 set-option global grepcmd 'rg --column --with-filename'
 set-option global connect_shell elvish
 
@@ -191,7 +191,7 @@ define-command grep-period -params 4.. -docstring 'grep-period <pattern> <format
   format="($pattern.+$format)|($format.+$pattern)"
   regex=$(
     chronic-period "$format" "$start" "$end" "$factory" |
-    paste --serial --delimiters '|'
+    paste -s -d '|' -
   )
   printf "grep '%s' %s" "$regex" "$@"
 }}
@@ -332,7 +332,7 @@ map global user <space> -docstring 'Clear selections' <space>
 
 map global user <ret> -docstring 'LSP' ': enter-user-mode lsp<ret>'
 
-map global user b -docstring 'Open Chrome' '<a-|>xargs --replace chromium {}<ret>'
+map global user b -docstring 'Open Chrome' '<a-|>xargs -I {} chromium {}<ret>'
 map global user c -docstring 'Chronic (YYYY-MM-DD)' ': chronic-prompt<ret>%F<ret>'
 map global user C -docstring 'Prompt for Chronic' ': chronic-prompt<ret>'
 map global user r -docstring 'Replace' ': replace<ret>'

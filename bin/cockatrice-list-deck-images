@@ -13,8 +13,8 @@ test -e "$deck" || {
 }
 
 regex=$(
-  pcregrep --only-matching=1 '<card number="[0-9]+" name="(.+)"/>' "$deck" |
-  paste --serial --delimiters '|'
+  pcregrep -o1 '<card number="[0-9]+" name="(.+)"/>' "$deck" |
+  paste -s -d '|' -
 )
 
 find $data/pics/downloadedPics |

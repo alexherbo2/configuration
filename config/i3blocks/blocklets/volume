@@ -9,8 +9,8 @@ case $BLOCK_BUTTON in
 esac
 
 data=$(amixer get $channel)
-volume=$(echo $data | pcregrep --only-matching=1 '([0-9]+)%')
-echo $data | grep --quiet --fixed-strings [off]
+volume=$(echo $data | pcregrep -o1 '([0-9]+)%')
+echo $data | grep -F -q [off]
 muted=$?
 
 if test $muted = 0 -o $volume = 0; then

@@ -7,7 +7,7 @@ nginx_config=$XDG_CONFIG_HOME/nginx/nginx.conf
 nginx_cache=$XDG_CACHE_HOME/nginx
 nginx_logs=$nginx_cache/logs
 
-mkdir --parents "$nginx_logs"
+mkdir -p "$nginx_logs"
 
 nginx_user() {
   sudo nginx -p "$nginx_cache" -c "$nginx_config" "$@"

@@ -170,7 +170,7 @@ fn weechat {
 
 # Aliases ──────────────────────────────────────────────────────────────────────
 
-alias:new md mkdir --parents
+alias:new md mkdir -p
 alias:new c clone
 alias:new d trash
 alias:new _ trash -null
