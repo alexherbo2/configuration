@@ -238,6 +238,10 @@ alias global bo! buffer-only-force
 alias global dbu delete-buffer-unpinned
 alias global pmm play-macro-marked
 
+# Grep
+alias global gn grep-next-match
+alias global gp grep-previous-match
+
 # Git
 define-command gw -docstring 'git add' 'write; git add'
 define-command gS -docstring 'git show' 'git show'
