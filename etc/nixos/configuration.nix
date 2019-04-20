@@ -231,6 +231,7 @@
     fdm
     ffmpeg-full
     file
+    firefox
     font-awesome_5
     fzf
     gcc
