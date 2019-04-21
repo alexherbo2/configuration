@@ -12,6 +12,7 @@ pathogen-infect "%opt(github)/alexherbo2/connect.kak"
 pathogen-infect "%opt(github)/alexherbo2/distraction-free.kak"
 pathogen-infect "%opt(github)/alexherbo2/explore.kak"
 pathogen-infect "%opt(github)/alexherbo2/flag.kak"
+pathogen-infect "%opt(github)/alexherbo2/mkdir.kak"
 pathogen-infect "%opt(github)/alexherbo2/move-line.kak"
 pathogen-infect "%opt(github)/alexherbo2/objectify.kak"
 pathogen-infect "%opt(github)/alexherbo2/pad-number.kak"
@@ -367,10 +368,7 @@ map global user w -docstring 'Wrap' ':toggle-highlighter window/ wrap -word<ret>
 
 # Auto-mkdir
 hook global BufWritePre .* %{
-  nop %sh{
-    directory=$(dirname "$kak_hook_param")
-    mkdir --parents "$directory"
-  }
+  mkdir-buffer
 }
 
 # Clipboard
