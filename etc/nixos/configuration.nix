@@ -104,7 +104,8 @@
   # Variables ──────────────────────────────────────────────────────────────────
 
   environment.variables = {
-    EDITOR = "kak";
+    EDITOR = "kak-connect";
+    KAKOUNE_SESSION = "othala";
     XDG_CURRENT_DESKTOP = "kde";
   };
 
