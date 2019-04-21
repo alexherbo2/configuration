@@ -6,6 +6,7 @@ source "%opt(github)/alexherbo2/pathogen.kak/rc/pathogen.kak"
 
 pathogen-infect "%opt(github)/alexherbo2/auto-pairs.kak"
 pathogen-infect "%opt(github)/alexherbo2/bc.kak"
+pathogen-infect "%opt(github)/alexherbo2/change-directory.kak"
 pathogen-infect "%opt(github)/alexherbo2/chronic.kak"
 pathogen-infect "%opt(github)/alexherbo2/connect.kak"
 pathogen-infect "%opt(github)/alexherbo2/distraction-free.kak"
@@ -167,6 +168,11 @@ define-command gist -params .. %{ echo %sh{
   printf %s "$kak_selection" | gist --open $@
 }}
 
+define-command change-directory-project-root %{
+  change-directory-buffer
+  try change-directory-git
+}
+
 define-command chmod -params .. %{ echo %sh{
   chmod $@ $kak_buffile
 }}
@@ -226,6 +232,9 @@ alias global p portal
 alias global t connect-terminal
 alias global df distraction-free-toggle
 alias global pn pad-number
+
+# Change directory
+alias global cd! change-directory-project-root
 
 # Buffers
 alias global bd delete-buffer
@@ -370,6 +379,10 @@ hook global NormalKey '[ydc]' %{
     (printf '%s' "$kak_main_reg_dquote" | xclip-selection) < /dev/null > /dev/null 2>&1 &
   }
 }
+
+# Automatically switch to the project root of the current buffer
+hook global WinDisplay .* change-directory-project-root
+hook global FocusIn .* change-directory-project-root
 
 # File-types ───────────────────────────────────────────────────────────────────
 
