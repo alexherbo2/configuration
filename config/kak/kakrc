@@ -266,12 +266,12 @@ alias global gn grep-next-match
 alias global gp grep-previous-match
 
 # Git
-define-command gw -docstring 'git add' 'write; git add'
-define-command gS -docstring 'git show' 'git show'
-define-command gs -docstring 'git diff' 'git diff %val(buffile)'
-define-command gc -docstring 'git commit' 'git commit'
-define-command gr -docstring 'git amend' 'git commit --amend'
-define-command gE -docstring 'git checkout' 'git checkout'
+define-command gw -docstring 'git add' 'write; change-directory-project-root; git add'
+define-command gS -docstring 'git show' 'change-directory-project-root; git show'
+define-command gs -docstring 'git diff' 'change-directory-project-root; git diff %val(buffile)'
+define-command gc -docstring 'git commit' 'change-directory-project-root; git commit'
+define-command gr -docstring 'git amend' 'change-directory-project-root; git commit --amend'
+define-command gE -docstring 'git checkout' 'change-directory-project-root; git checkout'
 
 # Quick editing
 define-command ek -docstring 'Open Kakoune configuration file' 'edit ~/.config/kak/kakrc'
