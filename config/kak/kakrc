@@ -132,6 +132,17 @@ hook global WinCreate .* %{
 
 # Commands ─────────────────────────────────────────────────────────────────────
 
+define-command delete-quit -docstring 'Delete buffer and quit' %{
+  delete-buffer
+  quit
+}
+
+define-command write-delete-quit -docstring 'Write, delete buffer and quit' %{
+  write
+  delete-buffer
+  quit
+}
+
 define-command scratch -params .. -docstring 'Create a scratch buffer (Default: *scratch*)' %{
   edit -scratch %sh(echo "${@:-*scratch*}")
 }
@@ -221,6 +232,8 @@ define-command markdown-sort-links -docstring 'Sort Markdown link definitions by
 
 # Aliases ──────────────────────────────────────────────────────────────────────
 
+alias global Q delete-quit
+alias global WQ write-delete-quit
 alias global s scratch
 alias global r read
 alias global f find-edit
