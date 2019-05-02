@@ -174,7 +174,7 @@ define-command find-edit-all -params 1 -shell-script-candidates 'fd --no-ignore 
 
 define-command git-edit -params 1 -shell-script-candidates 'git ls-files' 'edit %arg(1)'
 
-define-command git-edit-force 'edit!; git checkout'
+define-command git-edit-force 'edit!; nop %sh(git reset -- "$kak_buffile"); git checkout'
 
 define-command gist -params .. %{ echo %sh{
   printf %s "$kak_selection" | gist --open $@
