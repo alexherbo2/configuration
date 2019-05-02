@@ -17,21 +17,21 @@ cmd open ${{
   case $(file-type $f) in
     text/*)
       $EDITOR $fx
-    ;;
+      ;;
     video/*)
       mpv $fx
-    ;;
+      ;;
     image/*)
       mpv -profile image $fx
-    ;;
+      ;;
     audio/*)
       mpv -profile audio $fx
-    ;;
+      ;;
     *)
       for file in $fx; do
         $OPENER $file < /dev/null > /dev/null 2>&1 &
       done
-    ;;
+      ;;
   esac
 }}
 
