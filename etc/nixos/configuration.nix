@@ -337,6 +337,7 @@
     sox
     sshfs
     steam
+    surf
     sway
     sxhkd
     tabbed
