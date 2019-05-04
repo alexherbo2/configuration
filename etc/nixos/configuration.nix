@@ -313,6 +313,7 @@
     polybar
     postgresql
     python37
+    python37Packages.pip
     qemu
     ranger
     redshift
