@@ -233,6 +233,7 @@
     ffmpeg-full
     file
     firefox
+    flow
     font-awesome_5
     fzf
     gcc
