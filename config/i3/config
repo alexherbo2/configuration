@@ -235,6 +235,5 @@ bindsym XF86AudioPrev exec echo playlist-prev | socat - ~/.config/mpv/socket
 
 # Rules ────────────────────────────────────────────────────────────────────────
 
-no_focus [class=discord]
 for_window [instance=dofus] border normal
 for_window [title=Security.Warning class=Wine] kill
