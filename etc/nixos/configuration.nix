@@ -373,7 +373,7 @@
     xorg.xmodmap
     xorg.xrdb
     youtube-dl
-    # zathura
+    zathura
     zip
     zsnes
   ];
