@@ -268,7 +268,7 @@
     iw
     jq
     kakoune
-    # kdeApplications.kdenlive
+    kdeApplications.kdenlive
     kitty
     leiningen
     lemonbar-xft
