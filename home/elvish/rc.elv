@@ -17,9 +17,12 @@ paths = [
   ~/.cargo/bin
   ~/.cabal/bin
   ~/go/bin
-  ~/node_modules/.bin
+  node_modules/.bin
+  ~/.npm-packages/bin
   $@paths
 ]
+
+E:MANPATH = ~/.npm-packages/share/man:
 
 # Shell
 E:SHELL = elvish
