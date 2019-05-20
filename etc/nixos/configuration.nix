@@ -277,6 +277,7 @@
     light
     lispPackages.quicklisp
     llvm
+    lua
     lxc
     lzip
     maim
