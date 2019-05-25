@@ -220,6 +220,7 @@
     dejavu_fonts
     desmume
     discord
+    dmenu
     docker
     dolphin
     dolphinEmu
