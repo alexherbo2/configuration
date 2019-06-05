@@ -211,7 +211,7 @@ define-command grep-period -params 4.. -docstring 'grep-period <pattern> <format
     chronic-period "$format" "$start" "$end" "$factory" |
     paste -s -d '|' -
   )
-  printf "grep '%s' %s" "$regex" "$@"
+  printf "grep '%s' %s" "$regex" "$*"
 }}
 
 # Flag
