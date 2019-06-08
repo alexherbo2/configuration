@@ -368,6 +368,7 @@
     xcompmgr
     xdo
     xdotool
+    xorg.transset
     xorg.xbacklight
     xorg.xev
     xorg.xinit
