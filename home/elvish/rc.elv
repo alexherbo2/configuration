@@ -174,6 +174,24 @@ fn weechat {
   }
 }
 
+# Batch
+
+fn batch [@arguments]{
+  e:batch --editor kak $@arguments
+}
+
+fn batch-rename [@arguments]{
+  batch --map 'rename "$1" "$2"' $@arguments
+}
+
+fn batch-convert [@arguments]{
+  batch --map 'convert "$1" "$2"' $@arguments
+}
+
+fn batch-relink [@arguments]{
+  batch --map 'relink "$1" "$2"' $@arguments
+}
+
 # Aliases ──────────────────────────────────────────────────────────────────────
 
 alias:new md mkdir -p
@@ -221,6 +239,11 @@ alias:new scu synapse-unfinished
 
 # Brown noise
 alias:new i isolate
+
+# Batch
+fn rn [@arguments]{ batch-rename $@arguments }
+fn cv [@arguments]{ batch-convert $@arguments }
+fn rl [@arguments]{ batch-relink $@arguments }
 
 # Key-bindings ─────────────────────────────────────────────────────────────────
 
