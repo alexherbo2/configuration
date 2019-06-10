@@ -302,6 +302,7 @@
     notmuch
     ntfs3g
     ocaml
+    opam
     openjdk11
     openssl
     p7zip
