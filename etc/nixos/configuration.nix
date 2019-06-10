@@ -301,6 +301,7 @@
     nodejs-11_x
     notmuch
     ntfs3g
+    ocaml
     openjdk11
     openssl
     p7zip
