@@ -47,6 +47,8 @@ lsp-enable
 
 colorscheme dracula
 
+set-face global Phantom rgb:f8f8f2,rgb:44475a # white,gray
+
 # Options ──────────────────────────────────────────────────────────────────────
 
 set-option global ui_options ncurses_status_on_top=yes ncurses_assistant=cat ncurses_enable_mouse=no ncurses_set_title=no
