@@ -8,8 +8,8 @@ set shellopts -eu
 
 # Newline as IFS and file separator
 # Let’s just pretend filenames can’t contain the newline character
-set ifs \n
-set filesep \n
+set ifs "\n"
+set filesep "\n"
 
 # Commands ─────────────────────────────────────────────────────────────────────
 
