@@ -6,8 +6,8 @@ set shell dash
 # [-u] → Give error for unset variables
 set shellopts -eu
 
-# New-line as IFS and file separator
-# Let’s just pretend file-names can’t contain the new-line character
+# Newline as IFS and file separator
+# Let’s just pretend filenames can’t contain the newline character
 set ifs \n
 set filesep \n
 
