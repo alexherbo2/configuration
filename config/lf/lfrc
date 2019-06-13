@@ -46,6 +46,10 @@ cmd cd-fuzzy ${{
   lf -remote "send $id cd $(fd --type directory | fzf)"
 }}
 
+cmd batch ${{
+  batch --editor kak --map 'rename "$1" "$2"' --drop 'trash "$1"' $fx
+}}
+
 # Mappings ─────────────────────────────────────────────────────────────────────
 
 map <enter> open
@@ -59,3 +63,4 @@ map m embed mpv
 map x embed extract
 map s select-fuzzy
 map g cd-fuzzy
+map b batch
