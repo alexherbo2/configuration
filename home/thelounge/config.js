@@ -5,6 +5,6 @@ module.exports = {
     nick: 'alexherbo2',
     username: 'alexherbo2',
     realname: 'Alex Leferry 2>',
-    join: '#crystal-lang,##javascript,#kakoune,#mpv,#mpv-android,#nixos,#thelounge'
+    join: '#crystal-lang,#hunter,##javascript,#kakoune,#mpv,#mpv-android,#nixos,#thelounge'
   }
 }
