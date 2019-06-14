@@ -248,6 +248,7 @@
     gnuplot
     go
     godot
+    google-chrome
     gource
     gparted
     gptfdisk
