@@ -211,7 +211,7 @@ alias:new lla exa --long --all
 alias:new t exa --tree
 
 # Browser
-alias:new b launch chromium
+alias:new b launch chromium --remote-debugging-port=9222
 
 # Kakoune
 alias:new k kak-connect
