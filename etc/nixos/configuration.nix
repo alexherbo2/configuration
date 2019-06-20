@@ -284,6 +284,7 @@
     lxc
     lzip
     maim
+    maven
     mgba
     mkvtoolnix
     mongodb
