@@ -40,6 +40,7 @@ pathogen-infect "%opt(repositories)/github.com/occivink/kakoune-sudo-write"
 pathogen-infect "%opt(repositories)/github.com/occivink/kakoune-vertical-selection"
 pathogen-infect "%opt(repositories)/github.com/ul/kak-lsp/rc"
 pathogen-infect "%opt(repositories)/github.com/ul/kak-tree"
+pathogen-infect "%opt(repositories)/bitbucket.org/KJ_Duncan/kakoune-kotlin.kak"
 
 lsp-enable
 
