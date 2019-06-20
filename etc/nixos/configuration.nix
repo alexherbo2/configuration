@@ -272,6 +272,7 @@
     kakoune
     kdeApplications.kdenlive
     kitty
+    kotlin
     leiningen
     lemonbar-xft
     lf
