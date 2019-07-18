@@ -1,7 +1,7 @@
 #!/bin/sh
 
 if test ! -e Gemfile; then
-  cat > Gemfile <<EOF
+  cat > Gemfile <<'EOF'
 source 'https://rubygems.org'
 EOF
   $EDITOR Gemfile
@@ -14,7 +14,7 @@ if test ! -e gemset.nix; then
   '
 fi
 
-cat > shell.nix <<EOF
+cat > shell.nix <<'EOF'
 with import <nixpkgs> {};
 let
   gems = bundlerEnv {
