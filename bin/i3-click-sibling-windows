@@ -1,27 +1,5 @@
 #!/bin/sh
 
 button=$1
-
-cache=$(mktemp -d)
-trap "rm -Rf $cache" EXIT
-
-i3-get-sibling-windows > $cache/sibling-windows.json
-
-# Get information about the focused window
-eval $(
-  jq --raw-output '
-    select(.focused) |
-    @sh "
-      export class=\(.window_properties.class)
-      export instance=\(.window_properties.instance)
-    "
-  ' $cache/sibling-windows.json
-)
-
-windows=$(
-  jq '
-    select(.window_properties.class == env.class and .window_properties.instance == env.instance).window
-  ' $cache/sibling-windows.json
-)
-
+windows=$(i3-get-sibling-windows | jq '.[] | .window')
 xdotool-mouse-window click $button $windows

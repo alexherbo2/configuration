@@ -1,8 +1,16 @@
 #!/bin/sh
 
+# Recurse nodes
+# Select the parent container of the focused window
+# Output nodes
+# Select sibling windows of the same type,
+# by comparing the class and instance properties of the windows with the focused window.
+
 i3-msg -t get_tree |
 jq '
   recurse(.nodes[]) |
   select(.nodes[] | .focused) |
-  .nodes[]
+  .nodes |
+  map(select(.focused))[0] as $focused |
+  map(select(.window_properties.class == $focused.window_properties.class and .window_properties.instance == $focused.window_properties.instance))
 '
