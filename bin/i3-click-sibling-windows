@@ -1,5 +1,5 @@
 #!/bin/sh
 
 button=$1
-windows=$(i3-get-sibling-windows | jq '.[] | .window')
+windows=$(i3-get-windows -sibling | jq '.[] | .window')
 xdotool-mouse-window click $button $windows
