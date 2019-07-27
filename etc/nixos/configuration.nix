@@ -192,6 +192,7 @@
     aegisub
     aircrack-ng
     alacritty
+    albert
     android-file-transfer
     apacheHttpd
     appimagekit
