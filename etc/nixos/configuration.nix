@@ -317,6 +317,7 @@
     pcre
     pcsx2
     pcsxr
+    pdftk
     peek
     peruse
     plasma-desktop
