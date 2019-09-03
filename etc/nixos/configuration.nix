@@ -40,6 +40,11 @@
 
   time.timeZone = "Europe/Paris";
 
+  # Location: Paris
+  # https://google.com/search?q=Paris+Coordinates
+  location.latitude = 48.8566;
+  location.longitude = 2.3522;
+
   # Unfree
   # Allow Discord, drivers for Wi-Fi…
   nixpkgs.config.allowUnfree = true;
@@ -173,10 +178,6 @@
 
   # Redshift
   services.redshift.enable = true;
-  # Location: Paris
-  # https://google.com/search?q=Paris+Coordinates
-  services.redshift.latitude = "48.8566";
-  services.redshift.longitude = "2.3522";
 
   # Virtualisation
   # virtualisation.docker.enable = true;
