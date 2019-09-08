@@ -207,6 +207,7 @@
     bspwm
     bundix
     cabal-install
+    cachix
     calibre
     cargo
     ccl
