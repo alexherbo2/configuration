@@ -124,7 +124,7 @@
   # Browsers ───────────────────────────────────────────────────────────────────
 
   nixpkgs.config.chromium = {
-    enablePepperFlash = true;
+    # enablePepperFlash = true;
     # enablePepperPDF = true;
   };
 
