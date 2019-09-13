@@ -64,8 +64,8 @@
   nix.daemonIONiceLevel = 7;
 
   # CPU throttling
-  systemd.enableCgroupAccounting = true;
-  systemd.services.nix-daemon.serviceConfig.CPUQuota = "10%";
+  # systemd.enableCgroupAccounting = true;
+  # systemd.services.nix-daemon.serviceConfig.CPUQuota = "10%";
 
   # Automatic Upgrades
   # https://nixos.org/nixos/manual#idm140737316591792
