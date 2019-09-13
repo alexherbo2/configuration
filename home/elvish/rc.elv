@@ -31,7 +31,7 @@ E:SHELL = elvish
 E:LANG = en_US.UTF-8
 
 # Libraries
-E:PYTHONPATH = ~/.local/lib/python3.7/site-packages
+E:PYTHONPATH = ~/.local/lib/python3.8/site-packages
 
 # XDG
 E:XDG_CONFIG_HOME = ~/.config

@@ -325,8 +325,8 @@
     plasma-desktop
     polybar
     postgresql
-    python37
-    python37Packages.pip
+    python38
+    python38Packages.pip
     qemu
     ranger
     redshift
