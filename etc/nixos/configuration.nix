@@ -310,7 +310,7 @@
     ntfs3g
     ocaml
     opam
-    openjdk11
+    openjdk12
     openssl
     p7zip
     # pandoc
