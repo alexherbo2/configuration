@@ -60,8 +60,8 @@
   nix.buildCores = 1;
 
   # Lower the Nix daemon process priority
-  nix.daemonNiceLevel = 19;
-  nix.daemonIONiceLevel = 7;
+  # nix.daemonNiceLevel = 19;
+  # nix.daemonIONiceLevel = 7;
 
   # CPU throttling
   # systemd.enableCgroupAccounting = true;
