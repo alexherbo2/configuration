@@ -60,6 +60,10 @@
   # Use all available cores
   nix.buildCores = 0;
 
+  # Lower the Nix daemon process priority
+  nix.daemonNiceLevel = 19;
+  nix.daemonIONiceLevel = 7;
+
   # Automatic Upgrades
   # https://nixos.org/nixos/manual#idm140737316591792
   # system.autoUpgrade.enable = true;
