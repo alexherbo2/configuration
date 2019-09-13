@@ -55,10 +55,9 @@
 
   # Optimization – Speed-up builds
   # Jobs to run in parallel
-  # Pull request: https://github.com/NixOS/nixpkgs/pull/44880
-  # nix.maxJobs = "auto";
-  # Use all available cores
-  nix.buildCores = 0;
+  nix.maxJobs = 1;
+  # Use all available cores when set to 0
+  nix.buildCores = 1;
 
   # Lower the Nix daemon process priority
   nix.daemonNiceLevel = 19;
