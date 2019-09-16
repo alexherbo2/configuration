@@ -1,7 +1,7 @@
 #!/bin/sh
 
-container=$(find /sys/class/thermal -follow -maxdepth 1 -type d -name thermal_zone?)
-temperature=$(cat $container/temp)
-degrees=$(echo $temperature / 1000 | bc)
+container=$(find /sys/class/thermal -follow -maxdepth 1 -type d -name 'thermal_zone?' -print -quit)
+temperature=$(cat "$container/temp")
+degrees=$((temperature / 1000))
 
-echo $degrees °C
+printf '%d °C\n' "$degrees"
