@@ -1,4 +1,5 @@
 [Default Applications]
+application/pdf=org.pwmt.zathura.desktop
 text/html=chromium-browser.desktop
 video/x-matroska=mpv.desktop
 x-scheme-handler/http=chromium-browser.desktop
