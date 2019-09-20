@@ -30,6 +30,7 @@ pathogen-infect "%opt(repositories)/github.com/alexherbo2/toggle-highlighter.kak
 pathogen-infect "%opt(repositories)/github.com/alexherbo2/volatile-highlighter.kak"
 pathogen-infect "%opt(repositories)/github.com/alexherbo2/word-movement.kak"
 pathogen-infect "%opt(repositories)/github.com/alexherbo2/yank-ring.kak"
+pathogen-infect "%opt(repositories)/github.com/chambln/kakoune-readline"
 pathogen-infect "%opt(repositories)/github.com/Delapouite/kakoune-buffers"
 pathogen-infect "%opt(repositories)/github.com/Delapouite/kakoune-text-objects"
 pathogen-infect "%opt(repositories)/github.com/eraserhd/parinfer-rust/rc"
