@@ -45,7 +45,8 @@ font:
 
   use_thin_strokes: true
 
-render_timer: false
+debug:
+  render_timer: false
 
 # Dracula
 # https://draculatheme.com
