@@ -1,0 +1,1 @@
+/home/alex/repositories/github.com/TheAMM/mpv_thumbnail_script/mpv_thumbnail_script_server.lua
