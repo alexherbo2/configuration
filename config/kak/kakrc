@@ -242,9 +242,6 @@ alias global s scratch
 alias global r read
 alias global f find-edit
 alias global fa find-edit-all
-alias global g git
-alias global ge git-edit
-alias global ge! git-edit-force
 alias global fac find-apply-changes
 alias global p portal
 alias global t connect-terminal
@@ -270,6 +267,9 @@ alias global gn grep-next-match
 alias global gp grep-previous-match
 
 # Git
+alias global g git
+alias global ge git-edit
+alias global ge! git-edit-force
 define-command gw -docstring 'git add' 'write; change-directory-project-root; git add'
 define-command gS -docstring 'git show' 'change-directory-project-root; git show'
 define-command gs -docstring 'git diff' 'change-directory-project-root; git diff %val(buffile)'
