@@ -319,6 +319,7 @@
     opam
     openjdk12
     openssl
+    opera
     p7zip
     # pandoc
     par
