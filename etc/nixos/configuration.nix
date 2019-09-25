@@ -377,6 +377,7 @@
     vimHugeX
     virtualbox
     vis
+    vivaldi
     vscode
     wayland
     weechat
