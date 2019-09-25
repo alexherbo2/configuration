@@ -335,6 +335,7 @@
     python38
     python38Packages.pip
     qemu
+    qutebrowser
     ranger
     redshift
     ripgrep
