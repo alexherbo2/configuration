@@ -358,6 +358,7 @@
     snes9x-gtk
     socat
     sox
+    sqlite
     sshfs
     steam
     surf
