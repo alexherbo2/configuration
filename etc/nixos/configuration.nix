@@ -375,6 +375,7 @@
     uzbl
     vanilla-dmz
     vim
+    vimb
     vimHugeX
     virtualbox
     vis
