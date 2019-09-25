@@ -370,6 +370,7 @@
     translate-shell
     unrar
     unzip
+    uzbl
     vanilla-dmz
     vim
     vimHugeX
