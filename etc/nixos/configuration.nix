@@ -294,6 +294,7 @@
     luakit
     lxappearance-gtk3
     lxc
+    lxd
     lzip
     maim
     maven
