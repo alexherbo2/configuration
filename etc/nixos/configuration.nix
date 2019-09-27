@@ -187,7 +187,7 @@
   services.redshift.enable = true;
 
   # Virtualisation
-  # virtualisation.docker.enable = true;
+  virtualisation.docker.enable = true;
   # virtualisation.virtualbox.host.enable = true;
 
   # Packages ───────────────────────────────────────────────────────────────────
