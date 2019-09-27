@@ -323,7 +323,7 @@
     openssl
     opera
     p7zip
-    # pandoc
+    pandoc
     par
     pavucontrol
     pcre
