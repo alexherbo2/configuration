@@ -107,6 +107,7 @@
       "disk"
       "docker"
       "games"
+      "lxd"
       "networkmanager"
       "vboxusers"
       "wheel"
@@ -188,6 +189,7 @@
 
   # Virtualisation
   virtualisation.lxc.enable = true;
+  virtualisation.lxd.enable = true;
   virtualisation.docker.enable = true;
   virtualisation.virtualbox.host.enable = true;
 
