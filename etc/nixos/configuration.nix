@@ -187,6 +187,7 @@
   services.redshift.enable = true;
 
   # Virtualisation
+  virtualisation.lxc.enable = true;
   virtualisation.docker.enable = true;
   virtualisation.virtualbox.host.enable = true;
 
