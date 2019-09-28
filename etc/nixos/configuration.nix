@@ -258,6 +258,7 @@
     gitAndTools.diff-so-fancy
     git-lfs
     gnumake
+    gnupg
     gnuplot
     go
     godot
