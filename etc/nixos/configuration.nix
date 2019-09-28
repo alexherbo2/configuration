@@ -359,6 +359,7 @@
     shards
     shellcheck
     skim
+    slop
     smartmontools
     snes9x-gtk
     socat
