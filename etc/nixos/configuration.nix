@@ -249,6 +249,7 @@
     firefox
     flow
     font-awesome_5
+    fuse
     fzf
     gcc
     gdb
