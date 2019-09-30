@@ -337,6 +337,7 @@
     pdftk
     peek
     peruse
+    plan9port
     plasma-desktop
     polybar
     postgresql
