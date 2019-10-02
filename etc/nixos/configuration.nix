@@ -214,6 +214,7 @@
     bat
     bc
     blender
+    brave
     bspwm
     bundix
     cabal-install
