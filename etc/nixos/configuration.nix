@@ -394,7 +394,7 @@
     wayland
     weechat
     wget
-    wine
+    (wine.override { wineBuild = "wine64"; })
     winetricks
     xboxdrv
     xclip
