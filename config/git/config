@@ -12,6 +12,9 @@
 [push]
   default = current
 
+[commit]
+  verbose = true
+
 [log]
   date = relative
 
