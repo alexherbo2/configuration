@@ -11,6 +11,7 @@
 
 [push]
   default = current
+  followTags = true
 
 [commit]
   verbose = true
