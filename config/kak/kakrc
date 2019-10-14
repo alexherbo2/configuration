@@ -378,8 +378,8 @@ map global user P -docstring 'Paste (Before)' '!xclip -out -selection clipboard<
 map global user R -docstring 'Replace' '|xclip -out -selection clipboard<ret>'
 
 # Highlighters
-map global user l -docstring 'Line numbers' ':toggle-highlighter window/ number-lines<ret>'
-map global user w -docstring 'Wrap' ':toggle-highlighter window/ wrap -word<ret>'
+map global user l -docstring 'Line numbers' ':toggle-highlighter global/ number-lines<ret>'
+map global user w -docstring 'Wrap' ':toggle-highlighter global/ wrap -word<ret>'
 
 # Hooks ────────────────────────────────────────────────────────────────────────
 
