@@ -331,6 +331,7 @@
     p7zip
     pandoc
     par
+    pastel
     pavucontrol
     pcre
     pcsx2
