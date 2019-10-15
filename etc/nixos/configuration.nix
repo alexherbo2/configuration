@@ -384,7 +384,7 @@
     translate-shell
     unrar
     unzip
-    uzbl
+    # uzbl
     vanilla-dmz
     vim
     vimb
