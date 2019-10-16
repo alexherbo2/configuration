@@ -284,6 +284,7 @@
     inotify-tools
     iproute
     iw
+    janet
     jq
     kakoune
     kdeApplications.kdenlive
