@@ -85,8 +85,8 @@ hook global WinCreate .* %{
 # Primary cursor face:
 # Normal: Cyan
 # Insert: Green
-hook global ModeChange '.+:normal' %(face global PrimaryCursor 'black,cyan')
-hook global ModeChange '.+:insert' %(face global PrimaryCursor 'black,green')
+hook global ModeChange 'pop:.+:normal' %(face global PrimaryCursor 'black,cyan')
+hook global ModeChange 'pop:.+:insert' %(face global PrimaryCursor 'black,green')
 
 hook -group info-buffers global WinDisplay .* %{
   info-buffers
@@ -131,7 +131,7 @@ define-command -hidden block-update-auto-pairs %{ evaluate-commands %sh{
 }}
 
 hook global WinCreate .* %{
-  hook window ModeChange 'normal:insert|insert:normal' block-update-auto-pairs
+  hook window ModeChange 'pop:(normal:insert|insert:normal)' block-update-auto-pairs
 }
 
 # Commands ─────────────────────────────────────────────────────────────────────
