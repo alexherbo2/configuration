@@ -283,6 +283,7 @@ define-command gE -docstring 'git checkout' 'change-directory-project-root; git 
 
 # Quick editing
 define-command ek -docstring 'Open Kakoune configuration file' 'edit ~/.config/kak/kakrc'
+define-command ekr -docstring 'Open Krabby configuration file' 'edit ~/.config/krabby/config.js'
 define-command en -docstring 'Open NixOS configuration file' 'edit /etc/nixos/configuration.nix'
 define-command et -docstring 'Open tmux configuration file' 'edit ~/.tmux.conf'
 define-command eg -docstring 'Open Git configuration file' 'edit ~/.config/git/config'
