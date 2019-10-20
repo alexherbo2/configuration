@@ -62,6 +62,10 @@ set-option global makecmd 'make -j 8'
 set-option global grepcmd 'rg --column --with-filename'
 set-option global connect_shell elvish
 
+hook global ModuleLoaded x11 %{
+  set-option global termcmd 'kitty sh -c'
+}
+
 set-option -add global auto_pairs “ ” ‘ ’ « » ‹ ›
 set-option -add global snippets '->' '→'
 set-option -add global snippets '<-' '←'
