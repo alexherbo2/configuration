@@ -1,0 +1,38 @@
+{
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "krabby@mozilla.org"
+    }
+  },
+  "manifest_version": 2,
+  "name": "Krabby",
+  "description": "A keyboard interface to the web",
+  "version": "0.1.0",
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "packages/modal.js",
+        "packages/prompt.js",
+        "packages/hint.js",
+        "packages/selection.js",
+        "packages/mouse.js",
+        "packages/clipboard.js",
+        "packages/scroll.js",
+        "packages/player.js",
+        "packages/krabby.js",
+        "config.js"
+      ],
+      "css": [
+        "packages/selection.css"
+      ]
+    }
+  ],
+  "icons": {
+    "16": "packages/krabby.png",
+    "48": "packages/krabby.png",
+    "128": "packages/krabby.png"
+  }
+}
