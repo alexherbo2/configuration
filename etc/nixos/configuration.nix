@@ -271,6 +271,7 @@
     graphviz
     gsmartcontrol
     gtkpod
+    guile
     heroku
     higan
     htop
