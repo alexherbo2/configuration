@@ -11,3 +11,15 @@ cp ~/projects/mouse.js/scripts/mouse.js .
 cp ~/projects/clipboard.js/scripts/clipboard.js .
 cp ~/projects/scroll.js/scripts/scroll.js .
 cp ~/projects/player.js/scripts/player.js .
+
+cd ~/projects/krabby/website/packages
+cp ~/projects/modal.js/scripts/modal.js .
+cp ~/projects/prompt.js/scripts/prompt.js .
+cp ~/projects/hint.js/scripts/hint.js .
+cp ~/projects/selection.js/scripts/selection.js .
+cp ~/projects/selection.js/styles/selection.css .
+cp ~/projects/mouse.js/scripts/mouse.js .
+cp ~/projects/clipboard.js/scripts/clipboard.js .
+cp ~/projects/scroll.js/scripts/scroll.js .
+cp ~/projects/player.js/scripts/player.js .
+cp ~/projects/carousel.js/scripts/carousel.js .
