@@ -2,6 +2,7 @@
 
 cd ~/.config/krabby/packages
 cp ~/projects/krabby/src/krabby.js .
+cp ~/projects/krabby/src/krabby.css .
 cp ~/projects/modal.js/scripts/modal.js .
 cp ~/projects/prompt.js/scripts/prompt.js .
 cp ~/projects/hint.js/scripts/hint.js .
@@ -13,6 +14,7 @@ cp ~/projects/scroll.js/scripts/scroll.js .
 cp ~/projects/player.js/scripts/player.js .
 
 cd ~/projects/krabby/website/packages
+cp ~/projects/krabby/src/krabby.css .
 cp ~/projects/modal.js/scripts/modal.js .
 cp ~/projects/prompt.js/scripts/prompt.js .
 cp ~/projects/hint.js/scripts/hint.js .
