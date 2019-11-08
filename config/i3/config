@@ -133,8 +133,8 @@ bindsym Mod4+b border toggle
 bindsym Mod4+Shift+b border pixel
 
 # Search
-bindsym Mod4+slash exec i3-window-commander focus "rofi -dmenu -p 'Search window'"
-bindsym Mod4+Shift+slash exec "i3-window-commander 'move workspace current, focus' \\"rofi -dmenu -p 'Bring window'\\""
+bindsym Mod4+slash exec i3-window-commander focus "rofi -dmenu -i -p 'Search window'"
+bindsym Mod4+Shift+slash exec "i3-window-commander 'move workspace current, focus' \\"rofi -dmenu -i -p 'Bring window'\\""
 
 # Rename
 bindsym Mod4+r exec xdotool getactivewindow set_window --name "$(rofi -dmenu -p 'Window name')"
@@ -142,7 +142,7 @@ bindsym Mod4+r exec xdotool getactivewindow set_window --name "$(rofi -dmenu -p 
 # Marks
 bindsym Mod4+x mark --add --toggle marked
 bindsym Mod4+Shift+m exec i3-msg mark $(rofi -dmenu -p Mark)
-bindsym Mod4+m exec i3-msg [con_mark = '"'$(i3-msg -t get_marks | jq --raw-output .[] | rofi -dmenu -p 'Focus mark')'"'] focus
+bindsym Mod4+m exec i3-msg [con_mark = '"'$(i3-msg -t get_marks | jq --raw-output .[] | rofi -dmenu -i -p 'Focus mark')'"'] focus
 
 # Workspaces ───────────────────────────────────────────────────────────────────
 
@@ -212,7 +212,7 @@ bindsym Mod4+Shift+t exec transset --actual
 bindsym Mod4+F2 exec room
 
 # Password manager
-bindsym Mod4+Shift+y exec menu-password $(menu-password | rofi -dmenu -p Password) | xclip-selection
+bindsym Mod4+Shift+y exec menu-password $(menu-password | rofi -dmenu -i -p Password) | xclip-selection
 
 # Capture
 bindsym Print exec capture image window

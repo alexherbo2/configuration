@@ -17,7 +17,7 @@
   max_icon_size = 32
 
   # Advanced
-  dmenu = rofi -dmenu -p Dunst
+  dmenu = rofi -dmenu -i -p Dunst
   browser = chromium
 
 [shortcuts]
