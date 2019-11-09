@@ -306,6 +306,7 @@
     lzip
     maim
     maven
+    mediainfo
     mgba
     mkvtoolnix
     mongodb
