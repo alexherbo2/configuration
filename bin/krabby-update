@@ -13,6 +13,9 @@ cp ~/projects/clipboard.js/scripts/clipboard.js .
 cp ~/projects/scroll.js/scripts/scroll.js .
 cp ~/projects/player.js/scripts/player.js .
 
+cd ~/.config/krabby
+make
+
 cd ~/projects/krabby/website/packages
 cp ~/projects/krabby/src/krabby.css .
 cp ~/projects/modal.js/scripts/modal.js .
