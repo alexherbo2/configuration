@@ -381,6 +381,7 @@
     tabbed
     tectonic
     tig
+    tigervnc
     tldr
     tmux
     tor
