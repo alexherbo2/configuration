@@ -16,7 +16,7 @@ cp ~/projects/player.js/scripts/player.js .
 cp ~/projects/krabby-launchlet/scripts/krabby/launchlet.js krabby
 
 cd ~/.config/krabby
-make
+make -o fetch
 
 cd ~/projects/krabby/website/packages
 cp ~/projects/krabby/src/krabby.css .
