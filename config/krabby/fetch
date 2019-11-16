@@ -6,3 +6,7 @@ fetch() {
     2) curl -sSL "$1" --output "$2" ;;
   esac
 }
+
+fetch https://launchlet.dev/launchlet.js
+fetch https://launchlet.dev/launchlet.css
+fetch https://github.com/alexherbo2/krabby-launchlet/raw/master/scripts/krabby/launchlet.js krabby/launchlet.js

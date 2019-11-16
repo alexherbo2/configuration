@@ -13,6 +13,7 @@ cp ~/projects/mouse.js/scripts/mouse.js .
 cp ~/projects/clipboard.js/scripts/clipboard.js .
 cp ~/projects/scroll.js/scripts/scroll.js .
 cp ~/projects/player.js/scripts/player.js .
+cp ~/projects/krabby-launchlet/scripts/krabby/launchlet.js krabby
 
 cd ~/.config/krabby
 make
