@@ -2,3 +2,7 @@
 
 sudo umount /dev/disk/by-label/Disk
 sudo fsck /dev/disk/by-label/Disk
+status=$?
+if test -n "$DISPLAY"; then
+  notify-send 'Disk' "Status: $status"
+fi

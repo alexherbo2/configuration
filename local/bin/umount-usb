@@ -2,3 +2,7 @@
 
 sudo umount /dev/disk/by-label/USB
 sudo fsck /dev/disk/by-label/USB
+status=$?
+if test -n "$DISPLAY"; then
+  notify-send 'USB' "Status: $status"
+fi
