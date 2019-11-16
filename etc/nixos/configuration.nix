@@ -353,6 +353,7 @@
     qutebrowser
     ranger
     redshift
+    retroarch
     ripgrep
     rofi
     rtorrent
