@@ -6,8 +6,8 @@ sudo mount /dev/disk/by-label/USB ~/Disk/USB
 exa ~/Disk/USB
 if test -n "$DISPLAY"; then
   if test "$status" = 0; then
-    notify-send 'USB' "Status: $status"
+    notify-send 'USB::Mount' "Status: $status"
   else
-    notify-send --urgency critical 'USB' "Status: $status"
+    notify-send --urgency critical 'USB::Mount' "Status: $status"
   fi
 fi

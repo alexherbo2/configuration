@@ -4,8 +4,8 @@ sudo clone -null ~/root ~/downstream ~/Disk/Disk
 status=$?
 if test -n "$DISPLAY"; then
   if test "$status" = 0; then
-    notify-send 'Disk' "Status: $status"
+    notify-send 'Disk::Clone' "Status: $status"
   else
-    notify-send --urgency critical 'Disk' "Status: $status"
+    notify-send --urgency critical 'Disk::Clone' "Status: $status"
   fi
 fi

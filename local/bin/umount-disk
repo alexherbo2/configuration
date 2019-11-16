@@ -5,8 +5,8 @@ sudo fsck /dev/disk/by-label/Disk
 status=$?
 if test -n "$DISPLAY"; then
   if test "$status" = 0; then
-    notify-send 'Disk' "Status: $status"
+    notify-send 'Disk::Unmount' "Status: $status"
   else
-    notify-send --urgency critical 'Disk' "Status: $status"
+    notify-send --urgency critical 'Disk::Unmount' "Status: $status"
   fi
 fi
