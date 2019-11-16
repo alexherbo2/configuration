@@ -308,6 +308,7 @@
     maven
     mediainfo
     mednafen
+    mednaffe
     mgba
     mkvtoolnix
     mongodb
