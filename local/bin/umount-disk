@@ -4,5 +4,9 @@ sudo umount /dev/disk/by-label/Disk
 sudo fsck /dev/disk/by-label/Disk
 status=$?
 if test -n "$DISPLAY"; then
-  notify-send 'Disk' "Status: $status"
+  if test "$status" = 0; then
+    notify-send 'Disk' "Status: $status"
+  else
+    notify-send --urgency critical 'Disk' "Status: $status"
+  fi
 fi

@@ -4,5 +4,9 @@ sudo umount /dev/disk/by-label/USB
 sudo fsck /dev/disk/by-label/USB
 status=$?
 if test -n "$DISPLAY"; then
-  notify-send 'USB' "Status: $status"
+  if test "$status" = 0; then
+    notify-send 'USB' "Status: $status"
+  else
+    notify-send --urgency critical 'USB' "Status: $status"
+  fi
 fi
