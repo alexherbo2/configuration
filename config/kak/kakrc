@@ -47,7 +47,21 @@ lsp-enable
 
 # Color scheme ─────────────────────────────────────────────────────────────────
 
-colorscheme dracula
+define-command colorscheme-dracula-transparent %{
+  colorscheme dracula
+  set-face global Default rgb:f8f8f2 # white
+  set-face global LineNumbers rgb:44475a # gray
+  set-face global LineNumberCursor rgb:f8f8f2+b # white
+  set-face global LineNumbersWrapped rgb:44475a+i # gray
+  set-face global Information rgb:f1fa8c # yellow
+  set-face global StatusLine rgb:f8f8f2 # white
+  set-face global StatusLineInfo rgb:bd93f9 # purple
+  set-face global StatusLineValue rgb:ffb86c # orange
+  set-face global BufferPadding rgb:44475a # gray
+  set-face global Whitespace rgb:44475a # gray
+}
+
+colorscheme-dracula-transparent
 
 set-face global Phantom rgb:f8f8f2,rgb:44475a # white,gray
 
