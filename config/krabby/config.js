@@ -1,8 +1,10 @@
 // Configuration for Krabby (https://github.com/alexherbo2/krabby/blob/master/src/krabby.js)
 
-const { extensions, modes } = krabby
+const { env, extensions, modes } = krabby
 const { shell } = extensions
 const { modal } = modes
+
+env.EDITOR = 'kitty kak "$1" -e "select $2.$3,$4.$5"'
 
 modal.filter('Read Berserk', () => location.hostname === 'readberserk.com', 'Command')
 modal.filter('Read Berserk · Chapter', () => location.pathname.startsWith('/chapter'), 'Read Berserk')
