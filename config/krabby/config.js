@@ -4,7 +4,7 @@ const { env, extensions, modes } = krabby
 const { shell } = extensions
 const { modal } = modes
 
-env.EDITOR = 'kitty kak "$1" -e "select $2.$3,$4.$5"'
+env.EDITOR = 'kitty --class kitty-float --override background_opacity=0.75 kak "$1" -e "select $2.$3,$4.$5"'
 
 modal.filter('Read Berserk', () => location.hostname === 'readberserk.com', 'Command')
 modal.filter('Read Berserk · Chapter', () => location.pathname.startsWith('/chapter'), 'Read Berserk')
