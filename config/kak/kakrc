@@ -41,9 +41,32 @@ pathogen-infect "%opt(repositories)/github.com/occivink/kakoune-sudo-write"
 pathogen-infect "%opt(repositories)/github.com/occivink/kakoune-vertical-selection"
 pathogen-infect "%opt(repositories)/github.com/ul/kak-lsp/rc"
 pathogen-infect "%opt(repositories)/github.com/ul/kak-tree"
+pathogen-infect "%opt(repositories)/gitlab.com/Screwtapello/kakoune-state-save"
 pathogen-infect "%opt(repositories)/bitbucket.org/KJ_Duncan/kakoune-kotlin.kak"
 
 lsp-enable
+
+# state-save
+
+hook global KakBegin .* %{
+  state-save-reg-sync colon
+  state-save-reg-sync pipe
+  state-save-reg-sync slash
+}
+
+hook global KakEnd .* %{
+  state-save-reg-sync colon
+  state-save-reg-sync pipe
+  state-save-reg-sync slash
+}
+
+hook global FocusOut .* %{
+  state-save-reg-save dquote
+}
+
+hook global FocusIn .* %{
+  state-save-reg-load dquote
+}
 
 # Color scheme ─────────────────────────────────────────────────────────────────
 
