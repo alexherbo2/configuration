@@ -7,6 +7,10 @@ fetch() {
   esac
 }
 
+fetch https://cdn.jsdelivr.net/npm/@simonwep/selection-js/dist/selection.min.js mouse-selection.js
+fetch https://github.com/alexherbo2/krabby-selection/raw/master/scripts/krabby/selection.js krabby/selection.js
+fetch https://github.com/alexherbo2/krabby-selection/raw/master/styles/krabby/selection.css krabby/selection.css
+
 fetch https://launchlet.dev/launchlet.js
 fetch https://launchlet.dev/launchlet.css
 fetch https://github.com/alexherbo2/krabby-launchlet/raw/master/scripts/krabby/launchlet.js krabby/launchlet.js
