@@ -21,6 +21,7 @@
         "packages/mouse-selection.js",
         "packages/launchlet.js",
         "packages/krabby.js",
+        "packages/krabby/extension.js",
         "packages/krabby/init.js",
         "packages/krabby/selection.js",
         "packages/krabby/launchlet.js",
