@@ -20,8 +20,8 @@ cd ~/.config/krabby
 make -o fetch
 
 cd ~/projects/krabby/website/packages
-cp ~/projects/krabby/src/krabby.js .
-cp ~/projects/krabby/src/krabby.css .
+cp ~/projects/krabby/src/krabby/web/krabby.js .
+cp ~/projects/krabby/src/krabby/web/krabby.css .
 cp ~/projects/modal.js/scripts/modal.js .
 cp ~/projects/prompt.js/scripts/prompt.js .
 cp ~/projects/hint.js/scripts/hint.js .

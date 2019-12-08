@@ -20,9 +20,9 @@
         "packages/player.js",
         "packages/mouse-selection.js",
         "packages/launchlet.js",
-        "packages/krabby.js",
-        "packages/krabby/extension.js",
-        "packages/krabby/init.js",
+        "packages/krabby/web/krabby.js",
+        "packages/krabby/extension/extension.js",
+        "packages/krabby/extension/init.js",
         "packages/krabby/selection.js",
         "packages/krabby/launchlet.js",
         "config.js"
@@ -30,7 +30,7 @@
       "css": [
         "packages/selection.css",
         "packages/launchlet.css",
-        "packages/krabby.css",
+        "packages/krabby/web/krabby.css",
         "packages/krabby/selection.css"
       ]
     }
