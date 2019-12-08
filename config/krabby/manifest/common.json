@@ -10,6 +10,7 @@
       ],
       "js": [
         "packages/modal.js",
+        "packages/mouse-selection.js",
         "packages/prompt.js",
         "packages/hint.js",
         "packages/mark.js",
@@ -18,20 +19,17 @@
         "packages/clipboard.js",
         "packages/scroll.js",
         "packages/player.js",
-        "packages/mouse-selection.js",
         "packages/launchlet.js",
         "packages/krabby/web/krabby.js",
         "packages/krabby/extension/extension.js",
         "packages/krabby/extension/init.js",
-        "packages/krabby/selection.js",
         "packages/krabby/launchlet.js",
         "config.js"
       ],
       "css": [
         "packages/selection.css",
         "packages/launchlet.css",
-        "packages/krabby/web/krabby.css",
-        "packages/krabby/selection.css"
+        "packages/krabby/web/krabby.css"
       ]
     }
   ],
