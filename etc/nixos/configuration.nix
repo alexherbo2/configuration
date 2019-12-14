@@ -240,6 +240,7 @@
     dolphinEmu
     dtach
     dunst
+    ecmtools
     elvish
     emacs
     exa
