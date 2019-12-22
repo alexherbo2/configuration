@@ -5,7 +5,7 @@ XDG_DATA_HOME=${XDG_DATA_HOME:-~/.local/share}
 
 data=$XDG_DATA_HOME/Cockatrice/Cockatrice
 
-deck="$data/decks/$@.cod"
+deck=$data/decks/$@.cod
 
 test -e "$deck" || {
   echo 'No deck found' > /dev/stderr
