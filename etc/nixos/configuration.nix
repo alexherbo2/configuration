@@ -109,6 +109,7 @@
       "games"
       "lxd"
       "networkmanager"
+      "sway"
       "vboxusers"
       "wheel"
     ];
