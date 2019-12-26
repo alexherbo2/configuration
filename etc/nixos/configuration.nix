@@ -271,6 +271,7 @@
     gparted
     gptfdisk
     graphviz
+    grim
     gsmartcontrol
     gtkpod
     guile
