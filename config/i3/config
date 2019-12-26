@@ -37,11 +37,11 @@ bar {
     statusline $black
     separator $white
     # Color class | Border | Background | Text
-    focused_workspace 0 $black $white
-    active_workspace 0 $black $white
-    inactive_workspace 0 $white $black
-    urgent_workspace 0 $red $white
-    binding_mode 0 $black $white
+    focused_workspace $black $black $white
+    active_workspace $black $black $white
+    inactive_workspace $white $white $black
+    urgent_workspace $red $red $white
+    binding_mode $black $black $white
   }
 }
 
