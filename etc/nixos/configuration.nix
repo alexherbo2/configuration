@@ -308,6 +308,7 @@
     lxd
     lzip
     maim
+    mako
     maven
     mediainfo
     mednafen
