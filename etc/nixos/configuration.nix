@@ -290,6 +290,7 @@
     janet
     jq
     kakoune
+    kanshi
     kdeApplications.kdenlive
     kitty
     kotlin
