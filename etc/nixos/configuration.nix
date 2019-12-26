@@ -375,6 +375,7 @@
     shellcheck
     skim
     slop
+    slurp
     smartmontools
     snes9x-gtk
     socat
