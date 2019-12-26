@@ -404,6 +404,7 @@
     vis
     vivaldi
     vscode
+    waybar
     wayland
     weechat
     wget
