@@ -419,6 +419,7 @@
     xorg.xkbcomp
     xorg.xmodmap
     xorg.xrdb
+    xwayland
     yarn
     youtube-dl
     zathura
