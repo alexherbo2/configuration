@@ -160,34 +160,34 @@ bindsym Mod4+Tab workspace back_and_forth
 bindsym Mod4+Shift+Tab move container to workspace back_and_forth
 
 # Focus
-bind Mod4+49 scratchpad show
-bind Mod4+10 workspace number 1
-bind Mod4+11 workspace number 2
-bind Mod4+12 workspace number 3
-bind Mod4+13 workspace number 4
-bind Mod4+14 workspace number 5
-bind Mod4+15 workspace number 6
-bind Mod4+16 workspace number 7
-bind Mod4+17 workspace number 8
-bind Mod4+18 workspace number 9
-bind Mod4+19 workspace number 10
-bind Mod4+20 workspace number 11
-bind Mod4+21 workspace number 12
+bindcode Mod4+49 scratchpad show
+bindcode Mod4+10 workspace number 1
+bindcode Mod4+11 workspace number 2
+bindcode Mod4+12 workspace number 3
+bindcode Mod4+13 workspace number 4
+bindcode Mod4+14 workspace number 5
+bindcode Mod4+15 workspace number 6
+bindcode Mod4+16 workspace number 7
+bindcode Mod4+17 workspace number 8
+bindcode Mod4+18 workspace number 9
+bindcode Mod4+19 workspace number 10
+bindcode Mod4+20 workspace number 11
+bindcode Mod4+21 workspace number 12
 
 # Move
-bind Mod4+Shift+49 move scratchpad
-bind Mod4+Shift+10 move container to workspace number 1
-bind Mod4+Shift+11 move container to workspace number 2
-bind Mod4+Shift+12 move container to workspace number 3
-bind Mod4+Shift+13 move container to workspace number 4
-bind Mod4+Shift+14 move container to workspace number 5
-bind Mod4+Shift+15 move container to workspace number 6
-bind Mod4+Shift+16 move container to workspace number 7
-bind Mod4+Shift+17 move container to workspace number 8
-bind Mod4+Shift+18 move container to workspace number 9
-bind Mod4+Shift+19 move container to workspace number 10
-bind Mod4+Shift+20 move container to workspace number 11
-bind Mod4+Shift+21 move container to workspace number 12
+bindcode Mod4+Shift+49 move scratchpad
+bindcode Mod4+Shift+10 move container to workspace number 1
+bindcode Mod4+Shift+11 move container to workspace number 2
+bindcode Mod4+Shift+12 move container to workspace number 3
+bindcode Mod4+Shift+13 move container to workspace number 4
+bindcode Mod4+Shift+14 move container to workspace number 5
+bindcode Mod4+Shift+15 move container to workspace number 6
+bindcode Mod4+Shift+16 move container to workspace number 7
+bindcode Mod4+Shift+17 move container to workspace number 8
+bindcode Mod4+Shift+18 move container to workspace number 9
+bindcode Mod4+Shift+19 move container to workspace number 10
+bindcode Mod4+Shift+20 move container to workspace number 11
+bindcode Mod4+Shift+21 move container to workspace number 12
 
 # Monitors
 bindsym Mod4+Mod1+h focus output left
