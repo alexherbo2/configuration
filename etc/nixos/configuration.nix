@@ -154,12 +154,12 @@
   hardware.pulseaudio.enable = true;
 
   # X11
-  services.xserver.enable = true;
+  # services.xserver.enable = true;
   # Enable touchpad support
-  services.xserver.libinput.enable = true;
+  # services.xserver.libinput.enable = true;
 
   # Display manager
-  services.xserver.displayManager.sddm.enable = true;
+  # services.xserver.displayManager.sddm.enable = true;
 
   # Wayland compositors
   # Sway
@@ -167,14 +167,14 @@
 
   # Window managers
   # i3
-  services.xserver.windowManager.i3.enable = true;
-  services.xserver.windowManager.i3.package = pkgs.i3-gaps;
+  # services.xserver.windowManager.i3.enable = true;
+  # services.xserver.windowManager.i3.package = pkgs.i3-gaps;
   # bspwm
-  services.xserver.windowManager.bspwm.enable = true;
+  # services.xserver.windowManager.bspwm.enable = true;
 
   # Desktop managers
   # Plasma
-  services.xserver.desktopManager.plasma5.enable = true;
+  # services.xserver.desktopManager.plasma5.enable = true;
 
   # Qt
   # programs.qt5ct.enable = true;
