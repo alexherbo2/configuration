@@ -174,7 +174,7 @@
 
   # Desktop managers
   # Plasma
-  # services.xserver.desktopManager.plasma5.enable = true;
+  services.xserver.desktopManager.plasma5.enable = true;
 
   # Qt
   # programs.qt5ct.enable = true;
