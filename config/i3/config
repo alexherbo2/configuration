@@ -20,10 +20,10 @@ set $blue #2e9ef4
 set $white #eaeaea
 
 # Color class | Border | Background | Text | Indicator | Child border
-client.focused $white $white $black $blue
-client.focused_inactive $black $black $white $black
-client.unfocused $black $black $white $black
-client.urgent $red $red $white $black
+client.focused $white $white $black $blue $blue
+client.focused_inactive $black $black $white $black $black
+client.unfocused $black $black $white $black $black
+client.urgent $red $red $white $black $red
 
 # Bar ──────────────────────────────────────────────────────────────────────────
 
