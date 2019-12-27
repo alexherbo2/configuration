@@ -1,0 +1,7 @@
+{
+  output eDP-1 mode 1920x1080 position 0,0
+}
+{
+  output eDP-1 mode 1920x1080 position 0,900
+  output HDMI-A-1 mode 1440x900 position 0,0
+}
