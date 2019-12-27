@@ -409,6 +409,7 @@
     waybar
     wayland
     weechat
+    wf-recorder
     wget
     (wine.override { wineBuild = "wine64"; })
     winetricks
