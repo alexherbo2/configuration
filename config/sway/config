@@ -7,6 +7,7 @@ default_border pixel
 default_floating_border normal
 floating_modifier Mod4
 workspace_auto_back_and_forth yes
+output * bg ~/images/wallpapers/orioto/DKC.jpg fill
 
 # Colors ───────────────────────────────────────────────────────────────────────
 
