@@ -324,7 +324,7 @@ define-command ekr -docstring 'Open Krabby configuration file' 'edit ~/.config/k
 define-command en -docstring 'Open NixOS configuration file' 'edit /etc/nixos/configuration.nix'
 define-command et -docstring 'Open tmux configuration file' 'edit ~/.tmux.conf'
 define-command eg -docstring 'Open Git configuration file' 'edit ~/.config/git/config'
-define-command e3 -docstring 'Open i3 configuration file' 'edit ~/.config/i3/config'
+define-command ewm -docstring 'Open Sway configuration file' 'edit ~/.config/sway/config'
 define-command elv -docstring 'Open Elvish configuration file' 'edit ~/.elvish/rc.elv'
 define-command ea -docstring 'Open Alacritty configuration file' 'edit ~/.config/alacritty/alacritty.yml'
 define-command ekt -docstring 'Open kitty configuration file' 'edit ~/.config/kitty/kitty.conf'

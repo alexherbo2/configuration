@@ -117,8 +117,8 @@ fn enter {
 # GTD
 fn diary {
   try {
-    socket = (i3 --get-socketpath 2> /dev/null)
-    i3-msg --quiet mark Diary
+    socket = (sway --get-socketpath 2> /dev/null)
+    swaymsg --quiet mark Diary
   } except error { }
   cd ~/documents/diary
   kak (date +%Y).md
@@ -156,16 +156,16 @@ fn git-init [directory]{
 
 fn mpv [@arguments]{
   try {
-    socket = (i3 --get-socketpath 2> /dev/null)
-    i3-msg --quiet mark mpv
+    socket = (sway --get-socketpath 2> /dev/null)
+    swaymsg --quiet mark mpv
   } except error { }
   e:mpv $@arguments
 }
 
 fn weechat {
   try {
-    socket = (i3 --get-socketpath 2> /dev/null)
-    i3-msg --quiet mark IRC
+    socket = (sway --get-socketpath 2> /dev/null)
+    swaymsg --quiet mark IRC
   } except error { }
   try {
     ssh mawww -t weechat

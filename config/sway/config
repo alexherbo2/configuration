@@ -55,7 +55,7 @@ bindsym Mod4+Return exec kitty
 bindsym Mod4+Shift+Return exec kitty --directory $(window-working-directory)
 
 # Drop-down terminal
-bindsym Mod4+Shift+p exec "kitty sh -c 'i3-msg --quiet mark Drop-down, move scratchpad, [con_mark = Drop-down] scratchpad show; elvish'"
+bindsym Mod4+Shift+p exec "kitty sh -c 'swaymsg --quiet mark Drop-down, move scratchpad, [con_mark = Drop-down] scratchpad show; elvish'"
 bindsym Mod4+p [con_mark = Drop-down] scratchpad show
 
 # Mouse
@@ -130,7 +130,7 @@ bindsym Mod4+Control+k resize shrink down
 bindsym Mod4+Control+l resize grow right
 
 # Gaps
-bindsym Mod4+g exec "$(printf 'i3-msg gaps inner current set %d, gaps outer current set %d' $(rofi -dmenu -p Gaps))"
+bindsym Mod4+g exec "$(printf 'swaymsg gaps inner current set %d, gaps outer current set %d' $(rofi -dmenu -p Gaps))"
 bindsym Mod4+Shift+g gaps inner current set 0, gaps outer current set 0
 
 # Borders
@@ -146,8 +146,8 @@ bindsym Mod4+r exec xdotool getactivewindow set_window --name "$(rofi -dmenu -p 
 
 # Marks
 bindsym Mod4+x mark --add --toggle marked
-bindsym Mod4+Shift+m exec i3-msg mark $(rofi -dmenu -p Mark)
-bindsym Mod4+m exec i3-msg [con_mark = '"'$(i3-msg -t get_marks | jq --raw-output .[] | rofi -dmenu -i -p 'Focus mark')'"'] focus
+bindsym Mod4+Shift+m exec swaymsg mark $(rofi -dmenu -p Mark)
+bindsym Mod4+m exec swaymsg [con_mark = '"'$(swaymsg -t get_marks | jq --raw-output .[] | rofi -dmenu -i -p 'Focus mark')'"'] focus
 
 # Workspaces ───────────────────────────────────────────────────────────────────
 
@@ -206,7 +206,7 @@ bindsym Mod4+Mod1+Control+k move workspace to output up
 bindsym Mod4+Mod1+Control+l move workspace to output right
 
 # Rename
-bindsym Mod4+Shift+r exec i3-msg rename workspace to '"'$(rofi -dmenu -p 'Workspace name')'"'
+bindsym Mod4+Shift+r exec swaymsg rename workspace to '"'$(rofi -dmenu -p 'Workspace name')'"'
 
 # Desktop ──────────────────────────────────────────────────────────────────────
 

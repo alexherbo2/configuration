@@ -1,6 +1,13 @@
 #!/bin/sh
 
-i3-msg --quiet "
+wm_msg=i3-msg
+
+# Sway support
+if sway --get-socketpath > /dev/null 2>&1; then
+  wm_msg=swaymsg
+fi
+
+"$wm_msg" --quiet "
   floating enable,
   resize set $1 $2,
   move position center
