@@ -291,6 +291,7 @@
     iw
     janet
     jq
+    kak-lsp
     kakoune
     kanshi
     kdeApplications.kdenlive
