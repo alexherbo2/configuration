@@ -32,7 +32,7 @@ client.background $white
 
 bar {
   position top
-  status_command i3blocks
+  status_command waybar
   colors {
     background $white
     statusline $black

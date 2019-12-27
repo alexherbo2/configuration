@@ -165,6 +165,9 @@
   # Sway
   programs.sway.enable = true;
 
+  # Waybar
+  programs.waybar.enable = true;
+
   # Window managers
   # i3
   # services.xserver.windowManager.i3.enable = true;
