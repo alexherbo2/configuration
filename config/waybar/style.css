@@ -1,0 +1,16 @@
+@define-color black #202020;
+@define-color white #eaeaea;
+
+#workspaces button {
+  padding: 0;
+  border-radius: 0;
+}
+
+#workspaces button.focused {
+  background-color: @black;
+  color: @white;
+}
+
+#mode, #clock, #battery {
+  margin: 0 4px;
+}
