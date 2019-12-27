@@ -187,6 +187,7 @@
 
   # Redshift
   services.redshift.enable = true;
+  services.redshift.package = pkgs.redshift-wlr;
 
   # Virtualisation
   virtualisation.lxc.enable = true;
