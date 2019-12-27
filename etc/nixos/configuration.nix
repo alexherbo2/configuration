@@ -388,6 +388,7 @@
     surf
     sway
     sxhkd
+    synapse-bt
     tabbed
     tectonic
     tig
