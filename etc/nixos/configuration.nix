@@ -38,6 +38,10 @@
   # The Lounge: 9000
   networking.firewall.allowedTCPPorts = [ 80 443 9000 ];
 
+  # AdBlock via /etc/hosts
+  # https://github.com/StevenBlack/hosts
+  networking.extraHosts = builtins.readFile /home/alex/repositories/github.com/StevenBlack/hosts/hosts;
+
   time.timeZone = "Europe/Paris";
 
   # Location: Paris
