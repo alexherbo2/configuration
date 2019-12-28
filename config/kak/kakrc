@@ -104,10 +104,28 @@ hook global ModuleLoaded x11 %{
 }
 
 set-option -add global auto_pairs “ ” ‘ ’ « » ‹ ›
-set-option -add global snippets '->' '→'
-set-option -add global snippets '<-' '←'
-set-option -add global snippets '^' '↑'
-set-option -add global snippets 'v' '↓'
+
+# Snippets from file using Crystal
+# File: ~/.config/snippets.yml
+evaluate-commands %sh{
+  cat <<'EOF' | crystal eval
+    require "yaml"
+    class String
+      def shell_escape
+        "'" + self.gsub("'", %('"'"')) + "'"
+      end
+    end
+    yaml = File.open(File.join(ENV["XDG_CONFIG_HOME"], "snippets.yml")) do |file|
+      Hash(String, String).from_yaml(file)
+    end
+    yaml.each do |snippet, expansion|
+      puts "
+        set-option -add global snippets #{snippet.shell_escape} #{expansion.shell_escape}
+        set-option -add global static_words #{snippet.shell_escape}
+      "
+    end
+EOF
+}
 
 add-highlighter global/ number-lines
 add-highlighter global/ show-matching
