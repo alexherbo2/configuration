@@ -457,8 +457,8 @@ hook global NormalKey '[ydc]' %{
 }
 
 # Automatically switch to the project root of the current buffer
-hook global WinDisplay .* change-directory-project-root
-hook global FocusIn .* change-directory-project-root
+# hook global WinDisplay .* change-directory-project-root
+# hook global FocusIn .* change-directory-project-root
 
 # File-types ───────────────────────────────────────────────────────────────────
 
