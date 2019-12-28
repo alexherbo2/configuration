@@ -423,6 +423,7 @@
     wget
     (wine.override { wineBuild = "wine64"; })
     winetricks
+    wl-clipboard
     xboxdrv
     xclip
     xcompmgr
