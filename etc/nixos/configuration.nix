@@ -187,7 +187,7 @@
   # programs.qt5ct.enable = true;
 
   # Compositor for window managers
-  services.compton.enable = true;
+  # services.compton.enable = true;
 
   # Backlight
   programs.light.enable = true;
