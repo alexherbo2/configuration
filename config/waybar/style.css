@@ -11,6 +11,6 @@
   color: @white;
 }
 
-#mode, #clock, #battery {
+#mode, #clock, #battery, #pulseaudio {
   margin: 0 4px;
 }
