@@ -200,7 +200,7 @@ alias:new d trash
 alias:new _ trash -null
 alias:new x extract
 alias:new ft file-type
-alias:new yk xclip-selection
+alias:new yk wl-copy
 
 # Listing
 alias:new l exa

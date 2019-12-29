@@ -434,9 +434,9 @@ map global user t -docstring 'Translate' '|deepl translate --targetLanguage=FR<r
 map global user | -docstring 'Sort' '|sort<ret>'
 
 # Paste
-map global user p -docstring 'Paste (After)' '<a-!>xclip -out -selection clipboard<ret>'
-map global user P -docstring 'Paste (Before)' '!xclip -out -selection clipboard<ret>'
-map global user R -docstring 'Replace' '|xclip -out -selection clipboard<ret>'
+map global user p -docstring 'Paste (After)' '<a-!>wl-paste<ret>'
+map global user P -docstring 'Paste (Before)' '!wl-paste<ret>'
+map global user R -docstring 'Replace' '|wl-paste<ret>'
 
 # Highlighters
 map global user l -docstring 'Line numbers' ':toggle-highlighter global/ number-lines<ret>'
@@ -452,7 +452,7 @@ hook global BufWritePre .* %{
 # Clipboard
 hook global NormalKey '[ydc]' %{
   nop %sh{
-    (printf '%s' "$kak_main_reg_dquote" | xclip-selection) < /dev/null > /dev/null 2>&1 &
+    (printf '%s' "$kak_main_reg_dquote" | wl-copy) < /dev/null > /dev/null 2>&1 &
   }
 }
 

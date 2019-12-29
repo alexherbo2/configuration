@@ -218,7 +218,7 @@ bindsym Mod4+Shift+t exec transset --actual
 bindsym Mod4+F2 exec room
 
 # Password manager
-bindsym Mod4+Shift+y exec menu-password $(menu-password | rofi -dmenu -i -p Password) | xclip-selection
+bindsym Mod4+Shift+y exec menu-password $(menu-password | rofi -dmenu -i -p Password) | wl-copy
 
 # Capture
 bindsym Print exec capture image window
