@@ -1,11 +1,22 @@
 #!/bin/sh
 
+# Default values for the `light` and `night` parameters
 light=${1:-20}
 night=${2:-0.2}
 
-# Float to integer
-current=$(echo "($(light) + 0.5) / 1" | bc)
+round() {
+  echo "($1 + 0.5) / 1" | bc
+}
 
-test $light = $current && value=$night || value=$light
+# Get brightness
+brightness=$(light -G)
 
-sudo light -S $value
+# Set or unset room
+if test $(echo "$(round $brightness) > $(round $night)" | bc) -eq 1; then
+  brightness=$night
+else
+  brightness=$light
+fi
+
+# Set brightness
+sudo light -S "$brightness"
