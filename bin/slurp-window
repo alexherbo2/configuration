@@ -1,0 +1,10 @@
+#!/bin/sh
+
+swaymsg -t get_tree |
+jq --raw-output '
+  .. |
+  select(.pid? and .visible?) |
+  .rect |
+  "\(.x),\(.y) \(.width)x\(.height)"
+' |
+slurp

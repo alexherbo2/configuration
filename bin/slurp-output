@@ -1,0 +1,10 @@
+#!/bin/sh
+
+swaymsg -t get_outputs |
+jq --raw-output '
+  .[] |
+  select(.active) |
+  .rect |
+  "\(.x),\(.y) \(.width)x\(.height)"
+' |
+slurp
