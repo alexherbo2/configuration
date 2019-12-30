@@ -53,7 +53,6 @@ bindsym Mod4+q exec plumb mpv pandoc xdg-open
 
 # Terminal
 bindsym Mod4+Return exec kitty
-bindsym Mod4+Shift+Return exec kitty --directory $(window-working-directory)
 
 # Drop-down terminal
 bindsym Mod4+Shift+p exec "kitty sh -c 'swaymsg --quiet mark Drop-down, move scratchpad, [con_mark = Drop-down] scratchpad show; elvish'"
