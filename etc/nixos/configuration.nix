@@ -187,9 +187,6 @@
   # Qt
   # programs.qt5ct.enable = true;
 
-  # Compositor for window managers
-  # services.compton.enable = true;
-
   # Backlight
   programs.light.enable = true;
 
@@ -236,7 +233,6 @@
     clang
     clojure
     cockatrice
-    compton
     crystal
     ctags
     curl
