@@ -319,7 +319,7 @@
     nim
     nix-index
     nmap
-    nodejs-12_x
+    nodejs-13_x
     notmuch
     ntfs3g
     ocaml
