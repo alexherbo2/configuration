@@ -1,0 +1,4 @@
+#!/bin/sh
+
+region=$(slurp-window)
+grim -g "$region" "$@"

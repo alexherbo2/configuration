@@ -1,0 +1,4 @@
+#!/bin/sh
+
+region=$(slurp-output)
+grim -g "$region" "$@"
