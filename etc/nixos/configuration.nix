@@ -389,7 +389,6 @@
     steam
     surf
     sway
-    sxhkd
     synapse-bt
     tabbed
     tectonic
