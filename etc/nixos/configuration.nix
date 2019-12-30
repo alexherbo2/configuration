@@ -284,7 +284,6 @@
     kitty
     kotlin
     leiningen
-    lemonbar-xft
     lf
     libnotify
     light
