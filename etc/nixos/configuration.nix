@@ -177,8 +177,6 @@
   # i3
   # services.xserver.windowManager.i3.enable = true;
   # services.xserver.windowManager.i3.package = pkgs.i3-gaps;
-  # bspwm
-  # services.xserver.windowManager.bspwm.enable = true;
 
   # Desktop managers
   # Plasma
@@ -222,7 +220,6 @@
     bc
     blender
     brave
-    bspwm
     bundix
     cabal-install
     # cachix
