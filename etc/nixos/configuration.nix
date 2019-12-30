@@ -368,7 +368,6 @@
     sqlite
     sshfs
     steam
-    surf
     sway
     synapse-bt
     tectonic
