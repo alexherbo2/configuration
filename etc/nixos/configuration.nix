@@ -163,9 +163,6 @@
   # Enable touchpad support
   # services.xserver.libinput.enable = true;
 
-  # Display manager
-  # services.xserver.displayManager.sddm.enable = true;
-
   # Wayland compositors
   # Sway
   programs.sway.enable = true;
@@ -366,7 +363,6 @@
     sbcl
     scala
     screenkey
-    sddm
     setroot
     shards
     shellcheck
