@@ -78,7 +78,6 @@ bindsym Mod4+Mod1+space sticky toggle
 
 # Distraction-free
 bindsym Mod4+Shift+a exec i3-distraction-free
-bindsym Mod4+Shift+s exec pkill i3blocks
 bindsym Mod4+Shift+d bar mode dock
 bindsym Mod4+Shift+f bar mode invisible
 
@@ -220,9 +219,9 @@ bindsym Shift+Print exec grim-output $(new-file).webp
 
 # Multimedia-keys ──────────────────────────────────────────────────────────────
 
-bindsym XF86AudioMute exec amixer set Master toggle && pkill -RTMIN+1 i3blocks
-bindsym XF86AudioRaiseVolume exec amixer set Master 5%+ && pkill -RTMIN+1 i3blocks
-bindsym XF86AudioLowerVolume exec amixer set Master 5%- && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioMute exec amixer set Master toggle
+bindsym XF86AudioRaiseVolume exec amixer set Master 5%+
+bindsym XF86AudioLowerVolume exec amixer set Master 5%-
 
 bindsym XF86AudioPlay exec echo cycle pause | socat - ~/.config/mpv/socket
 bindsym XF86AudioPause exec echo cycle pause | socat - ~/.config/mpv/socket
