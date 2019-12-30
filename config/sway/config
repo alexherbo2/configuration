@@ -211,9 +211,6 @@ bindsym Mod4+Shift+r exec swaymsg rename workspace to '"'$(rofi -dmenu -p 'Works
 
 # Desktop ──────────────────────────────────────────────────────────────────────
 
-# Transparency
-bindsym Mod4+Shift+t exec transset --actual
-
 # Room
 bindsym Mod4+F2 exec room
 
