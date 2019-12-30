@@ -158,11 +158,6 @@
   sound.enable = true;
   hardware.pulseaudio.enable = true;
 
-  # X11
-  # services.xserver.enable = true;
-  # Enable touchpad support
-  # services.xserver.libinput.enable = true;
-
   # Wayland compositors
   # Sway
   programs.sway.enable = true;
