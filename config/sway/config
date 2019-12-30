@@ -217,9 +217,9 @@ bindsym Mod4+F2 exec room
 # Password manager
 bindsym Mod4+Shift+y exec menu-password $(menu-password | rofi -dmenu -i -p Password) | wl-copy
 
-# Capture
-bindsym Print exec capture image window
-bindsym Shift+Print exec capture image desktop
+# Screenshots
+bindsym Print exec grim-window $(new-file).webp
+bindsym Shift+Print exec grim-output $(new-file).webp
 
 # Resume
 bindsym Mod4+z exec window-signal -19 && notify-send "$(xdotool getactivewindow getwindowname)" Stopped
