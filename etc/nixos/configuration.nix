@@ -278,7 +278,6 @@
     hugo
     hunspell
     hunspellDicts.en-us
-    i3blocks
     imagemagick
     inkscape
     inotify-tools
