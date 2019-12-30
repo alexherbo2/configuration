@@ -221,10 +221,6 @@ bindsym Mod4+Shift+y exec menu-password $(menu-password | rofi -dmenu -i -p Pass
 bindsym Print exec grim-window $(new-file).webp
 bindsym Shift+Print exec grim-output $(new-file).webp
 
-# Resume
-bindsym Mod4+z exec window-signal -19 && notify-send "$(xdotool getactivewindow getwindowname)" Stopped
-bindsym Mod4+Shift+z exec window-signal -18 && notify-send "$(xdotool getactivewindow getwindowname)" Resumed
-
 # Multimedia-keys ──────────────────────────────────────────────────────────────
 
 bindsym XF86AudioMute exec amixer set Master toggle && pkill -RTMIN+1 i3blocks
