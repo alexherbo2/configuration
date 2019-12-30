@@ -418,13 +418,6 @@
     winetricks
     wl-clipboard
     xboxdrv
-    xorg.transset
-    xorg.xbacklight
-    xorg.xev
-    xorg.xinit
-    xorg.xkbcomp
-    xorg.xmodmap
-    xorg.xrdb
     xwayland
     yarn
     youtube-dl
