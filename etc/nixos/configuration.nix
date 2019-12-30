@@ -35,8 +35,9 @@
   # Firewall
   # Allow incoming connections
   # https://nixos.org/nixos/manual#sec-firewall
+  # receptor: 3000
   # The Lounge: 9000
-  networking.firewall.allowedTCPPorts = [ 80 443 9000 ];
+  networking.firewall.allowedTCPPorts = [ 80 443 3000 9000 ];
 
   # AdBlock via /etc/hosts
   # https://github.com/StevenBlack/hosts
