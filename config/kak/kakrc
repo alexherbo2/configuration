@@ -99,6 +99,10 @@ set-option global makecmd 'make -j 8'
 set-option global grepcmd 'rg --column --with-filename'
 set-option global connect_shell elvish
 
+# Explore files and buffers with fzf
+set-option global explore_files_command fzf-files
+set-option global explore_buffers_command fzf-buffers
+
 hook global ModuleLoaded x11 %{
   set-option global termcmd 'kitty sh -c'
 }
