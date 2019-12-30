@@ -420,7 +420,6 @@
     xboxdrv
     xclip
     xcompmgr
-    xdo
     xdotool
     xorg.transset
     xorg.xbacklight
