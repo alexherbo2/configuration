@@ -354,7 +354,6 @@
     rustup
     sbcl
     scala
-    setroot
     shards
     shellcheck
     skim
