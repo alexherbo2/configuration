@@ -311,6 +311,11 @@ alias global t connect-terminal
 alias global df distraction-free-toggle
 alias global pn pad-number
 
+# Rename buffers, clients and sessions
+alias global nb rename-buffer
+alias global nc rename-client
+alias global ns rename-session
+
 # Change directory
 alias global cd! change-directory-project-root
 
