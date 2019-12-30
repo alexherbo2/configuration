@@ -75,7 +75,6 @@ bindsym Mod4+f fullscreen toggle
 bindsym Mod4+Mod1+space sticky toggle
 
 # Distraction-free
-bindsym Mod4+Shift+a exec i3-distraction-free
 bindsym Mod4+Shift+d bar mode dock
 bindsym Mod4+Shift+f bar mode invisible
 
