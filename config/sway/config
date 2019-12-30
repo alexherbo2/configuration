@@ -224,4 +224,3 @@ bindsym XF86AudioPrev exec echo playlist-prev | socat - ~/.config/mpv/socket
 # Rules ────────────────────────────────────────────────────────────────────────
 
 for_window [class=kitty-float] exec 640px
-for_window [title=Security.Warning class=Wine] kill
