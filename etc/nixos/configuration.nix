@@ -419,7 +419,6 @@
     wl-clipboard
     xboxdrv
     xclip
-    xcompmgr
     xorg.transset
     xorg.xbacklight
     xorg.xev
