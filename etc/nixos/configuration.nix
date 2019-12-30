@@ -373,7 +373,6 @@
     surf
     sway
     synapse-bt
-    tabbed
     tectonic
     tig
     tigervnc
