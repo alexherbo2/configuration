@@ -173,11 +173,6 @@
   # Waybar
   programs.waybar.enable = true;
 
-  # Window managers
-  # i3
-  # services.xserver.windowManager.i3.enable = true;
-  # services.xserver.windowManager.i3.package = pkgs.i3-gaps;
-
   # Desktop managers
   # Plasma
   services.xserver.desktopManager.plasma5.enable = true;
@@ -284,7 +279,6 @@
     hunspell
     hunspellDicts.en-us
     i3blocks
-    i3-gaps
     imagemagick
     inkscape
     inotify-tools
