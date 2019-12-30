@@ -354,7 +354,6 @@
     rustup
     sbcl
     scala
-    screenkey
     setroot
     shards
     shellcheck
