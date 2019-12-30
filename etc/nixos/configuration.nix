@@ -229,7 +229,6 @@
     dolphin
     dolphinEmu
     dtach
-    dunst
     ecmtools
     elvish
     emacs
