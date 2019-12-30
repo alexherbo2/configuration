@@ -1,6 +1,0 @@
-xrdb .Xresources
-lafayette
-setroot --restore
-xcompmgr &
-dunst &
-i3
