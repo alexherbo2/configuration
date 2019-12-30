@@ -418,7 +418,6 @@
     winetricks
     wl-clipboard
     xboxdrv
-    xclip
     xorg.transset
     xorg.xbacklight
     xorg.xev
