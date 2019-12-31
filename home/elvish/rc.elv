@@ -212,6 +212,11 @@ alias:new L exa --tree
 # Browser
 alias:new b launch chromium --remote-debugging-port=9222
 
+# tmux
+alias:new t tmux
+alias:new tn tmux new-session
+alias:new ta tmux attach-session
+
 # Kakoune
 alias:new k kak-connect
 alias:new kl kak-list
