@@ -207,7 +207,7 @@ alias:new l exa
 alias:new ll exa --long
 alias:new la exa --all
 alias:new lla exa --long --all
-alias:new t exa --tree
+alias:new L exa --tree
 
 # Browser
 alias:new b launch chromium --remote-debugging-port=9222
