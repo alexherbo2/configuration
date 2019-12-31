@@ -362,6 +362,7 @@
     smartmontools
     snes9x-gtk
     socat
+    solargraph
     sox
     sqlite
     sshfs
