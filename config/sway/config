@@ -52,11 +52,11 @@ bar {
 bindsym Mod4+q exec plumb mpv pandoc xdg-open
 
 # Terminal
-bindsym Mod4+Return exec kitty
+bindsym Mod4+Return exec alacritty
 
 # Mouse
 bindsym --release button2 kill
-bindsym --release button3 exec kitty
+bindsym --release button3 exec alacritty
 
 bindsym --whole-window Mod4+button4 focus left
 bindsym --whole-window Mod4+button5 focus right
@@ -223,4 +223,4 @@ bindsym XF86AudioPrev exec echo playlist-prev | socat - ~/.config/mpv/socket
 
 # Rules ────────────────────────────────────────────────────────────────────────
 
-for_window [class=kitty-float] exec 640px
+for_window [class=alacritty-float] exec 640px

@@ -39,7 +39,7 @@ E:XDG_CACHE_HOME = ~/.cache
 E:XDG_DATA_HOME = ~/.local/share
 
 # Applications
-E:TERMINAL = kitty
+E:TERMINAL = alacritty
 E:BROWSER = chromium
 E:KAKOUNE_POSIX_SHELL = /run/current-system/sw/bin/dash
 E:MANPAGER = kak-man-pager
