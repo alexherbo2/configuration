@@ -5,6 +5,6 @@ module.exports = {
     nick: 'alexherbo2',
     username: 'alexherbo2',
     realname: 'Alex Leferry 2>',
-    join: '#alacritty,#archlinux,#batch,#bspwm,#chromium,#chromium-extensions,#chromium-support,#crystal-lang,#css,#curl,#elvish,#evil-mode,#ffmpeg,#html,#i3,##javascript,#jq,#kakoune,#krabby,#lf,#mpv,#mpv-android,#next-browser,#nixos,#qutebrowser,#ruby,#rubyonrails,#sway,#thelounge,#tmux,#tridactyl,#uzbl,#vim-fr'
+    join: '#alacritty,#archlinux,#batch,#bspwm,#chromium,#chromium-extensions,#chromium-support,#crystal-lang,#css,#curl,#elvish,#evil-mode,#ffmpeg,#html,#i3,##javascript,#jq,#kakoune,#krabby,#lf,#mpv,#mpv-android,#next-browser,#nixos,#qutebrowser,#ruby,#rubyonrails,#sway,#termux,#thelounge,#tmux,#tridactyl,#uzbl,#vim-fr'
   }
 }
