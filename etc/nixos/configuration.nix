@@ -395,6 +395,7 @@
     winetricks
     wl-clipboard
     xboxdrv
+    xdg_utils
     xwayland
     yarn
     youtube-dl
