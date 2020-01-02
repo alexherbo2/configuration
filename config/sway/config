@@ -218,10 +218,10 @@ bindsym XF86AudioMute exec amixer set Master toggle
 bindsym XF86AudioRaiseVolume exec amixer set Master 5%+
 bindsym XF86AudioLowerVolume exec amixer set Master 5%-
 
-bindsym XF86AudioPlay exec echo cycle pause | socat - ~/.config/mpv/socket
-bindsym XF86AudioPause exec echo cycle pause | socat - ~/.config/mpv/socket
-bindsym XF86AudioNext exec echo playlist-next | socat - ~/.config/mpv/socket
-bindsym XF86AudioPrev exec echo playlist-prev | socat - ~/.config/mpv/socket
+bindsym XF86AudioPlay exec echo cycle pause | socat - "$XDG_CONFIG_HOME/mpv/socket"
+bindsym XF86AudioPause exec echo cycle pause | socat - "$XDG_CONFIG_HOME/mpv/socket"
+bindsym XF86AudioNext exec echo playlist-next | socat - "$XDG_CONFIG_HOME/mpv/socket"
+bindsym XF86AudioPrev exec echo playlist-prev | socat - "$XDG_CONFIG_HOME/mpv/socket"
 
 # Rules ────────────────────────────────────────────────────────────────────────
 
