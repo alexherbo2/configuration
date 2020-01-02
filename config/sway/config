@@ -8,6 +8,8 @@ default_floating_border normal
 floating_modifier Mod4
 workspace_auto_back_and_forth yes
 output * bg ~/images/wallpapers/orioto/DKC.jpg fill
+exec_always pkill waybar; waybar
+exec_always pkill kanshi; kanshi
 
 # Colors ───────────────────────────────────────────────────────────────────────
 
