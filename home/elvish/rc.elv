@@ -154,14 +154,6 @@ fn git-init [directory]{
   git remotes
 }
 
-fn mpv [@arguments]{
-  try {
-    socket = (sway --get-socketpath 2> /dev/null)
-    swaymsg --quiet mark mpv
-  } except error { }
-  e:mpv $@arguments
-}
-
 # Batch
 
 fn batch [@arguments]{
