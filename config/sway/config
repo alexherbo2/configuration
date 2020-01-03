@@ -56,6 +56,9 @@ bindsym Mod4+q exec plumb mpv pandoc xdg-open
 # Terminal
 bindsym Mod4+Return exec alacritty
 
+# Launcher
+bindsym Mod4+Shift+Return exec launcher $(launcher | rofi -dmenu -i -p Launcher)
+
 # Mouse
 bindsym --release button2 kill
 bindsym --release button3 exec alacritty
