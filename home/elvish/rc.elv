@@ -146,14 +146,6 @@ fn kak [@arguments]{
   }
 }
 
-fn git-init [directory]{
-  git init $directory
-  cd $directory
-  repository = (basename $directory)
-  git remote add origin git@github.com:alexherbo2/$repository
-  git remotes
-}
-
 # Batch
 
 fn batch [@arguments]{
@@ -204,7 +196,6 @@ alias:new kl kak-list
 # Git
 alias:new g git
 alias:new G tig
-fn gi [@arguments]{ git-init $@arguments }
 fn gh [@arguments]{ git-hub $@arguments }
 fn gcd { git-hub:change-directory . }
 
