@@ -58,6 +58,8 @@
   co = checkout
   l = ! clear && git log -18
   g = ! clear && git graph -12
+  bd = branch-delete
+  bdr = branch-delete-remote
 
   ; Information
   root = rev-parse --show-toplevel
