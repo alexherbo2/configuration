@@ -152,7 +152,7 @@ alias:new tn tmux new-session
 alias:new ta tmux attach-session
 
 # Kakoune
-alias:new k kak-connect
+alias:new k kak
 alias:new kl kak-list
 
 # Git

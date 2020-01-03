@@ -58,7 +58,7 @@ map ~ cd ~
 map w $$SHELL
 map <delete> embed trash
 map | embed bat
-map e embed kak-connect
+map e embed kak
 map m embed mpv
 map x embed extract
 map s select-fuzzy
