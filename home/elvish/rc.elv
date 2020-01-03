@@ -114,16 +114,6 @@ fn enter {
 # on #elvish the 2018-03-14 at 17:40:20.
 # https://github.com/zzamboni
 
-# GTD
-fn diary {
-  try {
-    socket = (sway --get-socketpath 2> /dev/null)
-    swaymsg --quiet mark Diary
-  } except error { }
-  cd ~/documents/diary
-  kak (date +%Y).md
-}
-
 # Hijack
 alias:new su sudo --login
 alias:new ipd e:ipd -4
