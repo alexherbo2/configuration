@@ -1,7 +1,6 @@
 # Modules ──────────────────────────────────────────────────────────────────────
 
 use re
-use github.com/alexherbo2/command-duration.elv/lib/command-duration
 use github.com/alexherbo2/git-hub/contrib/elvish/lib/git-hub
 use github.com/zzamboni/elvish-modules/alias
 
@@ -82,22 +81,6 @@ edit:rprompt = {
     }
   } except error { } 2> /dev/null
 }
-
-# Hooks ────────────────────────────────────────────────────────────────────────
-
-# Display user-friendly durations
-edit:before-readline = [
-  $@edit:before-readline
-  {
-    if (> $command-duration:value 60) {
-      echo (edit:styled (
-        printf 'Finished in %s (%s)' \
-          (friendly-duration (* $command-duration:value 1000)) \
-          (date +'%a %b %-d %-I:%M %p') \
-      ) cyan) > /dev/tty
-    }
-  }
-]
 
 # Commands ─────────────────────────────────────────────────────────────────────
 
