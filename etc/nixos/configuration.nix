@@ -349,7 +349,7 @@
     ripgrep
     rofi
     rtorrent
-    ruby_2_6
+    ruby_2_7
     rustc
     rustup
     sbcl
