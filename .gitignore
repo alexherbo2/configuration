@@ -5,6 +5,7 @@ home/icons
 home/elvish/db
 home/elvish/aliases
 home/thelounge/logs
+home/thelounge/packages
 home/thelounge/users
 home/thelounge/vapid.json
 config/passwords.yml
