@@ -162,18 +162,6 @@ fn mpv [@arguments]{
   e:mpv $@arguments
 }
 
-fn weechat {
-  try {
-    socket = (sway --get-socketpath 2> /dev/null)
-    swaymsg --quiet mark IRC
-  } except error { }
-  try {
-    ssh mawww -t weechat
-  } except error {
-    e:weechat
-  }
-}
-
 # Batch
 
 fn batch [@arguments]{
