@@ -109,28 +109,6 @@ hook global ModuleLoaded x11 %{
 
 set-option -add global auto_pairs “ ” ‘ ’ « » ‹ ›
 
-# Snippets from file using Crystal
-# File: ~/.config/snippets.yml
-evaluate-commands %sh{
-  cat <<'EOF' | crystal eval
-    require "yaml"
-    class String
-      def shell_escape
-        "'" + self.gsub("'", %('"'"')) + "'"
-      end
-    end
-    yaml = File.open(File.join(ENV["XDG_CONFIG_HOME"], "snippets.yml")) do |file|
-      Hash(String, String).from_yaml(file)
-    end
-    yaml.each do |snippet, expansion|
-      puts "
-        set-option -add global snippets #{snippet.shell_escape} #{expansion.shell_escape}
-        set-option -add global static_words #{snippet.shell_escape}
-      "
-    end
-EOF
-}
-
 add-highlighter global/ number-lines
 add-highlighter global/ show-matching
 add-highlighter global/ show-whitespaces
@@ -592,5 +570,49 @@ hook global BufOpenFile ".*/diary/%sh(date +%Y)\.md" %{
     evaluate-commands %sh(printf "execute-keys '/^# %s$<ret>'" $(date +%F.%a))
     execute-keys '<a-i><a-w>vv'
     set-register / '^# \K\d{4}-\d{2}-\d{2}\.\w{3}'
+  }
+}
+
+# Plugins ──────────────────────────────────────────────────────────────────────
+
+# Snippets
+
+# Generate snippets on-demand using snippets-generate-config and snippets-source-config.
+
+hook global KakBegin .* %{
+  snippets-source-config
+}
+
+define-command snippets-source-config %{
+  try %{
+    source "%val(client_env_XDG_CACHE_HOME)/kak/snippets.kak"
+  }
+}
+
+define-command snippets-generate-config %{
+  # Ensure ~/.cache/kak exists
+  nop %sh{
+    mkdir -p "$XDG_CACHE_HOME/kak"
+  }
+  # Snippets from file using Crystal
+  # File: ~/.config/snippets.yml
+  echo -to-file "%val(client_env_XDG_CACHE_HOME)/kak/snippets.kak" %sh{
+    cat <<'EOF' | crystal eval
+      require "yaml"
+      class String
+        def shell_escape
+          "'" + self.gsub("'", %('"'"')) + "'"
+        end
+      end
+      yaml = File.open(File.join(ENV["XDG_CONFIG_HOME"], "snippets.yml")) do |file|
+        Hash(String, String).from_yaml(file)
+      end
+      yaml.each do |snippet, expansion|
+        puts "
+          set-option -add global snippets #{snippet.shell_escape} #{expansion.shell_escape}
+          set-option -add global static_words #{snippet.shell_escape}
+        "
+      end
+EOF
   }
 }
