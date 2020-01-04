@@ -144,7 +144,7 @@ alias:new lla exa --long --all
 alias:new L exa --tree
 
 # Browser
-alias:new b launch chromium --remote-debugging-port=9222
+alias:new b chromium
 
 # tmux
 alias:new t tmux
