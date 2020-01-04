@@ -165,7 +165,7 @@ fn gcd { git-hub:change-directory . }
 alias:new m mpv
 alias:new mi mpv -profile image
 alias:new ma mpv -profile audio
-alias:new mkwa mpv -profile audio "(radio-kawa '' '#{item.enclosure.url}')"
+alias:new mkwa mpv -profile audio "(radiokawa '' '#{item.enclosure.url}')"
 
 alias:new y youtube-dl
 alias:new dls youtube-dl-source
