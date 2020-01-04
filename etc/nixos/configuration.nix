@@ -319,6 +319,7 @@
     nodejs-13_x
     notmuch
     ntfs3g
+    nushell
     ocaml
     opam
     openjdk12
