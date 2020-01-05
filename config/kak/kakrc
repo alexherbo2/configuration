@@ -339,7 +339,7 @@ define-command elf -docstring 'Open lf configuration file' 'edit ~/.config/lf/lf
 define-command ed -docstring 'Open diary file' "edit ~/documents/diary/%sh(date +%Y).md"
 define-command es -docstring 'Open snippets file' 'edit ~/.config/snippets.yml'
 define-command ep -docstring 'Open passwords file' 'edit ~/.config/passwords.yml'
-define-command ew -docstring 'Open words file' 'edit ~/documents/words'
+define-command ew -docstring 'Open words file' 'edit ~/documents/words.txt'
 
 # Mappings ─────────────────────────────────────────────────────────────────────
 
