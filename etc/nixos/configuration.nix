@@ -379,7 +379,6 @@
     unrar
     unzip
     vanilla-dmz
-    vifm
     vim
     vimHugeX
     virtualbox
