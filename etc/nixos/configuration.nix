@@ -344,7 +344,6 @@
     python38Packages.pip
     qemu
     qutebrowser
-    ranger
     redshift
     retroarch
     ripgrep
