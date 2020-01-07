@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sudo clone -null ~/root ~/Disk/USB
+sudo clone ~/root ~/Disk/USB
 status=$?
 if test -n "$DISPLAY"; then
   if test "$status" = 0; then

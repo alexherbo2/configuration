@@ -131,7 +131,7 @@ fn batch-relink [@arguments]{
 alias:new md mkdir -p
 alias:new c clone
 alias:new d trash
-alias:new _ trash -null
+alias:new _ trash
 alias:new x extract
 alias:new ft file-type
 alias:new yk wl-copy

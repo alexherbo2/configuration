@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sudo clone -null ~/root ~/downstream ~/Disk/Disk
+sudo clone ~/root ~/downstream ~/Disk/Disk
 status=$?
 if test -n "$DISPLAY"; then
   if test "$status" = 0; then
