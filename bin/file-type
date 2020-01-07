@@ -2,4 +2,4 @@
 
 type=$(file -b -i -L "$@")
 type=${type%;*}
-echo "$type"
+printf '%s\n' "$type"
