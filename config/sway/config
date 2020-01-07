@@ -135,8 +135,8 @@ bindsym Mod4+b border toggle
 bindsym Mod4+Shift+b border pixel
 
 # Search
-bindsym Mod4+slash exec i3-window-commander focus "rofi -dmenu -i -p 'Search window'"
-bindsym Mod4+Shift+slash exec "i3-window-commander 'move workspace current, focus' \\"rofi -dmenu -i -p 'Bring window'\\""
+bindsym Mod4+slash exec sway-commander rofi -dmenu -i -p 'Search window'
+bindsym Mod4+Shift+slash exec echo move workspace current, focus | sway-commander rofi -dmenu -i -p 'Bring window'
 
 # Marks
 bindsym Mod4+x mark --add --toggle marked
