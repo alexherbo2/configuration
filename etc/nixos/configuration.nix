@@ -395,6 +395,7 @@
     wl-clipboard
     xboxdrv
     xdg_utils
+    xorg.xev
     xwayland
     yarn
     youtube-dl
