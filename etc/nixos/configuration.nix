@@ -213,6 +213,7 @@
     bc
     blender
     brave
+    broot
     bundix
     cabal-install
     # cachix
