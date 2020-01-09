@@ -121,10 +121,10 @@ bindsym Mod4+y swap container with mark marked
 # │    │ →
 # ╰────╯ →
 # ↓ ↓ ↓  ↘
-bindsym Mod4+Control+h resize shrink right
-bindsym Mod4+Control+j resize grow down
-bindsym Mod4+Control+k resize shrink down
-bindsym Mod4+Control+l resize grow right
+bindsym Mod4+Control+h resize shrink right 5 ppt
+bindsym Mod4+Control+j resize grow down 5 ppt
+bindsym Mod4+Control+k resize shrink down 5 ppt
+bindsym Mod4+Control+l resize grow right 5 ppt
 
 # Gaps
 bindsym Mod4+g exec "$(printf 'swaymsg gaps inner current set %d, gaps outer current set %d' $(rofi -dmenu -p Gaps))"
