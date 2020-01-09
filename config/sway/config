@@ -1,3 +1,58 @@
+# Key codes ────────────────────────────────────────────────────────────────────
+
+# Generated with xev or wev using KeyboardEvent.code as names.
+# https://gitlab.freedesktop.org/xorg/app/xev
+# https://git.sr.ht/~sircmpwn/wev
+# https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/code
+
+set $Backquote 49
+set $Digit1 10
+set $Digit2 11
+set $Digit3 12
+set $Digit4 13
+set $Digit5 14
+set $Digit6 15
+set $Digit7 16
+set $Digit8 17
+set $Digit9 18
+set $Digit0 19
+set $Minus 20
+set $Equal 21
+set $KeyQ 24
+set $KeyW 25
+set $KeyE 26
+set $KeyR 27
+set $KeyT 28
+set $KeyY 29
+set $KeyU 30
+set $KeyI 31
+set $KeyO 32
+set $KeyP 33
+set $BracketLeft 34
+set $BracketRight 35
+set $Backslash 51
+set $KeyA 38
+set $KeyS 39
+set $KeyD 40
+set $KeyF 41
+set $KeyG 42
+set $KeyH 43
+set $KeyJ 44
+set $KeyK 45
+set $KeyL 46
+set $Semicolon 47
+set $Quote 48
+set $KeyZ 52
+set $KeyX 53
+set $KeyC 54
+set $KeyV 55
+set $KeyB 56
+set $KeyN 57
+set $KeyM 58
+set $Comma 59
+set $Period 60
+set $Slash 61
+
 # Options ──────────────────────────────────────────────────────────────────────
 
 font pango:DejaVu
@@ -50,7 +105,7 @@ bar {
 # Key-bindings ─────────────────────────────────────────────────────────────────
 
 # Plumb
-bindsym Mod4+q exec plumb mpv pandoc xdg-open
+bindcode Mod4+$KeyQ exec plumb mpv pandoc xdg-open
 
 # Terminal
 bindsym Mod4+Return exec alacritty
@@ -68,15 +123,15 @@ bindsym --whole-window Mod4+Shift+button4 move left
 bindsym --whole-window Mod4+Shift+button5 move right
 
 # Layouts
-bindsym Mod4+a layout tabbed
-bindsym Mod4+s layout stacking
-bindsym Mod4+d layout toggle split
-bindsym Mod4+f fullscreen toggle
+bindcode Mod4+$KeyA layout tabbed
+bindcode Mod4+$KeyS layout stacking
+bindcode Mod4+$KeyD layout toggle split
+bindcode Mod4+$KeyF fullscreen toggle
 bindsym Mod4+Mod1+space sticky toggle
 
 # Distraction-free
-bindsym Mod4+Shift+d bar mode dock
-bindsym Mod4+Shift+f bar mode invisible
+bindcode Mod4+Shift+$KeyD bar mode dock
+bindcode Mod4+Shift+$KeyF bar mode invisible
 
 # Tiling / Floating
 bindsym Mod4+Shift+space floating toggle
@@ -89,30 +144,30 @@ bindsym Mod4+Shift+Escape restart
 # Containers ───────────────────────────────────────────────────────────────────
 
 # Kill
-bindsym Mod4+w kill
+bindcode Mod4+$KeyW kill
 
 # Split
-bindsym Mod4+o split vertical
-bindsym Mod4+Shift+o split horizontal
+bindcode Mod4+$KeyO split vertical
+bindcode Mod4+Shift+$KeyO split horizontal
 
 # Parent / Child
-bindsym Mod4+u focus parent
-bindsym Mod4+i focus child
+bindcode Mod4+$KeyU focus parent
+bindcode Mod4+$KeyI focus child
 
 # Focus
-bindsym Mod4+h focus left
-bindsym Mod4+j focus down
-bindsym Mod4+k focus up
-bindsym Mod4+l focus right
+bindcode Mod4+$KeyH focus left
+bindcode Mod4+$KeyJ focus down
+bindcode Mod4+$KeyK focus up
+bindcode Mod4+$KeyL focus right
 
 # Move
-bindsym Mod4+Shift+h move left
-bindsym Mod4+Shift+j move down
-bindsym Mod4+Shift+k move up
-bindsym Mod4+Shift+l move right
+bindcode Mod4+Shift+$KeyH move left
+bindcode Mod4+Shift+$KeyJ move down
+bindcode Mod4+Shift+$KeyK move up
+bindcode Mod4+Shift+$KeyL move right
 
 # Swap
-bindsym Mod4+y swap container with mark marked
+bindcode Mod4+$KeyY swap container with mark marked
 
 # Resize in these directions
 # ╭────╮ →
@@ -121,86 +176,86 @@ bindsym Mod4+y swap container with mark marked
 # │    │ →
 # ╰────╯ →
 # ↓ ↓ ↓  ↘
-bindsym Mod4+Control+h resize shrink right 5 ppt
-bindsym Mod4+Control+j resize grow down 5 ppt
-bindsym Mod4+Control+k resize shrink down 5 ppt
-bindsym Mod4+Control+l resize grow right 5 ppt
+bindcode Mod4+Control+$KeyH resize shrink right 5 ppt
+bindcode Mod4+Control+$KeyJ resize grow down 5 ppt
+bindcode Mod4+Control+$KeyK resize shrink down 5 ppt
+bindcode Mod4+Control+$KeyL resize grow right 5 ppt
 
 # Gaps
-bindsym Mod4+g exec "$(printf 'swaymsg gaps inner current set %d, gaps outer current set %d' $(rofi -dmenu -p Gaps))"
-bindsym Mod4+Shift+g gaps inner current set 0, gaps outer current set 0
+bindcode Mod4+$KeyG exec "$(printf 'swaymsg gaps inner current set %d, gaps outer current set %d' $(rofi -dmenu -p Gaps))"
+bindcode Mod4+Shift+$KeyG gaps inner current set 0, gaps outer current set 0
 
 # Borders
-bindsym Mod4+b border toggle
-bindsym Mod4+Shift+b border pixel
+bindcode Mod4+$KeyB border toggle
+bindcode Mod4+Shift+$KeyB border pixel
 
 # Search
-bindsym Mod4+slash exec sway-commander rofi -dmenu -i -p 'Search window'
-bindsym Mod4+Shift+slash exec echo move workspace current, focus | sway-commander rofi -dmenu -i -p 'Bring window'
+bindcode Mod4+$Slash exec sway-commander rofi -dmenu -i -p 'Search window'
+bindcode Mod4+Shift+$Slash exec echo move workspace current, focus | sway-commander rofi -dmenu -i -p 'Bring window'
 
 # Marks
-bindsym Mod4+x mark --add --toggle marked
-bindsym Mod4+Shift+m exec swaymsg mark $(rofi -dmenu -p Mark)
-bindsym Mod4+m exec swaymsg [con_mark = '"'$(swaymsg -t get_marks | jq --raw-output .[] | rofi -dmenu -i -p 'Focus mark')'"'] focus
+bindcode Mod4+$KeyX mark --add --toggle marked
+bindcode Mod4+Shift+$KeyM exec swaymsg mark $(rofi -dmenu -p Mark)
+bindcode Mod4+$KeyM exec swaymsg [con_mark = '"'$(swaymsg -t get_marks | jq --raw-output .[] | rofi -dmenu -i -p 'Focus mark')'"'] focus
 
 # Workspaces ───────────────────────────────────────────────────────────────────
 
 # Next / Previous
-bindsym Mod4+n workspace next
-bindsym Mod4+Shift+n workspace prev
+bindcode Mod4+$KeyN workspace next
+bindcode Mod4+Shift+$KeyN workspace prev
 
 # Last
 bindsym Mod4+Tab workspace back_and_forth
 bindsym Mod4+Shift+Tab move container to workspace back_and_forth
 
 # Focus
-bindcode Mod4+49 scratchpad show
-bindcode Mod4+10 workspace number 1
-bindcode Mod4+11 workspace number 2
-bindcode Mod4+12 workspace number 3
-bindcode Mod4+13 workspace number 4
-bindcode Mod4+14 workspace number 5
-bindcode Mod4+15 workspace number 6
-bindcode Mod4+16 workspace number 7
-bindcode Mod4+17 workspace number 8
-bindcode Mod4+18 workspace number 9
-bindcode Mod4+19 workspace number 10
-bindcode Mod4+20 workspace number 11
-bindcode Mod4+21 workspace number 12
+bindcode Mod4+$Backquote scratchpad show
+bindcode Mod4+$Digit1 workspace number 1
+bindcode Mod4+$Digit2 workspace number 2
+bindcode Mod4+$Digit3 workspace number 3
+bindcode Mod4+$Digit4 workspace number 4
+bindcode Mod4+$Digit5 workspace number 5
+bindcode Mod4+$Digit6 workspace number 6
+bindcode Mod4+$Digit7 workspace number 7
+bindcode Mod4+$Digit8 workspace number 8
+bindcode Mod4+$Digit9 workspace number 9
+bindcode Mod4+$Digit0 workspace number 10
+bindcode Mod4+$Minus workspace number 11
+bindcode Mod4+$Equal workspace number 12
 
 # Move
-bindcode Mod4+Shift+49 move scratchpad
-bindcode Mod4+Shift+10 move container to workspace number 1
-bindcode Mod4+Shift+11 move container to workspace number 2
-bindcode Mod4+Shift+12 move container to workspace number 3
-bindcode Mod4+Shift+13 move container to workspace number 4
-bindcode Mod4+Shift+14 move container to workspace number 5
-bindcode Mod4+Shift+15 move container to workspace number 6
-bindcode Mod4+Shift+16 move container to workspace number 7
-bindcode Mod4+Shift+17 move container to workspace number 8
-bindcode Mod4+Shift+18 move container to workspace number 9
-bindcode Mod4+Shift+19 move container to workspace number 10
-bindcode Mod4+Shift+20 move container to workspace number 11
-bindcode Mod4+Shift+21 move container to workspace number 12
+bindcode Mod4+Shift+$Backquote move scratchpad
+bindcode Mod4+Shift+$Digit1 move container to workspace number 1
+bindcode Mod4+Shift+$Digit2 move container to workspace number 2
+bindcode Mod4+Shift+$Digit3 move container to workspace number 3
+bindcode Mod4+Shift+$Digit4 move container to workspace number 4
+bindcode Mod4+Shift+$Digit5 move container to workspace number 5
+bindcode Mod4+Shift+$Digit6 move container to workspace number 6
+bindcode Mod4+Shift+$Digit7 move container to workspace number 7
+bindcode Mod4+Shift+$Digit8 move container to workspace number 8
+bindcode Mod4+Shift+$Digit9 move container to workspace number 9
+bindcode Mod4+Shift+$Digit0 move container to workspace number 10
+bindcode Mod4+Shift+$Minus move container to workspace number 11
+bindcode Mod4+Shift+$Equal move container to workspace number 12
 
 # Monitors
-bindsym Mod4+Mod1+h focus output left
-bindsym Mod4+Mod1+j focus output down
-bindsym Mod4+Mod1+k focus output up
-bindsym Mod4+Mod1+l focus output right
+bindcode Mod4+Mod1+$KeyH focus output left
+bindcode Mod4+Mod1+$KeyJ focus output down
+bindcode Mod4+Mod1+$KeyK focus output up
+bindcode Mod4+Mod1+$KeyL focus output right
 
-bindsym Mod4+Mod1+Shift+h move container to output left
-bindsym Mod4+Mod1+Shift+j move container to output down
-bindsym Mod4+Mod1+Shift+k move container to output up
-bindsym Mod4+Mod1+Shift+l move container to output right
+bindcode Mod4+Mod1+Shift+$KeyH move container to output left
+bindcode Mod4+Mod1+Shift+$KeyJ move container to output down
+bindcode Mod4+Mod1+Shift+$KeyK move container to output up
+bindcode Mod4+Mod1+Shift+$KeyL move container to output right
 
-bindsym Mod4+Mod1+Control+h move workspace to output left
-bindsym Mod4+Mod1+Control+j move workspace to output down
-bindsym Mod4+Mod1+Control+k move workspace to output up
-bindsym Mod4+Mod1+Control+l move workspace to output right
+bindcode Mod4+Mod1+Control+$KeyH move workspace to output left
+bindcode Mod4+Mod1+Control+$KeyJ move workspace to output down
+bindcode Mod4+Mod1+Control+$KeyK move workspace to output up
+bindcode Mod4+Mod1+Control+$KeyL move workspace to output right
 
 # Rename
-bindsym Mod4+Shift+r exec swaymsg rename workspace to '"'$(rofi -dmenu -p 'Workspace name')'"'
+bindcode Mod4+Shift+$KeyR exec swaymsg rename workspace to '"'$(rofi -dmenu -p 'Workspace name')'"'
 
 # Desktop ──────────────────────────────────────────────────────────────────────
 
@@ -208,7 +263,7 @@ bindsym Mod4+Shift+r exec swaymsg rename workspace to '"'$(rofi -dmenu -p 'Works
 bindsym Mod4+F2 exec room
 
 # Password manager
-bindsym Mod4+p exec menu-password $(menu-password | rofi -dmenu -i -p Password) | wl-copy
+bindcode Mod4+$KeyP exec menu-password $(menu-password | rofi -dmenu -i -p Password) | wl-copy
 
 # Screenshots
 bindsym Print exec grim-window $(new-file).webp
