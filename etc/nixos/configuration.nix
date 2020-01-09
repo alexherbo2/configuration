@@ -165,6 +165,12 @@
   # Waybar
   programs.waybar.enable = true;
 
+  # X11
+  services.xserver.enable = true;
+
+  # Display manager
+  services.xserver.displayManager.sddm.enable = true;
+
   # Desktop managers
   # Plasma
   services.xserver.desktopManager.plasma5.enable = true;
