@@ -7,8 +7,10 @@ default_floating_border normal
 floating_modifier Mod4
 workspace_auto_back_and_forth yes
 output * bg ~/images/wallpapers/orioto/DKC.jpg fill
-exec_always pkill waybar; waybar
-exec_always pkill kanshi; kanshi
+exec_always {
+  pkill waybar; waybar
+  pkill kanshi; kanshi
+}
 
 # Colors ───────────────────────────────────────────────────────────────────────
 
@@ -16,10 +18,12 @@ exec_always pkill kanshi; kanshi
 # Mac
 # Dracula
 # https://draculatheme.com
-set $black #202020
-set $red #ff5555
-set $blue #2e9ef4
-set $white #eaeaea
+set {
+  $black #202020
+  $red #ff5555
+  $blue #2e9ef4
+  $white #eaeaea
+}
 
 # Color class | Border | Background | Text | Indicator | Child border
 client.focused $white $white $black $blue $white
@@ -49,181 +53,184 @@ bar {
 
 # Key-bindings ─────────────────────────────────────────────────────────────────
 
-# Plumb
-bindsym --to-code Mod4+q exec plumb mpv pandoc xdg-open
+bindsym --to-code {
 
-# Terminal
-bindsym Mod4+Return exec alacritty
+  # Plumb
+  Mod4+q exec plumb mpv pandoc xdg-open
 
-# Launcher
-bindsym Mod4+Shift+Return exec launcher $(launcher | rofi -dmenu -i -p Launcher)
+  # Terminal
+  Mod4+Return exec alacritty
 
-# Mouse
-bindsym --release button2 kill
-bindsym --release button3 exec alacritty
+  # Launcher
+  Mod4+Shift+Return exec launcher $(launcher | rofi -dmenu -i -p Launcher)
 
-bindsym --whole-window Mod4+button4 focus left
-bindsym --whole-window Mod4+button5 focus right
-bindsym --whole-window Mod4+Shift+button4 move left
-bindsym --whole-window Mod4+Shift+button5 move right
+  # Mouse
+  --release button2 kill
+  --release button3 exec alacritty
 
-# Layouts
-bindsym --to-code Mod4+a layout tabbed
-bindsym --to-code Mod4+s layout stacking
-bindsym --to-code Mod4+d layout toggle split
-bindsym --to-code Mod4+f fullscreen toggle
-bindsym Mod4+Mod1+space sticky toggle
+  --whole-window Mod4+button4 focus left
+  --whole-window Mod4+button5 focus right
+  --whole-window Mod4+Shift+button4 move left
+  --whole-window Mod4+Shift+button5 move right
 
-# Distraction-free
-bindsym --to-code Mod4+Shift+d bar mode dock
-bindsym --to-code Mod4+Shift+f bar mode invisible
+  # Layouts
+  Mod4+a layout tabbed
+  Mod4+s layout stacking
+  Mod4+d layout toggle split
+  Mod4+f fullscreen toggle
+  Mod4+Mod1+space sticky toggle
 
-# Tiling / Floating
-bindsym Mod4+Shift+space floating toggle
-bindsym Mod4+space focus mode_toggle
+  # Distraction-free
+  Mod4+Shift+d bar mode dock
+  Mod4+Shift+f bar mode invisible
 
-# Reload
-bindsym Mod4+Escape reload
-bindsym Mod4+Shift+Escape restart
+  # Tiling / Floating
+  Mod4+Shift+space floating toggle
+  Mod4+space focus mode_toggle
 
-# Containers ───────────────────────────────────────────────────────────────────
+  # Reload
+  Mod4+Escape reload
+  Mod4+Shift+Escape restart
 
-# Kill
-bindsym --to-code Mod4+w kill
+  # Containers ─────────────────────────────────────────────────────────────────
 
-# Split
-bindsym --to-code Mod4+o split vertical
-bindsym --to-code Mod4+Shift+o split horizontal
+  # Kill
+  Mod4+w kill
 
-# Parent / Child
-bindsym --to-code Mod4+u focus parent
-bindsym --to-code Mod4+i focus child
+  # Split
+  Mod4+o split vertical
+  Mod4+Shift+o split horizontal
 
-# Focus
-bindsym --to-code Mod4+h focus left
-bindsym --to-code Mod4+j focus down
-bindsym --to-code Mod4+k focus up
-bindsym --to-code Mod4+l focus right
+  # Parent / Child
+  Mod4+u focus parent
+  Mod4+i focus child
 
-# Move
-bindsym --to-code Mod4+Shift+h move left
-bindsym --to-code Mod4+Shift+j move down
-bindsym --to-code Mod4+Shift+k move up
-bindsym --to-code Mod4+Shift+l move right
+  # Focus
+  Mod4+h focus left
+  Mod4+j focus down
+  Mod4+k focus up
+  Mod4+l focus right
 
-# Swap
-bindsym --to-code Mod4+y swap container with mark marked
+  # Move
+  Mod4+Shift+h move left
+  Mod4+Shift+j move down
+  Mod4+Shift+k move up
+  Mod4+Shift+l move right
 
-# Resize in these directions
-# ╭────╮ →
-# │    │ →
-# │    │ →
-# │    │ →
-# ╰────╯ →
-# ↓ ↓ ↓  ↘
-bindsym --to-code Mod4+Control+h resize shrink right 5 ppt
-bindsym --to-code Mod4+Control+j resize grow down 5 ppt
-bindsym --to-code Mod4+Control+k resize shrink down 5 ppt
-bindsym --to-code Mod4+Control+l resize grow right 5 ppt
+  # Swap
+  Mod4+y swap container with mark marked
 
-# Gaps
-bindsym --to-code Mod4+g exec "$(printf 'swaymsg gaps inner current set %d, gaps outer current set %d' $(rofi -dmenu -p Gaps))"
-bindsym --to-code Mod4+Shift+g gaps inner current set 0, gaps outer current set 0
+  # Resize in these directions
+  # ╭────╮ →
+  # │    │ →
+  # │    │ →
+  # │    │ →
+  # ╰────╯ →
+  # ↓ ↓ ↓  ↘
+  Mod4+Control+h resize shrink right 5 ppt
+  Mod4+Control+j resize grow down 5 ppt
+  Mod4+Control+k resize shrink down 5 ppt
+  Mod4+Control+l resize grow right 5 ppt
 
-# Borders
-bindsym --to-code Mod4+b border toggle
-bindsym --to-code Mod4+Shift+b border pixel
+  # Gaps
+  Mod4+g exec "$(printf 'swaymsg gaps inner current set %d, gaps outer current set %d' $(rofi -dmenu -p Gaps))"
+  Mod4+Shift+g gaps inner current set 0, gaps outer current set 0
 
-# Search
-bindsym --to-code Mod4+slash exec sway-commander rofi -dmenu -i -p 'Search window'
-bindsym --to-code Mod4+Shift+slash exec echo move workspace current, focus | sway-commander rofi -dmenu -i -p 'Bring window'
+  # Borders
+  Mod4+b border toggle
+  Mod4+Shift+b border pixel
 
-# Marks
-bindsym --to-code Mod4+x mark --add --toggle marked
-bindsym --to-code Mod4+Shift+m exec swaymsg mark $(rofi -dmenu -p Mark)
-bindsym --to-code Mod4+m exec swaymsg [con_mark = '"'$(swaymsg -t get_marks | jq --raw-output .[] | rofi -dmenu -i -p 'Focus mark')'"'] focus
+  # Search
+  Mod4+slash exec sway-commander rofi -dmenu -i -p 'Search window'
+  Mod4+Shift+slash exec echo move workspace current, focus | sway-commander rofi -dmenu -i -p 'Bring window'
 
-# Workspaces ───────────────────────────────────────────────────────────────────
+  # Marks
+  Mod4+x mark --add --toggle marked
+  Mod4+Shift+m exec swaymsg mark $(rofi -dmenu -p Mark)
+  Mod4+m exec swaymsg [con_mark = '"'$(swaymsg -t get_marks | jq --raw-output .[] | rofi -dmenu -i -p 'Focus mark')'"'] focus
 
-# Next / Previous
-bindsym --to-code Mod4+n workspace next
-bindsym --to-code Mod4+Shift+n workspace prev
+  # Workspaces ─────────────────────────────────────────────────────────────────
 
-# Last
-bindsym Mod4+Tab workspace back_and_forth
-bindsym Mod4+Shift+Tab move container to workspace back_and_forth
+  # Next / Previous
+  Mod4+n workspace next
+  Mod4+Shift+n workspace prev
 
-# Focus
-bindsym --to-code Mod4+grave scratchpad show
-bindsym --to-code Mod4+1 workspace number 1
-bindsym --to-code Mod4+2 workspace number 2
-bindsym --to-code Mod4+3 workspace number 3
-bindsym --to-code Mod4+4 workspace number 4
-bindsym --to-code Mod4+5 workspace number 5
-bindsym --to-code Mod4+6 workspace number 6
-bindsym --to-code Mod4+7 workspace number 7
-bindsym --to-code Mod4+8 workspace number 8
-bindsym --to-code Mod4+9 workspace number 9
-bindsym --to-code Mod4+0 workspace number 10
-bindsym --to-code Mod4+minus workspace number 11
-bindsym --to-code Mod4+equal workspace number 12
+  # Last
+  Mod4+Tab workspace back_and_forth
+  Mod4+Shift+Tab move container to workspace back_and_forth
 
-# Move
-bindsym --to-code Mod4+Shift+grave move scratchpad
-bindsym --to-code Mod4+Shift+1 move container to workspace number 1
-bindsym --to-code Mod4+Shift+2 move container to workspace number 2
-bindsym --to-code Mod4+Shift+3 move container to workspace number 3
-bindsym --to-code Mod4+Shift+4 move container to workspace number 4
-bindsym --to-code Mod4+Shift+5 move container to workspace number 5
-bindsym --to-code Mod4+Shift+6 move container to workspace number 6
-bindsym --to-code Mod4+Shift+7 move container to workspace number 7
-bindsym --to-code Mod4+Shift+8 move container to workspace number 8
-bindsym --to-code Mod4+Shift+9 move container to workspace number 9
-bindsym --to-code Mod4+Shift+0 move container to workspace number 10
-bindsym --to-code Mod4+Shift+minus move container to workspace number 11
-bindsym --to-code Mod4+Shift+equal move container to workspace number 12
+  # Focus
+  Mod4+grave scratchpad show
+  Mod4+1 workspace number 1
+  Mod4+2 workspace number 2
+  Mod4+3 workspace number 3
+  Mod4+4 workspace number 4
+  Mod4+5 workspace number 5
+  Mod4+6 workspace number 6
+  Mod4+7 workspace number 7
+  Mod4+8 workspace number 8
+  Mod4+9 workspace number 9
+  Mod4+0 workspace number 10
+  Mod4+minus workspace number 11
+  Mod4+equal workspace number 12
 
-# Monitors
-bindsym --to-code Mod4+Mod1+h focus output left
-bindsym --to-code Mod4+Mod1+j focus output down
-bindsym --to-code Mod4+Mod1+k focus output up
-bindsym --to-code Mod4+Mod1+l focus output right
+  # Move
+  Mod4+Shift+grave move scratchpad
+  Mod4+Shift+1 move container to workspace number 1
+  Mod4+Shift+2 move container to workspace number 2
+  Mod4+Shift+3 move container to workspace number 3
+  Mod4+Shift+4 move container to workspace number 4
+  Mod4+Shift+5 move container to workspace number 5
+  Mod4+Shift+6 move container to workspace number 6
+  Mod4+Shift+7 move container to workspace number 7
+  Mod4+Shift+8 move container to workspace number 8
+  Mod4+Shift+9 move container to workspace number 9
+  Mod4+Shift+0 move container to workspace number 10
+  Mod4+Shift+minus move container to workspace number 11
+  Mod4+Shift+equal move container to workspace number 12
 
-bindsym --to-code Mod4+Mod1+Shift+h move container to output left
-bindsym --to-code Mod4+Mod1+Shift+j move container to output down
-bindsym --to-code Mod4+Mod1+Shift+k move container to output up
-bindsym --to-code Mod4+Mod1+Shift+l move container to output right
+  # Monitors
+  Mod4+Mod1+h focus output left
+  Mod4+Mod1+j focus output down
+  Mod4+Mod1+k focus output up
+  Mod4+Mod1+l focus output right
 
-bindsym --to-code Mod4+Mod1+Control+h move workspace to output left
-bindsym --to-code Mod4+Mod1+Control+j move workspace to output down
-bindsym --to-code Mod4+Mod1+Control+k move workspace to output up
-bindsym --to-code Mod4+Mod1+Control+l move workspace to output right
+  Mod4+Mod1+Shift+h move container to output left
+  Mod4+Mod1+Shift+j move container to output down
+  Mod4+Mod1+Shift+k move container to output up
+  Mod4+Mod1+Shift+l move container to output right
 
-# Rename
-bindsym --to-code Mod4+Shift+r exec swaymsg rename workspace to '"'$(rofi -dmenu -p 'Workspace name')'"'
+  Mod4+Mod1+Control+h move workspace to output left
+  Mod4+Mod1+Control+j move workspace to output down
+  Mod4+Mod1+Control+k move workspace to output up
+  Mod4+Mod1+Control+l move workspace to output right
 
-# Desktop ──────────────────────────────────────────────────────────────────────
+  # Rename
+  Mod4+Shift+r exec swaymsg rename workspace to '"'$(rofi -dmenu -p 'Workspace name')'"'
 
-# Room
-bindsym Mod4+F2 exec room
+  # Desktop ────────────────────────────────────────────────────────────────────
 
-# Password manager
-bindsym --to-code Mod4+p exec menu-password $(menu-password | rofi -dmenu -i -p Password) | wl-copy
+  # Room
+  Mod4+F2 exec room
 
-# Screenshots
-bindsym Print exec grim-window $(new-file).webp
-bindsym Shift+Print exec grim-output $(new-file).webp
+  # Password manager
+  Mod4+p exec menu-password $(menu-password | rofi -dmenu -i -p Password) | wl-copy
 
-# Multimedia-keys ──────────────────────────────────────────────────────────────
+  # Screenshots
+  Print exec grim-window $(new-file).webp
+  Shift+Print exec grim-output $(new-file).webp
 
-bindsym XF86AudioMute exec amixer set Master toggle
-bindsym XF86AudioRaiseVolume exec amixer set Master 5%+
-bindsym XF86AudioLowerVolume exec amixer set Master 5%-
+  # Multimedia-keys ────────────────────────────────────────────────────────────
 
-bindsym XF86AudioPlay exec echo cycle pause | socat - "$XDG_CONFIG_HOME/mpv/socket"
-bindsym XF86AudioPause exec echo cycle pause | socat - "$XDG_CONFIG_HOME/mpv/socket"
-bindsym XF86AudioNext exec echo playlist-next | socat - "$XDG_CONFIG_HOME/mpv/socket"
-bindsym XF86AudioPrev exec echo playlist-prev | socat - "$XDG_CONFIG_HOME/mpv/socket"
+  XF86AudioMute exec amixer set Master toggle
+  XF86AudioRaiseVolume exec amixer set Master 5%+
+  XF86AudioLowerVolume exec amixer set Master 5%-
+
+  XF86AudioPlay exec echo cycle pause | socat - "$XDG_CONFIG_HOME/mpv/socket"
+  XF86AudioPause exec echo cycle pause | socat - "$XDG_CONFIG_HOME/mpv/socket"
+  XF86AudioNext exec echo playlist-next | socat - "$XDG_CONFIG_HOME/mpv/socket"
+  XF86AudioPrev exec echo playlist-prev | socat - "$XDG_CONFIG_HOME/mpv/socket"
+}
 
 # Rules ────────────────────────────────────────────────────────────────────────
 
