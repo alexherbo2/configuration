@@ -316,7 +316,6 @@
     neovim-qt
     nettools
     networkmanager
-    networkmanagerapplet
     next
     nginx
     nim
