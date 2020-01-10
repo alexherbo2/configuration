@@ -295,7 +295,6 @@
     lispPackages.quicklisp
     llvm
     lua
-    lxappearance-gtk3
     lxc
     lxd
     lzip
