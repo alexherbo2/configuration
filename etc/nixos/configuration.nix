@@ -274,7 +274,6 @@
     hunspellDicts.en-us
     inkscape
     inotify-tools
-    iproute
     iw
     janet
     jq
