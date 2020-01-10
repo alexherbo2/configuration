@@ -311,7 +311,6 @@
     mpv
     msmtp
     mysql
-    ncftp
     neovim
     neovim-qt
     nettools
