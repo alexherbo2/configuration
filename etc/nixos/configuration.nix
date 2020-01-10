@@ -257,7 +257,6 @@
     git-lfs
     gnumake
     gnupg
-    gnuplot
     go
     godot
     google-chrome
