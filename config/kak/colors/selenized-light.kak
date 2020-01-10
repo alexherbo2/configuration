@@ -1,1 +1,0 @@
-/home/alex/repositories/github.com/TeddyDD/kakoune-selenized/colors/selenized-light.kak

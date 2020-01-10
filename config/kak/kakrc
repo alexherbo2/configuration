@@ -1,52 +1,383 @@
-# Extensions ───────────────────────────────────────────────────────────────────
+# Plugins ──────────────────────────────────────────────────────────────────────
 
-declare-option str repositories %sh(echo ~/repositories)
-
-source "%opt(repositories)/github.com/alexherbo2/pathogen.kak/rc/pathogen.kak"
-
-pathogen-infect "%opt(repositories)/github.com/alexherbo2/auto-pairs.kak"
-pathogen-infect "%opt(repositories)/github.com/alexherbo2/bc.kak"
-pathogen-infect "%opt(repositories)/github.com/alexherbo2/change-directory.kak"
-pathogen-infect "%opt(repositories)/github.com/alexherbo2/chronic.kak"
-pathogen-infect "%opt(repositories)/github.com/alexherbo2/connect.kak"
-pathogen-infect "%opt(repositories)/github.com/alexherbo2/distraction-free.kak"
-pathogen-infect "%opt(repositories)/github.com/alexherbo2/explore.kak"
-pathogen-infect "%opt(repositories)/github.com/alexherbo2/flag.kak"
-pathogen-infect "%opt(repositories)/github.com/alexherbo2/mkdir.kak"
-pathogen-infect "%opt(repositories)/github.com/alexherbo2/move-line.kak"
-pathogen-infect "%opt(repositories)/github.com/alexherbo2/objectify.kak"
-pathogen-infect "%opt(repositories)/github.com/alexherbo2/pad-number.kak"
-pathogen-infect "%opt(repositories)/github.com/alexherbo2/palette.kak"
-pathogen-infect "%opt(repositories)/github.com/alexherbo2/phantom.kak"
-pathogen-infect "%opt(repositories)/github.com/alexherbo2/portal.kak"
-pathogen-infect "%opt(repositories)/github.com/alexherbo2/replace.kak"
-pathogen-infect "%opt(repositories)/github.com/alexherbo2/search-highlighter.kak"
-pathogen-infect "%opt(repositories)/github.com/alexherbo2/select.kak"
-pathogen-infect "%opt(repositories)/github.com/alexherbo2/shell.kak"
-pathogen-infect "%opt(repositories)/github.com/alexherbo2/snippets.kak"
-pathogen-infect "%opt(repositories)/github.com/alexherbo2/space-indent.kak"
-pathogen-infect "%opt(repositories)/github.com/alexherbo2/split-object.kak"
-pathogen-infect "%opt(repositories)/github.com/alexherbo2/toggle-highlighter.kak"
-pathogen-infect "%opt(repositories)/github.com/alexherbo2/volatile-highlighter.kak"
-pathogen-infect "%opt(repositories)/github.com/alexherbo2/word-movement.kak"
-pathogen-infect "%opt(repositories)/github.com/alexherbo2/yank-ring.kak"
-pathogen-infect "%opt(repositories)/github.com/chambln/kakoune-readline"
-pathogen-infect "%opt(repositories)/github.com/Delapouite/kakoune-buffers"
-pathogen-infect "%opt(repositories)/github.com/Delapouite/kakoune-text-objects"
-pathogen-infect "%opt(repositories)/github.com/eraserhd/parinfer-rust/rc"
-pathogen-infect "%opt(repositories)/github.com/mawww/notmuch.kak"
-pathogen-infect "%opt(repositories)/github.com/occivink/kakoune-expand"
-pathogen-infect "%opt(repositories)/github.com/occivink/kakoune-find"
-pathogen-infect "%opt(repositories)/github.com/occivink/kakoune-sudo-write"
-pathogen-infect "%opt(repositories)/github.com/occivink/kakoune-vertical-selection"
-pathogen-infect "%opt(repositories)/github.com/ul/kak-lsp/rc"
-pathogen-infect "%opt(repositories)/github.com/ul/kak-tree"
-pathogen-infect "%opt(repositories)/gitlab.com/Screwtapello/kakoune-state-save"
-pathogen-infect "%opt(repositories)/bitbucket.org/KJ_Duncan/kakoune-kotlin.kak"
+source ~/projects/auto-pairs.kak/rc/auto-pairs.kak
+source ~/projects/bc.kak/rc/bc.kak
+source ~/projects/change-directory.kak/rc/change-directory.kak
+source ~/projects/chronic.kak/rc/chronic.kak
+source ~/projects/connect.kak/rc/connect.kak
+source ~/projects/explore.kak/rc/explore-files.kak
+source ~/projects/explore.kak/rc/explore-buffers.kak
+source ~/projects/mkdir.kak/rc/mkdir.kak
+source ~/projects/move-line.kak/rc/move-line.kak
+source ~/projects/objectify.kak/rc/objectify.kak
+source ~/projects/pad-number.kak/rc/pad-number.kak
+source ~/projects/palette.kak/rc/palette.kak
+source ~/projects/phantom.kak/rc/phantom.kak
+source ~/projects/replace.kak/rc/replace.kak
+source ~/projects/search-highlighter.kak/rc/search-highlighter.kak
+source ~/projects/snippets.kak/rc/snippets.kak
+source ~/projects/space-indent.kak/rc/space-indent.kak
+source ~/projects/split-object.kak/rc/split-object.kak
+source ~/projects/toggle-highlighter.kak/rc/toggle-highlighter.kak
+source ~/projects/volatile-highlighter.kak/rc/volatile-highlighter.kak
+source ~/projects/word-movement.kak/rc/word-movement.kak
+source ~/projects/yank-ring.kak/rc/yank-ring.kak
+source ~/repositories/github.com/Delapouite/kakoune-buffers/buffers.kak
+source ~/repositories/github.com/Delapouite/kakoune-text-objects/text-objects.kak
+source ~/repositories/github.com/occivink/kakoune-find/find.kak
+source ~/repositories/github.com/occivink/kakoune-sudo-write/sudo-write.kak
+source ~/repositories/github.com/occivink/kakoune-vertical-selection/vertical-selection.kak
+source ~/repositories/github.com/ul/kak-lsp/rc/lsp.kak
+source ~/repositories/gitlab.com/Screwtapello/kakoune-state-save/state-save.kak
 
 lsp-enable
 
-# state-save
+# Options ──────────────────────────────────────────────────────────────────────
+
+set-option -add global ui_options ncurses_status_on_top=yes
+set-option -add global ui_options ncurses_assistant=cat
+set-option -add global ui_options ncurses_enable_mouse=no
+set-option -add global ui_options ncurses_set_title=no
+
+set-option global autoreload yes
+set-option global scrolloff 3,5
+set-option global tabstop 2
+set-option global indentwidth 2
+set-option global makecmd 'make -j 8'
+set-option global grepcmd 'rg --column --with-filename'
+
+hook global ModuleLoaded x11 %{
+  set-option global termcmd 'alacritty --command dash -c'
+}
+
+add-highlighter global/ number-lines
+add-highlighter global/ show-matching
+add-highlighter global/ show-whitespaces
+
+hook global WinCreate .* %{
+  phantom-enable -with-maps
+  search-highlighter-enable
+  volatile-highlighter-enable
+  space-indent-enable
+  auto-pairs-enable
+}
+
+# Fix Hugo LiveReload
+hook global BufCreate '.*/(content|layouts|static)/.*|.*/config\.toml' %{
+  set-option buffer writemethod replace
+}
+
+# Color scheme ─────────────────────────────────────────────────────────────────
+
+# Dracula – A dark theme (https://draculatheme.com)
+declare-option str background 'rgb:282a36'
+declare-option str dimmed_background 'rgb:44475a'
+declare-option str foreground 'rgb:f8f8f2'
+declare-option str orange 'rgb:ffb86c'
+declare-option str purple 'rgb:bd93f9'
+declare-option str yellow 'rgb:f1fa8c'
+
+define-command colorscheme-dracula-transparent %{
+  colorscheme dracula
+  set-face global Default %opt{foreground}
+  set-face global LineNumbers %opt{dimmed_background}
+  set-face global LineNumberCursor "%opt{foreground}+b"
+  set-face global LineNumbersWrapped "%opt{dimmed_background}+i"
+  set-face global Information %opt{yellow}
+  set-face global StatusLine %opt{foreground}
+  set-face global StatusLineInfo %opt{purple}
+  set-face global StatusLineValue %opt{orange}
+  set-face global BufferPadding %opt{dimmed_background}
+  set-face global Whitespace %opt{dimmed_background}
+  set-face global Phantom "%opt{foreground},%opt{dimmed_background}"
+}
+
+colorscheme-dracula-transparent
+
+# Status line ──────────────────────────────────────────────────────────────────
+
+set-option global modelinefmt '{{mode_info}} {magenta}%val{client}{default} at {yellow}%val{session}{default} on {green}%val{bufname}{default} {{context_info}} {cyan}%val{cursor_line}{default}:{cyan}%val{cursor_char_column}{default}'
+
+# Commands ─────────────────────────────────────────────────────────────────────
+
+define-command scratch %{
+  edit -scratch '*scratch*'
+}
+
+define-command read-only %{
+  edit -readonly %val{bufname}
+}
+
+define-command git-write %{
+  write
+  git add
+}
+
+define-command git-commit %{
+  git commit
+}
+
+define-command git-amend %{
+  git commit --amend
+}
+
+define-command find-edit -params 1 -shell-script-candidates 'fd --type file' %{
+  edit %arg{1}
+}
+
+define-command find-edit-all -params 1 -shell-script-candidates 'fd --no-ignore --type file' %{
+  edit %arg{1}
+}
+
+define-command chmod -params .. %{
+  echo %sh{
+    chmod "$@" "$kak_buffile"
+  }
+}
+
+define-command capitalize-selections %{
+  evaluate-commands -save-regs 's' %{
+    set-register s %val{selections_desc}
+    execute-keys -draft '<a-:><a-;>L`h~'
+    select %reg{s}
+  }
+}
+
+define-command markdown-sort-links-by-url %{
+  execute-keys '<a-x><a-s>gimw<a-e>yI[<c-r>"]<esc><a-x><a-_>|sort<ret><a-s>gimd<a-x><a-_>'
+}
+
+# Aliases ──────────────────────────────────────────────────────────────────────
+
+alias global s scratch
+alias global ro read-only
+alias global f find-edit
+alias global fa find-edit-all
+
+# Rename buffers, clients and sessions
+alias global nb rename-buffer
+alias global nc rename-client
+alias global ns rename-session
+
+# Grep
+alias global gn grep-next-match
+alias global gp grep-previous-match
+
+# Git
+alias global g git
+alias global gw git-write
+alias global gc git-commit
+alias global gr git-amend
+
+# Quick editing
+define-command ek 'edit ~/.config/kak/kakrc'
+define-command ekr 'edit ~/.config/krabby/config.js'
+define-command en 'edit /etc/nixos/configuration.nix'
+define-command et 'edit ~/.tmux.conf'
+define-command eg 'edit ~/.config/git/config'
+define-command ewm 'edit ~/.config/sway/config'
+define-command elv 'edit ~/.elvish/rc.elv'
+define-command eterm 'edit ~/.config/alacritty/alacritty.yml'
+define-command em 'edit ~/.config/mpv/mpv.conf'
+define-command emi 'edit ~/.config/mpv/input.conf'
+define-command elf 'edit ~/.config/lf/lfrc'
+define-command ed %(edit "~/documents/diary/%sh(date '+%Y').md")
+define-command es 'edit ~/.config/snippets.yml'
+define-command ep 'edit ~/.config/passwords.yml'
+define-command ew 'edit ~/documents/words.txt'
+
+# Mappings ─────────────────────────────────────────────────────────────────────
+
+map global normal <ret> :
+map global normal <backspace> ';'
+map global normal <tab> '<a-;>'
+map global normal <a-tab> '<a-:>'
+
+map global normal '#' ': comment-line<ret>'
+map global normal <a-`> ': capitalize-selections<ret>'
+
+# Type <character><character> to leave insert mode.
+# ["jj", "kk"]
+hook global InsertChar '[jk]' %{
+  try %{
+    execute-keys -draft "hH<a-k>%val{hook_param}%val{hook_param}<ret>d"
+    execute-keys <esc>
+  }
+}
+
+# Create a new window
+map global normal <c-n> ': new<ret>'
+map global normal <c-t> ': connect<ret>'
+
+# Move macros to ^
+map global normal ^ q
+map global normal <a-^> Q
+
+# Buffers
+map global normal b ': fzf-buffers<ret>'
+map global normal B ': enter-user-mode -lock buffers<ret>'
+map global normal <c-a> ga
+
+# Yanks
+map global normal Y ': yank-ring<ret>'
+
+# User mappings ────────────────────────────────────────────────────────────────
+
+# User mapping
+map global normal , <space>
+map global normal <space> ,
+
+# LSP
+map global user <ret> ': enter-user-mode lsp<ret>'
+
+# Browser
+map global user b '<a-|>xargs -I {} chromium {}<ret>'
+
+# Sort
+map global user | '|sort<ret>'
+
+# Paste
+map global user p '<a-!>wl-paste --no-newline<ret>'
+map global user P '!wl-paste --no-newline<ret>'
+map global user R '|wl-paste --no-newline<ret>'
+
+# Replace
+map global user r ': replace<ret>'
+
+# Surround
+map global user s ': auto-pairs-surround <lt> <gt><ret>'
+map global user S ': auto-pairs-surround <lt> <gt> _ _ * *<ret>'
+
+# Chronic
+map global user c ': chronic-prompt<ret>%F<ret>'
+map global user C ': chronic-prompt<ret>'
+
+# Toggle highlighters
+map global user l ': toggle-highlighter global/ number-lines<ret>'
+map global user w ': toggle-highlighter global/ wrap -word<ret>'
+
+# Hooks ────────────────────────────────────────────────────────────────────────
+
+# Clipboard
+hook global NormalKey '[ydc]' %{
+  nop %sh{
+    wl-copy "$kak_main_reg_dquote" < /dev/null > /dev/null 2>&1 &
+  }
+}
+
+# Highlighters ─────────────────────────────────────────────────────────────────
+
+# Hook on filetype is required
+hook global WinSetOption filetype=.* %{
+  add-highlighter window/whitespace regex '\h+' "0:%opt{background}"
+  add-highlighter window/newline regex '\n+' "0:%opt{dimmed_background}"
+  add-highlighter window/trailing-whitespaces regex '\h+$' 0:red
+  add-highlighter window/non-breaking-space regex ' +' 0:red
+  add-highlighter window/not-two-spaces-after-sentence regex '[?!.…]\K\h(\h{2,})?(?=\w)' 0:red
+  add-highlighter window/two-spaces-after-sentence regex '[?!.…]\K\h{2}(?=\w)' 0:green
+  add-highlighter window/multiple-whitespaces-after-word regex '\w\K\h{2,}' 0:red
+  add-highlighter window/apostrophe regex '\w\K''(?=\w)' 0:red
+  add-highlighter window/cesure regex '‐+' 0:red
+  add-highlighter window/range-of-values regex '‑+' 0:blue
+  add-highlighter window/u+2013 regex '–+' 0:green
+  add-highlighter window/u+2014 regex '—+' 0:green+b
+  add-highlighter window/u+2015 regex '―+' 0:red
+  add-highlighter window/math regex '[−×]+' 0:cyan
+  add-highlighter window/opening-quotation-mark regex '[“‘]+' 0:cyan
+  add-highlighter window/closing-quotation-mark regex '”+' 0:cyan+u
+}
+
+# Plugins ──────────────────────────────────────────────────────────────────────
+
+# bc ───────────────────────────────────────────────────────────────────────────
+
+map global normal = ': bc-prompt<ret>'
+map global normal + ': bc-prompt<ret><up><ret>'
+
+# change-directory ─────────────────────────────────────────────────────────────
+
+define-command change-directory-project-root %{
+  change-directory-buffer
+  try change-directory-git
+}
+
+alias global cd! change-directory-project-root
+
+# Connect ──────────────────────────────────────────────────────────────────────
+
+define-command lf -params .. -file-completion %(connect lf %arg{@})
+define-command fzf-files -params .. -file-completion %(connect edit $(fd --type file . %arg{@} | fzf))
+define-command fzf-buffers %(connect buffer $(buffer | fzf))
+alias global fzf fzf-files
+
+# Explore ──────────────────────────────────────────────────────────────────────
+
+# Explore files and buffers with fzf
+set-option global explore_files_command fzf-files
+set-option global explore_buffers_command fzf-buffers
+
+# mkdir ────────────────────────────────────────────────────────────────────────
+
+hook global BufWritePre .* %{
+  mkdir-buffer
+}
+
+# move-line ────────────────────────────────────────────────────────────────────
+
+map global normal "'" ': move-line-below<ret>'
+map global normal "<a-'>" ': move-line-above<ret>'
+
+# Snippets ─────────────────────────────────────────────────────────────────────
+
+hook global WinCreate .* %{
+  snippets-enable
+}
+
+# Generate snippets on-demand using snippets-generate-config and snippets-source-config.
+
+hook global KakBegin .* %{
+  snippets-source-config
+}
+
+define-command snippets-source-config %{
+  try %{
+    source "%val{client_env_XDG_CACHE_HOME}/kak/snippets.kak"
+  }
+}
+
+define-command snippets-generate-config %{
+  # Ensure ~/.cache/kak exists
+  nop %sh{
+    mkdir -p "$XDG_CACHE_HOME/kak"
+  }
+  # Snippets from file using Crystal
+  # File: ~/.config/snippets.yml
+  echo -to-file "%val{client_env_XDG_CACHE_HOME}/kak/snippets.kak" %sh{
+    cat <<'EOF' | crystal eval
+      require "yaml"
+      class String
+        def shell_escape
+          "'" + self.gsub("'", %('"'"')) + "'"
+        end
+      end
+      yaml = File.open(File.join(ENV["XDG_CONFIG_HOME"], "snippets.yml")) do |file|
+        Hash(String, String).from_yaml(file)
+      end
+      yaml.each do |snippet, expansion|
+        puts "
+          set-option -add global snippets #{snippet.shell_escape} #{expansion.shell_escape}
+          set-option -add global static_words #{snippet.shell_escape}
+        "
+      end
+EOF
+  }
+}
+
+# split-object ─────────────────────────────────────────────────────────────────
+
+map global normal <a-I> ': enter-user-mode split-object<ret>'
+
+# state-save ───────────────────────────────────────────────────────────────────
 
 hook global KakBegin .* %{
   state-save-reg-sync colon
@@ -68,538 +399,94 @@ hook global FocusIn .* %{
   state-save-reg-load dquote
 }
 
-# Color scheme ─────────────────────────────────────────────────────────────────
+# word-movement ────────────────────────────────────────────────────────────────
 
-define-command colorscheme-dracula-transparent %{
-  colorscheme dracula
-  set-face global Default rgb:f8f8f2 # white
-  set-face global LineNumbers rgb:44475a # gray
-  set-face global LineNumberCursor rgb:f8f8f2+b # white
-  set-face global LineNumbersWrapped rgb:44475a+i # gray
-  set-face global Information rgb:f1fa8c # yellow
-  set-face global StatusLine rgb:f8f8f2 # white
-  set-face global StatusLineInfo rgb:bd93f9 # purple
-  set-face global StatusLineValue rgb:ffb86c # orange
-  set-face global BufferPadding rgb:44475a # gray
-  set-face global Whitespace rgb:44475a # gray
-}
-
-colorscheme-dracula-transparent
-
-set-face global Phantom rgb:f8f8f2,rgb:44475a # white,gray
-
-# Options ──────────────────────────────────────────────────────────────────────
-
-set-option global ui_options ncurses_status_on_top=yes ncurses_assistant=cat ncurses_enable_mouse=no ncurses_set_title=no
-set-option global autoreload yes
-set-option global scrolloff 3,5
-set-option global tabstop 2
-set-option global indentwidth 2
-set-option global makecmd 'make -j 8'
-set-option global grepcmd 'rg --column --with-filename'
-set-option global connect_shell elvish
-
-# Explore files and buffers with fzf
-set-option global explore_files_command fzf-files
-set-option global explore_buffers_command fzf-buffers
-
-hook global ModuleLoaded x11 %{
-  set-option global termcmd 'alacritty --command dash -c'
-}
-
-set-option -add global auto_pairs “ ” ‘ ’ « » ‹ ›
-
-add-highlighter global/ number-lines
-add-highlighter global/ show-matching
-add-highlighter global/ show-whitespaces
-
-hook global WinCreate .* %{
-  phantom-enable -with-maps
-  search-highlighter-enable
-  volatile-highlighter-enable
-  space-indent-enable
-  auto-pairs-enable
-  snippets-enable
-  palette-enable
-}
-
-# Primary cursor face:
-# Normal: Cyan
-# Insert: Green
-hook global ModeChange 'pop:.+:normal' %(face global PrimaryCursor 'black,cyan')
-hook global ModeChange 'pop:.+:insert' %(face global PrimaryCursor 'black,green')
-
-hook -group info-buffers global WinDisplay .* %{
-  info-buffers
-}
-
-# Fix Hugo LiveReload
-hook global BufCreate '.*/(content|layouts|static)/.*|.*/(config.toml)' %{
-  set-option buffer writemethod replace
-}
-
-# Status line ──────────────────────────────────────────────────────────────────
-
-set-option global modelinefmt '{{mode_info}} {default+b}%opt{block_auto_pairs}{default} {blue}%opt{block_flags}{default} {magenta}%val{client}{default} at {yellow}%val{session}{default} on {green}%val{bufname}{default} {{context_info}} {cyan}%val{cursor_line}{default}:{cyan}%val{cursor_char_column}{default}'
-
-# Flags
-
-declare-option -hidden str block_flags
-
-define-command -hidden block-update-flags %{ evaluate-commands %sh{
-  eval "set -- $kak_opt_flags"
-  if test $# != 0; then
-    text=[$@]
-  else
-    text="''"
-  fi
-  echo set-option window block_flags "'$text'"
-}}
-
-hook global WinSetOption flags=.+ block-update-flags
-
-# Auto-pairs
-
-declare-option -hidden str block_auto_pairs
-
-define-command -hidden block-update-auto-pairs %{ evaluate-commands %sh{
-  if [ $kak_opt_auto_pairs_surround_enabled = true ]; then
-    text=surround
-  else
-    text="''"
-  fi
-  echo set-option window block_auto_pairs $text
-}}
-
-hook global WinCreate .* %{
-  hook window ModeChange 'pop:(normal:insert|insert:normal)' block-update-auto-pairs
-}
-
-# Commands ─────────────────────────────────────────────────────────────────────
-
-define-command scratch -params .. -docstring 'Create a scratch buffer (Default: *scratch*)' %{
-  edit -scratch %sh(echo "${@:-*scratch*}")
-}
-
-define-command read -params .. -file-completion -docstring 'Create a buffer in read-only mode (Default: Current)' %{
-  edit -readonly %sh(echo "${@:-$kak_bufname}")
-}
-
-define-command new-window -params .. -command-completion -docstring 'Create a new client in a new window' %{
-  set-option window kitty_window_type os
-  new %arg(@)
-  unset-option window kitty_window_type
-}
-
-define-command connect-new-window -params .. -shell-completion -docstring 'Create a new terminal connected to the current client in a new window' %{
-  set-option window kitty_window_type os
-  connect %arg(@)
-  unset-option window kitty_window_type
-}
-
-define-command lf -params .. -file-completion %(connect lf %arg(@))
-
-define-command fzf-files -params .. -file-completion %(connect edit $(fd --type file . %arg(@) | fzf))
-define-command fzf-buffers %(connect buffer $(buffer | fzf))
-alias global fzf fzf-files
-
-define-command find-edit -params 1 -shell-script-candidates 'fd --type file' 'edit %arg(1)'
-define-command find-edit-all -params 1 -shell-script-candidates 'fd --no-ignore --type file' 'edit %arg(1)'
-
-define-command git-edit -params 1 -shell-script-candidates 'git ls-files' 'edit %arg(1)'
-
-define-command git-edit-force 'edit!; nop %sh(git reset -- "$kak_buffile"); git checkout'
-
-define-command gist -params .. %{ echo %sh{
-  printf %s "$kak_selection" | gist --open $@
-}}
-
-define-command change-directory-project-root %{
-  change-directory-buffer
-  try change-directory-git
-}
-
-define-command chmod -params .. %{ echo %sh{
-  chmod $@ $kak_buffile
-}}
-
-# Capitalize
-
-declare-option str-list capitalize_selections
-
-define-command capitalize -docstring 'Capitalize selections' %{
-  set-option window capitalize_selections %val(selections_desc)
-  execute-keys -draft '<a-:><a-;>L`h~'
-  select %opt(capitalize_selections)
-}
-
-define-command grep-period -params 4.. -docstring 'grep-period <pattern> <format> <time-start> <time-end> [argument…]: Grep period' %{ evaluate-commands %sh{
-  pattern=$1
-  format=$2
-  start=$3
-  end=$4
-  shift 4
-  factory=day
-  format="($pattern.+$format)|($format.+$pattern)"
-  regex=$(
-    chronic-period "$format" "$start" "$end" "$factory" |
-    paste -s -d '|' -
-  )
-  printf "grep '%s' %s" "$regex" "$*"
-}}
-
-# Flag
-
-define-command flag -params .. -shell-script-candidates 'eval "set -- $kak_opt_flags"; printf ''%s\n'' $@' -docstring 'Flag buffer' 'set-option buffer flags %arg(@)'
-define-command unflag -docstring 'Unflag buffer' 'unset-option buffer flags'
-define-command pin -docstring 'Pin buffer' 'set-option buffer flags pinned'
-define-command delete-buffer-unpinned -docstring 'Delete unpinned buffers' 'evaluate-commands-flag \A(?!pinned) delete-buffer'
-define-command mark -docstring 'Mark buffer' 'set-option buffer flags marked'
-define-command play-macro-marked -docstring 'Play macro on marked buffers' 'execute-keys-flag marked q'
-
-# Markdown
-
-define-command markdown-sort-links -docstring 'Sort Markdown link definitions by URL' %{
-  execute-keys '<a-x><a-s>_<a-i><a-w>yI[<c-r>"]<esc><a-x><a-_>|sort<ret><a-s>gimd<a-x><a-_>'
-  echo -markup '{Information}Markdown link definitions have been sorted by URL.'
-}
-
-# Aliases ──────────────────────────────────────────────────────────────────────
-
-alias global s scratch
-alias global r read
-alias global f find-edit
-alias global fa find-edit-all
-alias global fac find-apply-changes
-alias global p portal
-alias global t connect-terminal
-alias global df distraction-free-toggle
-alias global pn pad-number
-
-# Rename buffers, clients and sessions
-alias global nb rename-buffer
-alias global nc rename-client
-alias global ns rename-session
-
-# Change directory
-alias global cd! change-directory-project-root
-
-# Buffers
-alias global bd delete-buffer
-alias global bf buffer-first
-alias global bl buffer-last
-alias global bo buffer-only
-alias global bo! buffer-only-force
-
-# Flag
-alias global dbu delete-buffer-unpinned
-alias global pmm play-macro-marked
-
-# Grep
-alias global gn grep-next-match
-alias global gp grep-previous-match
-
-# Git
-alias global g git
-alias global ge git-edit
-alias global ge! git-edit-force
-define-command gw -docstring 'git add' 'write; change-directory-project-root; git add'
-define-command gS -docstring 'git show' 'change-directory-project-root; git show'
-define-command gs -docstring 'git diff' 'change-directory-project-root; git diff %val(buffile)'
-define-command gc -docstring 'git commit' 'change-directory-project-root; git commit'
-define-command gr -docstring 'git amend' 'change-directory-project-root; git commit --amend'
-define-command gE -docstring 'git checkout' 'change-directory-project-root; git checkout'
-
-# Quick editing
-define-command ek -docstring 'Open Kakoune configuration file' 'edit ~/.config/kak/kakrc'
-define-command ekr -docstring 'Open Krabby configuration file' 'edit ~/.config/krabby/config.js'
-define-command en -docstring 'Open NixOS configuration file' 'edit /etc/nixos/configuration.nix'
-define-command et -docstring 'Open tmux configuration file' 'edit ~/.tmux.conf'
-define-command eg -docstring 'Open Git configuration file' 'edit ~/.config/git/config'
-define-command ewm -docstring 'Open Sway configuration file' 'edit ~/.config/sway/config'
-define-command elv -docstring 'Open Elvish configuration file' 'edit ~/.elvish/rc.elv'
-define-command ea -docstring 'Open Alacritty configuration file' 'edit ~/.config/alacritty/alacritty.yml'
-define-command ekt -docstring 'Open kitty configuration file' 'edit ~/.config/kitty/kitty.conf'
-define-command em -docstring 'Open mpv configuration file' 'edit ~/.config/mpv/mpv.conf'
-define-command emi -docstring 'Open mpv input configuration file' 'edit ~/.config/mpv/input.conf'
-define-command elf -docstring 'Open lf configuration file' 'edit ~/.config/lf/lfrc'
-define-command ed -docstring 'Open diary file' "edit ~/documents/diary/%sh(date +%Y).md"
-define-command es -docstring 'Open snippets file' 'edit ~/.config/snippets.yml'
-define-command ep -docstring 'Open passwords file' 'edit ~/.config/passwords.yml'
-define-command ew -docstring 'Open words file' 'edit ~/documents/words.txt'
-
-# Mappings ─────────────────────────────────────────────────────────────────────
-
-# Type <character><character> to leave insert mode.
-# ['jj', 'kk']
-hook global InsertChar '[jk]' %{ try %{
-  execute-keys -draft "hH<a-k>%val(hook_param)%val(hook_param)<ret>d"
-  execute-keys <esc>
-}}
-
-# Create a new client
-map global normal <c-t> ': new<ret>'
-map global normal <c-n> ': new-window<ret>'
-
-# Create a new terminal connected to the current client
-map global normal <c-p> ': connect<ret>'
-map global normal <c-w> ': connect-new-window<ret>'
-
-# Move macros to ^
-map global normal ^ q
-map global normal <a-^> Q
-
-# Move b to q, so that
-# q, w, e actions are aligned
+# Move b to q, so that [qwe] actions are aligned.
 word-movement-map previous q
 word-movement-map next w
 word-movement-map skip e
 
-map global normal <a-I> ': enter-user-mode split-object<ret>'
-
-# Buffers
-map global normal b ': buffer<ret>'
-map global normal B ': enter-user-mode -lock buffers<ret>'
-
-# Yanks
-map global normal Y ': yank-ring<ret>'
-
-map global normal <ret> :
-map global normal <backspace> ';'
-map global normal <tab> '<a-;>'
-map global normal <a-tab> '<a-:>'
-
-map global normal <c-a> ga
-map global normal <c-n> :buffer-next<ret>
-map global normal <c-p> :buffer-previous<ret>
-
-map global normal "'" ': move-line-below %val(count)<ret>'
-map global normal "<a-'>" ': move-line-above %val(count)<ret>'
-
-map global normal '#' :comment-line<ret>
-
-map global normal <a-`> :capitalize<ret>
-
-map global normal = -docstring 'Prompt for bc' ': bc-prompt<ret>'
-map global normal + -docstring 'Repeat last bc command' ': bc-prompt<ret><up><ret>'
-
-# Tree-sitter
-
-map global normal <up> ': tree-select-parent-node<ret>'
-map global normal <down> ': tree-select-children<ret>'
-map global normal <right> ': tree-select-next-node<ret>'
-map global normal <left> ': tree-select-previous-node<ret>'
-
-# User mappings
-
-map global normal , <space>
-map global normal <space> ,
-map global user <space> -docstring 'Clear selections' <space>
-
-map global user <ret> -docstring 'LSP' ': enter-user-mode lsp<ret>'
-
-map global user b -docstring 'Open Chrome' '<a-|>xargs -I {} chromium {}<ret>'
-map global user c -docstring 'Chronic (YYYY-MM-DD)' ': chronic-prompt<ret>%F<ret>'
-map global user C -docstring 'Prompt for Chronic' ': chronic-prompt<ret>'
-map global user r -docstring 'Replace' ': replace<ret>'
-map global user s -docstring 'Surround' ': auto-pairs-surround <lt> <gt><ret>'
-map global user S -docstring 'Surround++' ': auto-pairs-surround <lt> <gt> _ _ * *<ret>'
-map global user t -docstring 'Translate' '|deepl translate --targetLanguage=FR<ret>'
-map global user | -docstring 'Sort' '|sort<ret>'
-
-# Paste
-map global user p -docstring 'Paste (After)' '<a-!>wl-paste<ret>'
-map global user P -docstring 'Paste (Before)' '!wl-paste<ret>'
-map global user R -docstring 'Replace' '|wl-paste<ret>'
-
-# Highlighters
-map global user l -docstring 'Line numbers' ':toggle-highlighter global/ number-lines<ret>'
-map global user w -docstring 'Wrap' ':toggle-highlighter global/ wrap -word<ret>'
-
-# Hooks ────────────────────────────────────────────────────────────────────────
-
-# Auto-mkdir
-hook global BufWritePre .* %{
-  mkdir-buffer
-}
-
-# Clipboard
-hook global NormalKey '[ydc]' %{
-  nop %sh{
-    (printf '%s' "$kak_main_reg_dquote" | wl-copy) < /dev/null > /dev/null 2>&1 &
-  }
-}
-
-# Automatically switch to the project root of the current buffer
-# hook global WinDisplay .* change-directory-project-root
-# hook global FocusIn .* change-directory-project-root
-
-# File-types ───────────────────────────────────────────────────────────────────
-
-# Kakoune
-
-hook global WinSetOption filetype=kak %{
-  set-option -add window snippets def 'define-command X %{X}<esc><a-/>X<ret><a-n>c'
-}
-
-# JavaScript
-
-hook global WinSetOption filetype=javascript %{
-  set-option window lintcmd 'eslint --format eslint-formatter-kakoune'
-  lint-enable
-}
-
-# Highlighters ─────────────────────────────────────────────────────────────────
-
-hook global WinSetOption filetype=.+ %{ try %{
-  # Works with show-whitespaces highlighter
-  # Only show EOL
-  # Whitespace characters still visible when selecting a region
-  # RGB colors correspond to Dracula color scheme:
-  # Background: Black
-  # Background (Dimmed): Gray
-  add-highlighter window/ regex ' +' 0:rgb:282a36 # Whitespaces
-  add-highlighter window/ regex '\n+' 0:rgb:44475a # New lines
-  add-highlighter window/ regex '\h+$' 0:red # Trailing whitespaces
-  add-highlighter window/ regex ' +' 0:red # Non-breaking spaces
-  add-highlighter window/ regex '(?<=[?!.…])\h(\h{2,})?(?=\w)' 0:red # A sentence not followed by exactly two spaces
-  add-highlighter window/ regex '(?<=[?!.…])(\h{2})?(?=\w)' 0:green # A sentence followed by exactly two spaces
-  add-highlighter window/ regex '(?<=…)\h(?=[a-z])' 0:green # Suspension points
-  add-highlighter window/ regex '(?<=\w)\h{2,}' 0:red # A word character followed by more than two spaces
-  add-highlighter window/ regex 'Mrs?\.\K\h(?=\w)' 0:green # Mr. and Mrs.
-  add-highlighter window/ regex "(?<=\w)'(?=\w)" 0:red # Apostrophe
-  add-highlighter window/ regex '‐+' 0:red # Césures
-  add-highlighter window/ regex '‑+' 0:green # Range of values
-  add-highlighter window/ regex '–+' 0:green # Unicode 2013
-  add-highlighter window/ regex '—+' 0:yellow # Unicode 2014
-  add-highlighter window/ regex '―+' 0:red # Unicode 2015
-  add-highlighter window/ regex '−+' 0:cyan # Subtractions
-  add-highlighter window/ regex '×+' 0:cyan # Multiplications
-  add-highlighter window/ regex '[“‘]+' 0:cyan # Opening quotation marks
-  add-highlighter window/ regex '[”]+' 0:cyan+u # Closing quotation marks
-}}
-
-# Modes ────────────────────────────────────────────────────────────────────────
-
-# Directory ────────────────────────────────────────────────────────────────────
-
-define-command -hidden -override explore-files-recursive -params 0..1 %{
-  explore-files-display "fd %sh(test $kak_opt_explore_show_hidden = true && echo --hidden)" %arg(1)
-}
-
 # GTD ──────────────────────────────────────────────────────────────────────────
 
-add-highlighter shared/gtd regions
-add-highlighter shared/gtd/code default-region group
-add-highlighter shared/gtd/action region '^(To do|Done|Cancelled|Aborted|Waiting|Try)' '$' group
-add-highlighter shared/gtd/state region '^(Status|Rule|Constat|Habits|Fixed point)' '$' group
-add-highlighter shared/gtd/time region '^(Scheduled|Deadline)' '$' group
+declare-option bool gtd
 
-add-highlighter shared/gtd/code/ regex '^[A-Z][a-z]+(?=:)' 0:variable
-add-highlighter shared/gtd/code/ regex '\b(How to|Fix(es)?)\b' 0:value
+hook global BufCreate '.*/diary/\d{4}\.md' %{
+  set-option buffer gtd yes
+}
 
-add-highlighter shared/gtd/action/ regex 'To do|[A-Z][a-z]+' 0:value
-add-highlighter shared/gtd/action/ regex '(To do|[A-Z][a-z]+) ([A-Z][a-z]+|Go to)' 2:comment
-add-highlighter shared/gtd/action/ regex '(To do|[A-Z][a-z]+) (Now)' 2:type
-add-highlighter shared/gtd/action/ regex 'Done|Cancelled|Aborted|Waiting' 0:comment
-add-highlighter shared/gtd/action/ regex 'Postponed' 0:type
+hook global WinSetOption gtd=true %{
 
-add-highlighter shared/gtd/state/ regex 'Fixed point|[A-Z][a-z]+' 0:value
-
-add-highlighter shared/gtd/time/ regex 'Scheduled|Deadline' 0:comment
-
-define-command -hidden switch-to-do-done %{ try %{
-  execute-keys "<space>;<a-x>sTo do<ret>cDone(%sh(date +'%F %T'))<esc>h<a-a>b"
-}}
-
-define-command -hidden switch-to-do-cancelled %{ try %{
-  execute-keys "<space>;<a-x>sTo do<ret>cCancelled(%sh(date +'%F %T'))<esc>"
-  execute-keys 'o<ret>Reason:<space>'
-}}
-
-define-command gtd-grep-daily %(grep-period 'To do' '%F' today today)
-define-command gtd-grep-weekly %(grep-period 'To do' '%F' today week)
-
-declare-user-mode gtd-grep
-
-map global gtd-grep t -docstring 'To do' ":grep 'To do'<ret>"
-map global gtd-grep s -docstring 'Scheduled' ":grep Scheduled<ret>"
-map global gtd-grep u -docstring 'Deadline' ":grep Deadline<ret>"
-map global gtd-grep h -docstring '+Hour' ":grep '\+\d+H'<ret>"
-map global gtd-grep d -docstring '+Day' ":grep '\+\d+D'<ret>"
-map global gtd-grep w -docstring '+Week' ":grep '\+\d+W'<ret>"
-map global gtd-grep m -docstring '+Month' ":grep '\+\d+M'<ret>"
-map global gtd-grep y -docstring '+Year' ":grep '\+\d+Y'<ret>"
-
-hook global WinCreate '.*/diary/\d{4}\.md' %{
+  require-module gtd
+  evaluate-commands set-option window static_words %opt{gtd_keywords}
   add-highlighter window/ ref gtd
-}
 
-hook global BufOpenFile '.*/diary/\d{4}\.md' %{
-  set-option -add buffer snippets td 'To do '
-  set-option -add buffer snippets tb 'To do Buy '
-  set-option -add buffer snippets tc 'To do Call '
-  set-option -add buffer snippets tg 'To do Go to '
-  set-option -add buffer snippets tr 'To do Read '
-  set-option -add buffer snippets tw 'To do Watch '
-  alias buffer td gtd-grep-daily
-  alias buffer tw gtd-grep-weekly
-  map buffer normal <a-d> '/%sh(date +%F.%a)<a-!><ret>:set-register / "^# \K\d{4}-\d{2}-\d{2}\.\w{3}"<ret>'
-  map buffer normal <c-d> :switch-to-do-done<ret>
-  map buffer normal <c-u> :switch-to-do-cancelled<ret>
-  map buffer normal <a-g> ':enter-user-mode gtd-grep<ret>'
-  map buffer insert <c-y> '<a-;>|date +%F<ret>'
-  map buffer insert <c-u> '<a-;>|date +%R<ret>'
-}
+  alias window gtd gtd-grep-todo
+  alias window g+ gtd-grep-scheduled
+  alias window g! gtd-grep-deadline
+  alias window g+h gtd-grep-hourly
+  alias window g+d gtd-grep-daily
+  alias window g+w gtd-grep-weekly
+  alias window g+m gtd-grep-monthly
+  alias window g+y gtd-grep-yearly
 
-hook global BufOpenFile ".*/diary/%sh(date +%Y)\.md" %{
-  hook -once buffer NormalIdle .* %{
-    evaluate-commands %sh(printf "execute-keys '/^# %s$<ret>'" $(date +%F.%a))
-    execute-keys '<a-i><a-w>vv'
-    set-register / '^# \K\d{4}-\d{2}-\d{2}\.\w{3}'
+  alias window td gtd-chronic-grep-today
+  alias window tw gtd-chronic-grep-week
+
+  map window normal <a-d> ': gtd-jump-to-day<ret>'
+  map window normal <c-d> ': gtd-todo-done<ret>'
+  map window normal <c-u> ': gtd-todo-cancelled<ret>'
+  map window insert <c-y> '<a-;>: gtd-insert-date<ret>'
+  map window insert <c-u> '<a-;>: gtd-insert-time<ret>'
+
+  hook -always -once window WinSetOption gtd=false %{
+    remove-highlighter window/gtd
   }
 }
 
-# Plugins ──────────────────────────────────────────────────────────────────────
+provide-module gtd %🐈
+  declare-option -hidden str-list gtd_keywords 'Aborted' 'Buy' 'Call' 'Cancelled' 'Constat' 'Day' 'Days' 'Deadline' 'Done' 'Fix' 'Fixed point' 'Fixes' 'Go to' 'Habits' 'Hour' 'Hours' 'How to' 'Month' 'Months' 'Postponed' 'Read' 'Reason' 'Rule' 'Scheduled' 'Status' 'To do' 'Try' 'Waiting' 'Watch' 'Week' 'Weeks' 'Year' 'Years'
 
-# Snippets
+  add-highlighter shared/gtd regions
+  add-highlighter shared/gtd/code default-region group
 
-# Generate snippets on-demand using snippets-generate-config and snippets-source-config.
-
-hook global KakBegin .* %{
-  snippets-source-config
-}
-
-define-command snippets-source-config %{
-  try %{
-    source "%val(client_env_XDG_CACHE_HOME)/kak/snippets.kak"
+  evaluate-commands %sh{
+    # Keywords
+    eval "set -- $kak_quoted_opt_gtd_keywords"
+    regex="\\b(?:\\Q$1\\E"
+    shift
+    for keyword do
+      regex="$regex|\\Q$keyword\\E"
+    done
+    regex="$regex)\\b"
+    printf "add-highlighter shared/gtd/code/keywords regex '%s' 0:keyword\n" "$regex"
   }
-}
 
-define-command snippets-generate-config %{
-  # Ensure ~/.cache/kak exists
-  nop %sh{
-    mkdir -p "$XDG_CACHE_HOME/kak"
+  define-command gtd-jump-to-day %{
+    set-register / "^# \K%sh(date '+%F\.%a')$"
+    execute-keys '<space>n'
+    set-register / '^# \K\d{4}-\d{2}-\d{2}\.\w{3}$'
   }
-  # Snippets from file using Crystal
-  # File: ~/.config/snippets.yml
-  echo -to-file "%val(client_env_XDG_CACHE_HOME)/kak/snippets.kak" %sh{
-    cat <<'EOF' | crystal eval
-      require "yaml"
-      class String
-        def shell_escape
-          "'" + self.gsub("'", %('"'"')) + "'"
-        end
-      end
-      yaml = File.open(File.join(ENV["XDG_CONFIG_HOME"], "snippets.yml")) do |file|
-        Hash(String, String).from_yaml(file)
-      end
-      yaml.each do |snippet, expansion|
-        puts "
-          set-option -add global snippets #{snippet.shell_escape} #{expansion.shell_escape}
-          set-option -add global static_words #{snippet.shell_escape}
-        "
-      end
-EOF
+
+  define-command gtd-todo-done %{
+    execute-keys -draft '<a-x>sTo do<ret>cDone<esc>'
   }
-}
+
+  define-command gtd-todo-cancelled %{
+    execute-keys -draft '<a-x>sTo do<ret>cCancelled<esc>'
+  }
+
+  define-command gtd-grep-todo %(grep 'To do')
+  define-command gtd-grep-scheduled %(grep 'Scheduled')
+  define-command gtd-grep-deadline %(grep 'Deadline')
+  define-command gtd-grep-hourly %(grep '\+\d+Hours?')
+  define-command gtd-grep-daily %(grep '\+\d+Days?')
+  define-command gtd-grep-weekly %(grep '\+\d+Weeks?')
+  define-command gtd-grep-monthly %(grep '\+\d+Months?')
+  define-command gtd-grep-yearly %(grep '\+\d+Years?')
+
+  define-command gtd-chronic-grep-today %(chronic-grep-period 'To do.+%F' today today day)
+  define-command gtd-chronic-grep-week %(chronic-grep-period 'To do.+%F' today week day)
+
+  define-command gtd-insert-date %(execute-keys -draft '!date ''+%F'' | tr -d ''\n''<ret>')
+  define-command gtd-insert-time %(execute-keys -draft '!date ''+%R'' | tr -d ''\n''<ret>')
+🐈
