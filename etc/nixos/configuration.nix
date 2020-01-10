@@ -235,7 +235,6 @@
     docker
     dolphin
     dolphinEmu
-    dtach
     ecmtools
     elvish
     emacs
