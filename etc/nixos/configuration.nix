@@ -339,7 +339,6 @@
     # pcsx2
     pcsxr
     pdftk
-    peek
     plan9port
     plasma-desktop
     polybar
