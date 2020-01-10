@@ -256,7 +256,6 @@
     gitAndTools.diff-so-fancy
     git-lfs
     gnumake
-    gnupg
     go
     godot
     google-chrome
