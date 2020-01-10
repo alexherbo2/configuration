@@ -388,7 +388,6 @@
     vim
     vimHugeX
     virtualbox
-    vis
     vivaldi
     vscode
     waybar
