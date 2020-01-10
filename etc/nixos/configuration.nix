@@ -257,7 +257,6 @@
     git-lfs
     gnumake
     go
-    godot
     google-chrome
     gource
     gparted
