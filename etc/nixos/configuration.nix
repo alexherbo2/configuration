@@ -275,7 +275,6 @@
     hugo
     hunspell
     hunspellDicts.en-us
-    imagemagick
     inkscape
     inotify-tools
     iproute
