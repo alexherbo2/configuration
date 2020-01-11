@@ -265,28 +265,6 @@ hook global NormalKey '[ydc]' %{
   }
 }
 
-# Highlighters ─────────────────────────────────────────────────────────────────
-
-# Hook on filetype is required
-hook global WinSetOption filetype=.* %{
-  add-highlighter window/whitespace regex '\h+' "0:%opt{background}"
-  add-highlighter window/newline regex '\n+' "0:%opt{dimmed_background}"
-  add-highlighter window/trailing-whitespaces regex '\h+$' 0:red
-  add-highlighter window/non-breaking-space regex ' +' 0:red
-  add-highlighter window/not-two-spaces-after-sentence regex '[?!.…]\K\h(\h{2,})?(?=\w)' 0:red
-  add-highlighter window/two-spaces-after-sentence regex '[?!.…]\K\h{2}(?=\w)' 0:green
-  add-highlighter window/multiple-whitespaces-after-word regex '\w\K\h{2,}' 0:red
-  add-highlighter window/apostrophe regex '\w\K''(?=\w)' 0:red
-  add-highlighter window/cesure regex '‐+' 0:red
-  add-highlighter window/range-of-values regex '‑+' 0:blue
-  add-highlighter window/u+2013 regex '–+' 0:green
-  add-highlighter window/u+2014 regex '—+' 0:green+b
-  add-highlighter window/u+2015 regex '―+' 0:red
-  add-highlighter window/math regex '[−×]+' 0:cyan
-  add-highlighter window/opening-quotation-mark regex '[“‘]+' 0:cyan
-  add-highlighter window/closing-quotation-mark regex '”+' 0:cyan+u
-}
-
 # Plugins ──────────────────────────────────────────────────────────────────────
 
 # bc ───────────────────────────────────────────────────────────────────────────
@@ -405,6 +383,41 @@ hook global FocusIn .* %{
 word-movement-map previous q
 word-movement-map next w
 word-movement-map skip e
+
+# show-characters ──────────────────────────────────────────────────────────────
+
+set-face global ShowCharactersBackground %opt{background}
+set-face global ShowCharactersDimmedBackground %opt{dimmed_background}
+
+# Hook on filetype is required
+hook global WinSetOption filetype=.* %{
+  require-module show-characters
+  add-highlighter window/ ref show-characters
+  hook -always -once window WinSetOption filetype=.* %{
+    remove-highlighter window/show-characters
+  }
+}
+
+provide-module show-characters %🐈
+  add-highlighter shared/show-characters regions
+  add-highlighter shared/show-characters/code default-region group
+  add-highlighter shared/show-characters/code/whitespace regex '\h+' 0:ShowCharactersBackground
+  add-highlighter shared/show-characters/code/newline regex '\n+' 0:ShowCharactersDimmedBackground
+  add-highlighter shared/show-characters/code/trailing-whitespaces regex '\h+$' 0:red
+  add-highlighter shared/show-characters/code/non-breaking-space regex ' +' 0:red
+  add-highlighter shared/show-characters/code/not-two-spaces-after-sentence regex '[?!.…]\K\h(\h{2,})?(?=\w)' 0:red
+  add-highlighter shared/show-characters/code/two-spaces-after-sentence regex '[?!.…]\K\h{2}(?=\w)' 0:green
+  add-highlighter shared/show-characters/code/multiple-whitespaces-after-word regex '\w\K\h{2,}' 0:red
+  add-highlighter shared/show-characters/code/apostrophe regex '\w\K''(?=\w)' 0:red
+  add-highlighter shared/show-characters/code/cesure regex '‐+' 0:red
+  add-highlighter shared/show-characters/code/range-of-values regex '‑+' 0:blue
+  add-highlighter shared/show-characters/code/u+2013 regex '–+' 0:green
+  add-highlighter shared/show-characters/code/u+2014 regex '—+' 0:green+b
+  add-highlighter shared/show-characters/code/u+2015 regex '―+' 0:red
+  add-highlighter shared/show-characters/code/math regex '[−×]+' 0:cyan
+  add-highlighter shared/show-characters/code/opening-quotation-mark regex '[“‘]+' 0:cyan
+  add-highlighter shared/show-characters/code/closing-quotation-mark regex '”+' 0:cyan+u
+🐈
 
 # GTD ──────────────────────────────────────────────────────────────────────────
 
