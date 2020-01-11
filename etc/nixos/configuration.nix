@@ -367,6 +367,7 @@ in
     vivaldi
     vscode
     waybar
+    wayfire
     wayland
     weechat
     wev
