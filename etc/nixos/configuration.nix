@@ -120,14 +120,6 @@
     ];
   };
 
-  # Environment variables ──────────────────────────────────────────────────────
-
-  environment.variables = {
-    EDITOR = "kak";
-    KAKOUNE_SESSION = "othala";
-    XDG_CURRENT_DESKTOP = "kde";
-  };
-
   # Browsers ───────────────────────────────────────────────────────────────────
 
   nixpkgs.config.chromium = {
