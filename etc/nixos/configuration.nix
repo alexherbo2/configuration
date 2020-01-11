@@ -201,6 +201,7 @@ in
     blender
     brave
     broot
+    bspwc
     bundix
     cabal-install
     # cachix
