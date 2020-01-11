@@ -158,6 +158,7 @@
 
   # Desktop managers
   # Plasma
+  # Note: Required for icons
   services.xserver.desktopManager.plasma5.enable = true;
 
   # Backlight
