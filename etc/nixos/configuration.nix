@@ -204,6 +204,7 @@ in
     bundix
     cabal-install
     # cachix
+    cage
     calibre
     cargo
     ccl
