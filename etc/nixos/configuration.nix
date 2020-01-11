@@ -160,9 +160,6 @@
   # Plasma
   services.xserver.desktopManager.plasma5.enable = true;
 
-  # Qt
-  # programs.qt5ct.enable = true;
-
   # Backlight
   programs.light.enable = true;
 
