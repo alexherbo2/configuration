@@ -120,13 +120,6 @@
     ];
   };
 
-  # Browsers ───────────────────────────────────────────────────────────────────
-
-  nixpkgs.config.chromium = {
-    # enablePepperFlash = true;
-    # enablePepperPDF = true;
-  };
-
   # Services ───────────────────────────────────────────────────────────────────
 
   # Login
