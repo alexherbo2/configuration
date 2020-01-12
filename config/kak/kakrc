@@ -13,7 +13,7 @@ source ~/projects/objectify.kak/rc/objectify.kak
 source ~/projects/pad-number.kak/rc/pad-number.kak
 source ~/projects/palette.kak/rc/palette.kak
 source ~/projects/phantom.kak/rc/phantom.kak
-source ~/projects/replace.kak/rc/replace.kak
+source ~/projects/replace-mode.kak/rc/replace-mode.kak
 source ~/projects/search-highlighter.kak/rc/search-highlighter.kak
 source ~/projects/snippets.kak/rc/snippets.kak
 source ~/projects/space-indent.kak/rc/space-indent.kak
@@ -241,8 +241,8 @@ map global user p '<a-!>wl-paste --no-newline<ret>'
 map global user P '!wl-paste --no-newline<ret>'
 map global user R '|wl-paste --no-newline<ret>'
 
-# Replace
-map global user r ': replace<ret>'
+# Enter replace mode
+map global user r ': enter-replace-mode<ret>' -docstring 'Enter replace mode'
 
 # Surround
 map global user s ': auto-pairs-surround <lt> <gt><ret>'
