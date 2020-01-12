@@ -233,6 +233,9 @@ map global user <ret> ': enter-user-mode lsp<ret>'
 # Browser
 map global user b '<a-|>xargs -I {} chromium {}<ret>'
 
+# Pad numbers
+map global user 0 ': pad-number %val{count}<ret>' -docstring 'Pad numbers with leading zeros'
+
 # Sort
 map global user | '|sort<ret>'
 
