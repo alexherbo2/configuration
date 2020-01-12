@@ -193,6 +193,7 @@ in
     apacheHttpd
     appimagekit
     appimage-run
+    archiver
     asciidoc
     asciinema
     bash
