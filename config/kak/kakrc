@@ -5,6 +5,10 @@ source ~/projects/bc.kak/rc/bc.kak
 source ~/projects/change-directory.kak/rc/change-directory.kak
 source ~/projects/chronic.kak/rc/chronic.kak
 source ~/projects/connect.kak/rc/connect.kak
+source ~/projects/connect.kak/rc/modules/fzf.kak
+source ~/projects/connect.kak/rc/modules/rofi.kak
+source ~/projects/connect.kak/rc/modules/lf.kak
+source ~/projects/connect.kak/rc/modules/yank-ring.kak
 source ~/projects/explore.kak/rc/explore-files.kak
 source ~/projects/explore.kak/rc/explore-buffers.kak
 source ~/projects/mkdir.kak/rc/mkdir.kak
@@ -207,7 +211,6 @@ hook global InsertChar '[jk]' %{
 
 # Create a new window
 map global normal <c-n> ': new<ret>'
-map global normal <c-t> ': connect<ret>'
 
 # Move macros to ^
 map global normal ^ q
@@ -217,9 +220,6 @@ map global normal <a-^> Q
 map global normal b ': fzf-buffers<ret>'
 map global normal B ': enter-user-mode -lock buffers<ret>'
 map global normal <c-a> ga
-
-# Yanks
-map global normal Y ': yank-ring<ret>'
 
 # User mappings ────────────────────────────────────────────────────────────────
 
@@ -284,12 +284,15 @@ define-command change-directory-project-root %{
 
 alias global cd! change-directory-project-root
 
-# Connect ──────────────────────────────────────────────────────────────────────
+# connect ──────────────────────────────────────────────────────────────────────
 
-define-command lf -params .. -file-completion %(connect lf %arg{@})
-define-command fzf-files -params .. -file-completion %(connect edit $(fd --type file . %arg{@} | fzf))
-define-command fzf-buffers %(connect buffer $(buffer | fzf))
-alias global fzf fzf-files
+require-module connect-fzf
+require-module connect-rofi
+require-module connect-lf
+require-module connect-yank-ring
+
+map global normal <c-t> ': connect-terminal<ret>'
+map global normal Y ': yank-ring<ret>'
 
 # Explore ──────────────────────────────────────────────────────────────────────
 
