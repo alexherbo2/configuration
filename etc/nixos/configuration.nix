@@ -245,6 +245,7 @@ in
     git
     gitAndTools.diff-so-fancy
     git-lfs
+    glow
     gnumake
     go
     google-chrome
