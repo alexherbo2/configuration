@@ -155,7 +155,7 @@ alias:new ta tmux attach-session
 alias:new k kak
 alias:new ks kak -s
 alias:new kc kak -c
-alias:new kl kak-list
+alias:new kl kak -l
 
 # Git
 alias:new g git
