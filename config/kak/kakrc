@@ -8,7 +8,6 @@ source ~/projects/connect.kak/rc/connect.kak
 source ~/projects/connect.kak/rc/modules/fzf.kak
 source ~/projects/connect.kak/rc/modules/rofi.kak
 source ~/projects/connect.kak/rc/modules/lf.kak
-source ~/projects/connect.kak/rc/modules/yank-ring.kak
 source ~/projects/explore.kak/rc/explore-files.kak
 source ~/projects/explore.kak/rc/explore-buffers.kak
 source ~/projects/mkdir.kak/rc/mkdir.kak
@@ -289,10 +288,8 @@ alias global cd! change-directory-project-root
 require-module connect-fzf
 require-module connect-rofi
 require-module connect-lf
-require-module connect-yank-ring
 
 map global normal <c-t> ': connect-terminal<ret>'
-map global normal Y ': yank-ring<ret>'
 
 # Explore ──────────────────────────────────────────────────────────────────────
 
@@ -389,6 +386,10 @@ hook global FocusIn .* %{
 word-movement-map previous q
 word-movement-map next w
 word-movement-map skip e
+
+# yank-ring ────────────────────────────────────────────────────────────────────
+
+map global normal Y ': yank-ring<ret>'
 
 # show-characters ──────────────────────────────────────────────────────────────
 
