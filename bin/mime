@@ -1,0 +1,5 @@
+#!/bin/sh
+
+mime=$(file -b -i -L -- "$1")
+mime=${mime%;*}
+printf '%s\n' "$mime"

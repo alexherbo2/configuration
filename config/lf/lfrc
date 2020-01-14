@@ -14,7 +14,7 @@ set filesep "\n"
 # Commands ─────────────────────────────────────────────────────────────────────
 
 cmd open ${{
-  case $(file-type $f) in
+  case $(mime $f) in
     text/*)
       $EDITOR $fx
       ;;

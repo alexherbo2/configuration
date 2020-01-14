@@ -133,7 +133,7 @@ alias:new c clone
 alias:new d trash
 alias:new _ trash
 alias:new x extract
-alias:new ft file-type
+alias:new ft mime
 alias:new yk wl-copy
 
 # Listing

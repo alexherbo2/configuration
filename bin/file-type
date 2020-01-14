@@ -1,5 +1,0 @@
-#!/bin/sh
-
-type=$(file -b -i -L "$1")
-type=${type%;*}
-printf '%s\n' "$type"
