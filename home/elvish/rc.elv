@@ -153,6 +153,8 @@ alias:new ta tmux attach-session
 
 # Kakoune
 alias:new k kak
+alias:new ks kak -s
+alias:new kc kak -c
 alias:new kl kak-list
 
 # Git
