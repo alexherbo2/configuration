@@ -256,8 +256,8 @@ map global user c ': chronic-prompt<ret>%F<ret>'
 map global user C ': chronic-prompt<ret>'
 
 # Toggle highlighters
-map global user l ': toggle-highlighter global/ number-lines<ret>'
-map global user w ': toggle-highlighter global/ wrap -word<ret>'
+map global user l ': toggle-highlighter global/ number-lines<ret>' -docstring 'Toggle number-lines highlighter'
+map global user w ': toggle-highlighter global/ wrap -word<ret>' -docstring 'Toggle wrap highlighter'
 
 # Hooks ────────────────────────────────────────────────────────────────────────
 
