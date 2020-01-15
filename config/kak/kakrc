@@ -9,8 +9,8 @@ source ~/projects/connect.kak/rc/modules/fzf.kak
 source ~/projects/connect.kak/rc/modules/rofi.kak
 source ~/projects/connect.kak/rc/modules/lf.kak
 source ~/projects/connect.kak/rc/modules/dolphin.kak
-source ~/projects/explore.kak/rc/explore-files.kak
-source ~/projects/explore.kak/rc/explore-buffers.kak
+source ~/projects/explore.kak/rc/explore/files.kak
+source ~/projects/explore.kak/rc/explore/buffers.kak
 source ~/projects/mkdir.kak/rc/mkdir.kak
 source ~/projects/move-line.kak/rc/move-line.kak
 source ~/projects/objectify.kak/rc/objectify.kak
@@ -293,11 +293,11 @@ require-module connect-dolphin
 
 map global normal <c-t> ': connect-terminal<ret>'
 
-# Explore ──────────────────────────────────────────────────────────────────────
+# explore ──────────────────────────────────────────────────────────────────────
 
 # Explore files and buffers with fzf
-set-option global explore_files_command fzf-files
-set-option global explore_buffers_command fzf-buffers
+alias global explore-files fzf-files
+alias global explore-buffers fzf-buffers
 
 # mkdir ────────────────────────────────────────────────────────────────────────
 
