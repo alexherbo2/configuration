@@ -156,6 +156,7 @@ alias:new k kak
 alias:new ks kak -s
 alias:new kc kak -c
 alias:new kl kak -l
+alias:new kh kak -help
 
 # Git
 alias:new g git
