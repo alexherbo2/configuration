@@ -8,6 +8,7 @@ source ~/projects/connect.kak/rc/connect.kak
 source ~/projects/connect.kak/rc/modules/fzf.kak
 source ~/projects/connect.kak/rc/modules/rofi.kak
 source ~/projects/connect.kak/rc/modules/lf.kak
+source ~/projects/connect.kak/rc/modules/dolphin.kak
 source ~/projects/explore.kak/rc/explore-files.kak
 source ~/projects/explore.kak/rc/explore-buffers.kak
 source ~/projects/mkdir.kak/rc/mkdir.kak
@@ -288,6 +289,7 @@ alias global cd! change-directory-project-root
 require-module connect-fzf
 require-module connect-rofi
 require-module connect-lf
+require-module connect-dolphin
 
 map global normal <c-t> ': connect-terminal<ret>'
 
