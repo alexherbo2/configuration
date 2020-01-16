@@ -129,7 +129,7 @@ define-command find-edit -params 1 -shell-script-candidates 'fd --type file' %{
   edit %arg{1}
 }
 
-define-command find-edit-all -params 1 -shell-script-candidates 'fd --no-ignore --type file' %{
+define-command find-edit-all -params 1 -shell-script-candidates 'fd --hidden --no-ignore --type file' %{
   edit %arg{1}
 }
 
