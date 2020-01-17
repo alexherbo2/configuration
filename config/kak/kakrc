@@ -24,7 +24,7 @@ source ~/projects/space-indent.kak/rc/space-indent.kak
 source ~/projects/split-object.kak/rc/split-object.kak
 source ~/projects/toggle-highlighter.kak/rc/toggle-highlighter.kak
 source ~/projects/volatile-highlighter.kak/rc/volatile-highlighter.kak
-source ~/projects/word-movement.kak/rc/word-movement.kak
+source ~/projects/word-select.kak/rc/word-select.kak
 source ~/projects/yank-ring.kak/rc/yank-ring.kak
 source ~/repositories/github.com/Delapouite/kakoune-buffers/buffers.kak
 source ~/repositories/github.com/Delapouite/kakoune-text-objects/text-objects.kak
@@ -382,12 +382,17 @@ hook global FocusIn .* %{
   state-save-reg-load dquote
 }
 
-# word-movement ────────────────────────────────────────────────────────────────
+# word-select ──────────────────────────────────────────────────────────────────
 
-# Move b to q, so that [qwe] actions are aligned.
-word-movement-map previous q
-word-movement-map next w
-word-movement-map skip e
+# Move by word instead of word start
+map global normal w ': word-select-next-word<ret>'
+map global normal <a-w> ': word-select-next-big-word<ret>'
+
+# Move [b] to [q], so that [qwe] actions are aligned.
+map global normal q ': word-select-previous-word<ret>'
+map global normal <a-q> ': word-select-previous-big-word<ret>'
+map global normal Q B
+map global normal <a-Q> <a-B>
 
 # yank-ring ────────────────────────────────────────────────────────────────────
 
