@@ -2,6 +2,7 @@
 
 source ~/projects/auto-pairs.kak/rc/auto-pairs.kak
 source ~/projects/bc.kak/rc/bc.kak
+source ~/projects/capitalize-selections.kak/rc/capitalize-selections.kak
 source ~/projects/change-directory.kak/rc/change-directory.kak
 source ~/projects/chronic.kak/rc/chronic.kak
 source ~/projects/connect.kak/rc/connect.kak
@@ -136,14 +137,6 @@ define-command find-edit-all -params 1 -shell-script-candidates 'fd --hidden --n
 define-command chmod -params .. %{
   echo %sh{
     chmod "$@" "$kak_buffile"
-  }
-}
-
-define-command capitalize-selections %{
-  evaluate-commands -save-regs 's' %{
-    set-register s %val{selections_desc}
-    execute-keys -draft '<a-:><a-;>L`h~'
-    select %reg{s}
   }
 }
 
