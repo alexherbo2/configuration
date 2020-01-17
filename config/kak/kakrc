@@ -292,6 +292,10 @@ alias global explore-buffers fzf-buffers
 
 # jq ───────────────────────────────────────────────────────────────────────────
 
+# Prompts for jq
+map global user . ': jq-prompt<ret>' -docstring 'Prompt for jq'
+map global user @ ': jq-prompt-selections<ret>' -docstring 'Prompt for jq-selections'
+
 # Sort selections
 map global user | ': jq-selections sort<ret>' -docstring 'Sort selections'
 map global user <a-|> ': jq-selections sort | reverse<ret>' -docstring 'Sort selections in reverse order'
