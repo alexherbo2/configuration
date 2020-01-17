@@ -56,9 +56,9 @@ hook global ModuleLoaded x11 %{
   set-option global termcmd 'alacritty --command dash -c'
 }
 
-add-highlighter global/ number-lines
-add-highlighter global/ show-matching
-add-highlighter global/ show-whitespaces
+add-highlighter global/number-lines number-lines
+add-highlighter global/show-matching show-matching
+add-highlighter global/show-whitespaces show-whitespaces
 
 hook global WinCreate .* %{
   phantom-enable -with-maps
@@ -247,8 +247,8 @@ map global user c ': chronic-prompt<ret>%F<ret>'
 map global user C ': chronic-prompt<ret>'
 
 # Toggle highlighters
-map global user l ': toggle-highlighter global/ number-lines<ret>' -docstring 'Toggle number-lines highlighter'
-map global user w ': toggle-highlighter global/ wrap -word<ret>' -docstring 'Toggle wrap highlighter'
+map global user l ': toggle-highlighter global/number-lines number-lines<ret>' -docstring 'Toggle number-lines highlighter'
+map global user w ': toggle-highlighter global/wrap wrap -word<ret>' -docstring 'Toggle wrap highlighter'
 
 # Hooks ────────────────────────────────────────────────────────────────────────
 
@@ -407,7 +407,7 @@ set-face global ShowCharactersDimmedBackground %opt{dimmed_background}
 # Hook on filetype is required
 hook global WinSetOption filetype=.* %{
   require-module show-characters
-  add-highlighter window/ ref show-characters
+  add-highlighter window/show-characters ref show-characters
   hook -always -once window WinSetOption filetype=.* %{
     remove-highlighter window/show-characters
   }
@@ -446,7 +446,7 @@ hook global WinSetOption gtd=true %{
 
   require-module gtd
   evaluate-commands set-option window static_words %opt{gtd_keywords}
-  add-highlighter window/ ref gtd
+  add-highlighter window/gtd ref gtd
 
   alias window gtd gtd-grep-todo
   alias window g+ gtd-grep-scheduled
