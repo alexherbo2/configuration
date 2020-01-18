@@ -303,7 +303,7 @@ map global user <a-|> ': jq-selections sort | reverse<ret>' -docstring 'Sort sel
 # mkdir ────────────────────────────────────────────────────────────────────────
 
 hook global BufWritePre .* %{
-  mkdir-buffer
+  mkdir-current-buffer
 }
 
 # move-line ────────────────────────────────────────────────────────────────────
