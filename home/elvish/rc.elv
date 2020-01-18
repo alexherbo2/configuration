@@ -36,6 +36,7 @@ E:XDG_DATA_HOME = ~/.local/share
 
 # Applications
 E:TERMINAL = alacritty
+E:EDITOR = kak
 E:BROWSER = chromium
 E:KAKOUNE_POSIX_SHELL = /run/current-system/sw/bin/dash
 E:MANPAGER = kak-man-pager
