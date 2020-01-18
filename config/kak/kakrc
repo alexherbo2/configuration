@@ -266,15 +266,6 @@ hook global NormalKey '[ydc]' %{
 map global normal = ': bc-prompt<ret>'
 map global normal + ': bc-prompt<ret><up><ret>'
 
-# change-directory ─────────────────────────────────────────────────────────────
-
-define-command change-directory-project-root %{
-  change-directory-buffer
-  try change-directory-git
-}
-
-alias global cd! change-directory-project-root
-
 # connect ──────────────────────────────────────────────────────────────────────
 
 require-module connect-fzf
