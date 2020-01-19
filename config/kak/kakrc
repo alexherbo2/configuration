@@ -1,6 +1,5 @@
 # Plugins ──────────────────────────────────────────────────────────────────────
 
-source ~/projects/auto-pairs.kak/rc/auto-pairs.kak
 source ~/projects/bc.kak/rc/bc.kak
 source ~/projects/capitalize-selections.kak/rc/capitalize-selections.kak
 source ~/projects/change-directory.kak/rc/change-directory.kak
@@ -65,7 +64,6 @@ hook global WinCreate .* %{
   search-highlighter-enable
   volatile-highlighter-enable
   space-indent-enable
-  auto-pairs-enable
 }
 
 # Fix Hugo LiveReload
@@ -237,10 +235,6 @@ map global user R '|wl-paste --no-newline<ret>'
 
 # Enter replace mode
 map global user r ': enter-replace-mode<ret>' -docstring 'Enter replace mode'
-
-# Surround
-map global user s ': auto-pairs-surround <lt> <gt><ret>'
-map global user S ': auto-pairs-surround <lt> <gt> _ _ * *<ret>'
 
 # Chronic
 map global user c ': chronic-prompt<ret>%F<ret>'
