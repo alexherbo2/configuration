@@ -24,6 +24,7 @@ source ~/projects/search-highlighter.kak/rc/search-highlighter.kak
 source ~/projects/snippets.kak/rc/snippets.kak
 source ~/projects/space-indent.kak/rc/space-indent.kak
 source ~/projects/split-object.kak/rc/split-object.kak
+source ~/projects/text-objects.kak/rc/text-objects.kak
 source ~/projects/toggle-highlighter.kak/rc/toggle-highlighter.kak
 source ~/projects/volatile-highlighter.kak/rc/volatile-highlighter.kak
 source ~/projects/word-select.kak/rc/word-select.kak
