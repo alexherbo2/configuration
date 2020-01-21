@@ -12,6 +12,7 @@ source ~/projects/connect.kak/rc/modules/dolphin.kak
 source ~/projects/explore.kak/rc/explore/files.kak
 source ~/projects/explore.kak/rc/explore/buffers.kak
 source ~/projects/jq.kak/rc/jq.kak
+source ~/projects/manual-indent.kak/rc/manual-indent.kak
 source ~/projects/mkdir.kak/rc/mkdir.kak
 source ~/projects/move-line.kak/rc/move-line.kak
 source ~/projects/objectify.kak/rc/objectify.kak
@@ -287,6 +288,16 @@ map global user @ ': jq-prompt-selections<ret>' -docstring 'Prompt for jq-select
 # Sort selections
 map global user | ': jq-selections sort<ret>' -docstring 'Sort selections'
 map global user <a-|> ': jq-selections sort | reverse<ret>' -docstring 'Sort selections in reverse order'
+
+# manual-indent ────────────────────────────────────────────────────────────────
+
+hook global WinCreate .* %{
+  manual-indent-enable
+}
+
+hook global WinSetOption filetype=.* %{
+  manual-indent-remove-filetype-hooks
+}
 
 # mkdir ────────────────────────────────────────────────────────────────────────
 
