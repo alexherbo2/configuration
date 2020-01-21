@@ -60,7 +60,7 @@ map <delete> embed trash
 map | embed bat
 map e embed kak
 map m embed mpv
-map x embed extract
+map x embed arc unarchive
 map s select-fuzzy
 map g cd-fuzzy
 map b batch
