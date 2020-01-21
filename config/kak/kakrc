@@ -21,7 +21,6 @@ source ~/projects/phantom.kak/rc/phantom.kak
 source ~/projects/replace-mode.kak/rc/replace-mode.kak
 source ~/projects/search-highlighter.kak/rc/search-highlighter.kak
 source ~/projects/snippets.kak/rc/snippets.kak
-source ~/projects/space-indent.kak/rc/space-indent.kak
 source ~/projects/split-object.kak/rc/split-object.kak
 source ~/projects/surround.kak/rc/surround.kak
 source ~/projects/text-objects.kak/rc/text-objects.kak
@@ -64,7 +63,6 @@ hook global WinCreate .* %{
   phantom-enable -with-maps
   search-highlighter-enable
   volatile-highlighter-enable
-  space-indent-enable
 }
 
 # Fix Hugo LiveReload
