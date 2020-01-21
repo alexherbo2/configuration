@@ -1,7 +1,6 @@
 # Modules ──────────────────────────────────────────────────────────────────────
 
 use re
-use github.com/alexherbo2/git-hub/contrib/elvish/lib/git-hub
 use github.com/zzamboni/elvish-modules/alias
 
 # Environment variables ────────────────────────────────────────────────────────
@@ -40,9 +39,6 @@ E:EDITOR = kak
 E:BROWSER = chromium
 E:KAKOUNE_POSIX_SHELL = /run/current-system/sw/bin/dash
 E:MANPAGER = kak-man-pager
-E:GREPER = rg
-E:FILTER = fzf
-E:REMOVER = trash
 E:GIT_HUB = ~/repositories
 
 # ripgrep
@@ -163,8 +159,12 @@ alias:new kh kak -help
 # Git
 alias:new g git
 alias:new G tig
-fn gh [@arguments]{ git-hub $@arguments }
-fn gcd { git-hub:change-directory . }
+
+alias:new gcp git-hub-clone
+alias:new gls git-hub-list
+alias:new gupdate git-hub-update
+alias:new gpipe git-hub-pipe
+alias:new gcd cd '(git-hub-list | fzf)'
 
 # mpv
 alias:new m mpv
