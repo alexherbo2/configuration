@@ -2,7 +2,7 @@
   "layer": "top",
   "modules-left": ["sway/workspaces", "sway/mode"],
   "modules-center": ["sway/window"],
-  "modules-right": ["pulseaudio", "battery", "clock"],
+  "modules-right": ["disk", "pulseaudio", "battery", "clock"],
   "clock": {
     "format": "{:%-I:%M %p}",
     "format-alt": "{:%A, %B %-d, %Y · %-I:%M %p}"
@@ -36,5 +36,9 @@
       "default": ["", "", ""]
     },
     "on-click": "pavucontrol"
+  },
+  "disk": {
+    "path": "/",
+    "format": "{free}"
   }
 }
