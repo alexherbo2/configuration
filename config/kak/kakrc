@@ -253,7 +253,7 @@ map global user w ': toggle-highlighter global/wrap wrap -word<ret>' -docstring 
 # Clipboard
 hook global NormalKey '[ydc]' %{
   nop %sh{
-    wl-copy "$kak_main_reg_dquote" < /dev/null > /dev/null 2>&1 &
+    wl-copy -- "$kak_main_reg_dquote" < /dev/null > /dev/null 2>&1 &
   }
 }
 
