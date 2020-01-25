@@ -61,7 +61,6 @@ add-highlighter global/show-matching show-matching
 add-highlighter global/show-whitespaces show-whitespaces
 
 hook global WinCreate .* %{
-  search-highlighter-enable
   volatile-highlighter-enable
 }
 
