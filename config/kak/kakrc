@@ -61,7 +61,6 @@ add-highlighter global/show-matching show-matching
 add-highlighter global/show-whitespaces show-whitespaces
 
 hook global WinCreate .* %{
-  phantom-enable -with-maps
   search-highlighter-enable
   volatile-highlighter-enable
 }
@@ -93,7 +92,6 @@ define-command colorscheme-dracula-transparent %{
   set-face global StatusLineValue %opt{orange}
   set-face global BufferPadding %opt{dimmed_background}
   set-face global Whitespace %opt{dimmed_background}
-  set-face global Phantom "%opt{foreground},%opt{dimmed_background}"
 }
 
 colorscheme-dracula-transparent
