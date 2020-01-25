@@ -60,10 +60,6 @@ add-highlighter global/number-lines number-lines
 add-highlighter global/show-matching show-matching
 add-highlighter global/show-whitespaces show-whitespaces
 
-hook global WinCreate .* %{
-  volatile-highlighter-enable
-}
-
 # Fix Hugo LiveReload
 hook global BufCreate '.*/(content|layouts|static)/.*|.*/config\.toml' %{
   set-option buffer writemethod replace
