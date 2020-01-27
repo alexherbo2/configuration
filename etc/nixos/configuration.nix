@@ -232,6 +232,7 @@ in
     fd
     fdm
     ffmpeg-full
+    figlet
     file
     firefox
     flow
