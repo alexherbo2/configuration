@@ -376,6 +376,11 @@ hook global FocusIn .* %{
   state-save-reg-load dquote
 }
 
+# surround ─────────────────────────────────────────────────────────────────────
+
+set-option global surround_begin auto-pairs-disable
+set-option global surround_end auto-pairs-enable
+
 # word-select ──────────────────────────────────────────────────────────────────
 
 # Move by word instead of word start
