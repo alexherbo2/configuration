@@ -20,6 +20,7 @@
     "format-icons": ["", "", "", "", ""]
   },
   "pulseaudio": {
+    "scroll-step": 5,
     "format": "{volume}% {icon} {format_source}",
     "format-muted": " {format_source}",
     "format-bluetooth": "{volume}% {icon} {format_source}",
