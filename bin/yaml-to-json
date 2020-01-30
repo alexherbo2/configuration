@@ -1,6 +1,0 @@
-#!/usr/bin/env ruby
-
-require 'yaml'
-require 'json'
-
-puts YAML.load(STDIN.read).to_json
