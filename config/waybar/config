@@ -4,8 +4,8 @@
   "modules-center": ["sway/window"],
   "modules-right": ["disk", "pulseaudio", "battery", "clock"],
   "clock": {
-    "format": "{:%-I:%M %p}",
-    "format-alt": "{:%A, %B %-d, %Y · %-I:%M %p}"
+    "format": "{:%I:%M %p}",
+    "format-alt": "{:%A, %B %d, %Y · %I:%M %p}"
   },
   "battery": {
     "states": {
