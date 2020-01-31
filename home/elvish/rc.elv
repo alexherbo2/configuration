@@ -9,6 +9,7 @@ paths = [
   ~/configuration/bin
   ~/configuration/local/bin
   ~/configuration/install/bin
+  ~/configuration/src/crystal/bin
   ~/.bin
   ~/.local/bin
   (ruby -e 'puts Gem.user_dir')/bin
