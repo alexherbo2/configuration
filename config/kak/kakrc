@@ -405,6 +405,9 @@ set-face global ShowCharactersDimmedBackground %opt{dimmed_background}
 # Hook on filetype is required
 hook global WinSetOption filetype=.* %{
   require-module show-characters
+  # Fix duplicate show-characters highlighter
+  # Not sure why it is needed
+  remove-highlighter window/show-characters
   add-highlighter window/show-characters ref show-characters
   hook -always -once window WinSetOption filetype=.* %{
     remove-highlighter window/show-characters
