@@ -26,9 +26,6 @@ E:MANPATH = ~/.npm-packages/share/man:
 # Shell
 E:SHELL = elvish
 
-# Language
-E:LANG = en_US.UTF-8
-
 # XDG
 E:XDG_CONFIG_HOME = ~/.config
 E:XDG_CACHE_HOME = ~/.cache
