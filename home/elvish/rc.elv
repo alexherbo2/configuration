@@ -188,6 +188,12 @@ fn rn [@arguments]{ batch-rename $@arguments }
 fn cv [@arguments]{ batch-convert $@arguments }
 fn rl [@arguments]{ batch-relink $@arguments }
 
+# Password
+alias:new p password-get '(password-menu | fzf)' '|' wl-copy
+alias:new pm password-make
+alias:new pg password-get
+alias:new pe password-edit
+
 # Key-bindings ─────────────────────────────────────────────────────────────────
 
 # Navigation

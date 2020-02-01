@@ -1,3 +1,0 @@
-#!/bin/sh
-
-tr -c -d [:alnum:]

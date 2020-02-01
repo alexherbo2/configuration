@@ -1,8 +1,0 @@
-name: tools
-version: 0.1.0
-license: Unlicense
-targets:
-  get-password:
-    main: src/get-password.cr
-  menu-password:
-    main: src/menu-password.cr
