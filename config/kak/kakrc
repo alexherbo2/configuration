@@ -235,8 +235,7 @@ map global user s ': surround<ret>' -docstring 'Enter surround mode'
 map global user S ': surround _ _ * *<ret>' -docstring 'Enter surround mode with extra surrounding pairs'
 
 # Chronic
-map global user c ': chronic-prompt<ret>%F<ret>'
-map global user C ': chronic-prompt<ret>'
+map global normal <a-|> ': enter-user-mode chronic<ret>' -docstring 'Enter Chronic mode'
 
 # Toggle highlighters
 map global user l ': toggle-highlighter global/number-lines number-lines<ret>' -docstring 'Toggle number-lines highlighter'
@@ -459,9 +458,6 @@ hook global WinSetOption gtd=true %{
   alias window g+m gtd-grep-monthly
   alias window g+y gtd-grep-yearly
 
-  alias window td gtd-chronic-grep-today
-  alias window tw gtd-chronic-grep-week
-
   map window normal <a-d> ': gtd-jump-to-day<ret>'
   map window normal <c-d> ': gtd-todo-done<ret>'
   map window normal <c-u> ': gtd-todo-cancelled<ret>'
@@ -513,9 +509,6 @@ provide-module gtd %{
   define-command gtd-grep-weekly %(grep '\+\d+Weeks?')
   define-command gtd-grep-monthly %(grep '\+\d+Months?')
   define-command gtd-grep-yearly %(grep '\+\d+Years?')
-
-  define-command gtd-chronic-grep-today %(chronic-grep-period 'To do.+%F' today today day)
-  define-command gtd-chronic-grep-week %(chronic-grep-period 'To do.+%F' today week day)
 
   define-command gtd-insert-date %(execute-keys -draft '!date ''+%F'' | tr -d ''\n''<ret>')
   define-command gtd-insert-time %(execute-keys -draft '!date ''+%R'' | tr -d ''\n''<ret>')
