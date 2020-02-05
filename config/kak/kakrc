@@ -470,7 +470,7 @@ hook global WinSetOption gtd=true %{
 }
 
 provide-module gtd %{
-  declare-option -hidden str-list gtd_keywords 'Aborted' 'Buy' 'Call' 'Cancelled' 'Constat' 'Day' 'Days' 'Deadline' 'Done' 'Fix' 'Fixed point' 'Fixes' 'Go to' 'Habits' 'Hour' 'Hours' 'How to' 'Month' 'Months' 'Postponed' 'Read' 'Reason' 'Rule' 'Scheduled' 'Status' 'To do' 'Try' 'Waiting' 'Watch' 'Week' 'Weeks' 'Year' 'Years'
+  declare-option -hidden str-list gtd_keywords 'Aborted' 'Buy' 'Call' 'CANCELLED' 'Constat' 'Day' 'Days' 'Deadline' 'DONE' 'Fix' 'Fixed point' 'Fixes' 'Go to' 'Habits' 'Hour' 'Hours' 'How to' 'Month' 'Months' 'Postponed' 'Read' 'Reason' 'Rule' 'Scheduled' 'Status' 'TODO' 'Try' 'Waiting' 'Watch' 'Week' 'Weeks' 'Year' 'Years'
 
   add-highlighter shared/gtd regions
   add-highlighter shared/gtd/code default-region group
@@ -494,14 +494,14 @@ provide-module gtd %{
   }
 
   define-command gtd-todo-done %{
-    execute-keys -draft '<a-x>sTo do<ret>cDone<esc>'
+    execute-keys -draft '<a-x>sTODO<ret>cDONE<esc>'
   }
 
   define-command gtd-todo-cancelled %{
-    execute-keys -draft '<a-x>sTo do<ret>cCancelled<esc>'
+    execute-keys -draft '<a-x>sTODO<ret>cCANCELLED<esc>'
   }
 
-  define-command gtd-grep-todo %(grep 'To do')
+  define-command gtd-grep-todo %(grep 'TODO')
   define-command gtd-grep-scheduled %(grep 'Scheduled')
   define-command gtd-grep-deadline %(grep 'Deadline')
   define-command gtd-grep-hourly %(grep '\+\d+Hours?')
