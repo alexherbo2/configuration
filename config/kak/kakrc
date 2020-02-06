@@ -183,6 +183,10 @@ map global normal <backspace> ';'
 map global normal <tab> '<a-;>'
 map global normal <a-tab> '<a-:>'
 
+# Prompt
+map global prompt <a-tab> <a-!> -docstring 'Expand the typed expansions in currently entered text'
+map global prompt <a-ret> <a-!><ret> -docstring 'Expand the typed expansions in currently entered text and validate'
+
 map global normal '#' ': comment-line<ret>'
 map global normal <a-`> ': capitalize-selections<ret>'
 
