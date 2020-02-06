@@ -119,6 +119,9 @@ fn batch-relink [@arguments]{
   batch --map 'relink "$1" "$2"' $@arguments
 }
 
+# Chronic
+alias:new cr chronic
+
 # Aliases ──────────────────────────────────────────────────────────────────────
 
 alias:new md mkdir -p
