@@ -242,6 +242,7 @@ map global user S ': surround _ _ * *<ret>' -docstring 'Enter surround mode with
 # Chronic
 map global normal <a-|> ': enter-user-mode chronic<ret>' -docstring 'Enter Chronic mode'
 map global insert <a-|> '<esc>: type-expand-command-prompt<ret>chronic<space>' -docstring 'Expand time in currently entered text'
+map global insert <a-@> '<esc>: type-expand-command chronic ''%F''<ret>' -docstring 'Expand time to YYYY-MM-DD in currently entered text'
 
 # Toggle highlighters
 map global user l ': toggle-highlighter global/number-lines number-lines<ret>' -docstring 'Toggle number-lines highlighter'
