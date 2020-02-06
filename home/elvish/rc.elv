@@ -124,6 +124,7 @@ alias:new cr chronic
 
 # Aliases ──────────────────────────────────────────────────────────────────────
 
+alias:new p echo
 alias:new md mkdir -p
 alias:new c clone
 alias:new d trash
