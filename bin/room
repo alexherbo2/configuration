@@ -1,8 +1,8 @@
 #!/bin/sh
 
 # Default values for the `light` and `night` parameters
-light=${1:-20}
-night=${2:-0.2}
+light=${1:-30}
+night=${2:-0}
 
 round() {
   echo "($1 + 0.5) / 1" | bc
