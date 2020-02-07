@@ -363,6 +363,9 @@ in
     sshfs
     steam
     sway
+    swaybg
+    swayidle
+    swaylock
     synapse-bt
     tectonic
     tig
