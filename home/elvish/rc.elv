@@ -150,7 +150,7 @@ alias:new ta tmux attach-session
 
 # Kakoune
 alias:new k kak
-alias:new ks kak -s
+alias:new ks kak -s '{}' -d ';' kak -c '{}'
 alias:new kc kak -c
 alias:new kl kak -l
 alias:new kn kak -n
