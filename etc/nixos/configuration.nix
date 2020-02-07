@@ -367,6 +367,7 @@ in
     tectonic
     tig
     tigervnc
+    tilix
     tldr
     tmux
     tor
