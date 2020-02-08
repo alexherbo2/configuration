@@ -193,8 +193,8 @@ bindsym --to-code {
   Mod4+Shift+minus move container to workspace number 11
   Mod4+Shift+equal move container to workspace number 12
 
-  # Rename
-  Mod4+Shift+r exec swaymsg rename workspace to '"'$(rofi -dmenu -p 'Workspace name')'"'
+  # Rename workspace
+  Mod4+r exec swaymsg rename workspace to $(rofi -dmenu -p 'Workspace name')
 
   # Desktop ────────────────────────────────────────────────────────────────────
 
