@@ -149,9 +149,7 @@ bindsym --to-code {
   Mod4+Shift+slash exec echo move workspace current, focus | sway-commander rofi -dmenu -i -p 'Bring window'
 
   # Marks
-  Mod4+x mark --add --toggle marked
-  Mod4+Shift+m exec swaymsg mark $(rofi -dmenu -p Mark)
-  Mod4+m exec swaymsg [con_mark = '"'$(swaymsg -t get_marks | jq --raw-output .[] | rofi -dmenu -i -p 'Focus mark')'"'] focus
+  Mod4+m exec swaymsg mark $(rofi -dmenu -p Mark)
 
   # Workspaces ─────────────────────────────────────────────────────────────────
 
