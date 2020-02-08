@@ -79,7 +79,7 @@ bindsym --to-code {
   Mod4+s layout stacking
   Mod4+d layout toggle split
   Mod4+f fullscreen toggle
-  Mod4+Mod1+space sticky toggle
+  Mod4+x sticky toggle
 
   # Distraction-free
   Mod4+Shift+d bar mode dock
