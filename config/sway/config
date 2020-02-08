@@ -137,7 +137,7 @@ bindsym --to-code {
   Mod4+Control+l resize grow right 5 ppt
 
   # Gaps
-  Mod4+g exec "$(printf 'swaymsg gaps inner current set %d, gaps outer current set %d' $(rofi -dmenu -p Gaps))"
+  Mod4+g exec sh -c 'swaymsg gaps inner current set "${1:-0}", gaps outer current set "${2:-0}"' -- $(rofi -dmenu -p Gaps)
   Mod4+Shift+g gaps inner current set 0, gaps outer current set 0
 
   # Borders
