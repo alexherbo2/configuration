@@ -298,6 +298,7 @@ in
     mediainfo
     mednafen
     mednaffe
+    meson
     mgba
     mkvtoolnix
     mongodb
