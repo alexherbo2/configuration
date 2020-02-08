@@ -121,9 +121,6 @@ bindsym --to-code {
   Mod4+Shift+k move up
   Mod4+Shift+l move right
 
-  # Swap
-  Mod4+y swap container with mark marked
-
   # Resize in these directions
   # ╭────╮ →
   # │    │ →
