@@ -313,6 +313,7 @@ in
     next
     nginx
     nim
+    ninja
     nix-index
     nmap
     nodejs-13_x
