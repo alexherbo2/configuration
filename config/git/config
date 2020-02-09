@@ -16,6 +16,9 @@
 [commit]
   verbose = true
 
+[checkout]
+  defaultRemote = origin
+
 [log]
   date = relative
 
