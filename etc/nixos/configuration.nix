@@ -390,7 +390,6 @@ in
     waybox
     wayfire
     wayland
-    weechat
     wev
     wf-recorder
     wget
