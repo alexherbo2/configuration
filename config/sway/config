@@ -91,7 +91,7 @@ bindsym --to-code {
 
   # Reload
   Mod4+Escape reload
-  Mod4+Shift+Escape restart
+  Mod4+Shift+Escape exit
 
   # Screen locker
   Mod4+BackSpace exec swaylock
