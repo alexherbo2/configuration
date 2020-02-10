@@ -363,6 +363,7 @@ in
     sox
     sqlite
     sshfs
+    st
     steam
     sway
     swaybg
