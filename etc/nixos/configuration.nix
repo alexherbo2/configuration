@@ -217,6 +217,7 @@ in
     calibre
     cargo
     ccl
+    celluloid
     chromium
     clang
     clojure
