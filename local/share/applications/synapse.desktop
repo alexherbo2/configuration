@@ -1,3 +1,4 @@
 [Desktop Entry]
+Type=Application
 Name=BitTorrent client for synapse
 Exec=sycli add %U
