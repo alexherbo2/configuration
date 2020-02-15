@@ -398,6 +398,7 @@ in
     winetricks
     wl-clipboard
     wlr-randr
+    wofi
     xboxdrv
     xdg_utils
     xorg.xev
