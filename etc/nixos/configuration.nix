@@ -397,6 +397,7 @@ in
     (wine.override { wineBuild = "wine64"; })
     winetricks
     wl-clipboard
+    wlrobs
     wlr-randr
     wofi
     xboxdrv
