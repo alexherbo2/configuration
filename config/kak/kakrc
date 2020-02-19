@@ -9,6 +9,7 @@ source ~/projects/connect.kak/rc/connect.kak
 source ~/projects/connect.kak/rc/modules/fzf.kak
 source ~/projects/connect.kak/rc/modules/dmenu.kak
 source ~/projects/connect.kak/rc/modules/rofi.kak
+source ~/projects/connect.kak/rc/modules/wofi.kak
 source ~/projects/connect.kak/rc/modules/lf.kak
 source ~/projects/connect.kak/rc/modules/dolphin.kak
 source ~/projects/explore.kak/rc/explore/files.kak
@@ -270,6 +271,7 @@ map global normal + ': bc-prompt<ret><up><ret>'
 require-module connect-fzf
 require-module connect-dmenu
 require-module connect-rofi
+require-module connect-wofi
 require-module connect-lf
 require-module connect-dolphin
 
