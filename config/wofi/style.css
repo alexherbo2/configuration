@@ -1,0 +1,33 @@
+/* Dracula theme */
+/* https://draculatheme.com */
+@define-color background #282a36;
+@define-color dimmed_background #44475a;
+@define-color foreground #f8f8f2;
+
+window {
+}
+
+#input {
+  margin: 5px;
+  border: 1px solid @dimmed_background;
+  background-color: @background;
+  color: @foreground;
+}
+
+#inner-box {
+  margin: 20px;
+  background-color: @background;
+}
+
+#outer-box {
+  background-color: @background;
+}
+
+#scroll {
+  background-color: @background;
+}
+
+#text {
+  margin: 5px;
+  color: @foreground;
+}
