@@ -63,7 +63,7 @@ bindsym --to-code {
   Mod4+Return exec alacritty
 
   # Launcher
-  Mod4+Shift+Return exec launcher $(launcher | rofi -dmenu -i -p Launcher)
+  Mod4+Shift+Return exec alacritty --class alacritty-float --command sh -c 'launcher-run $(launcher-list | fzf)'
 
   # Mouse
   --release button2 kill
