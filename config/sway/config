@@ -136,7 +136,7 @@ bindsym --to-code {
   Mod4+Control+l resize grow right 5 ppt
 
   # Gaps
-  Mod4+g exec sh -c 'swaymsg gaps inner current set "${1:-0}", gaps outer current set "${2:-0}"' -- $(rofi -dmenu -p Gaps)
+  Mod4+g exec sh -c 'swaymsg gaps inner current set "${1:-0}", gaps outer current set "${2:-0}"' -- $(wofi --show dmenu --prompt Gaps)
   Mod4+Shift+g gaps inner current set 0, gaps outer current set 0
 
   # Borders
@@ -144,11 +144,11 @@ bindsym --to-code {
   Mod4+Shift+b border pixel
 
   # Search
-  Mod4+slash exec sway-commander rofi -dmenu -i -p 'Search window'
-  Mod4+Shift+slash exec echo move workspace current, focus | sway-commander rofi -dmenu -i -p 'Bring window'
+  Mod4+slash exec sway-commander wofi --show dmenu --prompt 'Search window'
+  Mod4+Shift+slash exec echo move workspace current, focus | sway-commander wofi --show dmenu --prompt 'Bring window'
 
   # Marks
-  Mod4+m exec swaymsg mark $(rofi -dmenu -p Mark)
+  Mod4+m exec swaymsg mark $(wofi --show dmenu --prompt Mark)
 
   # Workspaces ─────────────────────────────────────────────────────────────────
 
@@ -191,7 +191,7 @@ bindsym --to-code {
   Mod4+Shift+equal move container to workspace number 12
 
   # Rename workspace
-  Mod4+r exec swaymsg rename workspace to $(rofi -dmenu -p 'Workspace name')
+  Mod4+r exec swaymsg rename workspace to $(wofi --show dmenu --prompt 'Workspace name')
 
   # Desktop ────────────────────────────────────────────────────────────────────
 
@@ -199,7 +199,7 @@ bindsym --to-code {
   Mod4+F2 exec room
 
   # Password manager
-  Mod4+p exec password-get $(password-menu | rofi -dmenu -i -p Password) | wl-copy
+  Mod4+p exec password-get $(password-menu | wofi --show dmenu --prompt Password) | wl-copy
 
   # Screenshots
   Print exec grim-window $(new-file).webp
