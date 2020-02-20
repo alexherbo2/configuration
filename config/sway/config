@@ -63,7 +63,9 @@ bindsym --to-code {
   Mod4+Return exec alacritty
 
   # Launcher
-  Mod4+Shift+Return exec alacritty --class alacritty-float --command sh -c 'launcher-run $(launcher-list | fzf)'
+  # Note: Pass the final command to swaymsg so that the resulting window can be opened
+  # on the original workspace that the command was run on.
+  Mod4+Shift+Return exec alacritty --class alacritty-float --command sh -c 'swaymsg exec -- launcher-run $(launcher-list | fzf)'
 
   # Mouse
   --release button2 kill
