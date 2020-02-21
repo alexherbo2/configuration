@@ -199,7 +199,7 @@ bindsym --to-code {
   Mod4+F2 exec room
 
   # Password manager
-  Mod4+p exec password-get $(password-menu | wofi --show dmenu --prompt Password) | wl-copy
+  Mod4+p exec alacritty --class alacritty-float --command sh -c 'password-get $(password-menu | fzf) | nohup wl-copy > /dev/null'
 
   # Screenshots
   Print exec grim-window $(new-file).webp
