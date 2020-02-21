@@ -121,6 +121,7 @@ in
       "networkmanager"
       "sway"
       "vboxusers"
+      "video"
       "wheel"
     ];
   };
