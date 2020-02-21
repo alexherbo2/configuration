@@ -398,6 +398,7 @@ in
     (wine.override { wineBuild = "wine64"; })
     winetricks
     wl-clipboard
+    wlogout
     wlrobs
     wlr-randr
     wofi
