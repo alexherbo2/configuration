@@ -98,6 +98,9 @@ bindsym --to-code {
   # Screen locker
   Mod4+BackSpace exec swaylock
 
+  # Logout
+  Mod4+Shift+BackSpace exec wlogout
+
   # Containers ─────────────────────────────────────────────────────────────────
 
   # Kill
