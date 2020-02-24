@@ -99,6 +99,13 @@ colorscheme-dracula-transparent
 
 set-option global modelinefmt '{{mode_info}} {magenta}%val{client}{default} at {yellow}%val{session}{default} on {green}%val{bufname}{default} {{context_info}} {cyan}%val{cursor_line}{default}:{cyan}%val{cursor_char_column}{default}'
 
+# Filetype-specific ────────────────────────────────────────────────────────────
+
+# Makefile
+hook global WinSetOption filetype=makefile %{
+  set-option window indentwidth 0
+}
+
 # Commands ─────────────────────────────────────────────────────────────────────
 
 define-command scratch %{
