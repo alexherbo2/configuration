@@ -217,6 +217,9 @@ hook global InsertChar '[jk]' %{
 # Create a new window
 map global normal <c-n> ': new<ret>'
 
+# Quit
+map global normal <c-q> ': quit<ret>'
+
 # Move macros to ^
 map global normal ^ q
 map global normal <a-^> Q
