@@ -1,32 +1,36 @@
 // Configuration for Krabby (https://github.com/alexherbo2/krabby/blob/master/src/krabby)
 
 const { env, extensions, modes } = krabby
-const { shell, dmenu } = extensions
+const { shell, dmenu, editor } = extensions
 const { modal } = modes
 
 // Tab search with fzf and Alacritty.
-dmenu.send('set-dmenu', {
-  command: 'sh',
-  arguments: [
-    '-c',
-    `
-      # Create IO files
-      state=$(mktemp -d)
-      input=$state/input
-      output=$state/output
-      trap 'rm -Rf "$state"' EXIT
-      # Get input from /dev/stdin
-      cat > "$input"
-      # Run fzf with Alacritty
-      alacritty --class 'Alacritty · Floating' --command sh -c 'fzf < "$1" > "$2"' -- "$input" "$output"
-      # Write output to /dev/stdout
-      cat "$output"
-    `
-  ]
+dmenu.send('set', {
+  dmenu: {
+    command: 'sh',
+    arguments: [
+      '-c',
+      `
+        # Create IO files
+        state=$(mktemp -d)
+        input=$state/input
+        output=$state/output
+        trap 'rm -Rf "$state"' EXIT
+        # Get input from /dev/stdin
+        cat > "$input"
+        # Run fzf with Alacritty
+        alacritty --class 'Alacritty · Floating' --command sh -c 'fzf < "$1" > "$2"' -- "$input" "$output"
+        # Write output to /dev/stdout
+        cat "$output"
+      `
+    ]
+  }
 })
 
 // External editor
-env.EDITOR = `alacritty --class 'Alacritty · Floating' --command kak "$1" -e "select $2.$3,$4.$5"`
+editor.send('set', {
+  editor: `alacritty --class 'Alacritty · Floating' --command kak "$1" -e "select $2.$3,$4.$5"`
+})
 
 modal.filter('Read Berserk', () => location.hostname === 'readberserk.com', 'Command')
 modal.filter('Read Berserk · Chapter', () => location.pathname.startsWith('/chapter'), 'Read Berserk')
