@@ -101,6 +101,11 @@ set-option global modelinefmt '{{mode_info}} {magenta}%val{client}{default} at {
 
 # Filetype-specific ────────────────────────────────────────────────────────────
 
+# Grep
+hook global WinSetOption filetype=grep %{
+  map window normal <ret> ': grep-jump<ret>'
+}
+
 # Makefile
 hook global WinSetOption filetype=makefile %{
   set-option window indentwidth 0
