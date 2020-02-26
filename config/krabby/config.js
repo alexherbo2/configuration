@@ -1,6 +1,6 @@
 // Configuration for Krabby (https://github.com/alexherbo2/krabby/blob/master/src/krabby)
 
-const { env, extensions, modes } = krabby
+const { extensions, modes } = krabby
 const { shell, dmenu, editor } = extensions
 const { modal } = modes
 
