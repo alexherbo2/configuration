@@ -29,7 +29,7 @@ dmenu.send('set', {
 
 // External editor
 editor.send('set', {
-  editor: `alacritty --class 'Alacritty · Floating' --command kak "${file}" -e "select ${anchor_line}.${anchor_column},${cursor_line}.${cursor_column}"`
+  editor: `alacritty --class 'Alacritty · Floating' --command kak "$file" -e "select $anchor_line.$anchor_column,$cursor_line.$cursor_column"`
 })
 
 modal.filter('Read Berserk', () => location.hostname === 'readberserk.com', 'Command')
