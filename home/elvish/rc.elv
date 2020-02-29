@@ -43,6 +43,25 @@ E:RIPGREP_CONFIG_PATH = $E:XDG_CONFIG_HOME/ripgrep/rc
 # fzf
 E:FZF_DEFAULT_OPTS = '--multi --reverse'
 
+# dmenu
+E:DMENU = '
+  # Create IO files
+  state=$(mktemp -d)
+  input=$state/input
+  output=$state/output
+  trap ''rm -Rf "$state"'' EXIT
+  # Get input from /dev/stdin
+  cat > "$input"
+  # Run fzf with Alacritty
+  alacritty --class ''Alacritty · Floating'' --command sh -c ''fzf < "$1" > "$2"'' -- "$input" "$output"
+  # Write output to /dev/stdout
+  cat "$output"
+  # Exit code
+  if test ! -s "$output"; then
+    exit 1
+  fi
+'
+
 # Prompt ───────────────────────────────────────────────────────────────────────
 
 # ❯ echo Tchou                       alex at othala in ~/configuration on master
