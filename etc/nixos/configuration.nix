@@ -322,6 +322,7 @@ in
     notmuch
     ntfs3g
     nushell
+    obs-wlrobs
     ocaml
     opam
     openjdk12
@@ -399,7 +400,6 @@ in
     winetricks
     wl-clipboard
     wlogout
-    wlrobs
     wlr-randr
     wofi
     xboxdrv
