@@ -308,8 +308,8 @@ in
     mpv
     msmtp
     mysql
-    neovim
-    neovim-qt
+    # neovim
+    # neovim-qt
     nettools
     networkmanager
     next
