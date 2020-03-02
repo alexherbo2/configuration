@@ -2,19 +2,19 @@
 
 cd ~/.config/krabby/packages
 cp -R ~/projects/krabby/src/. .
-cp ~/projects/modal.js/scripts/modal.js .
-cp ~/projects/prompt.js/scripts/prompt.js .
-cp ~/projects/hint.js/scripts/hint.js .
-cp ~/projects/mark.js/scripts/mark.js .
-cp ~/projects/selection.js/scripts/selection.js .
-cp ~/projects/selection.js/styles/selection.css .
-cp ~/projects/mouse.js/scripts/mouse.js .
-cp ~/projects/clipboard.js/scripts/clipboard.js .
-cp ~/projects/scroll.js/scripts/scroll.js .
-cp ~/projects/player.js/scripts/player.js .
-cp ~/projects/krabby-selection/scripts/krabby/selection.js krabby
-cp ~/projects/krabby-selection/styles/krabby/selection.css krabby
-cp ~/projects/krabby-launchlet/scripts/krabby/launchlet.js krabby
+cp ~/projects/modal.js/src/modal.js .
+cp ~/projects/prompt.js/src/prompt.js .
+cp ~/projects/hint.js/src/hint.js .
+cp ~/projects/mark.js/src/mark.js .
+cp ~/projects/selection.js/src/selection.js .
+cp ~/projects/selection.js/src/selection.css .
+cp ~/projects/mouse.js/src/mouse.js .
+cp ~/projects/clipboard.js/src/clipboard.js .
+cp ~/projects/scroll.js/src/scroll.js .
+cp ~/projects/player.js/src/player.js .
+cp ~/projects/krabby-selection/src/krabby/selection.js krabby
+cp ~/projects/krabby-selection/src/krabby/selection.css krabby
+cp ~/projects/krabby-launchlet/src/krabby/launchlet.js krabby
 
 cd ~/.config/krabby
 make -o fetch
@@ -22,14 +22,14 @@ make -o fetch
 cd ~/projects/krabby/website/packages
 cp ~/projects/krabby/src/krabby/web/krabby.js .
 cp ~/projects/krabby/src/krabby/web/krabby.css .
-cp ~/projects/modal.js/scripts/modal.js .
-cp ~/projects/prompt.js/scripts/prompt.js .
-cp ~/projects/hint.js/scripts/hint.js .
-cp ~/projects/mark.js/scripts/mark.js .
-cp ~/projects/selection.js/scripts/selection.js .
-cp ~/projects/selection.js/styles/selection.css .
-cp ~/projects/mouse.js/scripts/mouse.js .
-cp ~/projects/clipboard.js/scripts/clipboard.js .
-cp ~/projects/scroll.js/scripts/scroll.js .
-cp ~/projects/player.js/scripts/player.js .
-cp ~/projects/carousel.js/scripts/carousel.js .
+cp ~/projects/modal.js/src/modal.js .
+cp ~/projects/prompt.js/src/prompt.js .
+cp ~/projects/hint.js/src/hint.js .
+cp ~/projects/mark.js/src/mark.js .
+cp ~/projects/selection.js/src/selection.js .
+cp ~/projects/selection.js/src/selection.css .
+cp ~/projects/mouse.js/src/mouse.js .
+cp ~/projects/clipboard.js/src/clipboard.js .
+cp ~/projects/scroll.js/src/scroll.js .
+cp ~/projects/player.js/src/player.js .
+cp ~/projects/carousel.js/src/carousel.js .

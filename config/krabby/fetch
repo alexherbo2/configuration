@@ -9,4 +9,4 @@ fetch() {
 
 fetch https://launchlet.dev/launchlet.js
 fetch https://launchlet.dev/launchlet.css
-fetch https://github.com/alexherbo2/krabby-launchlet/raw/master/scripts/krabby/launchlet.js krabby/launchlet.js
+fetch https://github.com/alexherbo2/krabby-launchlet/raw/master/src/krabby/launchlet.js krabby/launchlet.js
