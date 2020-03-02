@@ -292,6 +292,7 @@ in
     lispPackages.quicklisp
     llvm
     lua
+    luarocks
     lxc
     lxd
     lzip
