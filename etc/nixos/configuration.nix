@@ -274,6 +274,7 @@ in
     hugo
     hunspell
     hunspellDicts.en-us
+    i3
     inkscape
     inotify-tools
     iw
