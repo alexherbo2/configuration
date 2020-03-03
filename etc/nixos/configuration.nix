@@ -377,6 +377,7 @@ in
     sshfs
     st
     steam
+    surf
     sway
     swaybg
     swayidle
