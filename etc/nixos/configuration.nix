@@ -168,6 +168,11 @@ in
   # Display manager
   services.xserver.displayManager.sddm.enable = true;
 
+  # Window managers
+  # i3
+  services.xserver.windowManager.i3.enable = true;
+  services.xserver.windowManager.i3.package = pkgs.i3-gaps;
+
   # Desktop managers
   # Plasma
   # Note: Required for icons
