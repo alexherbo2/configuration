@@ -239,6 +239,7 @@ in
     docker
     dolphin
     dolphinEmu
+    dunst
     ecmtools
     elvish
     emacs
