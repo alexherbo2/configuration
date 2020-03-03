@@ -15,10 +15,9 @@ exec_always {
 
 # Colors ───────────────────────────────────────────────────────────────────────
 
-# Default
-# Mac
-# Dracula
-# https://draculatheme.com
+# – Default
+# – macOS
+# – Dracula – https://draculatheme.com
 set {
   $black #202020
   $red #ff5555
