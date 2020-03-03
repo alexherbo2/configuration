@@ -1,3 +1,3 @@
 #!/bin/sh
 
-i3-resize 640px 400px
+sway-resize 640px 400px
