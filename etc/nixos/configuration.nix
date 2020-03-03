@@ -245,6 +245,7 @@ in
     exa
     fd
     fdm
+    feh
     ffmpeg-full
     figlet
     file
