@@ -407,6 +407,7 @@ in
     xboxdrv
     xdg_utils
     xorg.xev
+    xorg.xinit
     xwayland
     yarn
     youtube-dl
