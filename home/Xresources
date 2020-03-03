@@ -1,0 +1,2 @@
+! Fixes the “Too big” cursor size effect when using multiple monitors
+Xcursor.size: 16
