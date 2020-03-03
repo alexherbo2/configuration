@@ -414,6 +414,7 @@ in
     xdg_utils
     xorg.xev
     xorg.xinit
+    xorg.xkbcomp
     xwayland
     yarn
     youtube-dl
