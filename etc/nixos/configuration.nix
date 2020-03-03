@@ -411,6 +411,7 @@ in
     wlr-randr
     wofi
     xboxdrv
+    xcompmgr
     xdg_utils
     xorg.xev
     xorg.xinit
