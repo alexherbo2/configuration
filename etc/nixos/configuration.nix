@@ -400,7 +400,8 @@ in
     vanilla-dmz
     vim
     vimHugeX
-    virtualbox
+    # Remove VirtualBox from systemPackages to start VMs as a user.
+    # virtualbox
     vivaldi
     vscode
     waybar
