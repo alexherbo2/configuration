@@ -56,7 +56,7 @@ in
   location.longitude = 2.3522;
 
   # Unfree
-  # Allow Discord, drivers for Wi-Fi…
+  # Allow VirtualBox, Discord, drivers for Wi-Fi…
   nixpkgs.config.allowUnfree = true;
 
   # Security
@@ -191,6 +191,9 @@ in
   virtualisation.docker.enable = true;
   virtualisation.virtualbox.host.enable = true;
   virtualisation.virtualbox.guest.enable = true;
+  # Install Oracle Extension Pack
+  # Important: Requires nixpkgs.config.allowUnfree
+  virtualisation.virtualbox.host.enableExtensionPack = true;
 
   # Packages ───────────────────────────────────────────────────────────────────
 
