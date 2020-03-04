@@ -217,6 +217,9 @@ alias:new pe password-edit
 
 # Key-bindings ─────────────────────────────────────────────────────────────────
 
+# Delete the last small word.
+edit:insert:binding[Ctrl-w] = { edit:kill-small-word-left }
+
 # Navigation
 edit:insert:binding[Alt-l] = { edit:location:start }
 edit:insert:binding[Alt-n] = { edit:navigation:start }
