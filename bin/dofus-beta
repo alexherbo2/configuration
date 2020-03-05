@@ -1,0 +1,3 @@
+#!/bin/sh
+
+wine64 ~/games/windows/ankama/zaap/dofus-beta/Dofus.exe
