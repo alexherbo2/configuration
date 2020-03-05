@@ -217,6 +217,16 @@ alias:new pe password-edit
 
 # Key-bindings ─────────────────────────────────────────────────────────────────
 
+# Delete words
+edit:insert:binding[Alt-Backspace] = { edit:kill-small-word-left }
+edit:insert:binding[Alt-Delete] = { edit:kill-small-word-right }
+
+# Move your cursor around
+edit:insert:binding[Alt-Left] = { edit:move-dot-left-word }
+edit:insert:binding[Alt-Right] = { edit:move-dot-right-word }
+edit:insert:binding[Alt-Shift-Left] = { edit:move-dot-left-word }
+edit:insert:binding[Alt-Shift-Right] = { edit:move-dot-right-word }
+
 # Navigation
 edit:insert:binding[Alt-l] = { edit:location:start }
 edit:insert:binding[Alt-n] = { edit:navigation:start }
