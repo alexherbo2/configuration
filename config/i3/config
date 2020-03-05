@@ -9,6 +9,7 @@ workspace_auto_back_and_forth yes
 
 # Colors ───────────────────────────────────────────────────────────────────────
 
+# Color palette:
 # – Default
 # – macOS
 # – Dracula – https://draculatheme.com
@@ -43,13 +44,24 @@ bar {
   }
 }
 
-# Key-bindings ─────────────────────────────────────────────────────────────────
+# Bindings ─────────────────────────────────────────────────────────────────────
+
+# Basics ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
 # Terminal
 bindsym Mod4+Return exec alacritty
 
 # Launcher
 bindsym Mod4+Shift+Return exec dmenu_run
+
+# Reload
+bindsym Mod4+Escape reload
+bindsym Mod4+Shift+Escape exit
+
+# Screen locker
+bindsym Mod4+BackSpace exec i3lock
+
+# Layouts ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
 # Layouts
 bindsym Mod4+a layout tabbed
@@ -62,43 +74,36 @@ bindsym Mod4+x sticky toggle
 bindsym Mod4+Shift+d bar mode dock
 bindsym Mod4+Shift+f bar mode invisible
 
-# Tiling / Floating
+# Tiling and floating
 bindsym Mod4+Shift+space floating toggle
 bindsym Mod4+space focus mode_toggle
 
-# Reload
-bindsym Mod4+Escape reload
-bindsym Mod4+Shift+Escape exit
+# Containers ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
-# Screen locker
-bindsym Mod4+BackSpace exec i3lock
-
-# Containers ───────────────────────────────────────────────────────────────────
-
-# Kill
+# Kill focused window
 bindsym Mod4+w kill
 
-# Split
+# Horizontal and vertical splits
 bindsym Mod4+o split vertical
 bindsym Mod4+Shift+o split horizontal
 
-# Parent / Child
+# Focus parent and child containers
 bindsym Mod4+u focus parent
 bindsym Mod4+i focus child
 
-# Focus
+# Move your focus around
 bindsym Mod4+h focus left
 bindsym Mod4+j focus down
 bindsym Mod4+k focus up
 bindsym Mod4+l focus right
 
-# Move
+# Move the focused window with the same, but add Shift.
 bindsym Mod4+Shift+h move left
 bindsym Mod4+Shift+j move down
 bindsym Mod4+Shift+k move up
 bindsym Mod4+Shift+l move right
 
-# Resize in these directions
+# Resize in these directions:
 # ╭────╮ →
 # │    │ →
 # │    │ →
@@ -110,21 +115,21 @@ bindsym Mod4+Control+j resize grow down 5 ppt
 bindsym Mod4+Control+k resize shrink down 5 ppt
 bindsym Mod4+Control+l resize grow right 5 ppt
 
-# Borders
+# Change border styles
 bindsym Mod4+b border toggle
 bindsym Mod4+Shift+b border pixel
 
-# Workspaces ───────────────────────────────────────────────────────────────────
+# Workspaces ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
-# Next / Previous
+# Switch to the next or previous workspace
 bindsym Mod4+n workspace next
 bindsym Mod4+Shift+n workspace prev
 
-# Last
+# Switch to the last workspace
 bindsym Mod4+Tab workspace back_and_forth
 bindsym Mod4+Shift+Tab move container to workspace back_and_forth
 
-# Focus
+# Switch to workspace
 bindsym Mod4+grave scratchpad show
 bindsym Mod4+1 workspace number 1
 bindsym Mod4+2 workspace number 2
@@ -139,7 +144,7 @@ bindsym Mod4+0 workspace number 10
 bindsym Mod4+minus workspace number 11
 bindsym Mod4+equal workspace number 12
 
-# Move
+# Move focused container to workspace
 bindsym Mod4+Shift+grave move scratchpad
 bindsym Mod4+Shift+1 move container to workspace number 1
 bindsym Mod4+Shift+2 move container to workspace number 2
@@ -154,12 +159,14 @@ bindsym Mod4+Shift+0 move container to workspace number 10
 bindsym Mod4+Shift+minus move container to workspace number 11
 bindsym Mod4+Shift+equal move container to workspace number 12
 
-# Multimedia-keys ──────────────────────────────────────────────────────────────
+# Multimedia-keys ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
+# Volume controls
 bindsym XF86AudioMute exec amixer set Master toggle
 bindsym XF86AudioRaiseVolume exec amixer set Master 5%+
 bindsym XF86AudioLowerVolume exec amixer set Master 5%-
 
 # Rules ────────────────────────────────────────────────────────────────────────
 
+# Alacritty · Floating
 for_window [class="Alacritty · Floating"] floating enable
