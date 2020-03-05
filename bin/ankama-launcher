@@ -1,3 +1,0 @@
-#!/bin/sh
-
-appimage-run ~/games/linux/ankama/launcher/'Ankama Launcher-Setup-x86_64.AppImage'
