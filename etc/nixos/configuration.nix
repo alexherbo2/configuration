@@ -363,7 +363,6 @@ in
     retroarch
     ripgrep
     rofi
-    rtorrent
     ruby_2_7
     rustc
     rustup
