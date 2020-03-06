@@ -362,7 +362,6 @@ in
     redshift
     retroarch
     ripgrep
-    rofi
     ruby_2_7
     rustc
     rustup
