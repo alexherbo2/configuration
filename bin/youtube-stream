@@ -1,5 +1,5 @@
 #!/bin/sh
 
-echo 'https://youtube.com/channel/UCv9nzkds34PnGOu6u_QvVBQ/live' |
-wl-copy
-capture video window rtmp://a.rtmp.youtube.com/live2/$(password-get alexherbo2@live.youtube.com) flv
+wl-copy 'https://youtube.com/channel/UCv9nzkds34PnGOu6u_QvVBQ/live'
+password=$(password-get alexherbo2@live.youtube.com)
+wf-recorder --audio --muxer flv -f "rtmp://a.rtmp.youtube.com/live2/$password"
