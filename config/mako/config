@@ -2,3 +2,5 @@ background-color=#eaeaea
 text-color=#202020
 border-color=#eaeaea
 progress-color=over #eaeaea
+# Show notifications at the bottom-center for screencasts
+# anchor=bottom-center
