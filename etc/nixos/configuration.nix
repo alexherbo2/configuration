@@ -232,6 +232,7 @@ in
     clang
     clojure
     cockatrice
+    cquery
     crystal
     ctags
     curl
