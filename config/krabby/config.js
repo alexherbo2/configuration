@@ -1,8 +1,20 @@
 // Configuration for Krabby (https://github.com/alexherbo2/krabby/blob/master/src/krabby)
 
 const { extensions, modes } = krabby
-const { shell, dmenu, editor } = extensions
+const { commands, shell, dmenu, editor } = extensions
 const { modal } = modes
+
+// Show keys for screencasts
+const showKeys = () => {
+  modal.on('command', ({ keyChord, description, label }) => {
+    const keys = modal.keyValues(keyChord)
+    const key = keys.join('-')
+    commands.send('notify', 'show-keys', {
+      title: label,
+      message: `${key}: ${description}`
+    })
+  })
+}
 
 // Tab search with fzf and Alacritty.
 dmenu.send('set', {
