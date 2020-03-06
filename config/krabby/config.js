@@ -16,6 +16,9 @@ const showKeys = () => {
   })
 }
 
+// Enable show-keys notifications
+// showKeys()
+
 // Tab search with fzf and Alacritty.
 dmenu.send('set', {
   dmenu: {
