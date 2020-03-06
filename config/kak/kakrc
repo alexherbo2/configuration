@@ -40,8 +40,6 @@ source ~/repositories/github.com/occivink/kakoune-vertical-selection/vertical-se
 source ~/repositories/github.com/ul/kak-lsp/rc/lsp.kak
 source ~/repositories/gitlab.com/Screwtapello/kakoune-state-save/state-save.kak
 
-lsp-enable
-
 # Options ──────────────────────────────────────────────────────────────────────
 
 set-option -add global ui_options ncurses_status_on_top=yes
@@ -100,6 +98,11 @@ colorscheme-dracula-transparent
 set-option global modelinefmt '{{mode_info}} {magenta}%val{client}{default} at {yellow}%val{session}{default} on {green}%val{bufname}{default} {{context_info}} {cyan}%val{cursor_line}{default}:{cyan}%val{cursor_char_column}{default}'
 
 # Filetype-specific ────────────────────────────────────────────────────────────
+
+# LSP
+hook global WinSetOption filetype=(c|cpp|crystal|css|go|haskell|html|javascript|json|ocaml|reason|ruby|rust|sh|typescript) %{
+  lsp-enable-window
+}
 
 # Grep
 hook global WinSetOption filetype=grep %{
