@@ -1,6 +1,6 @@
 // Configuration for Krabby (https://github.com/alexherbo2/krabby/blob/master/src/krabby)
 
-const { extensions, modes } = krabby
+const { extensions, modes, settings } = krabby
 const { commands, shell, dmenu, editor } = extensions
 const { modal } = modes
 
@@ -18,6 +18,9 @@ const showKeys = () => {
 
 // Enable show-keys notifications
 // showKeys()
+
+// Link hints
+settings['hint-selectors'] = ':not(.krabby)'
 
 // Tab search with fzf and Alacritty.
 dmenu.send('set', {
