@@ -324,7 +324,7 @@ hook global WinSetOption filetype=.* %{
 # mkdir ────────────────────────────────────────────────────────────────────────
 
 hook global BufWritePre .* %{
-  mkdir-current-buffer
+  mkdir -p %sh(dirname "$kak_hook_param")
 }
 
 # move-line ────────────────────────────────────────────────────────────────────
