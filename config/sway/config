@@ -247,3 +247,4 @@ bindsym --to-code {
 
 # Alacritty · Floating
 for_window [app_id="Alacritty · Floating"] exec 640px
+for_window [title="Picture in picture"] floating enable
