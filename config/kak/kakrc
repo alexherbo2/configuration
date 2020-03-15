@@ -1,5 +1,6 @@
 # Plugins ──────────────────────────────────────────────────────────────────────
 
+source ~/projects/prelude.kak/rc/prelude.kak
 source ~/projects/auto-pairs.kak/rc/auto-pairs.kak
 source ~/projects/bc.kak/rc/bc.kak
 source ~/projects/capitalize-selections.kak/rc/capitalize-selections.kak
