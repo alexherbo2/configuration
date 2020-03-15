@@ -80,7 +80,7 @@ bindsym --to-code {
   # Launcher
   # Note: Pass the final command to swaymsg so that the resulting window can be opened
   # on the original workspace that the command was run on.
-  Mod4+Shift+Return exec alacritty --class 'Alacritty · Floating' --command sh -c 'swaymsg exec -- launcher-run $(launcher-list | fzf)'
+  Mod4+Shift+Return exec swaymsg exec -- launcher-run $(launcher-list | wofi --show dmenu)
 
   # Reload
   Mod4+Escape reload
@@ -223,7 +223,7 @@ bindsym --to-code {
   Mod4+F2 exec room
 
   # Password manager
-  Mod4+p exec alacritty --class 'Alacritty · Floating' --command sh -c 'password-get $(password-menu | fzf) | nohup wl-copy > /dev/null'
+  Mod4+p exec password-get $(password-menu | wofi --show dmenu) | wl-copy
 
   # Screenshots
   Print exec grim-window $(new-file).webp
