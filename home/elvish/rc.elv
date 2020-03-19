@@ -147,7 +147,7 @@ alias:new p echo
 alias:new md mkdir -p
 alias:new c clone
 alias:new d trash
-alias:new _ trash
+alias:new _ rm -Rf
 alias:new x arc unarchive
 alias:new ft mime
 alias:new yk wl-copy
