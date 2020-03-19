@@ -410,8 +410,9 @@ in
     wev
     wf-recorder
     wget
-    (wine.override { wineBuild = "wine64"; })
     winetricks
+    # Support both 32-bit and 64-bit applications
+    wineWowPackages.stable
     wl-clipboard
     wlogout
     wlr-randr
