@@ -3,6 +3,7 @@ application/pdf=org.pwmt.zathura.desktop
 image/gif=mpv.desktop
 image/jpeg=mpv.desktop
 image/png=mpv.desktop
+image/webp=mpv.desktop
 text/html=chromium-browser.desktop
 text/plain=kakoune-connect.desktop
 text/xml=kakoune-connect.desktop
