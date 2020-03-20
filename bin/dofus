@@ -1,3 +1,3 @@
 #!/bin/sh
 
-wine64 ~/games/windows/ankama/zaap/dofus/Dofus.exe
+wine ~/games/windows/ankama/zaap/dofus/Dofus.exe
