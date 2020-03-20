@@ -411,8 +411,7 @@ in
     wf-recorder
     wget
     winetricks
-    # Support both 32-bit and 64-bit applications
-    wineWowPackages.stable
+    wine
     wl-clipboard
     wlogout
     wlr-randr
