@@ -19,4 +19,4 @@ else
 fi
 
 # Set brightness
-sudo light -S "$brightness"
+light -S "$brightness"
