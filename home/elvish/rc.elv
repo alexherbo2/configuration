@@ -119,6 +119,8 @@ alias:new grep rg
 alias:new curl e:curl --silent --show-error --location
 alias:new wget e:wget --continue
 alias:new gist e:gist --open
+# Use Tectonic as PDF engine
+alias:new pandoc e:pandoc --pdf-engine tectonic
 
 # Batch
 
