@@ -194,7 +194,6 @@ alias:new ma mpv -profile audio
 alias:new mkwa mpv -profile audio "(radiokawa '' '#{item.enclosure.url}')"
 
 alias:new y youtube-dl
-alias:new dls youtube-dl-source
 alias:new v2g ffmpeg-to-gif
 
 # wf-recorder
