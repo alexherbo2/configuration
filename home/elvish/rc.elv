@@ -191,7 +191,6 @@ alias:new gcd cd '(git-hub-list | fzf)'
 alias:new m mpv
 alias:new mi mpv -profile image
 alias:new ma mpv -profile audio
-alias:new mkwa mpv -profile audio "(radiokawa '' '#{item.enclosure.url}')"
 
 alias:new y youtube-dl
 alias:new v2g ffmpeg-to-gif
