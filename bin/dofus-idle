@@ -1,0 +1,10 @@
+#!/bin/sh
+
+while true; do
+  swaymsg '[title="Dofus"]' focus
+  sleep 1
+  swaymsg seat - cursor move -- +1 +1
+  sleep 1
+  swaymsg seat - cursor move -- -1 -1
+  sleep 300
+done
