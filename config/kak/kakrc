@@ -120,6 +120,10 @@ define-command scratch %{
   edit -scratch '*scratch*'
 }
 
+define-command scratch-reload %{
+  edit! -scratch '*scratch*'
+}
+
 define-command read-only %{
   edit -readonly %val{bufname}
 }
@@ -158,6 +162,7 @@ define-command markdown-sort-links-by-url %{
 # Aliases ──────────────────────────────────────────────────────────────────────
 
 alias global s scratch
+alias global s! scratch-reload
 alias global ro read-only
 alias global f find-edit
 alias global fa find-edit-all
