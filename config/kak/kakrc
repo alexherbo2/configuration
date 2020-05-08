@@ -34,6 +34,7 @@ source ~/projects/volatile-highlighter.kak/rc/volatile-highlighter.kak
 source ~/projects/word-select.kak/rc/word-select.kak
 source ~/projects/yank-ring.kak/rc/yank-ring.kak
 source ~/repositories/github.com/Delapouite/kakoune-buffers/buffers.kak
+source ~/repositories/github.com/gustavo-hms/luar/luar.kak
 source ~/repositories/github.com/occivink/kakoune-find/find.kak
 source ~/repositories/github.com/occivink/kakoune-sudo-write/sudo-write.kak
 source ~/repositories/github.com/occivink/kakoune-vertical-selection/vertical-selection.kak
