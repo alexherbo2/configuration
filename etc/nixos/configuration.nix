@@ -387,6 +387,7 @@ in
     swaylock
     synapse-bt
     tectonic
+    thelounge
     tig
     tigervnc
     tilix
