@@ -196,7 +196,7 @@ alias:new y youtube-dl
 alias:new v2g ffmpeg-to-gif
 
 # wf-recorder
-alias:new wf wf-recorder -f "(new-file '' .mkv)"
+alias:new record wf-recorder -f "(new-file '' .mkv)"
 
 # synapse
 alias:new scu synapse-unfinished
