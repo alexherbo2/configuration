@@ -2,7 +2,7 @@
   "layer": "top",
   "modules-left": ["sway/workspaces", "sway/mode"],
   "modules-center": ["sway/window"],
-  "modules-right": ["disk", "pulseaudio", "battery", "clock"],
+  "modules-right": ["disk", "pulseaudio", "backlight", "battery", "clock"],
   "clock": {
     "format": "{:%I:%M %p}",
     "format-alt": "{:%A, %B %d, %Y · %I:%M %p}"
@@ -18,6 +18,12 @@
     "format-plugged": "{capacity}% ",
     "format-alt": "{time} {icon}",
     "format-icons": ["", "", "", "", ""]
+  },
+  "backlight": {
+    "format": "{percent}% {icon}",
+    "format-icons": ["", ""],
+    "on-scroll-up": "light -A 5",
+    "on-scroll-down": "light -U 5"
   },
   "pulseaudio": {
     "scroll-step": 5,
