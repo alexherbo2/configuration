@@ -339,7 +339,7 @@ in
     obs-wlrobs
     ocaml
     opam
-    openjdk12
+    openjdk
     openssl
     opera
     p7zip
