@@ -23,7 +23,7 @@ in
 
   # File systems ───────────────────────────────────────────────────────────────
 
-  boot.supportedFilesystems = [ "zfs" ];
+  # boot.supportedFilesystems = [ "zfs" ];
 
   # Options ────────────────────────────────────────────────────────────────────
 
