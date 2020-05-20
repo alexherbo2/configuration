@@ -71,22 +71,22 @@ edit:prompt = {
 }
 
 edit:rprompt = {
-  edit:styled (whoami) magenta
+  styled (whoami) magenta
   put ' at '
-  edit:styled (hostname) yellow
+  styled (hostname) yellow
   put ' in '
-  edit:styled (tilde-abbr $pwd) green
+  styled (tilde-abbr $pwd) green
   try {
     branch = (git rev-parse --abbrev-ref HEAD)
     status = (git status --porcelain | slurp)
     put ' on '
-    edit:styled $branch magenta
+    styled $branch magenta
     # [?] → Unstaged changes
     # [!] → Ready to commit
     if (re:match '(?m)^.\S' $status) {
-      edit:styled '?' green
+      styled '?' green
     } elif (re:match '(?m)^.\s' $status) {
-      edit:styled '!' green
+      styled '!' green
     }
   } except error { } 2> /dev/null
 }
