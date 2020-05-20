@@ -418,6 +418,7 @@ in
     wlr-randr
     wofi
     xboxdrv
+    xclip
     xcompmgr
     xdg_utils
     xorg.xev
