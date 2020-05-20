@@ -348,7 +348,7 @@ in
     pastel
     pavucontrol
     pcre
-    # pcsx2
+    pcsx2
     pcsxr
     pdftk
     plan9port
