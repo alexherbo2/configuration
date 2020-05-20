@@ -186,8 +186,8 @@ in
   services.redshift.package = pkgs.redshift-wlr;
 
   # Virtualisation
-  virtualisation.lxc.enable = true;
-  virtualisation.lxd.enable = true;
+  # virtualisation.lxc.enable = true;
+  # virtualisation.lxd.enable = true;
   virtualisation.docker.enable = true;
   virtualisation.virtualbox.host.enable = true;
   virtualisation.virtualbox.guest.enable = true;
