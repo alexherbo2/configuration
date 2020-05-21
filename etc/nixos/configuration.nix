@@ -421,6 +421,7 @@ in
     xclip
     xcompmgr
     xdg_utils
+    xdotool
     xorg.xev
     xorg.xinit
     xorg.xkbcomp
