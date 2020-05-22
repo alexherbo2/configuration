@@ -61,6 +61,19 @@ bindsym Mod4+Shift+Escape exit
 # Screen locker
 bindsym Mod4+BackSpace exec i3lock
 
+# Mouse bindings ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+
+bindsym --release button2 kill
+bindsym --release button3 exec alacritty
+
+# Move your focus around
+bindsym --whole-window Mod4+button4 focus left
+bindsym --whole-window Mod4+button5 focus right
+
+# Move the focused window with the same, but add Shift.
+bindsym --whole-window Mod4+Shift+button4 move left
+bindsym --whole-window Mod4+Shift+button5 move right
+
 # Layouts ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
 # Layouts
