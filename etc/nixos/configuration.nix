@@ -197,11 +197,11 @@ in
   # virtualisation.lxc.enable = true;
   # virtualisation.lxd.enable = true;
   # virtualisation.docker.enable = true;
-  # virtualisation.virtualbox.host.enable = true;
-  # virtualisation.virtualbox.guest.enable = true;
+  virtualisation.virtualbox.host.enable = true;
+  virtualisation.virtualbox.guest.enable = true;
   # Install Oracle Extension Pack
   # Important: Requires nixpkgs.config.allowUnfree
-  # virtualisation.virtualbox.host.enableExtensionPack = true;
+  virtualisation.virtualbox.host.enableExtensionPack = true;
 
   # Packages ───────────────────────────────────────────────────────────────────
 
