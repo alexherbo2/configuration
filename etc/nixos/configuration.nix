@@ -277,6 +277,7 @@ in
     git-lfs
     glow
     gnumake
+    gnupg
     go
     google-chrome
     gotty
