@@ -354,6 +354,7 @@ in
     p7zip
     pandoc
     par
+    parted
     pastel
     pavucontrol
     pcre
