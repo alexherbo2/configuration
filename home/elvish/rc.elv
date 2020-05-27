@@ -125,6 +125,8 @@ alias:new pandoc e:pandoc --pdf-engine tectonic
 # Kakoune
 fn kak-session [session]{
   E:KAKOUNE_SESSION = $session
+  # Clear dead sessions before connecting
+  kak -clear
   kak -s $session -d
   kak -c $session
 }
