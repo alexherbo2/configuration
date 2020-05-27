@@ -169,7 +169,7 @@ in
   services.xserver.enable = true;
 
   # Display manager
-  # services.xserver.displayManager.sddm.enable = true;
+  services.xserver.displayManager.sddm.enable = true;
 
   # Window managers
   # i3
@@ -372,6 +372,7 @@ in
     rustup
     sbcl
     scala
+    sddm
     shards
     shellcheck
     skim
