@@ -5,14 +5,9 @@
 
 { config, pkgs, ... }:
 let
-  # Pin a specific version for Sway
-  #
-  # Black screen for Sway
-  # https://github.com/colemickens/nixpkgs-wayland/issues/214
-  #
-  # 2020-05-12
-  # https://github.com/colemickens/nixpkgs-wayland/commit/e294d55bcdaaad9d70312584cadc035709295388
-  rev = "e294d55bcdaaad9d70312584cadc035709295388";
+  # Pin a specific version
+  # Could be a Git revision
+  rev = "master";
   url = "https://github.com/colemickens/nixpkgs-wayland/archive/${rev}.tar.gz";
   waylandOverlay = (import (builtins.fetchTarball url));
 in
