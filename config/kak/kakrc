@@ -504,3 +504,127 @@ provide-module gtd %{
   define-command gtd-insert-date %(execute-keys -draft '!date ''+%F'' | tr -d ''\n''<ret>')
   define-command gtd-insert-time %(execute-keys -draft '!date ''+%R'' | tr -d ''\n''<ret>')
 }
+
+# Ruby on Rails ────────────────────────────────────────────────────────────────
+
+# Ruby on Rails
+# https://rubyonrails.org
+
+hook global BufCreate .* %{
+  rails-detect
+}
+
+provide-module rails %{
+
+  define-command rails-detect -docstring 'Detect Rails projects' %{
+    evaluate-commands %sh{
+      # Prelude
+      . "$kak_opt_prelude"
+
+      # Async main function
+      main() {
+        gemfile=$(find_upwards "$kak_buffile" Gemfile)
+        if test $? -ne 0; then
+          exit 1
+        fi
+        if ! grep -F -q rails "$gemfile"; then
+          exit 1
+        fi
+        kak_escape evaluate-commands -buffer "$kak_buffile" 'rails-mode' | kak -p "$kak_session"
+      }
+
+      # realpath for macOS
+      # https://flummox-engineering.blogspot.com/2014/06/getting-absolute-path-in-bash-in-osx.html
+      realpath() {
+        case "$1" in
+          /*) path=$1 ;;
+          *) path=$PWD/$1 ;;
+        esac
+        printf '%s' "$path"
+      }
+
+      find_upwards() {
+        path=$(realpath "${1:-$PWD}")
+        name=$2
+        while test -n "$path"; do
+          path=${path%/*}
+          file=$path/$name
+          if test -e "$file"; then
+            printf '%s' "$file"
+            return 0
+          fi
+        done
+        return 1
+      }
+
+      # Async main function
+      main < /dev/null > /dev/null 2>&1 &
+    }
+  }
+
+  define-command rails-mode -docstring 'Enter in Rails mode' %{
+    # Snippets directories:
+    # – ~/.config/kak/snippets/rails
+    # – /path/to/snippets.kak/snippets/rails
+    # – ~/.config/kak/snippets
+    # – /path/to/snippets.kak/snippets
+    set-option buffer snippets_directories "%val{config}/snippets/rails" "%opt{snippets_path}/rails" "%val{config}/snippets" "%opt{snippets_path}"
+
+    # Aliases
+    # MVC
+    alias buffer em rails-edit-models
+    alias buffer ev rails-edit-views
+    alias buffer ec rails-edit-controllers
+    # Configuration
+    alias buffer config rails-edit-config
+    # Routes
+    alias buffer routes rails-edit-routes
+    alias buffer er rails-edit-routes
+    # Layouts
+    alias buffer layouts rails-edit-layouts
+    alias buffer el rails-edit-layouts
+    # Database
+    alias buffer db rails-edit-db
+    alias buffer migrations rails-edit-migrations
+  }
+
+  # MVC
+  define-command rails-edit-models -docstring 'Edit Rails models' %{
+    explore-files app/models
+  }
+
+  define-command rails-edit-views -docstring 'Edit Rails views' %{
+    explore-files app/views
+  }
+
+  define-command rails-edit-controllers -docstring 'Edit Rails controllers' %{
+    explore-files app/controllers
+  }
+
+  # Configuration
+  define-command rails-edit-config -docstring 'Edit Rails config' %{
+    explore-files config
+  }
+
+  # Routes
+  define-command rails-edit-routes -docstring 'Edit Rails routes' %{
+    edit config/routes.rb
+  }
+
+  # Layouts
+  define-command rails-edit-layouts -docstring 'Edit Rails layouts' %{
+    explore-files app/views/layouts
+  }
+
+  # Database
+  define-command rails-edit-db -docstring 'Edit Rails database' %{
+    explore-files db
+  }
+
+  define-command rails-edit-migrations -docstring 'Edit Rails migrations' %{
+    explore-files db/migrate
+  }
+
+}
+
+require-module rails
