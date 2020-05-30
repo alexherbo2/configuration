@@ -26,6 +26,9 @@ E:MANPATH = ~/.npm-packages/share/man:
 # Shell
 E:SHELL = elvish
 
+# User identifier
+E:UID = (id -u $E:USER)
+
 # XDG
 E:XDG_CONFIG_HOME = ~/.config
 E:XDG_CACHE_HOME = ~/.cache
