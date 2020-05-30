@@ -142,8 +142,8 @@ fn kak-connect [session]{
   kak -c $session
 }
 
-fn kak-auto-connect {
-  kak -c $E:KAKOUNE_SESSION
+fn kak-attach [@arguments]{
+  kak -c $E:KAKOUNE_SESSION $@arguments
 }
 
 # Batch
@@ -198,7 +198,7 @@ alias:new k kak
 alias:new kl kak -l
 alias:new kn kak -n
 alias:new kh kak -help
-fn K { kak-auto-connect }
+fn K [@arguments]{ kak-attach $@arguments }
 fn ks [session]{ kak-session $session }
 fn kc [session]{ kak-connect $session }
 
