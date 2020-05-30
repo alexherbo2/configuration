@@ -29,6 +29,9 @@ E:SHELL = elvish
 # User identifier
 E:UID = (id -u $E:USER)
 
+# Temporary folder
+E:TMPDIR = /run/user/$E:UID
+
 # XDG
 E:XDG_CONFIG_HOME = ~/.config
 E:XDG_CACHE_HOME = ~/.cache
