@@ -1,7 +1,5 @@
 #!/bin/sh
 
-mkdir -p ~/games/linux/ankama/launcher
-cd ~/games/linux/ankama/launcher
-rm -f 'Ankama Launcher-Setup-x86_64.AppImage'
-curl 'https://launcher.cdn.ankama.com/installers/production/Ankama%20Launcher-Setup-x86_64.AppImage' --output 'Ankama Launcher-Setup-x86_64.AppImage'
-chmod +x 'Ankama Launcher-Setup-x86_64.AppImage'
+export NIXPKGS_ALLOW_UNFREE=1
+cd /etc/nixos/pkgs/games/ankama-launcher
+nix-build-expression
