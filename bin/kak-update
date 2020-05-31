@@ -4,7 +4,7 @@ cd ~/projects/kakoune
 git pull upstream master
 git push
 cd src
-nix-shell '<nixpkgs>' --attr kakoune --run '
+nix-shell --packages pkg-config ncurses --run '
   make -j 8
   strip -s kak
 '
