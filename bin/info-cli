@@ -1,0 +1,8 @@
+#!/bin/sh
+
+edo swaymsg -t get_workspaces
+edo date
+edo acpi
+edo light
+edo amixer get Master
+edo df -h /
