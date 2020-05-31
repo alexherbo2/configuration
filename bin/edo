@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# Convenience function to echo a command, run it, and `die_unless_nonfatal` if it fails.
+# https://exherbo.org/docs/eapi/exheres-for-smarties.html#helper_functions
+
+printf '$ %s\n' "$*"
+"$@" || exit $?
+printf '\n'
