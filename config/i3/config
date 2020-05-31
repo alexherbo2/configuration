@@ -181,5 +181,6 @@ bindsym XF86AudioLowerVolume exec amixer set Master 5%-
 
 # Rules ────────────────────────────────────────────────────────────────────────
 
-# Alacritty · Floating
+# Alacritty · [Fullscreen|Floating]
+for_window [class="Alacritty · Fullscreen"] fullscreen enable
 for_window [class="Alacritty · Floating"] floating enable
