@@ -245,7 +245,8 @@ bindsym --to-code {
 
 # Rules ────────────────────────────────────────────────────────────────────────
 
-# Alacritty · Floating
+# Alacritty · [Fullscreen|Floating]
+for_window [app_id="Alacritty · Fullscreen"] fullscreen enable
 for_window [app_id="Alacritty · Floating"] exec 640px
 for_window [title="Picture in picture"] floating enable
 for_window [instance="dofus.exe"] layout tabbed
