@@ -59,7 +59,7 @@ bindsym Mod4+F5 reload
 bindsym Mod4+Shift+Escape exit
 
 # Screen locker
-bindsym Mod4+BackSpace exec i3lock
+bindsym Mod4+Escape exec i3lock
 
 # Mouse bindings ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
