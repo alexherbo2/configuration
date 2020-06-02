@@ -83,7 +83,7 @@ bindsym --to-code {
   Mod4+Shift+Return exec swaymsg exec -- launcher-run $(launcher-list | wofi --show dmenu)
 
   # Reload
-  Mod4+Escape reload
+  Mod4+F5 reload
   Mod4+Shift+Escape exit
 
   # Screen locker

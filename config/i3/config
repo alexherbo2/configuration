@@ -55,7 +55,7 @@ bindsym Mod4+Return exec alacritty
 bindsym Mod4+Shift+Return exec dmenu_run
 
 # Reload
-bindsym Mod4+Escape reload
+bindsym Mod4+F5 reload
 bindsym Mod4+Shift+Escape exit
 
 # Screen locker
