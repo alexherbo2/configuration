@@ -35,6 +35,28 @@ cmd open ${{
   esac
 }}
 
+cmd create-new-file ${{
+  printf 'new-file:'
+  read file
+  if test -z "$file"; then
+    exit 1
+  fi
+  directory=$(dirname "$file")
+  mkdir -p "$directory"
+  touch "$file"
+  lf -remote "send $id select $file"
+}}
+
+cmd create-new-directory ${{
+  printf 'new-directory:'
+  read directory
+  if test -z "$directory"; then
+    exit 1
+  fi
+  mkdir -p "$directory"
+  lf -remote "send $id select $directory"
+}}
+
 # Execute shell command on selection
 cmd embed $$@ $fx
 
@@ -64,3 +86,5 @@ map x embed arc unarchive
 map s select-fuzzy
 map g cd-fuzzy
 map b batch
+map <f-2> create-new-file
+map <f-3> create-new-directory
