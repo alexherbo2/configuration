@@ -6,3 +6,12 @@ profile {
   output "Unknown 0x36ED 0x00000000" mode 1920x1080 position 0,900
   output "Acer Technologies Acer B193W LBT080444282" mode 1440x900 position 0,0
 }
+
+profile {
+  output "Chimei Innolux Corporation 0x15CA 0x00000000" mode 1366x768 position 0,0
+}
+
+profile {
+  output "Chimei Innolux Corporation 0x15CA 0x00000000" mode 1366x768 position 0,900
+  output "Acer Technologies Acer B193W LBT080444282" mode 1440x900 position 0,0
+}
