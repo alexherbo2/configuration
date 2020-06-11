@@ -1,8 +1,8 @@
 profile {
-  output eDP-1 mode 1920x1080 position 0,0
+  output "Unknown 0x36ED 0x00000000" mode 1920x1080 position 0,0
 }
 
 profile {
-  output eDP-1 mode 1920x1080 position 0,900
-  output HDMI-A-1 mode 1440x900 position 0,0
+  output "Unknown 0x36ED 0x00000000" mode 1920x1080 position 0,900
+  output "Acer Technologies Acer B193W LBT080444282" mode 1440x900 position 0,0
 }
