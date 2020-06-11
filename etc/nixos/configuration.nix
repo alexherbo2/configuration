@@ -227,7 +227,7 @@ in
     cabal-install
     # cachix
     cage
-    calibre
+    # calibre
     cargo
     ccl
     celluloid
