@@ -195,6 +195,7 @@ alias:new ta tmux attach-session
 
 # Kakoune
 alias:new k kak
+alias:new kt kak-connect
 alias:new kl kak -l
 alias:new kn kak -n
 alias:new kh kak -help
