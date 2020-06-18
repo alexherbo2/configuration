@@ -137,7 +137,7 @@ fn kak-session [session]{
   kak -c $session
 }
 
-fn kak-connect [session]{
+fn kak_connect [session]{
   E:KAKOUNE_SESSION = $session
   kak -c $session
 }
@@ -200,7 +200,7 @@ alias:new kn kak -n
 alias:new kh kak -help
 fn K [@arguments]{ kak-attach $@arguments }
 fn ks [session]{ kak-session $session }
-fn kc [session]{ kak-connect $session }
+fn kc [session]{ kak_connect $session }
 
 # Git
 alias:new g git
