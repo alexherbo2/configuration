@@ -83,6 +83,7 @@ map | embed bat
 map e embed kak
 map m embed mpv
 map x embed arc unarchive
+map W embed git add
 map s select-fuzzy
 map g cd-fuzzy
 map b batch
