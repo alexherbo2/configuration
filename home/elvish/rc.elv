@@ -210,8 +210,8 @@ alias:new G tig
 
 alias:new gcp git-hub-clone
 alias:new gls git-hub-list
-alias:new gupdate git-hub-update
-alias:new gpipe git-hub-pipe
+alias:new gu git-hub-update
+alias:new gp git-hub-pipe
 alias:new gcd cd '(git-hub-list | fzf)'
 
 # mpv
