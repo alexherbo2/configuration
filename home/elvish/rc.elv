@@ -213,6 +213,7 @@ alias:new gls git-hub-list
 alias:new gu git-hub-update
 alias:new gp git-hub-pipe
 alias:new gcd cd '(git-hub-list | fzf)'
+alias:new gx git-hub-list '|' fzf '|' git-hub-pipe
 
 # mpv
 alias:new m mpv
