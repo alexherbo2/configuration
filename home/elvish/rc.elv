@@ -128,24 +128,6 @@ alias:new gist e:gist --open
 # Use Tectonic as PDF engine
 alias:new pandoc e:pandoc --pdf-engine tectonic
 
-# Kakoune
-fn kak-session [session]{
-  E:KAKOUNE_SESSION = $session
-  # Clear dead sessions before connecting
-  kak -clear
-  kak -s $session -d
-  kak -c $session
-}
-
-fn kak_connect [session]{
-  E:KAKOUNE_SESSION = $session
-  kak -c $session
-}
-
-fn kak-attach [@arguments]{
-  kak -c $E:KAKOUNE_SESSION $@arguments
-}
-
 # Batch
 
 fn batch [@arguments]{
@@ -196,13 +178,12 @@ alias:new ta tmux attach-session
 
 # Kakoune
 alias:new k kak
-alias:new kt kak-connect
+alias:new K kak-connect
 alias:new kl kak -l
+alias:new ks setsid kak -s '{}' -d ';' kak -c '{}'
+alias:new kc kak -c
 alias:new kn kak -n
 alias:new kh kak -help
-fn K [@arguments]{ kak-attach $@arguments }
-fn ks [session]{ kak-session $session }
-fn kc [session]{ kak_connect $session }
 
 # Git
 alias:new g git
