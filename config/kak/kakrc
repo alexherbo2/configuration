@@ -359,13 +359,14 @@ hook global KakEnd .* %{
   state-save-reg-sync slash
 }
 
-hook global FocusOut .* %{
-  state-save-reg-save dquote
-}
-
-hook global FocusIn .* %{
-  state-save-reg-load dquote
-}
+# FIXME: Avoid dquote clobbering with yank-ring.
+# hook global FocusOut .* %{
+#   state-save-reg-save dquote
+# }
+#
+# hook global FocusIn .* %{
+#   state-save-reg-load dquote
+# }
 
 # surround ─────────────────────────────────────────────────────────────────────
 
