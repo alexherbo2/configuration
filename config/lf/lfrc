@@ -89,3 +89,4 @@ map g cd-fuzzy
 map b batch
 map <f-2> create-new-file
 map <f-3> create-new-directory
+map <c-n> $alacritty --command lf &
