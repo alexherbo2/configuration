@@ -27,6 +27,7 @@ source ~/projects/search-highlighter.kak/rc/search-highlighter.kak
 source ~/projects/snippets.kak/rc/snippets.kak
 source ~/projects/split-object.kak/rc/split-object.kak
 source ~/projects/surround.kak/rc/surround.kak
+source ~/projects/terminal-mode.kak/rc/terminal-mode.kak
 source ~/projects/text-objects.kak/rc/text-objects.kak
 source ~/projects/toggle-highlighter.kak/rc/toggle-highlighter.kak
 source ~/projects/type-expand.kak/rc/type-expand.kak
@@ -264,6 +265,9 @@ map global user r ': enter-replace-mode<ret>' -docstring 'Enter replace mode'
 # Surround pairs as-you-type
 map global user s ': surround<ret>' -docstring 'Enter surround mode'
 map global user S ': surround _ _ * *<ret>' -docstring 'Enter surround mode with extra surrounding pairs'
+
+# Terminal
+map global user t ': enter-user-mode terminal<ret>' -docstring 'Terminal'
 
 # Chronic
 map global normal <a-|> ': enter-user-mode chronic<ret>' -docstring 'Enter Chronic mode'
