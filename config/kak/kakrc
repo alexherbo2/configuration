@@ -212,6 +212,10 @@ map global normal <a-tab> '<a-:>'
 map global prompt <a-tab> <a-!> -docstring 'Expand the typed expansions in currently entered text'
 map global prompt <a-ret> <a-!><ret> -docstring 'Expand the typed expansions in currently entered text and validate'
 
+# Search
+# Case insensitive search
+map global prompt <a-i> '<home>(?i)<end>'
+
 map global normal '#' ': comment-line<ret>'
 map global normal <a-`> ': capitalize-selections<ret>'
 
