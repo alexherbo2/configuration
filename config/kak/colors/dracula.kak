@@ -1,1 +1,1 @@
-/home/alex/projects/kakoune-dracula-theme/colors/dracula.kak
+/home/alex/repositories/github.com/dracula/kakoune/colors/dracula.kak
