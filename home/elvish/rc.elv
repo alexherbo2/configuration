@@ -197,9 +197,9 @@ alias:new gcd cd '(git-hub-list | fzf)'
 alias:new gx git-hub-list '|' fzf '|' git-hub-pipe
 
 # mpv
-alias:new m sway-swallow mpv
-alias:new mi sway-swallow mpv -profile image
-alias:new ma sway-swallow mpv -profile audio
+alias:new m mpv
+alias:new mi mpv -profile image
+alias:new ma mpv -profile audio
 
 alias:new y youtube-dl
 alias:new v2g ffmpeg-to-gif
