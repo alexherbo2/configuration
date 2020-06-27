@@ -42,11 +42,12 @@ in
   # Firewall
   # Allow incoming connections
   # https://nixos.org/nixos/manual#sec-firewall
+  # Hugo: 1313
   # receptor: 3000
   # Rails: 5000
   # GoTTY: 8080
   # The Lounge: 9000
-  networking.firewall.allowedTCPPorts = [ 80 443 3000 5000 8080 9000 ];
+  networking.firewall.allowedTCPPorts = [ 80 443 1313 3000 5000 8080 9000 ];
 
   # AdBlock via /etc/hosts
   # https://github.com/StevenBlack/hosts
