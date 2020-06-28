@@ -208,6 +208,7 @@ in
   environment.systemPackages = with pkgs; [
     acpi
     aegisub
+    aerc
     aircrack-ng
     alacritty
     albert
