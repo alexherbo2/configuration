@@ -7,11 +7,6 @@ source ~/projects/capitalize-selections.kak/rc/capitalize-selections.kak
 source ~/projects/change-directory.kak/rc/change-directory.kak
 source ~/projects/chronic.kak/rc/chronic.kak
 source ~/projects/connect.kak/rc/connect.kak
-source ~/projects/connect.kak/rc/modules/fzf.kak
-source ~/projects/connect.kak/rc/modules/dmenu.kak
-source ~/projects/connect.kak/rc/modules/wofi.kak
-source ~/projects/connect.kak/rc/modules/lf.kak
-source ~/projects/connect.kak/rc/modules/dolphin.kak
 source ~/projects/explore.kak/rc/explore/files.kak
 source ~/projects/explore.kak/rc/explore/buffers.kak
 source ~/projects/jq.kak/rc/jq.kak
@@ -41,6 +36,22 @@ source ~/repositories/github.com/occivink/kakoune-sudo-write/sudo-write.kak
 source ~/repositories/github.com/occivink/kakoune-vertical-selection/vertical-selection.kak
 source ~/repositories/github.com/ul/kak-lsp/rc/lsp.kak
 source ~/repositories/gitlab.com/Screwtapello/kakoune-state-save/state-save.kak
+
+# connect ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+
+define-command -hidden source-and-require-connect-module -params 1 %{
+  source "~/projects/connect.kak/rc/modules/%arg{1}.kak"
+  require-module "connect-%arg{1}"
+}
+
+source-and-require-connect-module broot
+source-and-require-connect-module dmenu
+source-and-require-connect-module dolphin
+source-and-require-connect-module fzf
+source-and-require-connect-module lf
+source-and-require-connect-module nnn
+source-and-require-connect-module rofi
+source-and-require-connect-module wofi
 
 # Options ──────────────────────────────────────────────────────────────────────
 
@@ -270,7 +281,7 @@ map global user r ': enter-replace-mode<ret>' -docstring 'Enter replace mode'
 map global user s ': surround<ret>' -docstring 'Enter surround mode'
 map global user S ': surround _ _ * *<ret>' -docstring 'Enter surround mode with extra surrounding pairs'
 
-# Terminal
+# Terminal settings
 map global user t ': enter-user-mode terminal<ret>' -docstring 'Terminal'
 
 # Chronic
@@ -299,15 +310,8 @@ map global normal + ': bc-prompt<ret><up><ret>'
 
 # connect ──────────────────────────────────────────────────────────────────────
 
-require-module connect-fzf
-require-module connect-dmenu
-require-module connect-wofi
-require-module connect-lf
-require-module connect-dolphin
-
 # Create a new window
 map global normal <c-t> ': connect-terminal<ret>'
-map global normal <c-w> ': connect-shell alacritty<ret>'
 
 # explore ──────────────────────────────────────────────────────────────────────
 
