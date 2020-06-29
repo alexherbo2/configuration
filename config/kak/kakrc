@@ -245,14 +245,23 @@ map global normal <c-n> ': new<ret>'
 # Quit
 map global normal <c-q> ': quit<ret>'
 
-# Move macros to ^
-map global normal ^ q
-map global normal <a-^> Q
+# Delapouite – More controversial mappings
+# https://github.com/Delapouite/kakoune-buffers#more-controversial-mappings
 
 # Buffers
 map global normal b ': fzf-buffers<ret>'
 map global normal B ': enter-user-mode -lock buffers<ret>'
 map global normal <c-a> ga
+
+# Move [b] to [q], so that [qwe] actions are aligned.
+map global normal q ': word-select-previous-word<ret>'
+map global normal <a-q> ': word-select-previous-big-word<ret>'
+map global normal Q B
+map global normal <a-Q> <a-B>
+
+# Move macros to ^
+map global normal ^ q
+map global normal <a-^> Q
 
 # User mappings ────────────────────────────────────────────────────────────────
 
@@ -390,12 +399,6 @@ set-option global surround_end auto-pairs-enable
 # Move by word instead of word start
 map global normal w ': word-select-next-word<ret>'
 map global normal <a-w> ': word-select-next-big-word<ret>'
-
-# Move [b] to [q], so that [qwe] actions are aligned.
-map global normal q ': word-select-previous-word<ret>'
-map global normal <a-q> ': word-select-previous-big-word<ret>'
-map global normal Q B
-map global normal <a-Q> <a-B>
 
 # yank-ring ────────────────────────────────────────────────────────────────────
 
