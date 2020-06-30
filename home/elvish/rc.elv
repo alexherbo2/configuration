@@ -175,9 +175,6 @@ alias:new la exa --all
 alias:new lla exa --long --all
 alias:new L exa --tree
 
-# Browser
-alias:new b chromium
-
 # tmux
 alias:new t tmux
 alias:new tn tmux new-session
