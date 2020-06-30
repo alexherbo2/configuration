@@ -73,6 +73,13 @@ E:DMENU = '
 # ❯ echo Tchou                       alex at othala in ~/configuration on master
 
 edit:prompt = {
+  # connect.kak
+  if (and (not-eq '' $E:KAKOUNE_SESSION) (not-eq '' $E:KAKOUNE_CLIENT)) {
+    styled $E:KAKOUNE_CLIENT magenta
+    put ' at '
+    styled $E:KAKOUNE_SESSION yellow
+    put ' '
+  }
   put '❯ '
 }
 
