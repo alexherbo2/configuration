@@ -226,7 +226,6 @@ in
     brave
     broot
     bspwc
-    bundix
     cabal-install
     # cachix
     cage
