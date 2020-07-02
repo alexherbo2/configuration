@@ -332,7 +332,6 @@ in
     neovim-qt
     nettools
     networkmanager
-    next
     nginx
     nim
     ninja
