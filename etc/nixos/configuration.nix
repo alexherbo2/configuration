@@ -227,7 +227,7 @@ in
     broot
     bspwc
     cabal-install
-    # cachix
+    cachix
     cage
     # calibre
     cargo
