@@ -364,7 +364,6 @@ in
     python38
     python38Packages.pip
     qemu
-    qutebrowser
     redshift
     retroarch
     ripgrep
