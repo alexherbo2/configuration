@@ -14,6 +14,7 @@ source ~/projects/manual-indent.kak/rc/manual-indent.kak
 source ~/projects/mkdir.kak/rc/mkdir.kak
 source ~/projects/move-line.kak/rc/move-line.kak
 source ~/projects/objectify.kak/rc/objectify.kak
+source ~/projects/out-of-view.kak/rc/out-of-view.kak
 source ~/projects/pad-number.kak/rc/pad-number.kak
 source ~/projects/palette.kak/rc/palette.kak
 source ~/projects/phantom.kak/rc/phantom.kak
@@ -108,7 +109,7 @@ colorscheme-dracula-transparent
 
 # Status line ──────────────────────────────────────────────────────────────────
 
-set-option global modelinefmt '{{mode_info}} {magenta}%val{client}{default} at {yellow}%val{session}{default} on {green}%val{bufname}{default} {{context_info}} {cyan}%val{cursor_line}{default}:{cyan}%val{cursor_char_column}{default}'
+set-option global modelinefmt '{yellow}%opt{out_of_view_status_line}{default} {{mode_info}} {magenta}%val{client}{default} at {yellow}%val{session}{default} on {green}%val{bufname}{default} {{context_info}} {cyan}%val{cursor_line}{default}:{cyan}%val{cursor_char_column}{default}'
 
 # Filetype-specific ────────────────────────────────────────────────────────────
 
