@@ -78,6 +78,11 @@ E:DMENU = '
 # ❯ echo Tchou                       alex at othala in ~/configuration on master
 
 edit:prompt = {
+  # nix-shell
+  if (not-eq '' $E:IN_NIX_SHELL) {
+    put λ
+    put ' '
+  }
   # connect.kak
   if (and (not-eq '' $E:KAKOUNE_SESSION) (not-eq '' $E:KAKOUNE_CLIENT)) {
     styled $E:KAKOUNE_CLIENT magenta
