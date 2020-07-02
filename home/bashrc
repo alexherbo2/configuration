@@ -1,0 +1,3 @@
+if test -n "$IN_NIX_SHELL"; then
+  exec elvish
+fi
