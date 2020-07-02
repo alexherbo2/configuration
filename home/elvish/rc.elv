@@ -84,7 +84,7 @@ edit:prompt = {
     put ' '
   }
   # connect.kak
-  if (and (not-eq '' $E:KAKOUNE_SESSION) (not-eq '' $E:KAKOUNE_CLIENT)) {
+  if (not-eq '' $E:IN_KAKOUNE_CONNECT) {
     styled $E:KAKOUNE_CLIENT magenta
     put ' at '
     styled $E:KAKOUNE_SESSION yellow
