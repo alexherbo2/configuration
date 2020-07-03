@@ -36,9 +36,9 @@ cmd open ${{
 }}
 
 cmd create-new-file ${{
-  printf 'new-file:'
-  read file
-  if test -z "$file"; then
+  file=$1
+  if test -e "$file"; then
+    lf -remote "send $id echo File exists: $file"
     exit 1
   fi
   directory=$(dirname "$file")
@@ -48,9 +48,9 @@ cmd create-new-file ${{
 }}
 
 cmd create-new-directory ${{
-  printf 'new-directory:'
-  read directory
-  if test -z "$directory"; then
+  directory=$1
+  if test -e "$directory"; then
+    lf -remote "send $id echo File exists: $directory"
     exit 1
   fi
   mkdir -p "$directory"
@@ -87,6 +87,6 @@ map W embed git add
 map s select-fuzzy
 map g cd-fuzzy
 map b batch
-map <f-2> create-new-file
-map <f-3> create-new-directory
+map <f-2> push :create-new-file<space>
+map <f-3> push :create-new-directory<space>
 map <c-n> $alacritty --command lf &
