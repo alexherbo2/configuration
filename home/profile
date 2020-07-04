@@ -1,5 +1,82 @@
+# Preamble ─────────────────────────────────────────────────────────────────────
+
+prepend_to_path() {
+  export PATH=$1:$PATH
+}
+
+# Environment variables ────────────────────────────────────────────────────────
+
+RUBY_GEM_USER_DIR=$(ruby -e 'puts Gem.user_dir')
+
+# Paths
+prepend_to_path ~/configuration/bin
+prepend_to_path ~/configuration/local/bin
+prepend_to_path ~/configuration/install/bin
+prepend_to_path ~/configuration/src/crystal/bin
+prepend_to_path ~/.bin
+prepend_to_path ~/.local/bin
+prepend_to_path "$RUBY_GEM_USER_DIR/bin"
+prepend_to_path ~/.cargo/bin
+prepend_to_path ~/.cabal/bin
+prepend_to_path ~/go/bin
+prepend_to_path node_modules/.bin
+prepend_to_path ~/.npm-packages/bin
+
+# Manual paths
+export MANPATH=~/.npm-packages/share/man:
+
+# Shell
+export SHELL=elvish
+
+# User identifier
+# Note: On Bash, UID is a read-only variable.
+uid=$(id -u "$USER")
+
+# Temporary folder
+export TMPDIR=/run/user/$uid
+
+# XDG
+export XDG_CONFIG_HOME=~/.config
+export XDG_CACHE_HOME=~/.cache
+export XDG_DATA_HOME=~/.local/share
+
+# Applications
+export EDITOR=kak
+export BROWSER=chromium
+export KAKOUNE_POSIX_SHELL=/run/current-system/sw/bin/dash
+export MANPAGER=kak-man-pager
+export GIT_HUB=~/repositories
+
+# ripgrep
+export RIPGREP_CONFIG_PATH=$XDG_CONFIG_HOME/ripgrep/rc
+
+# fzf
+export FZF_DEFAULT_OPTS='--multi --reverse'
+
+# dmenu
+export DMENU=$(cat <<'EOF'
+  # Create IO files
+  state=$(mktemp -d)
+  input=$state/input
+  output=$state/output
+  trap 'rm -Rf "$state"' EXIT
+  # Get input from /dev/stdin
+  cat > "$input"
+  # Run fzf with Alacritty
+  alacritty --class 'Alacritty · Floating' --command sh -c 'fzf < "$1" > "$2"' -- "$input" "$output"
+  # Write output to /dev/stdout
+  cat "$output"
+  # Exit code
+  if test ! -s "$output"; then
+    exit 1
+  fi
+EOF
+)
+
+# Autostarting ─────────────────────────────────────────────────────────────────
+
 # Autostart Sway at login
 if test -z "$DISPLAY" -a "$XDG_VTNR" -eq 1; then
-  XDG_SESSION_TYPE=wayland
+  export XDG_SESSION_TYPE=wayland
   sway
 fi
