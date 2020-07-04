@@ -60,12 +60,22 @@ cmd create-new-directory ${{
 # Execute shell command on selection
 cmd embed $$@ $fx
 
-cmd select-fuzzy ${{
-  lf -remote "send $id select $(fd --type file | fzf)"
-}}
-
-cmd cd-fuzzy ${{
-  lf -remote "send $id cd $(fd --type directory | fzf)"
+# Jump to location
+cmd fzf-jump ${{
+  # Select a file:
+  path=$(fd | fzf --header='Jump to location')
+  # Assign the command:
+  if test -f "$path"; then
+    command=select
+  elif test -d "$path"; then
+    command=cd
+  else
+    exit 1
+  fi
+  # Send the command to the client:
+  lf -remote "
+    send $id $command $path
+  "
 }}
 
 cmd batch ${{
@@ -84,8 +94,7 @@ map e embed kak
 map m embed mpv
 map x embed arc unarchive
 map W embed git add
-map s select-fuzzy
-map g cd-fuzzy
+map <c-f> fzf-jump
 map b batch
 map <f-2> push :create-new-file<space>
 map <f-3> push :create-new-directory<space>
