@@ -1,0 +1,5 @@
+# Autostart Sway at login
+if test -z "$DISPLAY" -a "$XDG_VTNR" -eq 1; then
+  XDG_SESSION_TYPE=wayland
+  sway
+fi
