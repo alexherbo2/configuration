@@ -320,6 +320,10 @@ map global normal + ': bc-prompt<ret><up><ret>'
 
 # connect ──────────────────────────────────────────────────────────────────────
 
+set-option global connect_environment %{
+  SHELL=elvish
+}
+
 # Create a new window
 map global normal <c-t> ': connect-terminal<ret>'
 

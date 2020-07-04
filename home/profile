@@ -25,9 +25,6 @@ prepend_to_path ~/.npm-packages/bin
 # Manual paths
 export MANPATH=~/.npm-packages/share/man:
 
-# Shell
-export SHELL=elvish
-
 # User identifier
 # Note: On Bash, UID is a read-only variable.
 uid=$(id -u "$USER")
