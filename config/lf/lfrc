@@ -61,9 +61,10 @@ cmd create-new-directory ${{
 cmd embed $$@ $fx
 
 # Jump to location
+# fzf-jump [path...]
 cmd fzf-jump ${{
-  # Select a file:
-  path=$(fd | fzf --header='Jump to location')
+  # Select a file under the given or current directory:
+  path=$(fd . "$@" | fzf --header='Jump to location')
   # Assign the command:
   if test -f "$path"; then
     command=select
