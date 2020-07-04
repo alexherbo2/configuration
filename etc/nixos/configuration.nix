@@ -388,7 +388,6 @@ in
     tectonic
     thelounge
     tigervnc
-    tilix
     tldr
     tmux
     tor
