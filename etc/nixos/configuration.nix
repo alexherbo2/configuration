@@ -370,6 +370,7 @@ in
     shards
     shellcheck
     skim
+    slack
     slurp
     smartmontools
     snes9x-gtk
