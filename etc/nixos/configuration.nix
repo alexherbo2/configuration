@@ -429,6 +429,7 @@ in
     youtube-dl
     zathura
     zip
+    zoom-us
     zsnes
   ];
 
