@@ -1,0 +1,43 @@
+#!/bin/sh
+
+# File exists
+file_exists() {
+  test -e "$1"
+}
+
+# Write file from stdin
+write() {
+  sed -E 's/^ {4}//' > "$1"
+}
+
+# Generate Gemfile
+if ! file_exists Gemfile; then
+  write Gemfile <<'EOF'
+    source 'https://rubygems.org'
+EOF
+  $EDITOR Gemfile
+fi
+
+# Generate or update Gemfile.lock and gemset.nix
+nix-shell --packages bundler bundix --run '
+  bundle lock
+  bundix
+'
+
+# Generate shell.nix
+if ! file_exists shell.nix; then
+  write shell.nix <<'EOF'
+    with import <nixpkgs> {};
+    let
+      gems = bundlerEnv {
+        name = "gems";
+        inherit ruby;
+        gemdir = ./.;
+      };
+    in mkShell {
+      buildInputs = [ gems gems.wrappedRuby ];
+    }
+EOF
+fi
+
+nix-shell "$@"
