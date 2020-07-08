@@ -113,8 +113,8 @@ bindsym --to-code {
   Mod4+x sticky toggle
 
   # Distraction-free
-  Mod4+Shift+d bar mode dock
-  Mod4+Shift+f bar mode invisible
+  # Mod4+Shift+d bar mode dock
+  # Mod4+Shift+f bar mode invisible
 
   # Tiling and floating
   Mod4+Shift+space floating toggle
