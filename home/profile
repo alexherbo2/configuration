@@ -72,8 +72,11 @@ EOF
 
 # Autostarting ─────────────────────────────────────────────────────────────────
 
-# Autostart Sway at login
-if test -z "$DISPLAY" -a "$XDG_VTNR" -eq 1; then
+# Autostart the Wayland compositor (Sway or Wayfire) at login
+if test -z "$DISPLAY"; then
   export XDG_SESSION_TYPE=wayland
-  sway
+  case "$XDG_VTNR" in
+    1) sway ;;
+    2) wayfire ;;
+  esac
 fi
