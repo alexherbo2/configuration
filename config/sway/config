@@ -86,8 +86,8 @@ bindsym --to-code {
   Mod4+F5 reload
 
   # Logout
-  Mod4+Escape exec wlogout
-  Mod4+Shift+Escape exec swaylock
+  Mod4+BackSpace exec wlogout
+  Mod4+Shift+BackSpace exec swaylock
 
   # Mouse bindings ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
