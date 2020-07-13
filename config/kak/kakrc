@@ -294,10 +294,6 @@ map global user R '|wl-paste --no-newline<ret>'
 # Enter replace mode
 map global user r ': enter-replace-mode<ret>' -docstring 'Enter replace mode'
 
-# Surround pairs as-you-type
-map global user s ': surround<ret>' -docstring 'Enter surround mode'
-map global user S ': surround _ _ * *<ret>' -docstring 'Enter surround mode with extra surrounding pairs'
-
 # Terminal settings
 map global user t ': enter-user-mode terminal<ret>' -docstring 'Terminal'
 
@@ -403,8 +399,9 @@ hook global KakEnd .* %{
 
 # surround ─────────────────────────────────────────────────────────────────────
 
-set-option global surround_begin auto-pairs-disable
-set-option global surround_end auto-pairs-enable
+# Quote
+map global normal "'" ': enter-user-mode surround<ret>'
+map global normal '"' ': surround-enter-insert-mode<ret>'
 
 # word-select ──────────────────────────────────────────────────────────────────
 
