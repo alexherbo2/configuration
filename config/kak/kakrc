@@ -371,8 +371,8 @@ hook global BufWritePre .* %{
 
 # move-line ────────────────────────────────────────────────────────────────────
 
-map global normal "'" ': move-line-below<ret>'
-map global normal "<a-'>" ': move-line-above<ret>'
+map global normal <down> ': move-line-below<ret>'
+map global normal <up> ': move-line-above<ret>'
 
 # split-object ─────────────────────────────────────────────────────────────────
 
