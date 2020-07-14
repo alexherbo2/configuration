@@ -440,6 +440,8 @@ provide-module show-characters %{
   add-highlighter shared/show-characters/code/non-breaking-space regex ' +' 0:red
   add-highlighter shared/show-characters/code/not-two-spaces-after-sentence regex '[?!.…]\K\h(\h{2,})?(?=\w)' 0:red
   add-highlighter shared/show-characters/code/two-spaces-after-sentence regex '[?!.…]\K\h{2}(?=\w)' 0:green
+  add-highlighter shared/show-characters/code/one-space-for-ordered-list regex '\d\.\K\h(?=\w)' 0:green
+  add-highlighter shared/show-characters/code/not-one-space-for-ordered-list regex '\d\.\K\h{2,}(?=\w)' 0:red
   add-highlighter shared/show-characters/code/multiple-whitespaces-after-word regex '\w\K\h{2,}' 0:red
   add-highlighter shared/show-characters/code/apostrophe regex '\w\K''(?=\w)' 0:red
   add-highlighter shared/show-characters/code/cesure regex '‐+' 0:red
