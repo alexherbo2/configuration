@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# Move focused pane to window
+target_window=$1
+source_window=$(tmux display-message -p '#{window_index}')
+tmux join-pane -t ":$target_window"
+tmux select-window -t "$source_window"
