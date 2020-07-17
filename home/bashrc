@@ -1,3 +1,5 @@
+# Run Elvish in nix-shell
+# FIXME: Nix environment is set **after** reading the bashrc.
 if test -n "$IN_NIX_SHELL"; then
-  exec elvish
+  bind -x '"\C-M":"exec elvish"'
 fi
