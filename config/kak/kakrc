@@ -84,13 +84,6 @@ hook global BufCreate '.*/(content|layouts|static)/.*|.*/config\.toml' %{
 # Color scheme ─────────────────────────────────────────────────────────────────
 
 # Dracula – A dark theme (https://draculatheme.com)
-declare-option str background 'rgb:282a36'
-declare-option str dimmed_background 'rgb:44475a'
-declare-option str foreground 'rgb:f8f8f2'
-declare-option str orange 'rgb:ffb86c'
-declare-option str purple 'rgb:bd93f9'
-declare-option str yellow 'rgb:f1fa8c'
-
 define-command colorscheme-dracula-transparent %{
   colorscheme dracula
   set-face global Default %opt{foreground}
