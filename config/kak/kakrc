@@ -381,7 +381,7 @@ hook global KakEnd .* %{
 
 # surround ─────────────────────────────────────────────────────────────────────
 
-# Quote
+# Quoting
 map global normal q ': enter-user-mode surround<ret>'
 map global normal Q ': surround-enter-insert-mode<ret>'
 
