@@ -290,7 +290,7 @@ map global user w ': toggle-highlighter global/wrap wrap -word<ret>' -docstring 
 # Hooks ────────────────────────────────────────────────────────────────────────
 
 # Clipboard
-hook global NormalKey '[ydc]' %{
+hook global RegisterModified '"' %{
   nop %sh{
     wl-copy -- "$kak_main_reg_dquote" < /dev/null > /dev/null 2>&1 &
   }
