@@ -378,6 +378,7 @@ in
     solargraph
     sox
     sqlite
+    sqlitebrowser
     sshfs
     st
     steam
