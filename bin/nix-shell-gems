@@ -18,6 +18,7 @@ if ! file_exists Gemfile; then
     gem 'rails'
     gem 'sinatra'
     gem 'sqlite3'
+    gem 'pg'
 
     group :test do
       gem 'rspec'
