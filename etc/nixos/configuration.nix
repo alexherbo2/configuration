@@ -389,6 +389,7 @@ in
     synapse-bt
     tectonic
     thelounge
+    tig
     tigervnc
     tldr
     tmux
