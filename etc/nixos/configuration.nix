@@ -354,7 +354,7 @@ in
     plan9port
     plasma-desktop
     polybar
-    postgresql
+    postgresql_12
     python38
     python38Packages.pip
     qemu
