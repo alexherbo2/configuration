@@ -14,6 +14,20 @@ write() {
 if ! file_exists Gemfile; then
   write Gemfile <<'EOF'
     source 'https://rubygems.org'
+
+    gem 'rails'
+    gem 'sqlite3'
+
+    group :test do
+      gem 'rspec'
+      gem 'faker'
+    end
+
+    group :development do
+      gem 'pry'
+      gem 'byebug'
+      gem 'pry-byebug'
+    end
 EOF
   $EDITOR Gemfile
 fi
