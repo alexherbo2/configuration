@@ -331,7 +331,7 @@ in
     ninja
     nix-index
     nmap
-    nodejs-14_x
+    nodejs_latest
     notmuch
     ntfs3g
     nushell
