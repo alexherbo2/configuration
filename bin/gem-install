@@ -14,3 +14,4 @@ gem install rake
 gem install rspec
 gem install rubocop
 gem install sinatra
+gem install solargraph
