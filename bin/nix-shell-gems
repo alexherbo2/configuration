@@ -16,6 +16,7 @@ if ! file_exists Gemfile; then
     source 'https://rubygems.org'
 
     gem 'rails'
+    gem 'sinatra'
     gem 'sqlite3'
 
     group :test do
