@@ -24,6 +24,7 @@ if ! file_exists Gemfile; then
     end
 
     group :development do
+      gem 'rubocop'
       gem 'pry'
       gem 'byebug'
       gem 'pry-byebug'
