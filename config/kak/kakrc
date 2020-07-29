@@ -240,9 +240,6 @@ hook global InsertChar '[jk]' %{
 # Select all occurrences of the current selection set.
 map global normal <a-percent> '*%s<ret>'
 
-# Create a new window
-map global normal <c-n> ': new<ret>'
-
 # Quit
 map global normal <c-q> ': quit<ret>'
 
@@ -311,6 +308,7 @@ set-option global connect_environment %{
 
 # Create a new window
 map global normal <c-t> ': connect-terminal<ret>'
+map global normal <c-n> ': connect-shell alacritty<ret>'
 
 # explore ──────────────────────────────────────────────────────────────────────
 
