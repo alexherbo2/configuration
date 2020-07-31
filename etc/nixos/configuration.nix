@@ -264,6 +264,7 @@ in
     gimp
     git
     gitAndTools.diff-so-fancy
+    gitAndTools.gh
     gitAndTools.gitui
     git-lfs
     glow
