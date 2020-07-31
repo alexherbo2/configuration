@@ -262,6 +262,7 @@ in
     gdb
     ghc
     gimp
+    gist
     git
     gitAndTools.diff-so-fancy
     gitAndTools.gh
