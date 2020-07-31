@@ -1,0 +1,66 @@
+defaults:
+  nicks: [alexherbo2]
+  realname: 'Alex Leferry 2>'
+
+servers:
+- addr: irc.oftc.net
+  port: 6697
+  tls: true
+  nicks: [alexherbo2]
+  realname: 'Alex Leferry 2>'
+  join:
+  - '#tiny'
+
+- addr: chat.freenode.net
+  port: 6697
+  tls: true
+  nicks: [alexherbo2]
+  realname: 'Alex Leferry 2>'
+  join:
+  - '#alacritty'
+  - '#amber'
+  - '#archlinux'
+  - '#bash'
+  - '#batch'
+  - '#bspwc'
+  - '#bspwm'
+  - '#chromium'
+  - '#chromium-extensions'
+  - '#chromium-support'
+  - '#chronic'
+  - '#crystal-lang'
+  - '#css'
+  - '#curl'
+  - '#elvish'
+  - '#emacs'
+  - '#evil-mode'
+  - '#ffmpeg'
+  - '#freebsd'
+  - '#freebsd-fr'
+  - '#html'
+  - '#i3'
+  - '#inkscape'
+  - '##javascript'
+  - '#jq'
+  - '#kakoune'
+  - '#kde'
+  - '#krabby'
+  - '#launcher'
+  - '#lf'
+  - '#lua'
+  - '#mpv'
+  - '#mpv-android'
+  - '#neovim'
+  - '#nixos'
+  - '#password'
+  - '#ruby'
+  - '#rubyonrails'
+  - '#svg'
+  - '#sway'
+  - '#termux'
+  - '#thelounge'
+  - '#tmux'
+  - '#vim'
+  - '#vim-fr'
+  - '#waybox'
+  - '#wayfire'
