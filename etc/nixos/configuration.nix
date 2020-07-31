@@ -393,6 +393,7 @@ in
     thelounge
     tig
     tigervnc
+    tiny
     tldr
     tmux
     tor
