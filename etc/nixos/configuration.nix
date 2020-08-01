@@ -357,6 +357,7 @@ in
     plasma-desktop
     polybar
     postgresql_12
+    procs
     python38
     python38Packages.pip
     qemu
