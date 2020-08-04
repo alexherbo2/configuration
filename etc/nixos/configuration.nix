@@ -434,6 +434,7 @@ in
     yarn
     youtube-dl
     zathura
+    zig
     zip
     zoom-us
     zsnes
