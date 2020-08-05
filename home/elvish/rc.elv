@@ -111,7 +111,7 @@ alias:new _ rm -Rf
 alias:new x arc unarchive
 alias:new ft mime
 alias:new yk wl-copy
-alias:new bg detach
+alias:new bg fork
 
 # Listing
 alias:new l exa
