@@ -241,7 +241,7 @@ hook global InsertChar '[jk]' %{
 map global normal <a-percent> '*%s<ret>'
 
 # Quit
-map global normal <c-q> ': quit<ret>'
+map global normal <c-q> ': quit!<ret>'
 
 # Buffers
 map global normal <c-a> ga
