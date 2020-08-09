@@ -1,14 +1,19 @@
 # Pry default environment variables:
 ENV['PAGER'] = nil
 
-Pry.config.prompt = -> (target, nest, pry) do
-  '❯ '
-end
+Pry.config.prompt = Pry::Prompt.new(
+  :custom,
+  'Custom prompt',
+  [
+    ->(target, nest_level, pry) { '❯ ' },
+    ->(target, nest_level, pry) { '… ' }
+  ]
+)
 
 Pry.config.output_prefix = '→ '
 
-Pry.config.editor = -> (file, line) do
-  "kak -e 'edit #{file} #{line}'"
+Pry.config.editor = ->(file, line) do
+  "kak #{file} +#{line}"
 end
 
 # Commands
