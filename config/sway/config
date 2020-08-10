@@ -95,8 +95,8 @@ bindsym --to-code {
 
   # Mouse bindings ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
-  --release button2 kill
-  --release button3 exec alacritty
+  button2 kill
+  button3 exec alacritty
 
   # Move your focus around
   --whole-window Mod4+button4 focus left
