@@ -140,6 +140,12 @@ define-command git-write %{
   git add
 }
 
+define-command git-write-force %{
+  write
+  nop %sh(git add --force "$kak_buffile")
+  git add
+}
+
 define-command git-commit %{
   git commit
 }
@@ -186,6 +192,7 @@ alias global gp grep-previous-match
 # Git
 alias global g git
 alias global gw git-write
+alias global gw! git-write-force
 alias global gc git-commit
 alias global gr git-amend
 
