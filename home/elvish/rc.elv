@@ -76,7 +76,7 @@ alias:new grep rg
 # Configure curl to be quiet (but not silent)
 alias:new curl e:curl --silent --show-error --location
 alias:new wget e:wget --continue
-alias:new gist e:gist --open
+alias:new gist gh gist create
 # Use Tectonic as PDF engine
 alias:new pandoc e:pandoc --pdf-engine tectonic
 
