@@ -1,0 +1,44 @@
+before_action :set_{record}, only: [:show, :edit, :update, :destroy]
+
+def index
+	@{record}s = {model}.all
+end
+
+def show
+end
+
+def new
+	@{record} = {model}.new
+end
+
+def create
+	{record} = {model}.new({record}_params)
+	{record}.save
+	redirect_to {record}_path({record})
+end
+
+def edit
+end
+
+def update
+	@{record}.update({record}_params)
+	redirect_to {record}_path(@{record})
+end
+
+def destroy
+	@{record}.destroy
+
+	# Redirect to index
+	redirect_to {record}s_path
+end
+
+private
+
+# Strong params
+def {record}_params
+	params.require(:{record}).permit(:{attribute})
+end
+
+def set_{record}
+	@{record} = {model}.find(params[:id])
+end
