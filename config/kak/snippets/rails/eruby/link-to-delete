@@ -1,8 +1,3 @@
-<%=
-	link_to('Delete', {model}_path(@{model}),
-		method: :delete,
-		data: {
-			confirm: 'Are you sure?'
-		}
-	)
-%>
+<%= link_to {record}_path(@{record}), method: :delete, data: { confirm: 'Are you sure?' } do %>
+	<i class="fas fa-trash"></i>
+<% end %>
