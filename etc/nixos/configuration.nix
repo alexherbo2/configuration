@@ -244,6 +244,7 @@ in
     dolphinEmu
     dunst
     ecmtools
+    elixir
     elvish
     emacs
     exa
