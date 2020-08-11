@@ -1,0 +1,16 @@
+# All
+get 'pages', to: 'pages#index'
+
+# Create
+get 'pages/new', to: 'pages#new', as: :new_page
+post 'pages', to: 'pages#create'
+
+# Read
+get 'pages/:id', to: 'pages#show', as: :page
+
+# Update
+get 'pages/:id/edit', to: 'pages#edit', as: :edit_page
+patch 'pages/:id', to: 'pages#update'
+
+# Delete
+delete 'pages/:id', to: 'pages#destroy'
