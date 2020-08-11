@@ -1,0 +1,3 @@
+<%= link_to {record}s_path do %>
+	<i class="fas fa-history"></i>
+<% end %>
