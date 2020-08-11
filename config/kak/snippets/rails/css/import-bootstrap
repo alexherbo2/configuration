@@ -1,0 +1,3 @@
+> yarn add bootstrap
+> mv app/assets/stylesheets/application.css app/assets/stylesheets/application.scss
+> app/assets/stylesheets/application.scss: @import "bootstrap/scss/bootstrap";
