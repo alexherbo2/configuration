@@ -1,0 +1,6 @@
+private
+
+# Strong params
+def {model}_params
+	params.require(:{model}).permit(:{attribute})
+end
