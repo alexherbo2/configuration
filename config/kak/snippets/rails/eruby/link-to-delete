@@ -1,0 +1,8 @@
+<%=
+	link_to('Delete', {model}_path(@{model}),
+		method: :delete,
+		data: {
+			confirm: 'Are you sure?'
+		}
+	)
+%>
