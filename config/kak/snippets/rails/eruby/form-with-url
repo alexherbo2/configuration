@@ -1,0 +1,5 @@
+<%= form_with url: {model}s_path do |form| %>
+	{{form-field}}
+
+	<%= form.submit %>
+<% end >
