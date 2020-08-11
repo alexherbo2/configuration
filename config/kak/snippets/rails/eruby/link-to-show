@@ -1,0 +1,3 @@
+<%= link_to {record}_path(@{record}) do %>
+	<i class="fas fa-search-plus"></i>
+<% end %>
