@@ -1,0 +1,13 @@
+<h1>{record}</h1>
+
+<main>
+	<h3><%= @{record}.name %></h3>
+	<dl>
+		<dt>{attribute}<dt>
+		<dd><%= @{record}.{attribute} %><dd>
+	</dl>
+	<div class="actions">
+		{{link-to-edit}}
+		{{link-to-delete}}
+	</div>
+</main>
