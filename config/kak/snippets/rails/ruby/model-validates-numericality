@@ -1,0 +1,3 @@
+validates :{attribute}, numericality: {
+	message: '%{value} is not a number'
+}
