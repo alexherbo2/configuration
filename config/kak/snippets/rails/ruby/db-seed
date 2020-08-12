@@ -1,0 +1,14 @@
+require 'faker'
+
+# https://github.com/faker-ruby/faker#default
+151.times do
+	name = Faker::Games::Pokemon.name
+	location = Faker::Games::Pokemon.location
+	move = Faker::Games::Pokemon.move
+
+	Pokemon.create do |pokemon|
+		pokemon.name = name
+		pokemon.location = location
+		pokemon.move = move
+	end
+end
