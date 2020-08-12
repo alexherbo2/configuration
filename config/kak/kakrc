@@ -603,6 +603,7 @@ provide-module rails %{
     # Database
     alias buffer db rails-edit-db
     alias buffer migrations rails-edit-migrations
+    alias buffer schema rails-edit-schema
   }
 
   # MVC
@@ -640,6 +641,10 @@ provide-module rails %{
 
   define-command rails-edit-migrations -docstring 'Edit Rails migrations' %{
     explore-files db/migrate
+  }
+
+  define-command rails-edit-schema -docstring 'Edit Rails schema' %{
+    edit db/schema.rb
   }
 
 }
