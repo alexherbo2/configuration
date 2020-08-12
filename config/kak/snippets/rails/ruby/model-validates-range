@@ -1,0 +1,1 @@
+validates :{attribute}, inclusion: {minimum}..{maximum}
