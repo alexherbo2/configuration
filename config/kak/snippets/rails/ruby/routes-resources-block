@@ -1,0 +1,5 @@
+resources :{model}s do
+	{{routes-resources}}
+	{{routes-resources-collection}}
+	{{routes-resources-member}}
+end

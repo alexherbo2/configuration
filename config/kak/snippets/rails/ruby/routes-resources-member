@@ -1,0 +1,3 @@
+member do
+	get :{route}
+end
