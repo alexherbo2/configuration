@@ -1,0 +1,3 @@
+change_table :{table} do |table|
+	table.change :{column}, :{type}
+end
