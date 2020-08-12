@@ -14,6 +14,8 @@ end
 def create
 	{record} = {model}.new({record}_params)
 	{record}.save
+
+	# Redirect to show
 	redirect_to {record}_path({record})
 end
 
@@ -22,6 +24,8 @@ end
 
 def update
 	@{record}.update({record}_params)
+
+	# Redirect to show
 	redirect_to {record}_path(@{record})
 end
 

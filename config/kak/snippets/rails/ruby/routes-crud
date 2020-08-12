@@ -1,4 +1,4 @@
-# All
+# Index
 get 'pages', to: 'pages#index'
 
 # Create

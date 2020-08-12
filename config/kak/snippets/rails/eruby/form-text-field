@@ -1,2 +1,2 @@
 <%= form.label :{name} %>
-<%= form.text_field :{name}, id: :{model}_{name} %>
+<%= form.text_field :{name} %>

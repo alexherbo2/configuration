@@ -1,4 +1,1 @@
-validates :{attribute}, inclusion: {
-	in: {values},
-	message: '%{value} is not a valid value'
-}
+validates :{attribute}, inclusion: {values}

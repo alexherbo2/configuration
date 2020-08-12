@@ -1,1 +1,1 @@
-<%= link_to {text}, {path} %>
+<%= link_to {text}, {url} %>

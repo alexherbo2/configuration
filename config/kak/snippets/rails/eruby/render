@@ -1,1 +1,1 @@
-<%= render '{file}', {model}: @{model} %>
+<%= render '{file}', {model}: {model} %>

@@ -1,0 +1,3 @@
+<%= link_to {url} do %>
+	{body}
+<% end %>

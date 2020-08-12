@@ -1,2 +1,3 @@
+# Boolean
 validates :{attribute}, inclusion: [true, false]
 validates :{attribute}, exclusion: [nil]

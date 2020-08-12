@@ -1,5 +1,1 @@
-validates :{attribute}, length: {
-	minimum: {minimum},
-	maximum: {maximum},
-	in: {minimum}..{maximum}
-}
+validates :{attribute}, length: {minimum}..{maximum}

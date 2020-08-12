@@ -1,10 +1,10 @@
-<h1>{record}</h1>
+<h1>{title}</h1>
 
 <main>
-	<h3><%= @{record}.name %></h3>
+	<h3><%= {record}.name %></h3>
 	<dl>
 		<dt>{attribute}<dt>
-		<dd><%= @{record}.{attribute} %><dd>
+		<dd><%= {record}.{attribute} %><dd>
 	</dl>
 	<div class="actions">
 		{{link-to-edit}}

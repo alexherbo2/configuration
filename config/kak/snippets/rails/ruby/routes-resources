@@ -1,1 +1,1 @@
-resources :{model}s, only: [:{action}]
+resources :{controller}, only: [:{action}]
