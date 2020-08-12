@@ -1,0 +1,12 @@
+<h1>{record}s</h1>
+
+<% @{record}s.each do |{record}| %>
+	<section>
+		<h3><%= {record}.name %></h3>
+		<dl>
+			<dt>{attribute}<dt>
+			<dd><%= {record}.{attribute} %><dd>
+		</dl>
+		{{link-to-show}}
+	</section>
+<% end %>
