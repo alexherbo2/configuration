@@ -111,6 +111,11 @@ hook global WinSetOption filetype=(c|cpp|crystal|css|go|haskell|html|javascript|
   lsp-enable-window
 }
 
+# Snippets
+hook global BufCreate '.*/snippets/.*' %{
+  set-option buffer indentwidth 0
+}
+
 # Grep
 hook global WinSetOption filetype=grep %{
   map window normal <ret> ': grep-jump<ret>'
