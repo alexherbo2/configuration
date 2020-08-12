@@ -9,5 +9,6 @@
 	<div class="actions">
 		{{link-to-edit}}
 		{{link-to-delete}}
+		{{link-to-index}}
 	</div>
 </main>
