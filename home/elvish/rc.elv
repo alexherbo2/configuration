@@ -19,11 +19,15 @@ edit:prompt = {
     put ' '
   }
   # connect.kak
-  if (not-eq '' $E:IN_KAKOUNE_CONNECT) {
+  if (and (not-eq '' $E:KAKOUNE_SESSION) (not-eq '' $E:KAKOUNE_CLIENT)) {
     styled $E:KAKOUNE_CLIENT magenta
     put ' at '
     styled $E:KAKOUNE_SESSION yellow
     put ' '
+  } elif (not-eq '' $E:KAKOUNE_SESSION) {
+    put '('
+    styled $E:KAKOUNE_SESSION yellow
+    put ')'
   }
   put '❯ '
 }
