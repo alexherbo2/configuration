@@ -286,7 +286,7 @@ map global user R '|wl-paste --no-newline<ret>'
 map global user r ': enter-replace-mode<ret>' -docstring 'Enter replace mode'
 
 # Terminal settings
-map global user t ': enter-user-mode terminal<ret>' -docstring 'Terminal'
+map global normal <c-w> ': enter-user-mode terminal<ret>' -docstring 'Terminal'
 
 # Chronic
 map global normal <a-|> ': enter-user-mode chronic<ret>' -docstring 'Enter Chronic mode'
