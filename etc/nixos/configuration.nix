@@ -194,6 +194,13 @@ in
   # Important: Requires nixpkgs.config.allowUnfree
   # virtualisation.virtualbox.host.enableExtensionPack = true;
 
+  # PostgreSQL
+  # https://postgresql.org
+  # https://nixos.org/nixos/manual#module-postgresql
+  services.postgresql.enable = true;
+  services.postgresql.package = pkgs.postgresql_12;
+  services.postgresql.dataDir = "/data/postgresql";
+
   # Packages ───────────────────────────────────────────────────────────────────
 
   # Page: https://nixos.org/nixos/packages.html
@@ -356,7 +363,6 @@ in
     plan9port
     plasma-desktop
     polybar
-    postgresql_12
     procs
     python38
     python38Packages.pip
