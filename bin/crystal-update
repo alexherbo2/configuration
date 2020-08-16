@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# Crystal
+# https://crystal-lang.org
+# https://crystal-lang.org/install/from_sources/
+
+# Fetch the latest Crystal release.
+crystal-update-latest
+
+# Update
+cd ~/repositories/github.com/crystal-lang/crystal
+git pull
+nix-shell --packages pcre libevent --run '
+  PATH=$XDG_DATA_HOME/crystal/releases/latest/bin:$PATH
+  make
+'
