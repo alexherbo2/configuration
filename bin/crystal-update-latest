@@ -1,0 +1,96 @@
+#!/bin/sh
+
+# Crystal
+# Homepage: https://crystal-lang.org
+# Releases: https://github.com/crystal-lang/crystal/releases
+# Latest: https://github.com/crystal-lang/crystal/releases/latest
+
+# Install Crystal from sources
+# https://crystal-lang.org/install/from_sources/
+#
+# “To compile Crystal, you need Crystal :)”
+#
+
+# Usage:
+#
+# $ crystal-update-latest
+#
+# Add ~/.local/share/crystal/releases/latest/bin to your path when building Crystal.
+
+# Environment variables ────────────────────────────────────────────────────────
+
+XDG_DATA_HOME=${XDG_DATA_HOME:-~/.local/share}
+XDG_CACHE_HOME=${XDG_CACHE_HOME:-~/.cache}
+
+DATA=$XDG_DATA_HOME/crystal/releases/latest
+CACHE=$XDG_CACHE_HOME/crystal/releases/latest
+
+# Main program ─────────────────────────────────────────────────────────────────
+
+main() {
+  # Platform
+  os=$(get_os)
+  arch=$(get_arch)
+
+  # Download link
+  download_link=$(get_download_link)
+  archive_name=$(basename "$download_link")
+  # crystal-{version}-1-{os}-{arch}.tar.gz ⇒ crystal-{version}-1
+  file_name=$(basename "$archive_name" "-${os}-${arch}.tar.gz")
+
+  # Clean data and cache
+  rm -Rf "$DATA" "$CACHE"
+  mkdir -p "$DATA" "$CACHE"
+
+  # Navigate into the cache directory and extract the latest release.
+  cd "$CACHE"
+  curl -sSL --remote-name "$download_link"
+  tar xf "$archive_name"
+  # Move to (not into) the destination:
+  rmdir "$DATA"
+  mv "$file_name" "$DATA"
+
+  # Output
+  find "$DATA/bin"
+}
+
+# Utility functions ────────────────────────────────────────────────────────────
+
+get_download_link() {
+  # Platform
+  os=$(get_os)
+  arch=$(get_arch)
+  version=$(get_version)
+
+  echo "https://github.com/crystal-lang/crystal/releases/download/${version}/crystal-${version}-1-${os}-${arch}.tar.gz"
+}
+
+# curl wrappers
+get_url_effective() {
+  # [--head] ⇒ Do not download the body
+  # [-o /dev/null] ⇒ Suppress headers output
+  # [--write-out '%{url_effective}'] ⇒ Display the URL that was fetched
+  curl -sSL --head -o /dev/null --write-out '%{url_effective}' "$1"
+}
+
+# Get platform info
+get_os() {
+  uname -s | downcase
+}
+
+get_arch() {
+  uname -m
+}
+
+get_version() {
+  url=$(get_url_effective https://github.com/crystal-lang/crystal/releases/latest)
+  version=$(basename "$url")
+
+  echo "$version"
+}
+
+downcase() {
+  tr '[:upper:]' '[:lower:]'
+}
+
+main
