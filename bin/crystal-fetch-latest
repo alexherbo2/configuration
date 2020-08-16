@@ -13,7 +13,7 @@
 
 # Usage:
 #
-# $ crystal-update-latest
+# $ crystal-fetch-latest
 #
 # Add ~/.local/share/crystal/releases/latest/bin to your path when building Crystal.
 

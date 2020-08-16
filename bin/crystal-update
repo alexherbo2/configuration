@@ -5,7 +5,7 @@
 # https://crystal-lang.org/install/from_sources/
 
 # Fetch the latest Crystal release.
-crystal-update-latest
+crystal-fetch-latest
 
 # Update
 cd ~/repositories/github.com/crystal-lang/crystal
