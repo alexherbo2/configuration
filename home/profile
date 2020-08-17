@@ -51,7 +51,7 @@ export RIPGREP_CONFIG_PATH=$XDG_CONFIG_HOME/ripgrep/rc
 export FZF_DEFAULT_OPTS='--multi --reverse'
 
 # dmenu
-export DMENU='wofi --show dmenu'
+export DMENU='wofi --dmenu'
 
 # Autostarting ─────────────────────────────────────────────────────────────────
 
