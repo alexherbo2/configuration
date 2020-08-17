@@ -84,7 +84,7 @@ bindsym --to-code {
   # Launcher
   # Note: Pass the final command to swaymsg so that the resulting window can be opened
   # on the original workspace that the command was run on.
-  Mod4+Shift+Return exec swaymsg exec -- launcher-run $(launcher-list | wofi --dmenu)
+  Mod4+Shift+Return exec swaymsg exec -- launcher run $(launcher menu | wofi --dmenu)
 
   # Reload
   Mod4+F5 reload
