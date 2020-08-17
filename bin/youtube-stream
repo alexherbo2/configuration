@@ -1,5 +1,5 @@
 #!/bin/sh
 
 wl-copy https://youtube.com/channel/UCv9nzkds34PnGOu6u_QvVBQ/live
-password=$(password-get alexherbo2@live.youtube.com)
+password=$(password get alexherbo2@live.youtube.com)
 wf-recorder --audio --muxer flv -f "rtmp://a.rtmp.youtube.com/live2/$password"

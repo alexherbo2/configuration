@@ -172,10 +172,10 @@ fn cv [@arguments]{ batch-convert $@arguments }
 fn rl [@arguments]{ batch-relink $@arguments }
 
 # Password
-alias:new pm password-get '(password-menu | fzf)' '|' wl-copy
-alias:new pc password-create
-alias:new pg password-get
-alias:new pe password-edit
+alias:new pm password get '(password menu | fzf)' '|' wl-copy
+alias:new pc password create
+alias:new pg password get
+alias:new pe password edit
 
 # Key-bindings ─────────────────────────────────────────────────────────────────
 
