@@ -113,7 +113,11 @@ hook global WinSetOption filetype=(c|cpp|crystal|css|go|haskell|html|javascript|
 
 # Snippets
 hook global BufCreate '.*/snippets/.*' %{
-  set-option buffer indentwidth 0
+  evaluate-commands %sh{
+    if test -z "$kak_opt_filetype"; then
+      echo set-option buffer indentwidth 0
+    fi
+  }
 }
 
 # Grep
