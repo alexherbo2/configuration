@@ -1,0 +1,15 @@
+Name: {{name}}
+Season: {{season}}
+Episodes: {{episodes}}
+Aired: {{aired}}
+Finished: {{finished}}
+Studios: {{studios}}
+Source: {{source}}
+MAL: {{https://myanimelist.net}}
+
+Team: {{team}}
+Download: {{download}}
+
+Resolution: {{resolution}}p
+
+Date: {{date}}
