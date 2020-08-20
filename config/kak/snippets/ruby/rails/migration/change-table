@@ -1,4 +1,0 @@
-# https://guides.rubyonrails.org/active_record_migrations.html#changing-tables
-change_table :{table} do |table|
-	table.change :{column}, :{type}
-end

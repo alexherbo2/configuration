@@ -1,7 +1,0 @@
-> https://github.com/FortAwesome/font-awesome-sass
-> Gemfile: gem 'font-awesome-sass'
-> bundle install
-> mv app/assets/stylesheets/application.css app/assets/stylesheets/application.scss
-> app/assets/stylesheets/application.scss:
-> > @import "font-awesome-sprockets";
-> > @import "font-awesome";

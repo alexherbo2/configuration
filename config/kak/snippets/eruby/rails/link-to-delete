@@ -1,3 +1,0 @@
-<%= link_to {route}_path({record}), method: :delete, data: { confirm: 'Are you sure?' } do %>
-	<i class="fas fa-trash"></i>
-<% end %>

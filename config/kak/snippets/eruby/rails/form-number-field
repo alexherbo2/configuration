@@ -1,2 +1,0 @@
-<%= form.label :{name} %>
-<%= form.number_field :{name} %>

@@ -589,13 +589,6 @@ provide-module rails %{
   }
 
   define-command rails-mode -docstring 'Enter in Rails mode' %{
-    # Snippets directories:
-    # – ~/.config/kak/snippets/rails
-    # – /path/to/snippets.kak/snippets/rails
-    # – ~/.config/kak/snippets
-    # – /path/to/snippets.kak/snippets
-    set-option buffer snippets_directories "%val{config}/snippets/rails" "%opt{snippets_path}/rails" "%val{config}/snippets" "%opt{snippets_path}"
-
     # Aliases
     # MVC
     alias buffer em rails-edit-models

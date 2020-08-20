@@ -1,6 +1,0 @@
-private
-
-# Strong params
-def {record}_params
-	params.require(:{record}).permit(:{attribute})
-end

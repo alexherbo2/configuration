@@ -1,7 +1,0 @@
-before_action :{method}, only: [:{action}]
-
-private
-
-def {method}
-	{body}
-end

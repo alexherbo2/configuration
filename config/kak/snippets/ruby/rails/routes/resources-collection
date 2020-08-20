@@ -1,3 +1,0 @@
-collection do
-	get :{action}
-end

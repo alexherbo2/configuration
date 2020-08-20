@@ -1,5 +1,0 @@
-<%= form_with url: {url} do |form| %>
-	{{form-field}}
-
-	<%= form.submit %>
-<% end >
