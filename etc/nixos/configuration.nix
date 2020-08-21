@@ -399,7 +399,6 @@ in
     synapse-bt
     tectonic
     thelounge
-    tig
     tigervnc
     tiny
     tldr
