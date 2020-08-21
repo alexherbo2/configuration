@@ -307,6 +307,7 @@ in
     kdeApplications.kdenlive
     kitty
     kotlin
+    lazygit
     leiningen
     lf
     libnotify
