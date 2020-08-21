@@ -140,7 +140,7 @@ alias:new kh kak -help
 
 # Git
 alias:new g git
-alias:new G gitui
+alias:new G lazygit
 
 alias:new gcp git-hub-clone
 alias:new gls git-hub-list
