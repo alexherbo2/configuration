@@ -379,7 +379,7 @@ map global normal <up> ': move-line-above<ret>'
 
 # snippets ─────────────────────────────────────────────────────────────────────
 
-set-option global snippets_scope global/emoji
+set-option global snippets_scope global
 
 # split-object ─────────────────────────────────────────────────────────────────
 
