@@ -543,7 +543,6 @@ hook global ModuleLoaded rails %{
 provide-module rails %{
 
   # Modules
-  require-module snippets
   require-module explore-files
 
   # Rails mode
@@ -593,32 +592,10 @@ provide-module rails %{
       map window user -docstring 'Rails' r ': enter-user-mode rails<ret>'
       map window user -docstring 'Rails – Edit' e ': enter-user-mode rails-edit<ret>'
 
-      # Scope detection
-      set-option -add window snippets_scope "rails/%opt{filetype}"
-
-      # Gemfile
-      snippets-add-scope window rails/ruby/gemfile '/.+/Gemfile'
-
-      # MVC
-      snippets-add-scope window rails/ruby/model '/.+/app/models/.+\.rb'
-      snippets-add-scope window rails/ruby/view '/.+/app/views/.+\.erb'
-      snippets-add-scope window rails/ruby/controller '/.+/app/controllers/.+\.rb'
-
-      # Routes
-      snippets-add-scope window rails/ruby/routes '/.+/config/routes\.rb'
-
-      # Database
-      snippets-add-scope window rails/ruby/migration '/.+/db/migrate/.+\.rb'
-      snippets-add-scope window rails/ruby/db/seed '/.+/db/seeds\.rb'
-
-      # Wiki
-      snippets-add-scope window rails/wiki '\*scratch\*'
-
-      # Clean options
+      # Clean settings
       hook -always -once window WinSetOption 'filetype=.*' %{
         unmap window user r
         unmap window user e
-        unset-option window snippets_scope
       }
     }
   }
@@ -626,16 +603,6 @@ provide-module rails %{
   # Disable Rails
   define-command rails-disable -docstring 'Disable Rails' %{
     remove-hooks global rails
-  }
-
-  # Add scope for a path
-  # snippets-add-scope <kakoune-scope> <snippets-scope> <buffer-path>
-  define-command -hidden snippets-add-scope -params 3 %{
-    hook -always -once window User "snippets-buffer-path=%arg{3}" "
-      set-option -add %arg{1} snippets_scope %arg{2}
-    "
-
-    trigger-user-hook "snippets-buffer-path=%val{buffile}"
   }
 }
 
