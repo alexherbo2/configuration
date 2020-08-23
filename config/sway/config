@@ -230,6 +230,9 @@ bindsym --to-code {
   # Password manager
   Mod4+p exec password get $(password menu | wofi --dmenu) | wl-copy
 
+  # Snippets
+  Mod4+y exec snippets-to-clipboard
+
   # Screenshots
   Print exec grim-window $(new-file).webp
   Shift+Print exec grim-output $(new-file).webp
