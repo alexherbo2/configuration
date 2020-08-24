@@ -2,6 +2,7 @@
 
 source ~/projects/prelude.kak/rc/prelude.kak
 source ~/projects/auto-pairs.kak/rc/auto-pairs.kak
+source ~/projects/batch.kak/rc/batch.kak
 source ~/projects/bc.kak/rc/bc.kak
 source ~/projects/capitalize-selections.kak/rc/capitalize-selections.kak
 source ~/projects/change-directory.kak/rc/change-directory.kak

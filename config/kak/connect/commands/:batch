@@ -1,12 +1,1 @@
-#!/bin/sh
-
-map='
-  rename "$1" "$2"
-  :send evaluate-commands -buffer "$1" rename-buffer "$2"
-'
-
-drop='
-  :send delete-buffer "$1"
-'
-
-:ls | batch --editor kak --map "$map" --drop "$drop"
+/home/alex/projects/batch.kak/config/kak/connect/commands/:batch
