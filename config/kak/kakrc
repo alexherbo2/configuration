@@ -380,7 +380,7 @@ map global normal <up> ': move-line-above<ret>'
 
 # snippets ─────────────────────────────────────────────────────────────────────
 
-set-option global snippets_scope global
+set-option global snippets_scope global global/arrows global/bullets global/dashes global/punctuation
 
 # split-object ─────────────────────────────────────────────────────────────────
 
