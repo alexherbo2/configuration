@@ -382,6 +382,9 @@ map global normal <up> ': move-line-above<ret>'
 
 set-option global snippets_scope global global/arrows global/bullets global/dashes global/punctuation
 
+# Add auto-pairs integration
+map global insert <ret> '<a-;>: snippets-enter auto-pairs-insert-new-line<ret>'
+
 # split-object ─────────────────────────────────────────────────────────────────
 
 map global normal <a-I> ': enter-user-mode split-object<ret>'
