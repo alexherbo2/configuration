@@ -1,4 +1,5 @@
 [Default Applications]
+application/json=kakoune-connect.desktop
 application/octet-stream=kakoune-connect.desktop
 application/pdf=org.pwmt.zathura.desktop
 image/gif=mpv.desktop
