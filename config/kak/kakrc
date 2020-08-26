@@ -295,6 +295,9 @@ map global normal <a-^> Q
 map global normal , <space>
 map global normal <space> ,
 
+# Source the main selection
+map global user -docstring 'Source the main selection' . ': <c-r>.<ret>'
+
 # LSP
 map global user <ret> ': enter-user-mode lsp<ret>'
 
