@@ -2,12 +2,13 @@
 
 source ~/projects/prelude.kak/rc/prelude.kak
 source ~/projects/auto-pairs.kak/rc/auto-pairs.kak
-source ~/projects/batch.kak/rc/batch.kak
 source ~/projects/bc.kak/rc/bc.kak
 source ~/projects/capitalize-selections.kak/rc/capitalize-selections.kak
 source ~/projects/change-directory.kak/rc/change-directory.kak
 source ~/projects/chronic.kak/rc/chronic.kak
 source ~/projects/connect.kak/rc/connect.kak
+source ~/projects/batch.kak/rc/batch.kak
+source ~/projects/yank-ring.kak/rc/yank-ring.kak
 source ~/projects/explore.kak/rc/explore/files.kak
 source ~/projects/explore.kak/rc/explore/buffers.kak
 source ~/projects/jq.kak/rc/jq.kak
@@ -30,7 +31,6 @@ source ~/projects/toggle-highlighter.kak/rc/toggle-highlighter.kak
 source ~/projects/type-expand.kak/rc/type-expand.kak
 source ~/projects/volatile-highlighter.kak/rc/volatile-highlighter.kak
 source ~/projects/word-select.kak/rc/word-select.kak
-source ~/projects/yank-ring.kak/rc/yank-ring.kak
 source ~/repositories/github.com/Delapouite/kakoune-buffers/buffers.kak
 source ~/repositories/github.com/gustavo-hms/luar/luar.kak
 source ~/repositories/github.com/occivink/kakoune-find/find.kak
