@@ -8,6 +8,7 @@ image/webp=mpv.desktop
 text/html=chromium-browser.desktop
 text/plain=kakoune-connect.desktop
 text/xml=kakoune-connect.desktop
+text/x-ruby=kakoune-connect.desktop
 video/x-matroska=mpv.desktop
 x-scheme-handler/http=chromium-browser.desktop
 x-scheme-handler/https=chromium-browser.desktop
