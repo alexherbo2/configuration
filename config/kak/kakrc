@@ -250,10 +250,15 @@ map global prompt <a-ret> <a-!><ret> -docstring 'Expand the typed expansions in 
 # Search
 # Case insensitive search
 map global prompt <a-i> '<home>(?i)<end>'
+map global prompt <a-I> '<up><home>(?i)<end>'
+# Plain text search
+map global prompt <a-q> '<home>\Q<end>'
+map global prompt <a-Q> '<up><home>\Q<end>'
 
 # Paths
-# Expand to the buffer directory
-map global prompt <a-.> '%sh(dirname "$kak_buffile")<a-!>'
+# Buffer file and directory paths
+map global prompt <a-/> '<c-r>%'
+map global prompt <a-?> '%sh(dirname "$kak_bufname")<a-!>/'
 
 map global normal '#' ': comment-line<ret>'
 map global normal <a-`> ': capitalize-selections<ret>'
