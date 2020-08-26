@@ -251,6 +251,7 @@ map global prompt <a-ret> <a-!><ret> -docstring 'Expand the typed expansions in 
 # Case insensitive search
 map global prompt <a-i> '<home>(?i)<end>'
 map global prompt <a-I> '<up><home>(?i)<end>'
+
 # Plain text search
 map global prompt <a-q> '<home>\Q<end>'
 map global prompt <a-Q> '<up><home>\Q<end>'
