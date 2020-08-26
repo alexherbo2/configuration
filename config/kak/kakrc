@@ -125,15 +125,6 @@ hook global WinSetOption filetype=(c|cpp|crystal|css|go|haskell|html|javascript|
   lsp-enable-window
 }
 
-# Snippets
-hook global BufCreate '.*/snippets/.*' %{
-  evaluate-commands %sh{
-    if test -z "$kak_opt_filetype"; then
-      echo set-option buffer indentwidth 0
-    fi
-  }
-}
-
 # Grep
 hook global WinSetOption filetype=grep %{
   map window normal <ret> ': grep-jump<ret>'
@@ -394,10 +385,19 @@ map global normal <up> ': move-line-above<ret>'
 
 # snippets ─────────────────────────────────────────────────────────────────────
 
+# Options
 set-option global snippets_scope global global/arrows global/bullets global/dashes global/punctuation
+
+# Create new snippets
+map global user -docstring 'Edit snippets' / ': snippets-edit<ret>'
 
 # Add auto-pairs integration
 map global insert <ret> '<a-;>: snippets-enter auto-pairs-insert-new-line<ret>'
+
+# Indent snippets with tabs
+hook global BufCreate '.+/\.?config/snippets/.+' %{
+  set-option buffer indentwidth 0
+}
 
 # split-object ─────────────────────────────────────────────────────────────────
 
