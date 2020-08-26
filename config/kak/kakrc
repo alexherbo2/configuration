@@ -63,8 +63,10 @@ define-command -hidden source-and-require-snippets-module -params 1 %{
 }
 
 source-and-require-snippets-module crystal
-source-and-require-snippets-module ruby
+source-and-require-snippets-module eruby
 source-and-require-snippets-module rails
+source-and-require-snippets-module ruby
+source-and-require-snippets-module scss
 
 # Options ──────────────────────────────────────────────────────────────────────
 
