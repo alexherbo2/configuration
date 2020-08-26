@@ -3,6 +3,7 @@ application/json=kakoune-connect.desktop
 application/octet-stream=kakoune-connect.desktop
 application/pdf=org.pwmt.zathura.desktop
 application/x-ruby=kakoune-connect.desktop
+application/x-yaml=kakoune-connect.desktop
 image/gif=mpv.desktop
 image/jpeg=mpv.desktop
 image/png=mpv.desktop
