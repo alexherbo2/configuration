@@ -244,8 +244,8 @@ map global normal <tab> '<a-;>'
 map global normal <a-tab> '<a-:>'
 
 # Prompt
-map global prompt <a-tab> <a-!> -docstring 'Expand the typed expansions in currently entered text'
-map global prompt <a-ret> <a-!><ret> -docstring 'Expand the typed expansions in currently entered text and validate'
+map global prompt -docstring 'Expand the typed expansions in currently entered text' <a-tab> <a-!>
+map global prompt -docstring 'Expand the typed expansions in currently entered text and validate' <a-ret> <a-!><ret>
 
 # Search
 # Case insensitive search
@@ -305,7 +305,7 @@ map global user <ret> ': enter-user-mode lsp<ret>'
 map global user b '<a-|>xargs -I {} chromium {}<ret>'
 
 # Pad numbers
-map global user 0 ': pad-number %val{count}<ret>' -docstring 'Pad numbers with leading zeros'
+map global user -docstring 'Pad numbers with leading zeros' 0 ': pad-number %val{count}<ret>'
 
 # Paste
 map global user p '<a-!>wl-paste --no-newline<ret>'
@@ -313,18 +313,18 @@ map global user P '!wl-paste --no-newline<ret>'
 map global user R '|wl-paste --no-newline<ret>'
 
 # Enter replace mode
-map global user r ': enter-replace-mode<ret>' -docstring 'Enter replace mode'
+map global user -docstring 'Enter replace mode' r ': enter-replace-mode<ret>'
 
 # Terminal settings
-map global normal <c-w> ': enter-user-mode terminal<ret>' -docstring 'Terminal'
+map global normal -docstring 'Terminal' <c-w> ': enter-user-mode terminal<ret>'
 
 # Chronic
-map global normal <a-|> ': enter-user-mode chronic<ret>' -docstring 'Enter Chronic mode'
-map global insert <a-|> '<esc>: enter-user-mode chronic-insert<ret>' -docstring 'Enter Chronic insert mode'
+map global normal -docstring 'Enter Chronic mode' <a-|> ': enter-user-mode chronic<ret>'
+map global insert -docstring 'Enter Chronic mode' <a-|> '<esc>: enter-user-mode chronic-insert<ret>'
 
 # Toggle highlighters
-map global user l ': toggle-highlighter global/number-lines number-lines<ret>' -docstring 'Toggle number-lines highlighter'
-map global user w ': toggle-highlighter global/wrap wrap -word<ret>' -docstring 'Toggle wrap highlighter'
+map global user -docstring 'Toggle number-lines highlighter' l ': toggle-highlighter global/number-lines number-lines<ret>'
+map global user -docstring 'Toggle wrap highlighter' w ': toggle-highlighter global/wrap wrap -word<ret>'
 
 # Hooks ────────────────────────────────────────────────────────────────────────
 
@@ -361,15 +361,15 @@ alias global explore-buffers fzf-buffers
 # jq ───────────────────────────────────────────────────────────────────────────
 
 # Prompts for jq
-map global user . ': jq-prompt<ret>' -docstring 'Prompt for jq'
-map global user @ ': jq-prompt-selections<ret>' -docstring 'Prompt for jq-selections'
+map global user -docstring 'Prompt for jq' . ': jq-prompt<ret>'
+map global user -docstring 'Prompt for jq-selections' @ ': jq-prompt-selections<ret>'
 
 # Sort selections
-map global user | ': jq-selections sort<ret>' -docstring 'Sort selections'
-map global user <a-|> ': jq-selections sort | reverse<ret>' -docstring 'Sort selections in reverse order'
+map global user -docstring 'Sort selections' | ': jq-selections sort<ret>'
+map global user -docstring 'Sort selections in reverse order' <a-|> ': jq-selections sort | reverse<ret>'
 
 # Reverse selections
-map global user ! ': jq-selections reverse<ret>' -docstring 'Reverse selections'
+map global user -docstring 'Reverse selections' ! ': jq-selections reverse<ret>'
 
 # manual-indent ────────────────────────────────────────────────────────────────
 
@@ -622,8 +622,8 @@ provide-module rails %{
   define-command rails-enable -docstring 'Enable Rails' %{
     hook -group rails global WinSetOption 'filetype=(ruby|eruby|html|css|scss|javascript)' %{
       # Mappings
-      map window user -docstring 'Rails' r ': enter-user-mode rails<ret>'
-      map window user -docstring 'Rails – Edit' e ': enter-user-mode rails-edit<ret>'
+      map -docstring 'Rails' window user r ': enter-user-mode rails<ret>'
+      map -docstring 'Rails – Edit' window user e ': enter-user-mode rails-edit<ret>'
 
       # Clean settings
       hook -always -once window WinSetOption 'filetype=.*' %{
