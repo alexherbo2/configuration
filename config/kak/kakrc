@@ -260,7 +260,10 @@ map global prompt <a-Q> '<up><home>\Q<end>'
 map global prompt <a-/> '<c-r>%'
 map global prompt <a-?> '%sh(dirname "$kak_bufname")<a-!>/'
 
+# Comment
 map global normal '#' ': comment-line<ret>'
+
+# Case
 map global normal <a-`> ': capitalize-selections<ret>'
 
 # Type <character><character> to leave insert mode.
