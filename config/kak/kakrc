@@ -342,6 +342,39 @@ set-option global connect_environment %{
 map global normal <c-t> ': connect-terminal<ret>'
 map global normal <c-n> ': connect-shell alacritty<ret>'
 
+# Turn Kakoune into an IDE
+define-command ide -params 0..1 -docstring 'ide [session-name]: Turn Kakoune into an IDE' %{
+  # Session name
+  try %{
+    rename-session %arg{1}
+  }
+
+  # Main client
+  rename-client main
+  set-option global jumpclient main
+
+  # Tools client
+  new %{
+    rename-client tools
+    set-option global toolsclient tools
+  }
+
+  # Docs client
+  new %{
+    rename-client docs
+    set-option global docsclient docs
+  }
+
+  # Project drawer
+  dolphin
+
+  # Git
+  > lazygit
+
+  # Terminal
+  >
+}
+
 # explore ──────────────────────────────────────────────────────────────────────
 
 # Explore files and buffers with fzf
