@@ -72,7 +72,6 @@ source-and-require-snippets-module scss
 
 set-option -add global ui_options ncurses_status_on_top=yes
 set-option -add global ui_options ncurses_assistant=cat
-set-option -add global ui_options ncurses_enable_mouse=no
 set-option -add global ui_options ncurses_set_title=no
 
 set-option global autoreload yes
