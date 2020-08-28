@@ -1,0 +1,24 @@
+[[verbs]]
+name = "view"
+invocation = "view"
+shortcut = "v"
+execution = "bat {file}"
+
+[[verbs]]
+key = "alt-l"
+name = "edit"
+invocation = "edit"
+shortcut = "e"
+execution = "$EDITOR {file}"
+
+[[verbs]]
+key = "alt-h"
+execution = ":back"
+
+[[verbs]]
+key = "alt-j"
+execution = ":line_down"
+
+[[verbs]]
+key = "alt-k"
+execution = ":line_up"
