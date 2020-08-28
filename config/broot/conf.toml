@@ -1,10 +1,4 @@
 [[verbs]]
-name = "view"
-invocation = "view"
-shortcut = "v"
-execution = "bat {file}"
-
-[[verbs]]
 key = "alt-l"
 execution = ":open_stay"
 
