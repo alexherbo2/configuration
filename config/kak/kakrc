@@ -120,11 +120,6 @@ set-option global modelinefmt '{yellow}%opt{out_of_view_status_line}{default} {{
 
 # Filetype-specific ────────────────────────────────────────────────────────────
 
-# LSP
-hook global WinSetOption filetype=(c|cpp|crystal|css|go|haskell|html|javascript|json|ocaml|reason|ruby|rust|sh|typescript) %{
-  lsp-enable-window
-}
-
 # Grep
 hook global WinSetOption filetype=grep %{
   map window normal <ret> ': grep-jump<ret>'
@@ -289,9 +284,6 @@ map global normal <space> ,
 # Source the main selection
 map global user -docstring 'Source the main selection' . ': <c-r>.<ret>'
 
-# LSP
-map global user -docstring 'LSP' <ret> ': enter-user-mode lsp<ret>'
-
 # Browser
 map global user -docstring 'Browser' b '<a-|>xargs -I {} chromium {}<ret>'
 
@@ -327,6 +319,18 @@ hook global RegisterModified '"' %{
 }
 
 # Plugins ──────────────────────────────────────────────────────────────────────
+
+# kak-lsp
+map global user -docstring 'LSP' <space> ': enter-user-mode lsp<ret>'
+
+# Go to definition and implementation
+map global goto -docstring 'Definition' d '<esc>: lsp-definition<ret>'
+map global goto -docstring 'Implementation' D '<esc>: lsp-implementation<ret>'
+
+# Enable kak-lsp
+hook global WinSetOption 'filetype=(c|cpp|crystal|css|go|haskell|html|javascript|json|ocaml|reason|ruby|rust|sh|typescript)' %{
+  lsp-enable-window
+}
 
 # bc ───────────────────────────────────────────────────────────────────────────
 
