@@ -6,10 +6,7 @@ execution = "bat {file}"
 
 [[verbs]]
 key = "alt-l"
-name = "edit"
-invocation = "edit"
-shortcut = "e"
-execution = "$EDITOR {file}"
+execution = ":open_stay"
 
 [[verbs]]
 key = "alt-h"
