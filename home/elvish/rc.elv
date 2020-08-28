@@ -124,6 +124,9 @@ alias:new la exa --all
 alias:new lla exa --long --all
 alias:new L exa --tree
 
+# Broot
+alias:new br broot
+
 # tmux
 alias:new t tmux
 alias:new tn tmux new-session
