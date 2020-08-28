@@ -290,18 +290,18 @@ map global normal <space> ,
 map global user -docstring 'Source the main selection' . ': <c-r>.<ret>'
 
 # LSP
-map global user <ret> ': enter-user-mode lsp<ret>'
+map global user -docstring 'LSP' <ret> ': enter-user-mode lsp<ret>'
 
 # Browser
-map global user b '<a-|>xargs -I {} chromium {}<ret>'
+map global user -docstring 'Browser' b '<a-|>xargs -I {} chromium {}<ret>'
 
 # Pad numbers
 map global user -docstring 'Pad numbers with leading zeros' 0 ': pad-number %val{count}<ret>'
 
 # Paste
-map global user p '<a-!>wl-paste --no-newline<ret>'
-map global user P '!wl-paste --no-newline<ret>'
-map global user R '|wl-paste --no-newline<ret>'
+map global user -docstring 'Paste after' p '<a-!>wl-paste --no-newline<ret>'
+map global user -docstring 'Paste before' P '!wl-paste --no-newline<ret>'
+map global user -docstring 'Replace' R '|wl-paste --no-newline<ret>'
 
 # Enter replace mode
 map global user -docstring 'Enter replace mode' r ': enter-replace-mode<ret>'
