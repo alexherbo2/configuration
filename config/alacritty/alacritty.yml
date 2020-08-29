@@ -5,3 +5,12 @@ window:
 
 shell:
   program: elvish
+
+# Taking back control of hjkl with modifiers keys (feat. @Delapouite)
+# https://discuss.kakoune.com/t/taking-back-control-of-hjkl-with-modifiers-keys/1077
+key_bindings:
+  - { key: H, mods: Control, chars: "\u24D7" } # ⓗ
+  - { key: I, mods: Control, chars: "\u24D8" } # ⓘ
+  - { key: J, mods: Control, chars: "\u24D9" } # ⓙ
+  - { key: M, mods: Control, chars: "\u24DC" } # ⓜ
+  - { key: Return, mods: Control, chars: "\u240D" } # ␍

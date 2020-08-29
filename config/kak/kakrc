@@ -417,8 +417,8 @@ hook global BufWritePre .* %{
 
 # move-line ────────────────────────────────────────────────────────────────────
 
-map global normal <down> ': move-line-below<ret>'
-map global normal <up> ': move-line-above<ret>'
+map global normal ⓙ ': move-line-below<ret>'
+map global normal <c-k> ': move-line-above<ret>'
 
 # snippets ─────────────────────────────────────────────────────────────────────
 
