@@ -415,7 +415,7 @@ in
     vivaldi
     vscode
     waybar
-    waybox
+    # waybox
     wayfire
     wayland
     wev
