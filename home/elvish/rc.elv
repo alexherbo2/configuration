@@ -141,6 +141,10 @@ alias:new kc kak -c
 alias:new kn kak -n
 alias:new kh kak -help
 
+# Kakoune – connect.kak
+alias:new Kcd cd '(:pwd)'
+alias:new kcd cd '(:bwd)'
+
 # Git
 alias:new g git
 alias:new G lazygit
