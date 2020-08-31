@@ -184,6 +184,11 @@ alias:new pc password create
 alias:new pg password get
 alias:new pe password edit
 
+# Rails
+alias:new r rails
+alias:new rr rails routes
+alias:new rrg rails routes '|' grep
+
 # Key-bindings ─────────────────────────────────────────────────────────────────
 
 # Delete words
