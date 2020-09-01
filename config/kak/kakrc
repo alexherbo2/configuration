@@ -52,6 +52,7 @@ source-and-require-connect-module dmenu
 source-and-require-connect-module dolphin
 source-and-require-connect-module fifo
 source-and-require-connect-module fzf
+source-and-require-connect-module fzy
 source-and-require-connect-module lf
 source-and-require-connect-module nnn
 source-and-require-connect-module rofi
