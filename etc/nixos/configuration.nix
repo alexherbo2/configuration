@@ -266,6 +266,7 @@ in
     font-awesome_5
     fuse
     fzf
+    fzy
     gcc
     gdb
     ghc
