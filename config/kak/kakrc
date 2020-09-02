@@ -364,10 +364,6 @@ define-command ide -params 0..1 -docstring 'ide [session-name]: Turn Kakoune int
   >
 }
 
-# current-word-highlighter ─────────────────────────────────────────────────────
-
-set-face global CurrentWord "default,%opt{dimmed_background}"
-
 # explore ──────────────────────────────────────────────────────────────────────
 
 # Explore files and buffers with fzf
