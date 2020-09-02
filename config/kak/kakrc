@@ -52,19 +52,6 @@ connect-require nnn
 connect-require rofi
 connect-require wofi
 
-# snippets ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-
-define-command -hidden source-and-require-snippets-module -params 1 %{
-  source "~/projects/snippets.kak/rc/modules/%arg{1}.kak"
-  require-module "snippets-%arg{1}"
-}
-
-source-and-require-snippets-module crystal
-source-and-require-snippets-module eruby
-source-and-require-snippets-module rails
-source-and-require-snippets-module ruby
-source-and-require-snippets-module scss
-
 # Options ──────────────────────────────────────────────────────────────────────
 
 set-option -add global ui_options ncurses_status_on_top=yes
