@@ -7,6 +7,7 @@ source ~/projects/capitalize-selections.kak/rc/capitalize-selections.kak
 source ~/projects/change-directory.kak/rc/change-directory.kak
 source ~/projects/chronic.kak/rc/chronic.kak
 source ~/projects/connect.kak/rc/connect.kak
+source ~/projects/current-word-highlighter.kak/rc/current-word-highlighter.kak
 source ~/projects/batch.kak/rc/batch.kak
 source ~/projects/yank-ring.kak/rc/yank-ring.kak
 source ~/projects/explore.kak/rc/explore/files.kak
@@ -362,6 +363,10 @@ define-command ide -params 0..1 -docstring 'ide [session-name]: Turn Kakoune int
   # Terminal
   >
 }
+
+# current-word-highlighter ─────────────────────────────────────────────────────
+
+set-face global CurrentWord "default,%opt{dimmed_background}"
 
 # explore ──────────────────────────────────────────────────────────────────────
 
