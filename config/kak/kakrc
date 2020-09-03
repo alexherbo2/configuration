@@ -266,8 +266,7 @@ map global normal , <space>
 map global normal <space> ,
 
 # Source the main selection
-# The @ has been chosen because it reminds the macro register.
-map global user -docstring 'Source the main selection' @ ': <c-r>.<ret>'
+map global user -docstring 'Source the main selection' = ': <c-r>.<ret>'
 
 # Browser
 map global user -docstring 'Browser' b '<a-|>xargs -I {} chromium {}<ret>'
