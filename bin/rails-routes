@@ -4,5 +4,5 @@
 if [ $# = 0 ]; then
   rails routes
 else
-  rails routes | grep "$@"
+  rails routes --grep "$@"
 fi
