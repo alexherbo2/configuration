@@ -404,6 +404,15 @@ hook global BufWritePre .* %{
 map global normal ⓙ ': move-line-below<ret>'
 map global normal <c-k> ': move-line-above<ret>'
 
+# rails ────────────────────────────────────────────────────────────────────────
+
+# Rails – Show routes
+define-command rails-show-routes -params .. -docstring 'Rails – Show routes' %{
+  fifo rails-routes %arg{@}
+}
+
+alias global rr rails-show-routes
+
 # snippets ─────────────────────────────────────────────────────────────────────
 
 # Options

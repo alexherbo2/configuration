@@ -186,8 +186,7 @@ alias:new pe password edit
 
 # Rails
 alias:new r rails
-alias:new rr rails routes
-alias:new rrg rails routes '|' grep
+alias:new rr rails-routes
 
 # Key-bindings ─────────────────────────────────────────────────────────────────
 
