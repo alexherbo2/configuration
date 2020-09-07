@@ -1,57 +1,62 @@
 # Plugins ──────────────────────────────────────────────────────────────────────
 
-source ~/projects/prelude.kak/rc/prelude.kak
-source ~/projects/auto-pairs.kak/rc/auto-pairs.kak
-source ~/projects/bc.kak/rc/bc.kak
-source ~/projects/capitalize-selections.kak/rc/capitalize-selections.kak
-source ~/projects/change-directory.kak/rc/change-directory.kak
-source ~/projects/chronic.kak/rc/chronic.kak
-source ~/projects/connect.kak/rc/connect.kak
-source ~/projects/current-word-highlighter.kak/rc/current-word-highlighter.kak
-source ~/projects/batch.kak/rc/batch.kak
-source ~/projects/yank-ring.kak/rc/yank-ring.kak
-source ~/projects/explore.kak/rc/explore/files.kak
-source ~/projects/explore.kak/rc/explore/buffers.kak
-source ~/projects/jq.kak/rc/jq.kak
-source ~/projects/manual-indent.kak/rc/manual-indent.kak
-source ~/projects/mkdir.kak/rc/mkdir.kak
-source ~/projects/move-line.kak/rc/move-line.kak
-source ~/projects/objectify.kak/rc/objectify.kak
-source ~/projects/out-of-view.kak/rc/out-of-view.kak
-source ~/projects/pad-number.kak/rc/pad-number.kak
-source ~/projects/palette.kak/rc/palette.kak
-source ~/projects/phantom.kak/rc/phantom.kak
-source ~/projects/rails.kak/rc/rails.kak
-source ~/projects/replace-mode.kak/rc/replace-mode.kak
-source ~/projects/search-highlighter.kak/rc/search-highlighter.kak
-source ~/projects/snippets.kak/rc/snippets.kak
-source ~/projects/split-object.kak/rc/split-object.kak
-source ~/projects/surround.kak/rc/surround.kak
-source ~/projects/terminal-mode.kak/rc/terminal-mode.kak
-source ~/projects/text-objects.kak/rc/text-objects.kak
-source ~/projects/toggle-highlighter.kak/rc/toggle-highlighter.kak
-source ~/projects/type-expand.kak/rc/type-expand.kak
-source ~/projects/volatile-highlighter.kak/rc/volatile-highlighter.kak
-source ~/projects/word-select.kak/rc/word-select.kak
-source ~/repositories/github.com/Delapouite/kakoune-buffers/buffers.kak
-source ~/repositories/github.com/gustavo-hms/luar/luar.kak
-source ~/repositories/github.com/occivink/kakoune-find/find.kak
-source ~/repositories/github.com/occivink/kakoune-sudo-write/sudo-write.kak
-source ~/repositories/github.com/occivink/kakoune-vertical-selection/vertical-selection.kak
-source ~/repositories/github.com/ul/kak-lsp/rc/lsp.kak
-source ~/repositories/gitlab.com/Screwtapello/kakoune-state-save/state-save.kak
+# Require modules
+require-module auto-pairs
+require-module batch
+require-module bc
+require-module capitalize-selections
+require-module change-directory
+require-module chronic
+require-module connect
+require-module connect-broot
+require-module connect-dmenu
+require-module connect-dolphin
+require-module connect-fzf
+require-module connect-fzy
+require-module connect-lf
+require-module connect-nnn
+require-module connect-rofi
+require-module connect-wofi
+require-module current-word-highlighter
+require-module explore-buffers
+require-module explore-files
+require-module jq
+require-module manual-indent
+require-module mkdir
+require-module move-line
+require-module objectify
+require-module out-of-view
+require-module pad-number
+require-module palette
+require-module phantom
+require-module prelude
+require-module rails
+require-module search-highlighter
+require-module snippets
+require-module split-object
+require-module surround
+require-module terminal-mode
+require-module text-objects
+require-module toggle-highlighter
+require-module type-expand
+require-module volatile-highlighter
+require-module word-select
+require-module yank-ring
+require-module yank-ring-connect
 
-# connect ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-
-connect-require broot
-connect-require dmenu
-connect-require dolphin
-connect-require fzf
-connect-require fzy
-connect-require lf
-connect-require nnn
-connect-require rofi
-connect-require wofi
+# Enable plugins
+auto-pairs-enable
+current-word-highlighter-enable
+explore-buffers-enable
+explore-files-enable
+out-of-view-enable
+palette-enable
+phantom-enable
+rails-detect
+search-highlighter-enable
+snippets-enable
+volatile-highlighter-enable
+yank-ring-enable
 
 # Options ──────────────────────────────────────────────────────────────────────
 
