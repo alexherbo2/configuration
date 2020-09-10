@@ -214,6 +214,9 @@ in
     alacritty
     albert
     android-file-transfer
+    # Dracula – Dark theme for GTK
+    # https://draculatheme.com/gtk
+    ant-dracula-theme
     apacheHttpd
     appimagekit
     appimage-run
