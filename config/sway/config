@@ -25,10 +25,8 @@ exec swayidle before-sleep swaylock
 
 # Startup commands ─────────────────────────────────────────────────────────────
 
-exec_always {
-  pkill waybar; waybar
-  pkill kanshi; kanshi
-}
+exec waybar
+exec kanshi
 
 # Colors ───────────────────────────────────────────────────────────────────────
 
