@@ -2,6 +2,7 @@
 
 alacritty --class 'Alacritty · Fullscreen' --command sh -c '
   info-cli
-  # Exit on key
+
+  # Exit on Enter
   read key
 '
