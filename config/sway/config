@@ -113,7 +113,6 @@ bindsym --to-code {
   Mod4+s layout stacking
   Mod4+d layout toggle split
   Mod4+f fullscreen toggle
-  Mod4+Shift+f exec sway-maximize
   Mod4+x sticky toggle
 
   # Distraction-free
