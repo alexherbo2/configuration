@@ -1,8 +1,20 @@
 #!/bin/sh
 
-# Convenience function to echo a command, run it, and `die_unless_nonfatal` if it fails.
+# Convenience function to:
+#
+# – Print the command.
+# – Run the command and die unless non-fatal.
+#
 # https://exherbo.org/docs/eapi/exheres-for-smarties.html#helper_functions
 
+# Print the command.
+#
+# $ <command>
+#
 printf '$ %s\n' "$*"
+
+# Run the command and die unless non-fatal.
 "$@" || exit $?
+
+# Add a final new line.
 printf '\n'
