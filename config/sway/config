@@ -25,7 +25,7 @@ exec swayidle before-sleep swaylock
 
 # Startup commands ─────────────────────────────────────────────────────────────
 
-exec kanshi
+exec_always kanshi
 
 # Colors ───────────────────────────────────────────────────────────────────────
 
