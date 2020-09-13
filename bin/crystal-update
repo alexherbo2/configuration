@@ -10,7 +10,7 @@ crystal-fetch-latest
 # Update
 cd ~/repositories/github.com/crystal-lang/crystal
 git pull
-nix-shell --packages zlib openssl pcre libevent --run '
+nix-shell --packages zlib openssl pcre libevent libyaml libxml2 --run '
   PATH=$XDG_DATA_HOME/crystal/releases/latest/bin:$PATH
   make
 '
