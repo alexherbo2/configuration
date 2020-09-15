@@ -84,6 +84,37 @@ alias:new gist gh gist create
 # Use Tectonic as PDF engine
 alias:new pandoc e:pandoc --pdf-engine tectonic
 
+# Sandbox
+# Usage:
+# sandbox experiments
+# [experiment-commands]
+# unsandbox
+fn sandbox [directory]{
+  # Initialize a Git repository and navigate into it.
+  git init $directory
+  cd $directory
+
+  # Create a .sandbox file and commit it.
+  touch .sandbox
+  git add .sandbox
+  git commit --message 'Initial commit'
+}
+
+fn unsandbox {
+  # Navigate to the Git root directory
+  git_root = (git rev-parse --show-toplevel)
+  cd $git_root
+
+  # Abort unless a sandbox
+  if (not ?(test -e .sandbox)) {
+    return 1
+  }
+
+  # Navigate upward and clean the sandboxed directory.
+  cd ..
+  rm -Rf $git_root
+}
+
 # Batch
 
 fn batch [@arguments]{
