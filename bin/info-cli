@@ -1,8 +1,29 @@
 #!/bin/sh
 
-edo swaymsg -t get_workspaces
-edo date
-edo acpi
-edo light
-edo amixer get Master
-edo df -h /
+# Group workspaces by output
+workspaces=$(
+  swaymsg -t get_workspaces | jq '
+    reduce .[] as { $output, $name } ({};
+      .[$output] += [$name]
+    )
+  '
+)
+
+# Get various information
+export time=$(date '+%A, %B %d, %Y · %I:%M %p')
+export battery=$(acpi | grep -E -o '[0-9]+%')
+export backlight=$(printf '%.f' `light`)
+export volume=$(amixer get Master | grep -E -o '[0-9]+%' | uniq)
+export disk=$(df -h / --output=avail | tail -1)
+
+# Output JSON
+jq --null-input --argjson workspaces "$workspaces" '
+  {
+    $workspaces,
+    disk: env.disk,
+    volume: env.volume,
+    backlight: env.backlight,
+    battery: env.battery,
+    time: env.time
+  }
+'
