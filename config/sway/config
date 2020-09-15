@@ -52,7 +52,7 @@ client.background $white
 
 bar {
   position top
-  status_command i3status
+  swaybar_command waybar
   colors {
     background $white
     statusline $black
