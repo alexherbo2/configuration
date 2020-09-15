@@ -3,6 +3,13 @@
   "modules-left": ["sway/workspaces", "sway/mode"],
   "modules-center": ["sway/window"],
   "modules-right": ["disk", "pulseaudio", "backlight", "battery", "clock"],
+  "sway/window": {
+    "on-click": "alacritty",
+    "on-click-middle": "swaymsg kill",
+    "on-click-right": "swaymsg split toggle",
+    "on-scroll-up": "swaymsg workspace prev_on_output",
+    "on-scroll-down": "swaymsg workspace next_on_output"
+  },
   "clock": {
     "format": "{:%I:%M %p}",
     "format-alt": "{:%A, %B %d, %Y · %I:%M %p}"
