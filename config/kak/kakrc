@@ -479,14 +479,19 @@ hook global ModuleLoaded show-characters %{
   set-face global ShowCharactersDimmedBackground %opt{dimmed_background}
 }
 
+# Show various characters and keep the faces final.
 provide-module show-characters %{
-  # Show various characters and keep the faces final.
+  # Faces
+  set-face global ShowCharactersBackground default
+  set-face global ShowCharactersDimmedBackground default
+
+  # Highlighters
   add-highlighter shared/show-characters regions
   add-highlighter shared/show-characters/code default-region group
 
   # Whitespaces
-  add-highlighter shared/show-characters/code/whitespace regex '\h+' 0:ShowCharactersBackground+f
-  add-highlighter shared/show-characters/code/newline regex '\n+' 0:ShowCharactersDimmedBackground+f
+  add-highlighter shared/show-characters/code/whitespace regex '\h+' 0:ShowCharactersBackground
+  add-highlighter shared/show-characters/code/newline regex '\n+' 0:ShowCharactersDimmedBackground
   add-highlighter shared/show-characters/code/tab regex '\t+' 0:red+f
   add-highlighter shared/show-characters/code/trailing-whitespaces regex '\h+$' 0:red+f
   add-highlighter shared/show-characters/code/non-breaking-space regex ' +' 0:red+f
