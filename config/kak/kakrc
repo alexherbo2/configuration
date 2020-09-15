@@ -18,6 +18,7 @@ require-module connect-nnn
 require-module connect-rofi
 require-module connect-wofi
 require-module current-word-highlighter
+require-module evaluate-selections
 require-module explore-buffers
 require-module explore-files
 require-module jq
@@ -270,9 +271,6 @@ map global normal <a-^> Q
 map global normal , <space>
 map global normal <space> ,
 
-# Source the main selection
-map global user -docstring 'Source the main selection' = ': <c-r>.<ret>'
-
 # Browser
 map global user -docstring 'Browser' b '<a-|>xargs -I {} chromium {}<ret>'
 
@@ -368,6 +366,10 @@ define-command ide -params 0..1 -docstring 'ide [session-name]: Turn Kakoune int
   # Terminal
   >
 }
+
+# evaluate-selections ──────────────────────────────────────────────────────────
+
+map global user -docstring 'Evaluate selections' = ': evaluate-selections<ret>'
 
 # explore ──────────────────────────────────────────────────────────────────────
 
