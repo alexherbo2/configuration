@@ -8,6 +8,10 @@ use github.com/zzamboni/elvish-completions/ssh
 use github.com/xiaq/edit.elv/compl/go
 go:apply
 
+# Broot
+# https://dystroy.org/broot/
+use broot
+
 # Prompt ───────────────────────────────────────────────────────────────────────
 
 # ❯ echo Tchou                       alex at othala in ~/configuration on master
@@ -87,10 +91,7 @@ alias:new pandoc e:pandoc --pdf-engine tectonic
 # Broot
 # https://dystroy.org/broot/
 fn br [@arguments]{
-  command_path = (mktemp)
-  broot --outcmd $command_path $@arguments
-  -source $command_path
-  rm -f $command_path
+  broot:br $@arguments
 }
 
 # Sandbox
