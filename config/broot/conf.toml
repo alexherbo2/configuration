@@ -1,3 +1,8 @@
+# Default flags
+# "g" ⇒ --show-git-info
+# "i" ⇒ --show-gitignored
+default_flags = "gi"
+
 [[verbs]]
 key = "alt-l"
 execution = ":open_stay"
