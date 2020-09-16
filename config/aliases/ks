@@ -1,0 +1,4 @@
+#!/bin/sh
+
+setsid kak -s "$@" -d
+kak -c "$@"

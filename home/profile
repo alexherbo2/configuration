@@ -9,6 +9,7 @@ prepend_to_path() {
 RUBY_GEM_USER_DIR=$(ruby -e 'puts Gem.user_dir')
 
 # Paths
+prepend_to_path ~/.config/aliases
 prepend_to_path ~/configuration/bin
 prepend_to_path ~/configuration/local/bin
 prepend_to_path ~/configuration/install/bin

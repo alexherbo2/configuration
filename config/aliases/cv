@@ -1,0 +1,3 @@
+#!/bin/sh
+
+batch --editor kak --map 'convert "$1" "$2"' "$@"

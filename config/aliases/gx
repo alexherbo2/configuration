@@ -1,0 +1,5 @@
+#!/bin/sh
+
+git-hub-list |
+fzf |
+git-hub-pipe "$@"

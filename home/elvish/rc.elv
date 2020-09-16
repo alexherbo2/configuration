@@ -1,12 +1,8 @@
 # Modules ──────────────────────────────────────────────────────────────────────
 
+# regexp
+# https://elv.sh/ref/re.html
 use re
-use github.com/zzamboni/elvish-modules/alias
-# use github.com/zzamboni/elvish-completions/cd
-# use github.com/zzamboni/elvish-completions/git
-use github.com/zzamboni/elvish-completions/ssh
-use github.com/xiaq/edit.elv/compl/go
-go:apply
 
 # Broot
 # https://dystroy.org/broot/
@@ -14,79 +10,84 @@ use broot
 
 # Prompt ───────────────────────────────────────────────────────────────────────
 
-# ❯ echo Tchou                       alex at othala in ~/configuration on master
-
+# Prompt
 edit:prompt = {
-  # nix-shell
+  # NixOS
+  # https://nixos.org
   if (not-eq '' $E:IN_NIX_SHELL) {
-    put λ
-    put ' '
+    styled λ green
   }
-  # connect.kak
-  if (and (not-eq '' $E:KAKOUNE_SESSION) (not-eq '' $E:KAKOUNE_CLIENT)) {
-    styled $E:KAKOUNE_CLIENT magenta
-    put ' at '
-    styled $E:KAKOUNE_SESSION yellow
-    put ' '
-  } elif (not-eq '' $E:KAKOUNE_SESSION) {
+
+  # Kakoune
+  # https://kakoune.org
+  if (eq 1 $E:IN_KAKOUNE_CONNECT) {
+    styled 🐈 yellow
     put '('
-    styled $E:KAKOUNE_SESSION yellow
+
+    # Client and session
+    if (not-eq '' $E:KAKOUNE_CLIENT) {
+      styled $E:KAKOUNE_CLIENT magenta
+      put @
+      styled $E:KAKOUNE_SESSION yellow
+
+    # Session
+    } else {
+      styled $E:KAKOUNE_SESSION yellow
+    }
+
+    # Kakoune info closing
     put ')'
   }
-  put '❯ '
-}
 
-edit:rprompt = {
-  styled (whoami) magenta
-  put ' at '
-  styled (hostname) yellow
-  put ' in '
-  styled (tilde-abbr $pwd) green
-  try {
+  # Git
+  # https://git-scm.com
+  if ?(git rev-parse 2> /dev/null) {
+    styled 🐙 red
+    put '('
+
+    # Reference
+    # https://alexherbo2.github.io/wiki/git/info/
     branch = (git rev-parse --abbrev-ref HEAD)
     status = (git status --porcelain | slurp)
-    put ' on '
+
+    # Branch
     styled $branch magenta
-    # [?] → Unstaged changes
-    # [!] → Ready to commit
+
+    # Status
+    # "?" ⇒ Unstaged changes
     if (re:match '(?m)^.\S' $status) {
-      styled '?' green
+      styled '?' green italic
+
+    # "!" ⇒ Ready to commit
     } elif (re:match '(?m)^.\s' $status) {
-      styled '!' green
+      styled '!' green italic
     }
-  } except error { } 2> /dev/null
-}
 
-# Commands ─────────────────────────────────────────────────────────────────────
-
-# Hit Enter to repeat the last command
-fn enter {
-  last-command = [(edit:command-history)][-1][cmd]
-  if (eq '' $edit:current-command) {
-    edit:current-command = $last-command
+    # Git info closing
+    put ')'
   }
-  edit:smart-enter
+
+  # Working directory
+  # Abbreviate path by shortening the parent directories.
+  if (eq ~ $pwd) {
+    styled '~' blue
+  } else {
+    @fragments = (splits / (tilde-abbr (dirname $pwd)))
+    for fragment $fragments {
+      styled $fragment[0]/ blue
+    }
+    styled (basename $pwd) blue
+  }
+
+  # Prompt
+  styled : bold
 }
 
-# Thanks to Diego Zamboni to show me the initial implementation,
-# on #elvish the 2018-03-14 at 17:40:20.
-# https://github.com/zzamboni
+# Remove the default right prompt
+edit:rprompt = {
+}
 
-# Hijack
-alias:new su sudo --login
-alias:new ipd e:ipd -4
-alias:new cat bat
-alias:new ls exa
-alias:new tree exa --tree
-alias:new cp clone
-alias:new rm trash
-alias:new grep rg
-# Configure curl to be quiet (but not silent)
-alias:new curl e:curl --silent --show-error --location
-alias:new wget e:wget --continue
-alias:new gist gh gist create
-# Use Tectonic as PDF engine
-alias:new pandoc e:pandoc --pdf-engine tectonic
+# Functions ────────────────────────────────────────────────────────────────────
 
 # Broot
 # https://dystroy.org/broot/
@@ -94,137 +95,87 @@ fn br [@arguments]{
   broot:br $@arguments
 }
 
-# Sandbox
-# Usage:
-# sandbox experiments
-# [experiment-commands]
-# unsandbox
-fn sandbox [directory]{
-  # Initialize a Git repository and navigate into it.
-  git init $directory
-  cd $directory
+# Change directory ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
-  # Create a .sandbox file and commit it.
-  touch .sandbox
-  git add .sandbox
-  git commit --message 'Initial commit'
+# git-hub
+# https://github.com/alexherbo2/git-hub
+fn gcd {
+  cd (git-hub-list | fzf)
 }
 
-fn unsandbox {
-  # Navigate to the Git root directory
-  git_root = (git rev-parse --show-toplevel)
-  cd $git_root
-
-  # Abort unless a sandbox
-  if (not ?(test -e .sandbox)) {
-    return 1
-  }
-
-  # Navigate upward and clean the sandboxed directory.
-  cd ..
-  rm -Rf $git_root
+# Kakoune
+# https://kakoune.org
+#
+# Buffer directory
+fn kcd {
+  cd (:bwd)
 }
 
-# Batch
-
-fn batch [@arguments]{
-  e:batch --editor kak $@arguments
+# Working directory
+fn Kcd {
+  cd (:pwd)
 }
-
-fn batch-rename [@arguments]{
-  batch --map 'rename "$1" "$2"' $@arguments
-}
-
-fn batch-convert [@arguments]{
-  batch --map 'convert "$1" "$2"' $@arguments
-}
-
-fn batch-relink [@arguments]{
-  batch --map 'relink "$1" "$2"' $@arguments
-}
-
-# Chronic
-alias:new cr chronic
 
 # Aliases ──────────────────────────────────────────────────────────────────────
 
-alias:new p echo
-alias:new md mkdir -p
-alias:new c clone
-alias:new d trash
-alias:new _ rm -Rf
-alias:new x arc unarchive
-alias:new ft mime
-alias:new yk wl-copy
-alias:new bg fork
+# cat → bat
+# https://github.com/sharkdp/bat
+fn cat [@arguments]{
+  bat $@arguments
+}
 
-# Listing
-alias:new l exa
-alias:new ll exa --long
-alias:new la exa --all
-alias:new lla exa --long --all
-alias:new L exa --tree
+# cp → clone
+# https://github.com/alexherbo2/clone
+fn cp [@arguments]{
+  clone $@arguments
+}
 
-# tmux
-alias:new t tmux
-alias:new tn tmux new-session
-alias:new ta tmux attach-session
+# curl
+# https://curl.haxx.se
+fn curl [@arguments]{
+  e:curl -sSL $@arguments
+}
 
-# Kakoune
-alias:new k kak
-alias:new K kak-shell
-alias:new kl kak -l
-alias:new ks setsid kak -s '{}' -d ';' kak -c '{}'
-alias:new kc kak -c
-alias:new kn kak -n
-alias:new kh kak -help
+# find → fd
+# https://github.com/sharkdp/fd
+fn find [@arguments]{
+  fd $@arguments
+}
 
-# Kakoune – connect.kak
-alias:new Kcd cd '(:pwd)'
-alias:new kcd cd '(:bwd)'
+# grep → ripgrep
+# https://github.com/BurntSushi/ripgrep
+fn grep [@arguments]{
+  rg $@arguments
+}
 
-# Git
-alias:new g git
-alias:new G lazygit
+# ls → exa
+# https://github.com/ogham/exa
+fn ls [@arguments]{
+  exa $@arguments
+}
 
-alias:new gcp git-hub-clone
-alias:new gls git-hub-list
-alias:new gu git-hub-update
-alias:new gp git-hub-pipe
-alias:new gcd cd '(git-hub-list | fzf)'
-alias:new gx git-hub-list '|' fzf '|' git-hub-pipe
+# Pandoc
+# https://pandoc.org
+#
+# Use Tectonic as PDF engine
+# https://tectonic-typesetting.github.io
+fn pandoc [@arguments]{
+  e:pandoc --pdf-engine tectonic $@arguments
+}
 
-# mpv
-alias:new m mpv
-alias:new mi mpv -profile=image
-alias:new ma mpv -profile=audio
+# rm → trash
+# https://github.com/alexherbo2/trash
+fn rm [@arguments]{
+  trash $@arguments
+}
 
-alias:new y youtube-dl
-alias:new v2g ffmpeg-to-gif
+fn su [@arguments]{
+  sudo --login $@arguments
+}
 
-# wf-recorder
-alias:new record wf-recorder -f "(new-file '' .mkv)"
-
-# synapse
-alias:new scu synapse-unfinished
-
-# Brown noise
-alias:new i isolate
-
-# Batch
-fn rn [@arguments]{ batch-rename $@arguments }
-fn cv [@arguments]{ batch-convert $@arguments }
-fn rl [@arguments]{ batch-relink $@arguments }
-
-# Password
-alias:new pm password get '(password menu | fzf)' '|' wl-copy
-alias:new pc password create
-alias:new pg password get
-alias:new pe password edit
-
-# Rails
-alias:new r rails
-alias:new rr rails-routes
+fn wget [@arguments]{
+  e:wget --continue $@arguments
+}
 
 # Key-bindings ─────────────────────────────────────────────────────────────────
 
@@ -242,17 +193,13 @@ edit:insert:binding[Alt-Shift-Right] = { edit:move-dot-right-word }
 edit:insert:binding[Alt-l] = { edit:location:start }
 edit:insert:binding[Alt-n] = { edit:navigation:start }
 
-# Enter to repeat last command
-edit:insert:binding[Enter] = $enter~
-
-# Clear
+# Clear the screen
 edit:insert:binding[Ctrl-l] = { clear > /dev/tty }
 
-# Next / Previous
+# History – Next
 edit:insert:binding[Ctrl-n] = { edit:history:start }
 edit:history:binding[Ctrl-n] = { edit:history:down }
 
+# History – Previous
 edit:insert:binding[Ctrl-p] = { edit:history:start }
 edit:history:binding[Ctrl-p] = { edit:history:up }
-
--exports- = (alias:export)
