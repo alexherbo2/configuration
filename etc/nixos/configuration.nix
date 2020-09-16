@@ -342,6 +342,7 @@ in
     ninja
     nix-index
     nmap
+    nnn
     nodejs_latest
     notmuch
     ntfs3g
