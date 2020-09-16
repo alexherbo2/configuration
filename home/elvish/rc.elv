@@ -84,6 +84,15 @@ alias:new gist gh gist create
 # Use Tectonic as PDF engine
 alias:new pandoc e:pandoc --pdf-engine tectonic
 
+# Broot
+# https://dystroy.org/broot/
+fn br [@arguments]{
+  command_path = (mktemp)
+  broot --outcmd $command_path $@arguments
+  -source $command_path
+  rm -f $command_path
+}
+
 # Sandbox
 # Usage:
 # sandbox experiments
@@ -154,9 +163,6 @@ alias:new ll exa --long
 alias:new la exa --all
 alias:new lla exa --long --all
 alias:new L exa --tree
-
-# Broot
-alias:new br broot
 
 # tmux
 alias:new t tmux
