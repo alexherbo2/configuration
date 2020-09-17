@@ -366,6 +366,7 @@ in
     plasma-desktop
     polybar
     procs
+    pueue
     python38
     python38Packages.pip
     qemu
