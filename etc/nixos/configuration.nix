@@ -310,7 +310,6 @@ in
     kotlin
     lazygit
     leiningen
-    lf
     libnotify
     light
     lispPackages.quicklisp

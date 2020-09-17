@@ -46,7 +46,6 @@ servers:
   - '#kde'
   - '#krabby'
   - '#launcher'
-  - '#lf'
   - '#lua'
   - '#mpv'
   - '#mpv-android'
