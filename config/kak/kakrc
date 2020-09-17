@@ -70,6 +70,11 @@ hook global ModuleLoaded x11 %{
   set-option global termcmd 'alacritty --command dash -c'
 }
 
+# Create a new tmux window
+hook global ModuleLoaded tmux %{
+  alias global terminal tmux-terminal-window
+}
+
 add-highlighter global/number-lines number-lines
 add-highlighter global/show-matching show-matching
 add-highlighter global/show-whitespaces show-whitespaces
