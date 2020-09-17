@@ -23,24 +23,32 @@ execution = ":line_up"
 
 # Commands ─────────────────────────────────────────────────────────────────────
 
+# Kakoune
+# https://kakoune.org
 [[verbs]]
 invocation = "edit"
 shortcut = "e"
 execution = "kak {file}"
 leave_broot = false
 
+# archiver
+# https://github.com/mholt/archiver
 [[verbs]]
 invocation = "extract"
 shortcut = "x"
 execution = "arc unarchive {file}"
 leave_broot = false
 
+# mpv
+# https://mpv.io
 [[verbs]]
 invocation = "mpv"
 shortcut = "m"
 execution = "mpv -really-quiet {directory}"
 leave_broot = false
 
+# bat
+# https://github.com/sharkdp/bat
 [[verbs]]
 invocation = "view"
 shortcut = "v"
