@@ -30,6 +30,12 @@ execution = "kak {file}"
 leave_broot = false
 
 [[verbs]]
+invocation = "extract"
+shortcut = "x"
+execution = "arc unarchive {file}"
+leave_broot = false
+
+[[verbs]]
 invocation = "mpv"
 shortcut = "m"
 execution = "mpv -really-quiet {directory}"
