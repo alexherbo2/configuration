@@ -4,6 +4,9 @@
 # https://elv.sh/ref/re.html
 use re
 
+# path-abbr
+use path-abbr
+
 # Broot
 # https://dystroy.org/broot/
 use broot
@@ -73,18 +76,7 @@ edit:prompt = {
   }
 
   # Working directory
-  # Abbreviate path by shortening the parent directories.
-  if (eq ~ $pwd) {
-    styled '~' blue
-  } else {
-    # Build a shortened path
-    path = (tilde-abbr $pwd)
-    prefix_path = (splits / (dirname $path) | each [fragment]{ put $fragment[0] } | joins /)
-    suffix_path = (basename $path)
-    shortened_path = $prefix_path/$suffix_path
-
-    styled $shortened_path blue
-  }
+  styled (path-abbr:path-abbr $pwd) blue
 
   # Prompt
   styled : bold
