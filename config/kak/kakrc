@@ -252,7 +252,7 @@ hook global InsertChar '[jk]' %{
 }
 
 # Select all occurrences of the current selection set.
-map global normal <a-percent> '*%s<ret>'
+map -docstring 'Select all occurrences of the current selection set' global normal '<a-percent>' '*%s<ret>'
 
 # Quit
 map global normal <c-q> ': quit!<ret>'
