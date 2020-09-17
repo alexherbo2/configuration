@@ -3,6 +3,8 @@
 # "i" ⇒ --show-gitignored
 default_flags = "gi"
 
+# Navigation ───────────────────────────────────────────────────────────────────
+
 [[verbs]]
 key = "alt-l"
 execution = ":open_stay"
@@ -18,3 +20,17 @@ execution = ":line_down"
 [[verbs]]
 key = "alt-k"
 execution = ":line_up"
+
+# Commands ─────────────────────────────────────────────────────────────────────
+
+[[verbs]]
+invocation = "edit"
+shortcut = "e"
+execution = "kak {file}"
+leave_broot = false
+
+[[verbs]]
+invocation = "view"
+shortcut = "v"
+execution = "bat {file}"
+leave_broot = false
