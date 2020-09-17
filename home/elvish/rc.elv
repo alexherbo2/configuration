@@ -47,7 +47,12 @@ edit:prompt = {
 
     # Reference
     # https://alexherbo2.github.io/wiki/git/info/
-    branch = (git rev-parse --abbrev-ref HEAD)
+    #
+    # Handle repositories with no commit yet.
+    branch = HEAD
+    try {
+      branch = (git rev-parse --abbrev-ref HEAD)
+    } except error { } 2> /dev/null
     status = (git status --porcelain | slurp)
 
     # Branch
