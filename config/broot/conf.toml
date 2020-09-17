@@ -30,6 +30,12 @@ execution = "kak {file}"
 leave_broot = false
 
 [[verbs]]
+invocation = "mpv"
+shortcut = "m"
+execution = "mpv -really-quiet {directory}"
+leave_broot = false
+
+[[verbs]]
 invocation = "view"
 shortcut = "v"
 execution = "bat {file}"
