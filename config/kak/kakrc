@@ -265,7 +265,7 @@ map global normal <c-a> ga
 map global normal ^ q
 map global normal <a-^> Q
 
-# User mappings ────────────────────────────────────────────────────────────────
+# User mappings ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
 # User mapping
 map global normal , <space>
@@ -319,12 +319,12 @@ hook global WinSetOption 'filetype=(c|cpp|crystal|css|go|haskell|html|javascript
   lsp-enable-window
 }
 
-# bc ───────────────────────────────────────────────────────────────────────────
+# bc ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
 map global normal = ': bc-prompt<ret>'
 map global normal + ': bc-prompt<ret><up><ret>'
 
-# connect ──────────────────────────────────────────────────────────────────────
+# connect ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
 set-option global connect_environment %{
   SHELL=elvish
@@ -367,17 +367,17 @@ define-command ide -params 0..1 -docstring 'ide [session-name]: Turn Kakoune int
   >
 }
 
-# evaluate-selections ──────────────────────────────────────────────────────────
+# evaluate-selections ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
 map global user -docstring 'Evaluate selections' = ': evaluate-selections<ret>'
 
-# explore ──────────────────────────────────────────────────────────────────────
+# explore ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
 # Explore files and buffers with fzf
 alias global explore-files fzf-files
 alias global explore-buffers fzf-buffers
 
-# jq ───────────────────────────────────────────────────────────────────────────
+# jq ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
 # Prompts for jq
 map global user -docstring 'Prompt for jq' . ': jq-prompt<ret>'
@@ -390,7 +390,7 @@ map global user -docstring 'Sort selections in reverse order' <a-|> ': jq-select
 # Reverse selections
 map global user -docstring 'Reverse selections' ! ': jq-selections reverse<ret>'
 
-# manual-indent ────────────────────────────────────────────────────────────────
+# manual-indent ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
 hook global WinCreate .* %{
   manual-indent-enable
@@ -400,18 +400,18 @@ hook global WinSetOption filetype=.* %{
   manual-indent-remove-filetype-hooks
 }
 
-# mkdir ────────────────────────────────────────────────────────────────────────
+# mkdir ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
 hook global BufWritePre .* %{
   mkdir -p %sh(dirname "$kak_hook_param")
 }
 
-# move-line ────────────────────────────────────────────────────────────────────
+# move-line ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
 map global normal ⓙ ': move-line-below<ret>'
 map global normal <c-k> ': move-line-above<ret>'
 
-# snippets ─────────────────────────────────────────────────────────────────────
+# snippets ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
 # Options
 set-option global snippets_scope global global/arrows global/bullets global/dashes global/punctuation
@@ -427,11 +427,11 @@ hook global BufCreate '.+/\.?config/snippets/.+' %{
   set-option buffer indentwidth 0
 }
 
-# split-object ─────────────────────────────────────────────────────────────────
+# split-object ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
 map global normal <a-I> ': enter-user-mode split-object<ret>'
 
-# state-save ───────────────────────────────────────────────────────────────────
+# state-save ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
 hook global KakBegin .* %{
   state-save-reg-sync colon
@@ -454,13 +454,13 @@ hook global KakEnd .* %{
 #   state-save-reg-load dquote
 # }
 
-# surround ─────────────────────────────────────────────────────────────────────
+# surround ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
 # Quoting
 map global normal q ': enter-user-mode surround<ret>'
 map global normal Q ': surround-enter-insert-mode<ret>'
 
-# word-select ──────────────────────────────────────────────────────────────────
+# word-select ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
 # Move by word instead of word start
 map global normal w ': word-select-next-word<ret>'
@@ -468,11 +468,11 @@ map global normal <a-w> ': word-select-next-big-word<ret>'
 map global normal b ': word-select-previous-word<ret>'
 map global normal <a-b> ': word-select-previous-big-word<ret>'
 
-# yank-ring ────────────────────────────────────────────────────────────────────
+# yank-ring ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
 map global normal Y ': yank-ring<ret>'
 
-# show-characters ──────────────────────────────────────────────────────────────
+# show-characters ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
 hook global ModuleLoaded show-characters %{
   add-highlighter global/show-characters ref show-characters
@@ -527,7 +527,7 @@ provide-module show-characters %{
 
 require-module show-characters
 
-# GTD ──────────────────────────────────────────────────────────────────────────
+# GTD ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
 declare-option bool gtd
 
