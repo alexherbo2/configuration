@@ -9,13 +9,8 @@ require-module change-directory
 require-module chronic
 require-module connect
 require-module connect-broot
-require-module connect-dmenu
 require-module connect-dolphin
 require-module connect-fzf
-require-module connect-fzy
-require-module connect-nnn
-require-module connect-rofi
-require-module connect-wofi
 require-module current-word-highlighter
 require-module evaluate-selections
 require-module explore-buffers
