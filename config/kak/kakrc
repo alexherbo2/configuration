@@ -207,6 +207,7 @@ define-command elv 'edit ~/.elvish/rc.elv'
 define-command eterm 'edit ~/.config/alacritty/alacritty.yml'
 define-command em 'edit ~/.config/mpv/mpv.conf'
 define-command emi 'edit ~/.config/mpv/input.conf'
+define-command ebr 'edit ~/.config/broot/conf.toml'
 define-command elf 'edit ~/.config/lf/lfrc'
 define-command ed %(edit "~/documents/diary/%sh(date '+%Y').md")
 define-command ep 'edit ~/.config/passwords.yml'
