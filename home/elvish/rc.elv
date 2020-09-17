@@ -77,11 +77,13 @@ edit:prompt = {
   if (eq ~ $pwd) {
     styled '~' blue
   } else {
-    @fragments = (splits / (tilde-abbr (dirname $pwd)))
-    for fragment $fragments {
-      styled $fragment[0]/ blue
-    }
-    styled (basename $pwd) blue
+    # Build a shortened path
+    path = (tilde-abbr $pwd)
+    prefix_path = (splits / (dirname $path) | each [fragment]{ put $fragment[0] } | joins /)
+    suffix_path = (basename $path)
+    shortened_path = $prefix_path/$suffix_path
+
+    styled $shortened_path blue
   }
 
   # Prompt
