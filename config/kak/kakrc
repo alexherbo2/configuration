@@ -214,10 +214,10 @@ define-command ew 'edit ~/documents/words.txt'
 
 # Mappings ─────────────────────────────────────────────────────────────────────
 
-map global normal <ret> :
-map global normal <backspace> ';'
-map global normal <tab> '<a-;>'
-map global normal <a-tab> '<a-:>'
+map -docstring 'Enter command prompt' global normal <ret> :
+map -docstring 'Reduce selections to their cursor' global normal <backspace> ';'
+map -docstring 'Swap selections cursor and anchor' global normal <tab> '<a-;>'
+map -docstring 'Ensure selection cursor is after anchor' global normal <a-tab> '<a-:>'
 
 # Prompt
 map global prompt -docstring 'Expand the typed expansions in currently entered text' <a-tab> <a-!>
