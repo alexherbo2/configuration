@@ -40,6 +40,14 @@ require-module word-select
 require-module yank-ring
 require-module yank-ring-connect
 
+# Termux
+# https://termux.com
+#
+# A bit more involved but recommended way is to require the module only for Termux.
+evaluate-commands %sh{
+  [ -e /data/data/com.termux ] && echo require-module termux
+}
+
 # Enable plugins
 auto-pairs-enable
 current-word-highlighter-enable
