@@ -12,6 +12,7 @@ require-module connect-broot
 require-module connect-dolphin
 require-module connect-fzf
 require-module current-word-highlighter
+require-module double-tap
 require-module evaluate-selections
 require-module explore-buffers
 require-module explore-files
@@ -242,15 +243,6 @@ map global normal '#' ': comment-line<ret>'
 # Case
 map global normal <a-`> ': capitalize-selections<ret>'
 
-# Type <character><character> to leave insert mode.
-# ["jj", "kk"]
-hook global InsertChar '[jk]' %{
-  try %{
-    execute-keys -draft "hH<a-k>%val{hook_param}%val{hook_param}<ret>d"
-    execute-keys <esc>
-  }
-}
-
 # Select all occurrences of the current selection set.
 map -docstring 'Select all occurrences of the current selection set' global normal '<a-percent>' '*%s<ret>'
 
@@ -365,6 +357,11 @@ define-command ide -params 0..1 -docstring 'ide [session-name]: Turn Kakoune int
   # Terminal
   >
 }
+
+# double-tap ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+
+# Type "jj" to leave insert mode:
+double-tap-escape global j
 
 # evaluate-selections ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
