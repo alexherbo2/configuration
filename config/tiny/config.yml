@@ -1,13 +1,13 @@
 defaults:
   nicks: [alexherbo2]
-  realname: 'Alex Leferry 2>'
+  realname: 'Mathieu Ablasou'
 
 servers:
 - addr: irc.oftc.net
   port: 6697
   tls: true
   nicks: [alexherbo2]
-  realname: 'Alex Leferry 2>'
+  realname: 'Mathieu Ablasou'
   join:
   - '#tiny'
 
@@ -15,7 +15,7 @@ servers:
   port: 6697
   tls: true
   nicks: [alexherbo2]
-  realname: 'Alex Leferry 2>'
+  realname: 'Mathieu Ablasou'
   join:
   - '#alacritty'
   - '#amber'
