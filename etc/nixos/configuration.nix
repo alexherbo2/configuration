@@ -297,6 +297,7 @@ in
     hunspell
     hunspellDicts.en-us
     i3
+    img2pdf
     inkscape
     inotify-tools
     iw
