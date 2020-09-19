@@ -32,7 +32,7 @@ in
 
   # Page: https://nixos.org/nixos/options.html
 
-  networking.hostName = "othala";
+  networking.hostName = "kanto";
   # Generate the 32-bit host ID of the machine with:
   # head [--bytes -c] 8 /etc/machine-id
   networking.hostId = "0338c82e";
@@ -51,7 +51,7 @@ in
 
   # AdBlock via /etc/hosts
   # https://github.com/StevenBlack/hosts
-  networking.extraHosts = builtins.readFile /home/alex/repositories/github.com/StevenBlack/hosts/hosts;
+  networking.extraHosts = builtins.readFile /home/taupiqueur/repositories/github.com/StevenBlack/hosts/hosts;
 
   time.timeZone = "Europe/Paris";
 
@@ -111,7 +111,7 @@ in
 
   # Users ──────────────────────────────────────────────────────────────────────
 
-  users.extraUsers.alex = {
+  users.extraUsers.taupiqueur = {
     uid = 1000;
     # Indicates whether this is an account for a real user.
     # In other words, set a bunch of options for us.
