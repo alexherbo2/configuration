@@ -1,1 +1,1 @@
-/home/alex/projects/mpv-translate-shell/scripts/translate-shell.lua
+/home/taupiqueur/projects/mpv-translate-shell/scripts/translate-shell.lua

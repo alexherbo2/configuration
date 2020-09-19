@@ -1,1 +1,1 @@
-/home/alex/repositories/github.com/occivink/mpv-gallery-view/scripts/playlist-view.lua
+/home/taupiqueur/repositories/github.com/occivink/mpv-gallery-view/scripts/playlist-view.lua
