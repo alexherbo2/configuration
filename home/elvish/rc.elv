@@ -7,6 +7,10 @@ use re
 # path-abbr
 use path-abbr
 
+# Kakoune
+# https://kakoune.org
+use kakoune
+
 # Broot
 # https://dystroy.org/broot/
 use broot
