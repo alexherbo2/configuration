@@ -5,15 +5,15 @@
 use re
 
 # path-abbr
-use path-abbr
+use github.com/alexherbo2/path-abbr.elv/lib/path-abbr
 
 # Kakoune
 # https://kakoune.org
-use kakoune
+use github.com/alexherbo2/kakoune.elv/lib/kakoune
 
 # Broot
 # https://dystroy.org/broot/
-use broot
+use github.com/alexherbo2/broot.elv/lib/broot
 
 # Prompt ───────────────────────────────────────────────────────────────────────
 
