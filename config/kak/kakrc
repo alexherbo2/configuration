@@ -35,6 +35,7 @@ require-module terminal-mode
 require-module text-objects
 require-module toggle-highlighter
 require-module type-expand
+require-module view-mode
 require-module volatile-highlighter
 require-module word-select
 require-module yank-ring
