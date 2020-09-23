@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# queue refresh F5
+pueue clean "$@"

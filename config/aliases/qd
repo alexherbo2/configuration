@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# queue delete
+pueue remove "$@"
