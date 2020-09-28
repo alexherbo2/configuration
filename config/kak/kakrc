@@ -119,11 +119,6 @@ set-option global modelinefmt '{yellow}%opt{out_of_view_status_line}{default} {{
 
 # Filetype-specific ────────────────────────────────────────────────────────────
 
-# Grep
-hook global WinSetOption filetype=grep %{
-  map window normal <ret> ': grep-jump<ret>'
-}
-
 # Makefile
 hook global WinSetOption filetype=makefile %{
   set-option window indentwidth 0
@@ -227,6 +222,15 @@ map -docstring 'Enter command prompt' global normal <ret> :
 map -docstring 'Reduce selections to their cursor' global normal <backspace> ';'
 map -docstring 'Swap selections cursor and anchor' global normal <tab> '<a-;>'
 map -docstring 'Ensure selection cursor is after anchor' global normal <a-tab> '<a-:>'
+
+# Keep the jump functionality on Enter for grep and make.
+hook global WinSetOption filetype=grep %{
+  map window normal <ret> ': grep-jump<ret>'
+}
+
+hook global WinSetOption filetype=make %{
+  map window normal <ret> ': make-jump<ret>'
+}
 
 # Prompt
 map global prompt -docstring 'Expand the typed expansions in currently entered text' <a-tab> <a-!>
