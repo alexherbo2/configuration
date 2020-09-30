@@ -57,6 +57,7 @@ explore-files-enable
 out-of-view-enable
 palette-enable
 phantom-enable
+phantom-add-mappings
 rails-detect
 search-highlighter-enable
 snippets-enable
