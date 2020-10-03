@@ -66,40 +66,20 @@ yank-ring-enable
 
 # Options ──────────────────────────────────────────────────────────────────────
 
+# User interface ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+
 set-option -add global ui_options ncurses_status_on_top=yes
 set-option -add global ui_options ncurses_assistant=cat
 set-option -add global ui_options ncurses_set_title=no
 
-set-option global autoreload yes
-set-option global scrolloff 3,5
-set-option global tabstop 2
-set-option global indentwidth 2
-set-option global makecmd 'make -j 8'
-set-option global grepcmd 'rg --column --with-filename'
+# Color scheme ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
-hook global ModuleLoaded x11 %{
-  set-option global termcmd 'alacritty --command dash -c'
-}
-
-# Create a new tmux window
-hook global ModuleLoaded tmux %{
-  alias global terminal tmux-terminal-window
-}
-
-add-highlighter global/number-lines number-lines
-add-highlighter global/show-matching show-matching
-add-highlighter global/show-whitespaces show-whitespaces
-
-# Fix Hugo LiveReload
-hook global BufCreate '.*/(content|layouts|static)/.*|.*/config\.toml' %{
-  set-option buffer writemethod replace
-}
-
-# Color scheme ─────────────────────────────────────────────────────────────────
-
-# Dracula – A dark theme (https://draculatheme.com)
+# Dracula – A dark theme for Kakoune
+# https://draculatheme.com/kakoune
 define-command colorscheme-dracula-transparent %{
   colorscheme dracula
+
+  # Apply faces
   set-face global Default %opt{foreground}
   set-face global LineNumbers %opt{dimmed_background}
   set-face global LineNumberCursor "%opt{foreground}+b"
@@ -114,15 +94,84 @@ define-command colorscheme-dracula-transparent %{
 
 colorscheme-dracula-transparent
 
-# Status line ──────────────────────────────────────────────────────────────────
+# Status line ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
 set-option global modelinefmt '{yellow}%opt{out_of_view_status_line}{default} {{mode_info}} {magenta}%val{client}{default} at {yellow}%val{session}{default} on {green}%val{bufname}{default} {{context_info}} {cyan}%val{cursor_line}{default}:{cyan}%val{cursor_char_column}{default}'
 
-# Filetype-specific ────────────────────────────────────────────────────────────
+# Highlighters ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+
+add-highlighter global/number-lines number-lines
+add-highlighter global/show-matching show-matching
+add-highlighter global/show-whitespaces show-whitespaces
+
+# Indentation ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+
+# Indent with 2 spaces
+# and make tabs appear as 2 spaces.
+set-option global tabstop 2
+set-option global indentwidth 2
+
+# Manual indent
+hook global WinCreate .* %{
+  manual-indent-enable
+}
+
+# Remove filetype hooks
+hook global WinSetOption filetype=.* %{
+  manual-indent-remove-filetype-hooks
+}
+
+# Filetype-specific
 
 # Makefile
 hook global WinSetOption filetype=makefile %{
   set-option window indentwidth 0
+}
+
+# Live reload ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+
+set-option global autoreload yes
+
+# Fix Hugo LiveReload
+hook global BufCreate '.*/(content|layouts|static)/.*|.*/config\.toml' %{
+  set-option buffer writemethod replace
+}
+
+# File explorer ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+
+# Explore files and buffers with fzf
+alias global explore-files fzf-files
+alias global explore-buffers fzf-buffers
+
+# Windowing ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+
+# Prefer dash to sh in Alacritty
+hook global ModuleLoaded x11 %{
+  set-option global termcmd 'alacritty --command dash -c'
+}
+
+# Create a new tmux window
+hook global ModuleLoaded tmux %{
+  alias global terminal tmux-terminal-window
+}
+
+# Tools ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+
+set-option global makecmd 'make -j 8'
+set-option global grepcmd 'rg --column --with-filename'
+
+# Hooks ────────────────────────────────────────────────────────────────────────
+
+# Make parent directories as needed.
+hook global BufWritePre .* %{
+  mkdir -p %sh(dirname "$kak_hook_param")
+}
+
+# Clipboard
+hook global RegisterModified '"' %{
+  nop %sh{
+    wl-copy -- "$kak_main_reg_dquote" < /dev/null > /dev/null 2>&1 &
+  }
 }
 
 # Commands ─────────────────────────────────────────────────────────────────────
@@ -301,15 +350,6 @@ map global insert -docstring 'Enter Chronic mode' <a-|> '<esc>: enter-user-mode 
 map global user -docstring 'Toggle number-lines highlighter' l ': toggle-highlighter global/number-lines number-lines<ret>'
 map global user -docstring 'Toggle wrap highlighter' w ': toggle-highlighter global/wrap wrap -word<ret>'
 
-# Hooks ────────────────────────────────────────────────────────────────────────
-
-# Clipboard
-hook global RegisterModified '"' %{
-  nop %sh{
-    wl-copy -- "$kak_main_reg_dquote" < /dev/null > /dev/null 2>&1 &
-  }
-}
-
 # Plugins ──────────────────────────────────────────────────────────────────────
 
 # kak-lsp
@@ -381,12 +421,6 @@ double-tap-escape global j
 
 map global user -docstring 'Evaluate selections' = ': evaluate-selections<ret>'
 
-# explore ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-
-# Explore files and buffers with fzf
-alias global explore-files fzf-files
-alias global explore-buffers fzf-buffers
-
 # jq ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
 # Prompts for jq
@@ -399,22 +433,6 @@ map global user -docstring 'Sort selections in reverse order' <a-|> ': jq-select
 
 # Reverse selections
 map global user -docstring 'Reverse selections' ! ': jq-selections reverse<ret>'
-
-# manual-indent ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-
-hook global WinCreate .* %{
-  manual-indent-enable
-}
-
-hook global WinSetOption filetype=.* %{
-  manual-indent-remove-filetype-hooks
-}
-
-# mkdir ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-
-hook global BufWritePre .* %{
-  mkdir -p %sh(dirname "$kak_hook_param")
-}
 
 # move-line ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
