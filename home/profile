@@ -49,7 +49,7 @@ export GIT_HUB=~/repositories
 export RIPGREP_CONFIG_PATH=$XDG_CONFIG_HOME/ripgrep/rc
 
 # fzf
-export FZF_DEFAULT_OPTS='--multi --reverse'
+export FZF_DEFAULT_OPTS='--multi --layout=reverse'
 
 # dmenu
 export DMENU='wofi --dmenu'
