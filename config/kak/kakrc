@@ -460,16 +460,18 @@ map global normal <a-I> ': enter-user-mode split-object<ret>'
 
 # state-save ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
+# Starting
 hook global KakBegin .* %{
-  state-save-reg-sync colon
-  state-save-reg-sync pipe
-  state-save-reg-sync slash
+  state-save-reg-load colon
+  state-save-reg-load pipe
+  state-save-reg-load slash
 }
 
+# Quitting
 hook global KakEnd .* %{
-  state-save-reg-sync colon
-  state-save-reg-sync pipe
-  state-save-reg-sync slash
+  state-save-reg-save colon
+  state-save-reg-save pipe
+  state-save-reg-save slash
 }
 
 # FIXME: Avoid dquote clobbering with yank-ring.
