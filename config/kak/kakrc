@@ -62,6 +62,7 @@ rails-detect
 search-highlighter-enable
 snippets-enable
 volatile-highlighter-enable
+word-select-add-mappings
 yank-ring-enable
 
 # Options ──────────────────────────────────────────────────────────────────────
@@ -487,14 +488,6 @@ hook global KakEnd .* %{
 # Quoting
 map global normal q ': enter-user-mode surround<ret>'
 map global normal Q ': surround-enter-insert-mode<ret>'
-
-# word-select ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
-
-# Move by word instead of word start
-map global normal w ': word-select-next-word<ret>'
-map global normal <a-w> ': word-select-next-big-word<ret>'
-map global normal b ': word-select-previous-word<ret>'
-map global normal <a-b> ': word-select-previous-big-word<ret>'
 
 # yank-ring ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
