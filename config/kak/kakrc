@@ -14,8 +14,8 @@ require-module connect-fzf
 require-module current-word-highlighter
 require-module double-tap
 require-module evaluate-selections
-require-module explore-buffers
 require-module explore-files
+require-module explore-buffers
 require-module jq
 require-module manual-indent
 require-module mkdir
@@ -52,8 +52,8 @@ evaluate-commands %sh{
 # Enable plugins
 auto-pairs-enable
 current-word-highlighter-enable
-explore-buffers-enable
 explore-files-enable
+explore-buffers-enable
 out-of-view-enable
 palette-enable
 phantom-enable
