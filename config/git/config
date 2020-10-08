@@ -53,6 +53,8 @@
 [alias]
 
   w = add
+  r = reword
+  p = pick
   st = status
   b = branch
   d = diff
@@ -76,7 +78,7 @@
   graph = log --graph --pretty=graph
 
   ; Commit
-  amend = commit --amend
+  reword = commit --amend
   pick = commit --amend --no-edit
 
   ; Undo
