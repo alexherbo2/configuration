@@ -114,11 +114,11 @@ plug-core %{
 
   # Keep the jump functionality on Enter for grep and make.
   hook global WinSetOption filetype=grep %{
-    map window normal <ret> ': grep-jump<ret>'
+    map -docstring 'grep-jump' window normal <ret> ': grep-jump<ret>'
   }
 
   hook global WinSetOption filetype=make %{
-    map window normal <ret> ': make-jump<ret>'
+    map -docstring 'make-jump' window normal <ret> ': make-jump<ret>'
   }
 
   # Control keys
