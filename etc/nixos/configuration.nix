@@ -390,6 +390,7 @@ in
     socat
     solargraph
     sox
+    spotify
     sqlite
     sqlitebrowser
     sshfs
