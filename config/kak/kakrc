@@ -206,7 +206,7 @@ plug double-tap projects/double-tap.kak %{
   double-tap-escape global j
 }
 
-plug-autoload edit
+plug edit projects/edit.kak
 
 plug evaluate-selections projects/evaluate-selections.kak %{
   map -docstring 'Evaluate selections' global user = ': evaluate-selections<ret>'
