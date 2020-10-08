@@ -41,7 +41,7 @@ plug-core %{
 
   # Windowing
   hook global ModuleLoaded x11 %{
-    set-option global termcmd 'kitty dash -c'
+    set-option global termcmd 'alacritty -e dash -c'
   }
 
   # Tools
