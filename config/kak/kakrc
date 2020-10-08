@@ -223,6 +223,7 @@ plug explore projects/explore.kak %{
 plug-old find https://github.com/occivink/kakoune-find
 
 plug-autoload git
+plug-autoload grep
 
 plug-autoload gtd %{
   gtd-enable
@@ -242,6 +243,7 @@ plug-old lsp https://github.com/kak-lsp/kak-lsp %{
 }
 
 plug-old luar https://github.com/gustavo-hms/luar
+plug-autoload make
 
 plug manual-indent projects/manual-indent.kak %{
   # Manual indent
