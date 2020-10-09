@@ -103,6 +103,11 @@ plug-core %{
   define-command -docstring 'Open passwords.yml' edit-passwords 'edit ~/.config/passwords.yml'
   define-command -docstring 'Open words.txt' edit-words 'edit ~/documents/words.txt'
 
+  # Aliases
+  alias global ek edit-kakoune
+  alias global en edit-nixos
+  alias global ed edit-diary
+
   # Mappings ───────────────────────────────────────────────────────────────────
 
   # Big keys
