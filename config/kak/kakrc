@@ -380,7 +380,7 @@ plug volatile-highlighter projects/volatile-highlighter.kak %{
   volatile-highlighter-enable
 }
 
-plug-autoload wl-clipboard
+plug wl-clipboard projects/wl-clipboard.kak
 
 plug word-select projects/word-select.kak %{
   word-select-add-mappings
