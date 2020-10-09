@@ -3,6 +3,7 @@
 #
 # Usage
 #
+# add-highlighter global/show-whitespaces show-whitespaces
 # add-highlighter global/show-characters ref show-characters
 #
 # Faces
