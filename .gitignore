@@ -9,6 +9,8 @@ home/thelounge/logs
 home/thelounge/packages
 home/thelounge/users
 home/thelounge/vapid.json
+config/kak/autoload/core
+config/kak/autoload/plugins
 config/broot/launcher
 config/passwords.yml
 config/mpv/socket

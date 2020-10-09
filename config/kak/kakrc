@@ -1,6 +1,9 @@
 # Preamble
 require-module plug
 
+# Let plug.kak manage itself.
+plug plug projects/plug.kak
+
 plug-core %{
   # Options ────────────────────────────────────────────────────────────────────
 
