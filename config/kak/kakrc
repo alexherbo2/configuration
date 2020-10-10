@@ -4,6 +4,13 @@ require-module plug
 # Let plug.kak manage itself.
 plug plug projects/plug.kak
 
+# Upgrade plugins
+# Install plugins and build kak-lsp.
+define-command plug-upgrade -docstring 'plug-upgrade' %{
+  plug-install
+  plug-execute lsp cargo build --release
+}
+
 plug-core %{
   # Options ────────────────────────────────────────────────────────────────────
 
