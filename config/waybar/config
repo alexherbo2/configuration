@@ -20,11 +20,14 @@
   },
   "custom/media-player": {
     "format": "",
-    "on-click": "celluloid"
+    "on-click": "celluloid",
+    "on-click-middle": "chromium --app=https://youtube.com",
+    "on-click-right": "dolphin videos"
   },
   "custom/browser": {
     "format": "",
-    "on-click": "chromium"
+    "on-click": "chromium",
+    "on-click-right": "chromium --incognito"
   },
   "custom/terminal": {
     "format": "",
@@ -33,6 +36,7 @@
   "custom/screenshot": {
     "format": "",
     "on-click": "sleep 1; grim-window $(new-file).webp",
+    "on-click-middle": "chromium --app=https://imgur.com/upload",
     "on-click-right": "sleep 1; grim-output $(new-file).webp"
   },
   "clock": {
