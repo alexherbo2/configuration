@@ -1,3 +1,11 @@
+# Variables ────────────────────────────────────────────────────────────────────
+
+# Terminal emulator
+set $terminal alacritty
+
+# Application launcher
+set $launcher dmenu_run
+
 # Options ──────────────────────────────────────────────────────────────────────
 
 font pango:DejaVu
@@ -49,10 +57,10 @@ bar {
 # Basics ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
 # Terminal
-bindsym Mod4+Return exec alacritty
+bindsym Mod4+Return exec $terminal
 
 # Launcher
-bindsym Mod4+Shift+Return exec dmenu_run
+bindsym Mod4+Shift+Return exec $launcher
 
 # Reload
 bindsym Mod4+F5 reload
@@ -64,7 +72,7 @@ bindsym Mod4+BackSpace exec i3lock
 # Mouse bindings ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
 bindsym --release button2 kill
-bindsym --release button3 exec alacritty
+bindsym --release button3 exec $launcher
 
 # Move your focus around
 bindsym --whole-window Mod4+button4 focus left
