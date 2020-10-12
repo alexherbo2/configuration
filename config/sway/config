@@ -101,7 +101,7 @@ bindsym --to-code {
   # Mouse bindings ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
   button2 kill
-  button3 exec $terminal
+  button3 exec $launcher
 
   # Move your focus around
   --whole-window Mod4+button4 focus left
