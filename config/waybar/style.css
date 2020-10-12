@@ -20,6 +20,10 @@ window#waybar {
   margin: 0 8px;
 }
 
+#custom-logout {
+  color: @white;
+}
+
 #mode, #clock, #battery, #backlight, #pulseaudio, #disk {
   margin: 0 4px;
 }

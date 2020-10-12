@@ -2,7 +2,7 @@
   "layer": "top",
   "modules-left": ["sway/workspaces", "sway/mode"],
   "modules-center": ["sway/window"],
-  "modules-right": ["custom/launcher", "custom/file-manager", "custom/media-player", "custom/browser", "custom/terminal", "custom/screenshot", "disk", "pulseaudio", "backlight", "battery", "clock"],
+  "modules-right": ["custom/launcher", "custom/file-manager", "custom/media-player", "custom/browser", "custom/terminal", "custom/screenshot", "disk", "pulseaudio", "backlight", "battery", "clock", "custom/logout"],
   "sway/window": {
     "on-click": "swaymsg scratchpad show",
     "on-click-middle": "swaymsg kill",
@@ -38,6 +38,11 @@
     "on-click": "sleep 1; grim-window $(new-file).webp",
     "on-click-middle": "chromium --app=https://imgur.com/upload",
     "on-click-right": "sleep 1; grim-output $(new-file).webp"
+  },
+  "custom/logout": {
+    "format": "",
+    "on-click": "wlogout",
+    "on-click-right": "swaylock"
   },
   "clock": {
     "format": "{:%I:%M %p}",
