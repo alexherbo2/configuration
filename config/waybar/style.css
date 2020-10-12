@@ -1,6 +1,11 @@
 @define-color black #202020;
 @define-color white #eaeaea;
 
+window#waybar {
+  background-color: @white;
+  color: @black;
+}
+
 #workspaces button {
   padding: 0;
   border-radius: 0;
