@@ -2,13 +2,38 @@
   "layer": "top",
   "modules-left": ["sway/workspaces", "sway/mode"],
   "modules-center": ["sway/window"],
-  "modules-right": ["disk", "pulseaudio", "backlight", "battery", "clock"],
+  "modules-right": ["custom/launcher", "custom/file-manager", "custom/media-player", "custom/browser", "custom/terminal", "custom/screenshot", "disk", "pulseaudio", "backlight", "battery", "clock"],
   "sway/window": {
-    "on-click": "alacritty",
+    "on-click": "swaymsg scratchpad show",
     "on-click-middle": "swaymsg kill",
-    "on-click-right": "swaymsg split toggle",
+    "on-click-right": "swaymsg floating toggle",
     "on-scroll-up": "swaymsg workspace prev_on_output",
     "on-scroll-down": "swaymsg workspace next_on_output"
+  },
+  "custom/launcher": {
+    "format": "",
+    "on-click": "launcher run $(launcher menu | wofi --dmenu)"
+  },
+  "custom/file-manager": {
+    "format": "",
+    "on-click": "dolphin"
+  },
+  "custom/media-player": {
+    "format": "",
+    "on-click": "celluloid"
+  },
+  "custom/browser": {
+    "format": "",
+    "on-click": "chromium"
+  },
+  "custom/terminal": {
+    "format": "",
+    "on-click": "alacritty"
+  },
+  "custom/screenshot": {
+    "format": "",
+    "on-click": "sleep 1; grim-window $(new-file).webp",
+    "on-click-right": "sleep 1; grim-output $(new-file).webp"
   },
   "clock": {
     "format": "{:%I:%M %p}",
