@@ -1,3 +1,13 @@
+# Variables ────────────────────────────────────────────────────────────────────
+
+# Terminal emulator
+set $terminal alacritty
+
+# Application launcher
+# Note: Pass the final command to swaymsg so that the resulting window can be opened
+# on the original workspace that the command was run on.
+set $launcher swaymsg exec -- launcher run $(launcher menu | wofi --dmenu)
+
 # Options ──────────────────────────────────────────────────────────────────────
 
 font pango:DejaVu
@@ -76,12 +86,10 @@ bindsym --to-code {
   Mod4+q exec plumb mpv pandoc xdg-open
 
   # Terminal
-  Mod4+Return exec alacritty
+  Mod4+Return exec $terminal
 
   # Launcher
-  # Note: Pass the final command to swaymsg so that the resulting window can be opened
-  # on the original workspace that the command was run on.
-  Mod4+Shift+Return exec swaymsg exec -- launcher run $(launcher menu | wofi --dmenu)
+  Mod4+Shift+Return exec $launcher
 
   # Reload
   Mod4+F5 reload
@@ -93,7 +101,7 @@ bindsym --to-code {
   # Mouse bindings ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
   button2 kill
-  button3 exec alacritty
+  button3 exec $terminal
 
   # Move your focus around
   --whole-window Mod4+button4 focus left
