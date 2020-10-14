@@ -351,7 +351,7 @@ plug snippets projects/snippets.kak %{
 }
 
 plug split-object projects/split-object.kak %{
-  map -docstring 'Split object' global normal <a-I> ': enter-user-mode split-object<ret>'
+  map -docstring 'Split object' global prompt <a-i> '<esc>: enter-user-mode split-object<ret>'
 }
 
 plug-old state-save https://gitlab.com/Screwtapello/kakoune-state-save %{
