@@ -1,3 +1,4 @@
 #!/bin/sh
 
-mpv -profile=audio "$@"
+# mpv – audio
+mpv -config-dir=~/.config/mpv/profiles/audio "$@"

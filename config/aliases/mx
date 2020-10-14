@@ -1,3 +1,4 @@
 #!/bin/sh
 
-mpv -profile=silent "$@"
+# mpv – filter
+mpv -config-dir=~/.config/mpv/profiles/filter "$@"

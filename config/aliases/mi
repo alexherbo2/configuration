@@ -1,3 +1,4 @@
 #!/bin/sh
 
-mpv -profile=image "$@"
+# mpv – image
+mpv -config-dir=~/.config/mpv/profiles/image "$@"
