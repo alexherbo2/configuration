@@ -152,8 +152,11 @@ plug-core %{
   map -docstring 'Expand the typed expansions in currently entered text' global prompt <a-tab> <a-!>
 
   # Search
-  map -docstring 'Case insensitive search' global prompt <a-i> '<home>(?i)<end>'
-  map -docstring 'Plain text search' global prompt <a-r> '<home>\Q<end>'
+  # Mnemonic
+  # Alt + l ⇒ Large case
+  # Alt + f ⇒ Fixed strings
+  map -docstring 'Case insensitive search' global prompt <a-l> '<home>(?i)<end>'
+  map -docstring 'Plain text search' global prompt <a-f> '<home>\Q<end>'
 
   # Paths
   map -docstring 'Current buffer name' global prompt <a-?> '<c-r>%'
