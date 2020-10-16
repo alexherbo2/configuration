@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# receptor
+# https://git.sr.ht/~sircmpwn/receptor
+
+# Start the server
+cd ~/repositories/git.sr.ht/~sircmpwn/receptor
+npm start

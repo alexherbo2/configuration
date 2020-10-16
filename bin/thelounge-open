@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# The Lounge
+# https://thelounge.chat
+
+# Open in application mode
+chromium --app=http://localhost:9000
