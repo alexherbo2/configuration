@@ -263,7 +263,7 @@ in
     file
     firefox
     flow
-    font-awesome_5
+    font-awesome
     fuse
     fzf
     fzy
