@@ -151,10 +151,13 @@ fn grep [@arguments]{
   rg $@arguments
 }
 
-# ls → exa
-# https://github.com/ogham/exa
+# ls → broot
+# https://dystroy.org/broot/
+#
+# Replace ls and its clones
+# https://dystroy.org/broot#replace-ls-and-its-clones
 fn ls [@arguments]{
-  exa $@arguments
+  br --sizes --dates --permissions $@arguments
 }
 
 # Pandoc

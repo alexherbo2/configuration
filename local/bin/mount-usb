@@ -3,7 +3,7 @@
 sudo fsck /dev/disk/by-label/USB
 status=$?
 sudo mount /dev/disk/by-label/USB ~/Disk/USB
-exa ~/Disk/USB
+ls ~/Disk/USB
 if test -n "$DISPLAY"; then
   if test "$status" = 0; then
     notify-send 'USB::Mount' "Status: $status"

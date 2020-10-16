@@ -3,7 +3,7 @@
 sudo fsck /dev/disk/by-label/Disk
 status=$?
 sudo mount /dev/disk/by-label/Disk ~/Disk/Disk
-exa ~/Disk/Disk
+ls ~/Disk/Disk
 if test -n "$DISPLAY"; then
   if test "$status" = 0; then
     notify-send 'Disk::Mount' "Status: $status"
