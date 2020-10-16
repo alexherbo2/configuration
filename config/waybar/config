@@ -52,7 +52,8 @@
   },
   "clock": {
     "format": "{:%I:%M %p}",
-    "format-alt": "{:%A, %B %d, %Y · %I:%M %p}"
+    "format-alt": "{:%A, %B %d, %Y · %I:%M %p}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
   "battery": {
     "states": {
