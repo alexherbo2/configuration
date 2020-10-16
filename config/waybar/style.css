@@ -16,7 +16,7 @@ window#waybar {
   color: @white;
 }
 
-#custom-launcher, #custom-file-manager, #custom-media-player, #custom-browser, #custom-terminal, #custom-screenshot {
+#custom-launcher, #custom-file-manager, #custom-media-player, #custom-browser, #custom-terminal, #custom-screenshot, #custom-network {
   margin: 0 8px;
 }
 
