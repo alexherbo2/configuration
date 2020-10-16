@@ -41,7 +41,9 @@
   },
   "custom/network": {
     "format": "",
-    "on-click": "alacritty --class 'Alacritty · Floating' --command nmtui"
+    // Run nmtui in a floating terminal.
+    // Note: nmtui does not redraw the window on resize, hence sleeping a bit before running the program.
+    "on-click": "alacritty --class 'Alacritty · Floating' --command sh -c 'sleep 0.1; nmtui'"
   },
   "custom/logout": {
     "format": "",
