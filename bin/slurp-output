@@ -1,10 +1,12 @@
 #!/bin/sh
 
-swaymsg -t get_outputs |
-jq --raw-output '
-  .[] |
-  select(.active) |
-  .rect |
-  "\(.x),\(.y) \(.width)x\(.height)"
-' |
-slurp
+# https://swaywm.org
+# https://wayland.emersion.fr/slurp/
+# https://stedolan.github.io/jq/
+
+jq_select_active_output='
+  .[] | select(.active) |
+  .rect | "\(.x),\(.y) \(.width)x\(.height)"
+'
+
+swaymsg -t get_outputs | jq --raw-output "$jq_select_active_output" | slurp
