@@ -138,8 +138,10 @@ plug-core %{
   }
 
   # Control keys
-  # [C-a] [C-n] [C-o] [C-q] [C-s] [C-t] [C-w] [C-x]
+  # [C-a] [C-f] [C-n] [C-o] [C-q] [C-s] [C-t] [C-w] [C-x]
   map -docstring 'Alternate buffer' global normal <c-a> ga
+  map -docstring 'Find in buffer' global normal <c-f> '/(?i)\Q'
+  map -docstring 'Find in buffer' global prompt <c-f> '<home>(?i)\Q<end>'
   map -docstring 'Open a new terminal window' global normal <c-n> ': connect-terminal<ret>'
   map -docstring 'Open file' global normal <c-o> ':edit<space>'
   map -docstring 'Quit' global normal <c-q> ': quit!<ret>'
