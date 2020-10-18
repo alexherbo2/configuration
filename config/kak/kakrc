@@ -231,6 +231,8 @@ plug evaluate-selections projects/evaluate-selections.kak %{
   map -docstring 'Evaluate selections' global user = ': evaluate-selections<ret>'
 }
 
+plug execute-key projects/execute-key.kak
+
 plug explore projects/explore.kak %{
   explore-enable
 
