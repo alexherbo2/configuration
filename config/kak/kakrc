@@ -144,7 +144,7 @@ plug-core %{
   map -docstring 'Find in buffer' global prompt <c-f> '<home>(?i)\Q<end>'
   map -docstring 'Open a new terminal window' global normal <c-n> ': connect-terminal<ret>'
   map -docstring 'Open file' global normal <c-o> ':edit<space>'
-  map -docstring 'Quit' global normal <c-q> ': quit!<ret>'
+  map -docstring 'Quit' global normal <c-q> ': quit<ret>'
   map -docstring 'Save buffer' global normal <c-s> ': write<ret>'
   map -docstring 'Open a new tab' global normal <c-t> ': new<ret>'
   map -docstring 'Terminal' global normal <c-w> ': enter-user-mode terminal<ret>'
