@@ -273,7 +273,7 @@ plug-old lsp https://github.com/kak-lsp/kak-lsp %{
   map -docstring 'Implementation' global goto D '<esc>: lsp-implementation<ret>'
 }
 
-plug-old luar https://github.com/gustavo-hms/luar
+plug luar https://github.com/gustavo-hms/luar
 plug-autoload make
 
 plug manual-indent projects/manual-indent.kak %{
