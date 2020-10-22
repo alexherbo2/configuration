@@ -364,6 +364,7 @@ in
     pcsxr
     pdftk
     plan9port
+    plasma5.sddm-kcm
     plasma-desktop
     polybar
     procs
