@@ -107,6 +107,9 @@ plug-core %{
 
   # Aliases ────────────────────────────────────────────────────────────────────
 
+  # User modes
+  alias global u enter-user-mode
+
   # Quick editing
   define-command -docstring 'Open kakrc' edit-kakoune 'edit ~/.config/kak/kakrc'
   define-command -docstring 'Open krabby/config.js' edit-krabby 'edit ~/.config/krabby/config.js'
