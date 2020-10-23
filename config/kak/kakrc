@@ -41,6 +41,9 @@ plug-core %{
   add-highlighter global/show-matching show-matching
   add-highlighter global/show-whitespaces show-whitespaces
 
+  # Scroll offset
+  set-option global scrolloff 5,1
+
   # Indentation
   # Indent with 2 spaces and make tabs appear as 2 spaces.
   set-option global tabstop 2
