@@ -3,8 +3,10 @@ window:
     columns: 80
     lines: 24
 
+# Login shell
 shell:
-  program: elvish
+  program: dash
+  args: [-l]
 
 # Taking back control of hjkl with modifiers keys (feat. @Delapouite)
 # https://discuss.kakoune.com/t/taking-back-control-of-hjkl-with-modifiers-keys/1077

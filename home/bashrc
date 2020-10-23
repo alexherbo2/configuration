@@ -1,2 +1,3 @@
-# Aliases
-alias e='exec elvish'
+# Elvish
+# https://elv.sh
+exec elvish

@@ -56,6 +56,16 @@ export DMENU='wofi --dmenu'
 
 # Autostarting ─────────────────────────────────────────────────────────────────
 
+# Starts tmux if not already in tmux.
+# Then attach or create a new session.
+if [ -z "$TMUX" ]; then
+  if tmux has-session 2> /dev/null; then
+    exec tmux attach-session
+  else
+    exec tmux new-session
+  fi
+fi
+
 # Autostart the Wayland compositor (Sway or Wayfire) at login
 if test -z "$DISPLAY"; then
   export XDG_SESSION_TYPE=wayland
