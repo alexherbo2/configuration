@@ -70,7 +70,7 @@ fi
 if test -z "$DISPLAY"; then
   export XDG_SESSION_TYPE=wayland
   case "$XDG_VTNR" in
-    1) sway ;;
-    2) wayfire ;;
+    1) exec sway ;;
+    2) exec wayfire ;;
   esac
 fi
