@@ -1,3 +1,10 @@
+# Configure ControlMaster for multiplexing
+# https://man.openbsd.org/ssh_config#ControlMaster
+Host *
+  ControlMaster auto
+  ControlPath ~/.cache/ssh/sessions/%r@%h:%p
+  ControlPersist yes
+
 Host mawww
   User taupiqueur
   HostName tamiok.kakoune.org
