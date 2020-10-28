@@ -302,8 +302,8 @@ plug mkdir projects/mkdir.kak %{
 }
 
 plug move-line projects/move-line.kak %{
-  map -docstring 'Move selected lines below' global normal ⓙ ': move-line-below<ret>'
-  map -docstring 'Move selected lines above' global normal <c-k> ': move-line-above<ret>'
+  map -docstring 'Move selected lines below' global normal <down> ': move-line-below<ret>'
+  map -docstring 'Move selected lines above' global normal <up> ': move-line-above<ret>'
 }
 
 plug objectify projects/objectify.kak
