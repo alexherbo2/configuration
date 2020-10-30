@@ -34,7 +34,12 @@ plug-core %{
   colorscheme dracula-transparent
 
   # Status line
-  set-option global modelinefmt '{yellow}%opt{out_of_view_status_line}{default} {{mode_info}} {magenta}%val{client}{default} at {yellow}%val{session}{default} on {green}%val{bufname}{default} {{context_info}} {cyan}%val{cursor_line}{default}:{cyan}%val{cursor_char_column}{default}'
+  #
+  # Display Unicode code point in the status line.
+  #
+  # https://en.wikipedia.org/wiki/Unicode
+  # https://en.wikipedia.org/wiki/Code_point
+  set-option global modelinefmt '{yellow}%opt{out_of_view_status_line}{default} {{mode_info}} {magenta}%val{client}{default} at {yellow}%val{session}{default} on {green}%val{bufname}{default} {{context_info}} {cyan}U+%sh{printf ''%04x'' "$kak_cursor_char_value"}{default} {cyan}%val{cursor_line}{default}:{cyan}%val{cursor_char_column}{default}'
 
   # Highlighters
   add-highlighter global/number-lines number-lines
