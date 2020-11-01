@@ -81,6 +81,10 @@ mode mouse {
   bindsym --to-code {
     1 exec sway-click button1 1
     2 exec sway-click button1 2
+    Shift+1 exec sway-click button1 1
+    Shift+2 exec sway-click button1 2
+    Control+1 exec sway-click button1 1
+    Control+2 exec sway-click button1 2
 
     Escape mode default
   }
