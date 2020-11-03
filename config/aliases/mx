@@ -1,4 +1,4 @@
 #!/bin/sh
 
 # mpv – filter
-mpv -config-dir=~/.config/mpv/profiles/filter "$@"
+mpv -config-dir="$XDG_CONFIG_HOME/mpv/profiles/filter" "$@"

@@ -7,7 +7,7 @@ Turn mpv into an image viewer.
 Add an alias to your bashrc:
 
 ``` bash
-alias mi='mpv -config-dir=~/.config/mpv/profiles/image'
+alias mi='mpv -config-dir="$XDG_CONFIG_HOME/mpv/profiles/image"'
 ```
 
 ## Credits

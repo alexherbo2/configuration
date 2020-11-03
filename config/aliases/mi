@@ -1,4 +1,4 @@
 #!/bin/sh
 
 # mpv – image
-mpv -config-dir=~/.config/mpv/profiles/image "$@"
+mpv -config-dir="$XDG_CONFIG_HOME/mpv/profiles/image" "$@"

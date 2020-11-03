@@ -14,7 +14,7 @@ mx | xargs rm
 Add an alias to your bashrc:
 
 ``` bash
-alias mx='mpv -config-dir=~/.config/mpv/profiles/filter'
+alias mx='mpv -config-dir="$XDG_CONFIG_HOME/mpv/profiles/filter"'
 ```
 
 ## Credits
