@@ -82,12 +82,18 @@ mode mouse {
     1 exec sway-click button1
     2 exec sway-click button2
     3 exec sway-click button3
+    4 exec sway-click button4
+    5 exec sway-click button5
     Shift+1 exec sway-click button1
     Shift+2 exec sway-click button2
     Shift+3 exec sway-click button3
+    Shift+4 exec sway-click button4
+    Shift+5 exec sway-click button5
     Control+1 exec sway-click button1
     Control+2 exec sway-click button2
     Control+3 exec sway-click button3
+    Control+4 exec sway-click button4
+    Control+5 exec sway-click button5
 
     Mod4+Escape mode default
   }
