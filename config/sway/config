@@ -134,7 +134,7 @@ bindsym --to-code {
   --whole-window Mod4+Shift+button5 move right
 
   # Enter mouse mode
-  Mod4+Shift+x mode mouse
+  Mod4+Escape mode mouse
 
   # Layouts ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
