@@ -79,14 +79,17 @@ bar {
 
 mode mouse {
   bindsym --to-code {
-    1 exec sway-click button1 1
-    2 exec sway-click button1 2
-    Shift+1 exec sway-click button1 1
-    Shift+2 exec sway-click button1 2
-    Control+1 exec sway-click button1 1
-    Control+2 exec sway-click button1 2
+    1 exec sway-click button1
+    2 exec sway-click button2
+    3 exec sway-click button3
+    Shift+1 exec sway-click button1
+    Shift+2 exec sway-click button2
+    Shift+3 exec sway-click button3
+    Control+1 exec sway-click button1
+    Control+2 exec sway-click button2
+    Control+3 exec sway-click button3
 
-    Escape mode default
+    Mod4+Escape mode default
   }
 }
 
