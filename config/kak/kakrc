@@ -352,6 +352,10 @@ plug-autoload show-characters %{
   set-face global ShowCharactersDimmedBackground "%opt{dimmed_background}+f"
 }
 
+plug sleuth projects/sleuth.kak %{
+  sleuth-enable
+}
+
 plug snippets projects/snippets.kak %{
   # Enable snippets
   snippets-enable
