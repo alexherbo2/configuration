@@ -1,11 +1,8 @@
 #!/bin/sh
 
-path=$(dirname "$0")
+alacritty_config=~/.config/alacritty/alacritty.yml
 
-# Environment variables
-XDG_CONFIG_HOME=${XDG_CONFIG_HOME:-~/.config}
-CONFIG=$XDG_CONFIG_HOME/alacritty
+config=~/configuration/config/alacritty/alacritty.yml
+colors=~/repositories/github.com/dracula/alacritty/dracula.yml
 
-# Write the configuration
-mkdir -p "$CONFIG"
-cat "$path/alacritty.yml" ~/repositories/github.com/dracula/alacritty/dracula.yml > "$CONFIG/alacritty.yml"
+cat "$config" "$colors" > "$alacritty_config"
