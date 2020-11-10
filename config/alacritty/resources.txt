@@ -1,0 +1,3 @@
+.config/alacritty/config.yml
+projects/alacritty-extended-keys/keys.yml
+repositories/github.com/dracula/alacritty/dracula.yml
