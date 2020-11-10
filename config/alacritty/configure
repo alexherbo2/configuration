@@ -3,6 +3,7 @@
 alacritty_config=~/.config/alacritty/alacritty.yml
 
 config=~/configuration/config/alacritty/alacritty.yml
+keys=~/projects/alacritty-extended-keys/keys.yml
 colors=~/repositories/github.com/dracula/alacritty/dracula.yml
 
-cat "$config" "$colors" > "$alacritty_config"
+cat "$config" "$keys" "$colors" > "$alacritty_config"
