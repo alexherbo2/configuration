@@ -6,5 +6,9 @@ window:
 shell:
   program: elvish
 
+font:
+  normal:
+    family: PragmataPro
+
 key_bindings:
   - { key: Return, mods: Control|Shift, action: SpawnNewInstance }
