@@ -1,3 +1,7 @@
+import:
+  - /home/taupiqueur/projects/alacritty-extended-keys/keys.yml
+  - /home/taupiqueur/repositories/github.com/dracula/alacritty/dracula.yml
+
 window:
   dimensions:
     columns: 80

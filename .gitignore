@@ -9,7 +9,6 @@ home/thelounge/logs
 home/thelounge/packages
 home/thelounge/users
 home/thelounge/vapid.json
-config/alacritty/alacritty.yml
 config/kak/autoload/plugins
 config/broot/launcher
 config/passwords.yml

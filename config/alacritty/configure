@@ -1,5 +1,0 @@
-#!/bin/sh
-
-cd
-set -- $(cat .config/alacritty/resources.txt)
-cat "$@" > .config/alacritty/alacritty.yml
