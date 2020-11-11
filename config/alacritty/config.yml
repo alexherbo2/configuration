@@ -7,3 +7,6 @@ window:
 shell:
   program: dash
   args: [-l]
+
+key_bindings:
+  - { key: Return, mods: Control|Shift, action: SpawnNewInstance }
