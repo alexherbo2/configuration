@@ -3,10 +3,8 @@ window:
     columns: 80
     lines: 24
 
-# Login shell
 shell:
-  program: dash
-  args: [-l]
+  program: elvish
 
 key_bindings:
   - { key: Return, mods: Control|Shift, action: SpawnNewInstance }
