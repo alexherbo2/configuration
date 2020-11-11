@@ -57,7 +57,7 @@ export DMENU='wofi --dmenu'
 # Autostarting ─────────────────────────────────────────────────────────────────
 
 # Autostart the Wayland compositor (Sway or Wayfire) at login
-if test -z "$DISPLAY"; then
+if [ -z "$DISPLAY" ]; then
   export XDG_SESSION_TYPE=wayland
   case "$XDG_VTNR" in
     1) exec sway ;;
