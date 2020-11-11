@@ -108,7 +108,6 @@ bindsym --to-code {
 
   # Terminal
   Mod4+Return exec $terminal
-  Mod4+Mod1+Return exec $terminal -e dash
 
   # Launcher
   Mod4+Shift+Return exec $launcher
