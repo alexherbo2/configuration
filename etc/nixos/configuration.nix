@@ -394,6 +394,7 @@ in
     spotify
     sqlite
     sqlitebrowser
+    squashfsTools
     sshfs
     st
     steam
