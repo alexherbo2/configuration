@@ -1,7 +1,7 @@
 # Variables ────────────────────────────────────────────────────────────────────
 
 # Terminal emulator
-set $terminal alacritty
+set $terminal wezterm
 
 # Application launcher
 # Note: Pass the final command to swaymsg so that the resulting window can be opened
@@ -278,8 +278,8 @@ bindsym --to-code {
 
 # Rules ────────────────────────────────────────────────────────────────────────
 
-# Alacritty · [Fullscreen|Floating]
-for_window [app_id="Alacritty · Fullscreen"] fullscreen enable
-for_window [app_id="Alacritty · Floating"] exec 640px
+# org.wezfurlong.wezterm · [Fullscreen|Floating]
+for_window [app_id="org.wezfurlong.wezterm · Fullscreen"] fullscreen enable
+for_window [app_id="org.wezfurlong.wezterm · Floating"] exec 640px
 for_window [title="Picture in picture"] floating enable
 for_window [instance="dofus.exe"] layout tabbed

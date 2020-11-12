@@ -1,6 +1,6 @@
 #!/bin/sh
 
-alacritty --class 'Alacritty · Floating' --command sh -c '
+wezterm start -- sh -c '
   setsid wl-copy --trim-newline < $(
     snippets get files |
     jq --raw-output .[] |
