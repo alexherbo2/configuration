@@ -18,6 +18,8 @@ return {
   -- https://draculatheme.com
   color_scheme = 'Dracula',
 
+  window_background_opacity = 0.8,
+
   -- Font configuration
   -- https://wezfurlong.org/wezterm/config/fonts.html
   font = wezterm.font('PragmataPro'),
