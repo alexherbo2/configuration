@@ -1,3 +1,0 @@
-#!/bin/sh
-
-appimage-run ~/Downloads/apps/WezTerm-nightly-Ubuntu16.04.AppImage "$@"
