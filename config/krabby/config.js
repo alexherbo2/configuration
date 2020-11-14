@@ -43,7 +43,7 @@ dmenu.send('set', {
 // External editor
 editor.send('set', {
   editor: `
-    wezterm start -- \\
+    wezterm start --class 'org.wezfurlong.wezterm · Floating' -- \\
       kak "$file" -e "
         select $anchor_line.$anchor_column,$cursor_line.$cursor_column
       "

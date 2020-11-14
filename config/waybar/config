@@ -43,7 +43,7 @@
     "format": "",
     // Run nmtui in a floating terminal.
     // Note: nmtui does not redraw the window on resize, hence sleeping a bit before running the program.
-    "on-click": "wezterm start -- sh -c 'sleep 0.1; nmtui'"
+    "on-click": "wezterm start --class 'org.wezfurlong.wezterm · Floating' -- sh -c 'sleep 0.1; nmtui'"
   },
   "custom/logout": {
     "format": "",
