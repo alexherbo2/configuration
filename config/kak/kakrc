@@ -68,7 +68,7 @@ plug-core %{
 
   # Windowing
   hook global ModuleLoaded x11 %{
-    set-option global termcmd 'wezterm start -- dash -c'
+    set-option global termcmd 'alacritty --command dash -c'
   }
 
   # Tools

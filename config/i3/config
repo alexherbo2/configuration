@@ -1,7 +1,7 @@
 # Variables ────────────────────────────────────────────────────────────────────
 
 # Terminal emulator
-set $terminal wezterm
+set $terminal alacritty
 
 # Application launcher
 set $launcher dmenu_run
@@ -194,6 +194,6 @@ bindsym XF86AudioLowerVolume exec amixer set Master 5%-
 
 # Rules ────────────────────────────────────────────────────────────────────────
 
-# org.wezfurlong.wezterm · [Fullscreen|Floating]
-for_window [class="org.wezfurlong.wezterm · Fullscreen"] fullscreen enable
-for_window [class="org.wezfurlong.wezterm · Floating"] floating enable
+# Alacritty · [Fullscreen|Floating]
+for_window [class="Alacritty · Fullscreen"] fullscreen enable
+for_window [class="Alacritty · Floating"] floating enable

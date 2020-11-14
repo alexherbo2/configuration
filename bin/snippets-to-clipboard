@@ -1,6 +1,6 @@
 #!/bin/sh
 
-wezterm start --class 'org.wezfurlong.wezterm · Floating' -- sh -c '
+alacritty --class 'Alacritty · Floating' --command sh -c '
   setsid wl-copy --trim-newline < $(
     snippets get files |
     jq --raw-output .[] |
