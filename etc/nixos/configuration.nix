@@ -159,7 +159,7 @@ in
   programs.sway.enable = true;
 
   # Waybar
-  programs.waybar.enable = true;
+  # programs.waybar.enable = true;
 
   # X11
   services.xserver.enable = true;
@@ -420,7 +420,7 @@ in
     # virtualbox
     vivaldi
     vscode
-    waybar
+    # waybar
     # waybox
     wayfire
     wayland
