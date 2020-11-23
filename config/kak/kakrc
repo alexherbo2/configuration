@@ -68,7 +68,8 @@ plug-core %{
 
   # Windowing
   hook global ModuleLoaded x11 %{
-    set-option global termcmd 'alacritty --command dash -c'
+    alias global terminal alacritty
+    alias global popup alacritty-popup
   }
 
   # Tools
@@ -198,6 +199,11 @@ plug-core %{
   # Move macros to ^
   map -docstring 'Play macro' global normal ^ q
   map -docstring 'Record macro' global normal <a-^> Q
+}
+
+plug alacritty projects/alacritty.kak %{
+  alias global terminal alacritty
+  alias global popup alacritty-popup
 }
 
 plug auto-pairs projects/auto-pairs.kak %{
