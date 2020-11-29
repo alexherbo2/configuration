@@ -403,6 +403,7 @@ in
     swayidle
     swaylock
     synapse-bt
+    teamviewer
     tectonic
     thelounge
     tigervnc
