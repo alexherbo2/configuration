@@ -449,7 +449,6 @@ in
     zathura
     zig
     zip
-    zoom-us
     zsnes
   ];
 
