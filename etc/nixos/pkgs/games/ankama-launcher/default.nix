@@ -10,7 +10,7 @@ appimageTools.wrapType2 rec {
   src = fetchurl {
     name = "${pname}";
     url = "https://launcher.cdn.ankama.com/installers/production/Ankama%20Launcher-Setup-x86_64.AppImage";
-    sha256 = "17xrrcgrf1jnpy6717223ca036yzfcihnrspl1wm5jc51vc7k7sw";
+    sha256 = "11c0b4d31cl0f584m2dshx6s6ayi509svnps7ms2nfmnrqfnxkpj";
   };
 
   extraInstallCommands = "mv $out/bin/${name} $out/bin/${pname}";
