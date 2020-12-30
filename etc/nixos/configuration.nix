@@ -291,6 +291,7 @@ in
     gtkpod
     guile
     heroku
+    hfsprogs
     higan
     htop
     hugo
