@@ -253,7 +253,7 @@ bindsym --to-code {
   Mod4+F2 exec room
 
   # Password manager
-  Mod4+p exec password get $(password menu | wofi --dmenu) | wl-copy
+  Mod4+p exec password get $(password menu | wofi --dmenu --prompt Password) | wl-copy
 
   # Snippets
   Mod4+y exec snippets-to-clipboard
