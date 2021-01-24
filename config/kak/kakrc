@@ -111,6 +111,14 @@ plug-core %{
     >
   }
 
+  # lazygit
+  # https://github.com/jesseduffield/lazygit
+  define-command lazygit -params .. -docstring 'Open lazygit' %{
+    > lazygit %arg{@}
+  }
+
+  alias global lg lazygit
+
   # Aliases ────────────────────────────────────────────────────────────────────
 
   # User modes
@@ -139,6 +147,9 @@ plug-core %{
   alias global ek edit-kakoune
   alias global en edit-nixos
   alias global ed edit-diary
+
+  # Git
+  alias global G lazygit
 
   # Mappings ───────────────────────────────────────────────────────────────────
 
