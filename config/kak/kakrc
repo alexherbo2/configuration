@@ -354,6 +354,16 @@ plug rails projects/rails.kak %{
   rails-detect
 }
 
+plug relate projects/relate.kak %{
+  # Aliases
+  alias global r relate
+  alias global rb relate-back-and-forth
+
+  # Mappings
+  map -docstring 'Next related buffer' global normal ']' ': relate-next-buffer<ret>'
+  map -docstring 'Previous related buffer' global normal '[' ': relate-previous-buffer<ret>'
+}
+
 plug replace-mode projects/replace-mode.kak %{
   map -docstring 'Replace' global user r ': enter-replace-mode<ret>'
 }
