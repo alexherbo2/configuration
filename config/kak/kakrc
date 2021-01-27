@@ -114,7 +114,7 @@ plug-core %{
   # lazygit
   # https://github.com/jesseduffield/lazygit
   define-command lazygit -params .. -docstring 'Open lazygit' %{
-    > lazygit %arg{@}
+    + lazygit %arg{@}
   }
 
   alias global lg lazygit
