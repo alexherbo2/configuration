@@ -426,6 +426,7 @@ in
     wayfire
     wayland
     wev
+    wezterm
     wf-recorder
     wget
     winetricks
