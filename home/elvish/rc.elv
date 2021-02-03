@@ -209,3 +209,9 @@ edit:history:binding[Ctrl-n] = { edit:history:down }
 # History – Previous
 edit:insert:binding[Ctrl-p] = { edit:history:start }
 edit:history:binding[Ctrl-p] = { edit:history:up }
+
+# Starship ─────────────────────────────────────────────────────────────────────
+
+# https://starship.rs
+
+eval (starship init elvish)
