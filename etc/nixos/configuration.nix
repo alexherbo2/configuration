@@ -397,6 +397,7 @@ in
     squashfsTools
     sshfs
     st
+    starship
     steam
     sway
     swaybg
