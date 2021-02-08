@@ -276,6 +276,7 @@ in
     gitAndTools.gh
     gitAndTools.gitui
     git-lfs
+    gitter
     glow
     gnumake
     gnupg
