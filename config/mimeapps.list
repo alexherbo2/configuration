@@ -1,18 +1,18 @@
 [Default Applications]
-application/javascript=kakoune-connect.desktop
-application/json=kakoune-connect.desktop
-application/octet-stream=kakoune-connect.desktop
+application/javascript=kakoune.desktop
+application/json=kakoune.desktop
+application/octet-stream=kakoune.desktop
 application/pdf=org.pwmt.zathura.desktop
-application/x-ruby=kakoune-connect.desktop
-application/x-yaml=kakoune-connect.desktop
+application/x-ruby=kakoune.desktop
+application/x-yaml=kakoune.desktop
 image/gif=mpv.desktop
 image/jpeg=mpv.desktop
 image/png=mpv.desktop
 image/webp=mpv.desktop
-text/html=kakoune-connect.desktop
-text/plain=kakoune-connect.desktop
-text/xml=kakoune-connect.desktop
-text/x-ruby=kakoune-connect.desktop
+text/html=kakoune.desktop
+text/plain=kakoune.desktop
+text/xml=kakoune.desktop
+text/x-ruby=kakoune.desktop
 video/webm=mpv.desktop
 video/x-matroska=mpv.desktop
 x-scheme-handler/http=chromium-browser.desktop
