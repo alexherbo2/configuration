@@ -464,3 +464,9 @@ plug yank-ring projects/yank-ring.kak %{
   # Enable yank-ring
   yank-ring-enable
 }
+
+# kakoune.cr
+# https://github.com/alexherbo2/kakoune.cr
+evaluate-commands %sh{
+  kcr init kakoune
+}
