@@ -470,3 +470,9 @@ plug yank-ring projects/yank-ring.kak %{
 evaluate-commands %sh{
   kcr init kakoune
 }
+
+# Mappings
+map -docstring 'New client' global normal <c-t> ': new<ret>'
+map -docstring 'New terminal' global normal <c-n> ': connect-terminal<ret>'
+map -docstring 'New popup' global normal + ': connect-popup<ret>'
+map -docstring 'Open Dolphin' global normal <c-e> ': $ dolphin .<ret>'
