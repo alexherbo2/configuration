@@ -39,7 +39,7 @@ export XDG_CACHE_HOME=~/.cache
 export XDG_DATA_HOME=~/.local/share
 
 # Applications
-export EDITOR=kak
+export EDITOR='kcr edit'
 export BROWSER=chromium
 export KAKOUNE_POSIX_SHELL=/run/current-system/sw/bin/dash
 export MANPAGER=kak-man-pager
