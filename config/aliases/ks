@@ -1,4 +1,3 @@
 #!/bin/sh
 
-setsid kak -s "$@" -d
-kak -c "$@"
+kcr shell --session "$@"
