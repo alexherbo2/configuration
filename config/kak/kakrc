@@ -226,7 +226,7 @@ plug batch projects/batch.kak
 
 plug bc projects/bc.kak %{
   map -docstring 'bc' global normal = ': bc-prompt<ret>'
-  map -docstring 'Repeat bc' global normal + ': bc-prompt<ret><up><ret>'
+  # map -docstring 'Repeat bc' global normal + ': bc-prompt<ret><up><ret>'
 }
 
 plug-old buffers https://github.com/Delapouite/kakoune-buffers
