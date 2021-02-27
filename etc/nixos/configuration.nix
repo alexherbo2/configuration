@@ -381,6 +381,7 @@ in
     rustup
     sbcl
     scala
+    scry
     sddm
     sddm-kcm
     shards
