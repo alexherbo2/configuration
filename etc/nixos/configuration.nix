@@ -308,7 +308,7 @@ in
     kak-lsp
     kakoune
     kanshi
-    kdeApplications.kdenlive
+    kdenlive
     kitty
     kotlin
     lazygit
@@ -366,7 +366,6 @@ in
     pcsxr
     pdftk
     plan9port
-    plasma5.sddm-kcm
     plasma-desktop
     polybar
     procs
@@ -383,6 +382,7 @@ in
     sbcl
     scala
     sddm
+    sddm-kcm
     shards
     shellcheck
     skim
