@@ -376,7 +376,7 @@ in
     redshift
     retroarch
     ripgrep
-    ruby
+    ruby_2_7
     rustc
     rustup
     sbcl
