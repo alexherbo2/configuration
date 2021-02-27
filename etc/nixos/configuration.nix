@@ -370,8 +370,8 @@ in
     polybar
     procs
     pueue
-    python38
-    python38Packages.pip
+    python39
+    python39Packages.pip
     qemu
     redshift
     retroarch
