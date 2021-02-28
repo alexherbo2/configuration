@@ -46,6 +46,12 @@ fn Kcd {
 
 # Aliases ──────────────────────────────────────────────────────────────────────
 
+# Batch
+# https://github.com/alexherbo2/batch
+fn batch [@arguments]{
+  e:batch --editor=kak $@arguments
+}
+
 # cat → bat
 # https://github.com/sharkdp/bat
 fn cat [@arguments]{
