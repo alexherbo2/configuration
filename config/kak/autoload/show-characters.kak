@@ -32,6 +32,7 @@ provide-module show-characters %{
   # Whitespaces – Sentences
   add-highlighter shared/show-characters/code/not-two-spaces-after-sentence regex '[?!.…]\K\h(\h{2,})?(?=\w)' 0:red+f
   add-highlighter shared/show-characters/code/two-spaces-after-sentence regex '[?!.…]\K\h{2}(?=\w)' 0:green+f
+  add-highlighter shared/show-characters/code/one-space-after-dot regex '[.]\K\h(?=[a-z])' 0:green+f
 
   # Whitespaces – Lists
   add-highlighter shared/show-characters/code/one-space-for-ordered-list regex '\d\.\K\h(?=\w)' 0:green+f
