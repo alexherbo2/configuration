@@ -10,7 +10,7 @@ appimageTools.wrapType2 rec {
   src = fetchurl {
     name = "${pname}";
     url = "https://github.com/wez/wezterm/releases/download/nightly/WezTerm-nightly-Ubuntu16.04.AppImage";
-    sha256 = "0fkx98qp22rjb98iflr1s2ppg4s494zhfw3yqfmlr8z9zvs6f2rs";
+    sha256 = "1smvwxvdwjr3fq6l6812xjwnk1z8npkwp1g168xxdjc96xk11b92";
   };
 
   extraInstallCommands = "mv $out/bin/${name} $out/bin/${pname}";
