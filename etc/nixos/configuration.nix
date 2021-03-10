@@ -406,6 +406,7 @@ in
     swayidle
     swaylock
     synapse-bt
+    tdesktop
     teamviewer
     tectonic
     thelounge
