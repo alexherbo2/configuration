@@ -31,9 +31,5 @@ return {
 
   -- Enable CSI u mode
   -- https://wezfurlong.org/wezterm/changelog.html?highlight=enable_csi_u_key_encoding#20200620-160318-e00b076c
-  enable_csi_u_key_encoding = true,
-
-  -- Wayland
-  -- https://wezfurlong.org/wezterm/config/misc.html
-  enable_wayland = true
+  enable_csi_u_key_encoding = true
 }
