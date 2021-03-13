@@ -1,0 +1,3 @@
+#!/bin/sh
+
+gh repo view --web
