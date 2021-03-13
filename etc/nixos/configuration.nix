@@ -252,7 +252,6 @@ in
     dunst
     ecmtools
     elixir
-    elvish
     emacs
     exa
     fd

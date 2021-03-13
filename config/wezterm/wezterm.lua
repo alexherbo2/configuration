@@ -7,9 +7,9 @@ return {
   -- Shell
   -- https://wezfurlong.org/wezterm/config/launch.html
   --
-  -- Elvish
-  -- https://elv.sh
-  default_prog = { 'elvish' },
+  -- Nushell
+  -- https://nushell.sh
+  default_prog = { 'nu' },
 
   -- Color scheme
   -- https://wezfurlong.org/wezterm/config/appearance.html

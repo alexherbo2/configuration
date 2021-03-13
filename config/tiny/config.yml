@@ -31,7 +31,6 @@ servers:
   - '#crystal-lang'
   - '#css'
   - '#curl'
-  - '#elvish'
   - '#emacs'
   - '#evil-mode'
   - '#ffmpeg'

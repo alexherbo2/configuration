@@ -1,0 +1,53 @@
+# Starship
+# https://starship.rs
+prompt = 'starship prompt'
+
+# Startup
+startup = [
+  '''
+  # Aliases
+
+  # Broot
+  # https://dystroy.org/broot/
+  alias br = broot
+
+  # Batch
+  # https://github.com/alexherbo2/batch
+  alias batch = batch --editor kak
+
+  # cat → bat
+  # https://github.com/sharkdp/bat
+  alias cat = bat
+
+  # cp → clone
+  # https://github.com/alexherbo2/clone
+  alias cp = clone
+
+  # curl
+  # https://curl.haxx.se
+  alias curl = curl -sSL
+
+  # find → fd
+  # https://github.com/sharkdp/fd
+  alias find = fd
+
+  # grep → ripgrep
+  # https://github.com/BurntSushi/ripgrep
+  alias grep = rg
+
+  # Pandoc
+  # https://pandoc.org
+  #
+  # Use Tectonic as PDF engine
+  # https://tectonic-typesetting.github.io
+  alias pandoc = pandoc --pdf-engine tectonic
+
+  # rm → trash
+  # https://github.com/alexherbo2/trash
+  alias rm = trash
+
+  alias su = sudo --login
+
+  alias wget = wget --continue
+  '''
+]

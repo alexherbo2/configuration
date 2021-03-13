@@ -10,7 +10,7 @@ window:
 background_opacity: 0.8
 
 shell:
-  program: elvish
+  program: nu
 
 font:
   normal:
