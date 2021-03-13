@@ -1,3 +1,6 @@
+# Options
+skip_welcome_message = true
+
 # Starship
 # https://starship.rs
 prompt = 'starship prompt'
