@@ -274,6 +274,7 @@ in
     gitAndTools.diff-so-fancy
     gitAndTools.gh
     gitAndTools.gitui
+    gitkraken
     git-lfs
     gitter
     glow
