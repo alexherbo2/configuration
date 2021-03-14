@@ -207,6 +207,7 @@ in
   # To search, run:
   # $ nix search {query}
   environment.systemPackages = with pkgs; [
+    _3mux
     acpi
     aegisub
     aerc
