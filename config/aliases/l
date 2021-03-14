@@ -1,5 +1,0 @@
-#!/bin/sh
-
-# Broot – Replace ls and its clones
-# https://dystroy.org/broot#replace-ls-and-its-clones
-broot --sizes --dates --permissions "$@"

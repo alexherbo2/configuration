@@ -1,4 +1,0 @@
-#!/bin/sh
-
-# queue kill -9
-pueue kill "$@"

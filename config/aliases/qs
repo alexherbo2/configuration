@@ -1,4 +1,0 @@
-#!/bin/sh
-
-# queue show
-pueue follow "$@"

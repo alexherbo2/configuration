@@ -1,4 +1,0 @@
-#!/bin/sh
-
-password get $(password menu | fzf --prompt='(p)>') |
-wl-copy

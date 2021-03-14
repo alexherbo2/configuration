@@ -1,5 +1,0 @@
-#!/bin/sh
-
-# Save downloaded videos in youtube.txt
-youtube-dl "$@"
-echo "$@" >> youtube.txt

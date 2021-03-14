@@ -1,3 +1,0 @@
-#!/bin/sh
-
-kcr-fzf-shell --working-directory . nnn "$@"

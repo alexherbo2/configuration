@@ -1,3 +1,0 @@
-#!/bin/sh
-
-batch --editor kak --map 'relink "$1" "$2"' "$@"

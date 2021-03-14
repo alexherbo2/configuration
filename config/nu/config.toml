@@ -12,49 +12,154 @@ prompt = 'starship prompt'
 startup = [
   '''
   # Aliases
+  alias @ = fork
+  alias p = echo
+  alias _ = rm -Rf
 
-  # Broot
-  # https://dystroy.org/broot/
-  alias br = broot
+  # clone
+  # https://github.com/alexherbo2/clone
+  alias cp = clone
 
-  # Batch
-  # https://github.com/alexherbo2/batch
-  alias batch = batch --editor kak
+  # trash
+  # https://github.com/alexherbo2/trash
+  alias rm = trash
 
-  # cat → bat
+  # bat
   # https://github.com/sharkdp/bat
   alias cat = bat
 
-  # cp → clone
-  # https://github.com/alexherbo2/clone
-  alias cp = clone
+  # fd
+  # https://github.com/sharkdp/fd
+  alias find = fd
+
+  # ripgrep
+  # https://github.com/BurntSushi/ripgrep
+  alias grep = rg
 
   # curl
   # https://curl.haxx.se
   alias curl = curl -sSL
 
-  # find → fd
-  # https://github.com/sharkdp/fd
-  alias find = fd
+  # archiver
+  # https://github.com/mholt/archiver
+  alias x = arc unarchive
 
-  # grep → ripgrep
-  # https://github.com/BurntSushi/ripgrep
-  alias grep = rg
+  # https://github.com/bugaevc/wl-clipboard
+  alias yk = wl-copy
 
-  # Pandoc
-  # https://pandoc.org
-  #
-  # Use Tectonic as PDF engine
-  # https://tectonic-typesetting.github.io
-  alias pandoc = pandoc --pdf-engine tectonic
+  # wf-recorder
+  # https://github.com/ammen99/wf-recorder
+  def rec [] {
+    wf-recorder -f $(new-file '' .mkv)
+  }
 
-  # rm → trash
-  # https://github.com/alexherbo2/trash
-  alias rm = trash
+  # Pueue
+  # https://github.com/Nukesor/pueue
+  alias q = pueue
+  alias Q = @ pueued
+  alias qj = pueue parallel
+  alias qa = pueue add
+  alias qi = pueue status
 
-  alias su = sudo --login
+  alias ql = pueue log
+  alias qL = pueue follow
 
-  alias wget = wget --continue
+  alias qp = pueue pause
+  alias qP = pueue start
+
+  alias q5 = pueue clean
+  alias q9 = pueue kill
+
+  # kakoune.cr
+  # https://github.com/alexherbo2/kakoune.cr
+  alias k = kcr edit
+  alias K = kcr-fzf-shell
+  alias KK = kcr-fzf-shell --working-directory .
+  alias ks = kcr shell --session
+  alias kl = kcr list
+  alias a = kcr attach
+  alias : = kcr send
+  alias :br = kcr-fzf-shell --working-directory . broot
+  alias :cat = kcr cat --raw
+
+  alias val = kcr get --value
+  alias opt = kcr get --option
+  alias reg = kcr get --register
+
+  # Git
+  # https://git-scm.com
+  alias g = git
+
+  # lazygit
+  # https://github.com/jesseduffield/lazygit
+  alias G = lazygit
+
+  # GitHub CLI
+  # https://cli.github.com
+  alias gist = gh gist create
+  alias gv = gh repo view --web
+
+  # git-hub
+  # https://github.com/alexherbo2/git-hub
+  alias gcp = git-hub-clone
+  alias gu = git-hub-update
+
+  # Broot
+  # https://dystroy.org/broot/
+  def br [] {
+    let path = $(broot --out /dev/stdout | str trim)
+    let is_empty = $(= $path | empty?)
+    if $is_empty {} {
+      cd $path
+    }
+  }
+
+  # Broot – Replace `ls` (and its clones)
+  # https://dystroy.org/broot#replace-ls-and-its-clones
+  alias l = broot --sizes --dates --permissions
+  alias la = broot --sizes --dates --permissions --hidden
+
+  # Batch
+  # https://github.com/alexherbo2/batch
+  alias batch = batch --editor kak
+  alias rn = batch --editor kak --map 'rename "$1" "$2"'
+  alias rl = batch --editor kak --map 'relink "$1" "$2"'
+  alias cv = batch --editor kak --map 'convert "$1" "$2"'
+
+  # Chronic
+  # https://github.com/alexherbo2/chronic
+  alias cr = chronic
+
+  # mpv
+  # https://mpv.io
+  alias m = mpv
+
+  # mpv – image
+  alias mi = mpv -config-dir="$XDG_CONFIG_HOME/mpv/profiles/image"
+
+  # mpv – audio
+  alias ma = mpv -config-dir="$XDG_CONFIG_HOME/mpv/profiles/audio"
+
+  # mpv – filter
+  alias mx = mpv -config-dir="$XDG_CONFIG_HOME/mpv/profiles/filter"
+
+  # https://ytdl-org.github.io/youtube-dl/
+  alias y = youtube-dl
+
+  # Password
+  # https://github.com/alexherbo2/password
+  alias pc = password create
+  alias pg = password get
+  alias pe = password edit
+  def pm [] {
+    password get $(password menu | fzf --prompt='(p)>') |
+    wl-copy
+  }
+
+  # Ruby on Rails
+  # https://rubyonrails.org
+  alias r = rails
+  alias rr = rails-routes
   '''
 ]
 

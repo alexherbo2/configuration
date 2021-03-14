@@ -1,4 +1,0 @@
-#!/bin/sh
-
-password get $(password menu | wofi --dmenu --prompt Password) |
-wl-copy

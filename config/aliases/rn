@@ -1,3 +1,0 @@
-#!/bin/sh
-
-batch --editor kak --map 'rename "$1" "$2"' "$@"
