@@ -56,7 +56,7 @@ startup = [
   # Pueue
   # https://github.com/Nukesor/pueue
   alias q = pueue
-  alias Q = @ pueued
+  alias Q = fork pueued
   alias qj = pueue parallel
   alias qa = pueue add
   alias qi = pueue status
