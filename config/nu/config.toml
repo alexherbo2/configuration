@@ -14,7 +14,7 @@ startup = [
   # Aliases
   alias @ = fork
   alias p = echo
-  alias _ = rm -Rf
+  alias _ = rm -rf
 
   # clone
   # https://github.com/alexherbo2/clone
