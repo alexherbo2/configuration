@@ -1,60 +1,36 @@
+# Broot
+# https://dystroy.org/broot/
+
+# Options ──────────────────────────────────────────────────────────────────────
+
+modal = true
+
 # Default flags
-# "g" ⇒ --show-git-info
-# "i" ⇒ --show-gitignored
-default_flags = "gi"
-
-# Navigation ───────────────────────────────────────────────────────────────────
-
-[[verbs]]
-key = "alt-l"
-execution = ":open_stay"
-
-[[verbs]]
-key = "alt-h"
-execution = ":back"
-
-[[verbs]]
-key = "alt-j"
-execution = ":line_down"
-
-[[verbs]]
-key = "alt-k"
-execution = ":line_up"
+# [g] ⇒ --show-git-info
+# [i] ⇒ --show-gitignored
+default_flags = 'gi'
 
 # Commands ─────────────────────────────────────────────────────────────────────
 
-# Kakoune
-# https://kakoune.org
+# Toggle hidden files
 [[verbs]]
-key = "alt-e"
-invocation = "edit"
-shortcut = "e"
-execution = "kak {file}"
-leave_broot = false
+key = '.'
+execution = ':toggle_hidden'
 
 # archiver
 # https://github.com/mholt/archiver
 [[verbs]]
-key = "alt-x"
-invocation = "extract"
-shortcut = "x"
-execution = "arc unarchive {file}"
+key = 'x'
+invocation = 'extract'
+shortcut = 'x'
+execution = 'arc unarchive {file}'
 leave_broot = false
 
 # mpv
 # https://mpv.io
 [[verbs]]
-key = "alt-m"
-invocation = "mpv"
-shortcut = "m"
-execution = "mpv -really-quiet {directory}"
-leave_broot = false
-
-# bat
-# https://github.com/sharkdp/bat
-[[verbs]]
-key = "alt-v"
-invocation = "view"
-shortcut = "v"
-execution = "bat {file}"
+key = 'm'
+invocation = 'mpv'
+shortcut = 'm'
+execution = 'mpv -really-quiet {file}'
 leave_broot = false
