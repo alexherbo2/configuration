@@ -57,3 +57,8 @@ startup = [
   alias wget = wget --continue
   '''
 ]
+
+[env]
+# kakoune.cr
+# https://github.com/alexherbo2/kakoune.cr
+EDITOR = 'kcr edit'
