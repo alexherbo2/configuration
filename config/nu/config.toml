@@ -15,6 +15,7 @@ startup = [
   alias @ = fork
   alias p = echo
   alias _ = rm -rf
+  alias md = mkdir
 
   # clone
   # https://github.com/alexherbo2/clone
