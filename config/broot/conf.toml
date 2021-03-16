@@ -17,6 +17,15 @@ default_flags = 'gi'
 key = '.'
 execution = ':toggle_hidden'
 
+# kakoune.cr
+# https://github.com/alexherbo2/kakoune.cr
+[[verbs]]
+key = 'e'
+invocation = 'edit'
+shortcut = 'e'
+execution = 'kcr edit +{line} {file}'
+leave_broot = false
+
 # archiver
 # https://github.com/mholt/archiver
 [[verbs]]
