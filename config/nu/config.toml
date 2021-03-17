@@ -17,6 +17,9 @@ startup = [
   alias _ = rm -rf
   alias md = mkdir
 
+  # Keyboard
+  alias kbd = swaymsg input 1:1:AT_Translated_Set_2_keyboard events toggle
+
   # clone
   # https://github.com/alexherbo2/clone
   alias cp = clone
