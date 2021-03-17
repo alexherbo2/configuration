@@ -291,8 +291,7 @@ plug-autoload gtd %{
 }
 
 plug jq projects/jq.kak %{
-  map -docstring 'jq' global user | ': jq-prompt<ret>'
-  map -docstring 'jq-selections' global user <a-|> ': jq-prompt-selections<ret>'
+  map -docstring 'jq' global normal <a-|> ': enter-user-mode jq<ret>'
 }
 
 plug-old lsp https://github.com/kak-lsp/kak-lsp %{
