@@ -32,33 +32,6 @@ const showKeys = () => {
 // Link hints
 settings['hint-selectors'] = ':not(.krabby)'
 
-// Tab search with fzf and Alacritty.
-dmenu.send('set', {
-  dmenu: {
-    command: 'sh',
-    arguments: [
-      '-c',
-      `
-        # Create IO files
-        state=$(mktemp -d)
-        input=$state/input
-        output=$state/output
-        trap 'rm -Rf "$state"' EXIT
-        # Get input from /dev/stdin
-        cat > "$input"
-        # Run fzf with Alacritty
-        alacritty --class 'Alacritty · Floating' --command sh -c 'fzf < "$1" > "$2"' -- "$input" "$output"
-        # Write output to /dev/stdout
-        cat "$output"
-        # Exit code
-        if test ! -s "$output"; then
-          exit 1
-        fi
-      `
-    ]
-  }
-})
-
 // External editor
 editor.send('set', {
   editor: `
