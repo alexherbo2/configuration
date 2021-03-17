@@ -17,6 +17,12 @@ startup = [
   alias _ = rm -rf
   alias md = mkdir
 
+  # SSH
+  def ssh! [] {
+    rm -rf ~/.cache/ssh/sessions
+    mkdir ~/.cache/ssh/sessions
+  }
+
   # Keyboard
   alias kbd = swaymsg input 1:1:AT_Translated_Set_2_keyboard events toggle
 
