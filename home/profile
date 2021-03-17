@@ -51,7 +51,24 @@ export RIPGREP_CONFIG_PATH=$XDG_CONFIG_HOME/ripgrep/rc
 export FZF_DEFAULT_OPTS='--multi --layout=reverse'
 
 # dmenu
-export DMENU='wofi --dmenu'
+export DMENU=$(cat <<'EOF'
+  # Create IO files
+  state=$(mktemp -d)
+  input=$state/input
+  output=$state/output
+  trap 'rm -Rf "$state"' EXIT
+  # Get input from /dev/stdin
+  cat > "$input"
+  # Run fzf with Alacritty
+  alacritty --class 'Alacritty · Floating' --command sh -c 'fzf < "$1" > "$2"' -- "$input" "$output"
+  # Write output to /dev/stdout
+  cat "$output"
+  # Exit code
+  if test ! -s "$output"; then
+    exit 1
+  fi
+EOF
+)
 
 # Autostarting ─────────────────────────────────────────────────────────────────
 
