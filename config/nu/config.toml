@@ -66,6 +66,7 @@ startup = [
   # tab
   # https://github.com/austinjones/tab-rs
   alias t = tab
+  alias t~ = tab home
   alias tl = tab --list
   alias tw = tab --close
   alias tW = tab --shutdown
