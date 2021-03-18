@@ -24,6 +24,17 @@ in
   # You should change this only after NixOS release notes say you should.
   system.stateVersion = "20.09";
 
+  # Flakes ─────────────────────────────────────────────────────────────────────
+
+  # Flakes
+  # https://nixos.wiki/wiki/Flakes
+  nix = {
+    package = pkgs.nixFlakes;
+    extraOptions = ''
+      experimental-features = nix-command flakes
+    '';
+  };
+
   # File systems ───────────────────────────────────────────────────────────────
 
   # boot.supportedFilesystems = [ "zfs" ];
@@ -343,7 +354,6 @@ in
     nginx
     nim
     ninja
-    nixFlakes
     nix-index
     nmap
     nnn
