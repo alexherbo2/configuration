@@ -12,7 +12,7 @@
   },
   "custom/launcher": {
     "format": "",
-    "on-click": "launcher run $(launcher menu | wofi --dmenu)"
+    "on-click": "launcher run $(launcher menu | dmenu)"
   },
   "custom/file-manager": {
     "format": "",

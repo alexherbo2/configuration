@@ -6,7 +6,7 @@ set $terminal alacritty
 # Application launcher
 # Note: Pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $launcher swaymsg exec -- launcher run $(launcher menu | wofi --dmenu)
+set $launcher swaymsg exec -- launcher run $(launcher menu | dmenu)
 
 # Options ──────────────────────────────────────────────────────────────────────
 
@@ -190,20 +190,20 @@ bindsym --to-code {
   Mod4+Control+k resize shrink down 5 ppt
   Mod4+Control+l resize grow right 5 ppt
 
-  # Change the inner or outer gaps for the current workspace.
-  Mod4+g exec -- sh -c 'swaymsg gaps inner current set "${1:-0}", gaps outer current set "${2:-0}"' -- $(wofi --dmenu --prompt Gaps)
-  Mod4+Shift+g gaps inner current set 0, gaps outer current set 0
+  # Change the gaps for the current workspace.
+  Mod4+g gaps inner current minus 10
+  Mod4+Shift+g gaps inner current plus 10
 
   # Change border styles
   Mod4+b border toggle
   Mod4+Shift+b border pixel
 
   # Search window
-  Mod4+slash exec sway-commander wofi --dmenu --prompt 'Search window'
-  Mod4+Shift+slash exec echo move workspace current, focus | sway-commander wofi --dmenu --prompt 'Bring window'
+  Mod4+slash exec sway-commander dmenu
+  Mod4+Shift+slash exec echo move workspace current, focus | sway-commander dmenu
 
   # Marks
-  Mod4+m exec swaymsg mark $(wofi --dmenu --prompt Mark)
+  Mod4+m exec swaymsg mark $(seq 0 9 | dmenu)
 
   # Workspaces ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
@@ -246,7 +246,7 @@ bindsym --to-code {
   Mod4+Shift+equal move container to workspace number 12
 
   # Rename workspace
-  Mod4+r exec swaymsg rename workspace to $(wofi --dmenu --prompt 'Workspace name')
+  Mod4+r exec swaymsg rename workspace to $(seq 0 12 | dmenu)
 
   # Desktop ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
@@ -254,7 +254,7 @@ bindsym --to-code {
   Mod4+F2 exec room
 
   # Password manager
-  Mod4+p exec password get $(password menu | wofi --dmenu --prompt Password) | wl-copy
+  Mod4+p exec password get $(password menu | dmenu) | wl-copy
 
   # Snippets
   Mod4+y exec snippets-to-clipboard
