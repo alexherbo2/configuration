@@ -343,6 +343,7 @@ in
     nginx
     nim
     ninja
+    nixFlakes
     nix-index
     nmap
     nnn
