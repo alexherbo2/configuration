@@ -63,6 +63,13 @@ startup = [
     wf-recorder -f $(new-file '' .mkv)
   }
 
+  # tab
+  # https://github.com/austinjones/tab-rs
+  alias t = tab
+  alias tl = tab --list
+  alias tw = tab --close
+  alias tW = tab --shutdown
+
   # Pueue
   # https://github.com/Nukesor/pueue
   alias q = pueue

@@ -1,3 +1,13 @@
+format = '${custom.tab}$all'
+
+[custom.tab]
+description = 'The current tab in the tab terminal multiplexer'
+command = 'tab --starship'
+when = 'tab --starship'
+shell = ['sh']
+style = 'bold blue'
+format = '[$output]($style)'
+
 [custom.kakoune]
 symbol = '🐈'
 command = 'printf "%s@%s" "${KAKOUNE_CLIENT:-null}" "$KAKOUNE_SESSION"'
