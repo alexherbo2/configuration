@@ -175,6 +175,7 @@ startup = [
 ]
 
 [env]
+SHELL = 'nu'
 # kakoune.cr
 # https://github.com/alexherbo2/kakoune.cr
 EDITOR = 'kcr edit'
