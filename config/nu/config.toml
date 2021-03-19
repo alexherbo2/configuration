@@ -155,6 +155,9 @@ startup = [
   # https://github.com/alexherbo2/chronic
   alias cr = chronic
 
+  # Web browser
+  alias b = fork chromium
+
   # mpv
   # https://mpv.io
   alias m = mpv
