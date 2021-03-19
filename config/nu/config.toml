@@ -17,6 +17,11 @@ startup = [
   alias _ = rm -rf
   alias md = mkdir
 
+  # Sleep
+  alias z = systemctl suspend
+  alias zz = swaymsg exit
+  alias zzz = shutdown now
+
   # SSH
   def ssh! [] {
     rm -rf ~/.cache/ssh/sessions
