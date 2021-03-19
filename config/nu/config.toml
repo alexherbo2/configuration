@@ -155,6 +155,9 @@ startup = [
   # https://github.com/alexherbo2/chronic
   alias cr = chronic
 
+  # File manager
+  alias d = fork dolphin
+
   # Web browser
   alias b = fork chromium
 
