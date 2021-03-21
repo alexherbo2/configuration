@@ -7,8 +7,6 @@ window:
     columns: 80
     lines: 24
 
-background_opacity: 0.8
-
 shell:
   program: nu
 
