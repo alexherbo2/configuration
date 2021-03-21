@@ -13,6 +13,7 @@ text/html=kakoune.desktop
 text/plain=kakoune.desktop
 text/xml=kakoune.desktop
 text/x-ruby=kakoune.desktop
+video/mp4=mpv.desktop
 video/webm=mpv.desktop
 video/x-matroska=mpv.desktop
 x-scheme-handler/http=chromium-browser.desktop
