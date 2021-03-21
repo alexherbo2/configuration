@@ -20,7 +20,7 @@ window#waybar {
   margin: 0 8px;
 }
 
-#custom-logout {
+#custom-workspace-next, #custom-logout {
   color: @white;
 }
 
