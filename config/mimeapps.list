@@ -7,15 +7,21 @@ x-scheme-handler/https=chromium-browser.desktop
 
 # kakoune.cr
 # https://github.com/alexherbo2/kakoune.cr
-application/javascript=kakoune.desktop
+application/csv=kakoune.desktop
 application/json=kakoune.desktop
-application/octet-stream=kakoune.desktop
-application/x-ruby=kakoune.desktop
-application/x-yaml=kakoune.desktop
+application/postscript=kakoune.desktop
 text/html=kakoune.desktop
 text/plain=kakoune.desktop
+text/troff=kakoune.desktop
+text/x-c++=kakoune.desktop
+text/x-c=kakoune.desktop
+text/x-java=kakoune.desktop
+text/x-lisp=kakoune.desktop
+text/x-makefile=kakoune.desktop
 text/xml=kakoune.desktop
 text/x-ruby=kakoune.desktop
+text/x-script.python=kakoune.desktop
+text/x-shellscript=kakoune.desktop
 
 # mpv
 # https://mpv.io
