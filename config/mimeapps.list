@@ -1,21 +1,36 @@
 [Default Applications]
+
+# Chromium
+# https://chromium.org
+x-scheme-handler/http=chromium-browser.desktop
+x-scheme-handler/https=chromium-browser.desktop
+
+# kakoune.cr
+# https://github.com/alexherbo2/kakoune.cr
 application/javascript=kakoune.desktop
 application/json=kakoune.desktop
 application/octet-stream=kakoune.desktop
-application/pdf=org.pwmt.zathura.desktop
 application/x-ruby=kakoune.desktop
 application/x-yaml=kakoune.desktop
-image/gif=mpv.desktop
-image/jpeg=mpv.desktop
-image/png=mpv.desktop
-image/webp=mpv.desktop
 text/html=kakoune.desktop
 text/plain=kakoune.desktop
 text/xml=kakoune.desktop
 text/x-ruby=kakoune.desktop
+
+# mpv
+# https://mpv.io
+image/gif=mpv.desktop
+image/jpeg=mpv.desktop
+image/png=mpv.desktop
+image/webp=mpv.desktop
 video/mp4=mpv.desktop
 video/webm=mpv.desktop
 video/x-matroska=mpv.desktop
-x-scheme-handler/http=chromium-browser.desktop
-x-scheme-handler/https=chromium-browser.desktop
+
+# synapse
+# https://synapse-bt.org
 x-scheme-handler/magnet=synapse.desktop
+
+# zathura
+# https://pwmt.org/projects/zathura/
+application/pdf=org.pwmt.zathura.desktop
