@@ -349,6 +349,7 @@ in
     mysql
     neovim
     neovim-qt
+    nestopia
     nettools
     networkmanager
     nginx
