@@ -48,7 +48,7 @@ export GIT_HUB=~/repositories
 export RIPGREP_CONFIG_PATH=$XDG_CONFIG_HOME/ripgrep/rc
 
 # fzf
-export FZF_DEFAULT_OPTS='--multi --layout=reverse'
+export FZF_DEFAULT_OPTS='--multi --layout=reverse --preview-window=down:60%'
 
 # Autostarting ─────────────────────────────────────────────────────────────────
 
