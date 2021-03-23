@@ -346,6 +346,7 @@ in
     mosh
     mpv
     msmtp
+    mupen64plus
     mysql
     neovim
     neovim-qt
