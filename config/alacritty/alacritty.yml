@@ -14,5 +14,14 @@ font:
   normal:
     family: PragmataPro
 
+# Enable audio bell.
+#
+# XDG sound theme
+# https://gitlab.freedesktop.org/xdg/xdg-sound-theme
+bell:
+  command:
+    program: mpv
+    args: ['-no-config', '-no-video', '-no-terminal', '/home/taupiqueur/repositories/gitlab.freedesktop.org/xdg/xdg-sound-theme/stereo/bell.oga']
+
 key_bindings:
   - { key: Return, mods: Control|Shift, action: SpawnNewInstance }
