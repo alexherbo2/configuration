@@ -266,6 +266,7 @@ in
     elixir
     emacs
     exa
+    fceux
     fd
     fdm
     feh
