@@ -4,13 +4,6 @@
 local wezterm = require 'wezterm'
 
 return {
-  -- Shell
-  -- https://wezfurlong.org/wezterm/config/launch.html
-  --
-  -- Nushell
-  -- https://nushell.sh
-  default_prog = { 'nu' },
-
   -- Color scheme
   -- https://wezfurlong.org/wezterm/config/appearance.html
   --

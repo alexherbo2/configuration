@@ -1,6 +1,22 @@
 # Nushell
 # https://nushell.sh
 
+# Paths
+path = [
+  '/home/taupiqueur/configuration/bin',
+  '/home/taupiqueur/configuration/local/bin',
+  '/home/taupiqueur/configuration/install/bin',
+  '/home/taupiqueur/configuration/src/crystal/bin',
+  '/home/taupiqueur/.bin',
+  '/home/taupiqueur/.local/bin',
+  '/home/taupiqueur/.gem/ruby/2.7.0/bin',
+  '/home/taupiqueur/.cargo/bin',
+  '/home/taupiqueur/.cabal/bin',
+  '/home/taupiqueur/go/bin',
+  'node_modules/.bin',
+  '/home/taupiqueur/.npm-packages/bin'
+]
+
 # Options
 skip_welcome_message = true
 
@@ -197,8 +213,33 @@ startup = [
   '''
 ]
 
+# Environment variables
 [env]
-SHELL = 'nu'
-# kakoune.cr
-# https://github.com/alexherbo2/kakoune.cr
+
+# Manual paths
+MANPATH = '/home/taupiqueur/.npm-packages/share/man:'
+
+# User identifier
+# Note: On Bash, UID is a read-only variable.
+UID = '1000'
+
+# Temporary folder
+TMPDIR = '/run/user/1000'
+
+# XDG
+XDG_CONFIG_HOME = '/home/taupiqueur/.config'
+XDG_CACHE_HOME = '/home/taupiqueur/.cache'
+XDG_DATA_HOME = '/home/taupiqueur/.local/share'
+
+# Applications
 EDITOR = 'kcr edit'
+BROWSER = 'chromium'
+KAKOUNE_POSIX_SHELL = '/run/current-system/sw/bin/dash'
+MANPAGER = 'kak-man-pager'
+GIT_HUB = '/home/taupiqueur/repositories'
+
+# ripgrep
+RIPGREP_CONFIG_PATH = '/home/taupiqueur/.config/ripgrep/rc'
+
+# fzf
+FZF_DEFAULT_OPTS = '--multi --layout=reverse --preview-window=down:60%'

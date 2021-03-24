@@ -7,9 +7,6 @@ window:
     columns: 80
     lines: 24
 
-shell:
-  program: nu
-
 font:
   normal:
     family: PragmataPro

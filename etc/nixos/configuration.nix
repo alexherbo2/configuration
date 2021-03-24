@@ -128,6 +128,7 @@ in
     # In other words, set a bunch of options for us.
     # https://nixos.org/nixos/options.html#isNormalUser
     isNormalUser = true;
+    shell = pkgs.nushell;
     extraGroups = [
       "audio"
       "disk"

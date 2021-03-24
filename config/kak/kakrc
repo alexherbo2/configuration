@@ -254,11 +254,6 @@ plug connect projects/connect.kak %{
   require-module connect-fzf
   require-module connect-broot
   require-module connect-dolphin
-
-  # Environment variables
-  set-option global connect_environment %{
-    export SHELL=nu
-  }
 }
 
 plug current-word-highlighter projects/current-word-highlighter.kak %{
