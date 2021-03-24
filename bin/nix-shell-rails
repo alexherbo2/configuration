@@ -1,0 +1,3 @@
+#!/bin/sh
+
+nix-shell --packages rubyPackages_2_7.railties "$@"
