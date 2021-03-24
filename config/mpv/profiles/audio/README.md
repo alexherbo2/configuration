@@ -7,5 +7,5 @@ Turn mpv into a music player.
 Add an alias to your bashrc:
 
 ``` bash
-alias ma='mpv -config-dir="$XDG_CONFIG_HOME/mpv/profiles/audio"'
+alias ma='mpv -config-dir ~/.config/mpv/profiles/audio'
 ```

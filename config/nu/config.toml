@@ -185,13 +185,13 @@ startup = [
   alias m = mpv
 
   # mpv – image
-  alias mi = mpv -config-dir="$XDG_CONFIG_HOME/mpv/profiles/image"
+  alias mi = mpv -config-dir ~/.config/mpv/profiles/image
 
   # mpv – audio
-  alias ma = mpv -config-dir="$XDG_CONFIG_HOME/mpv/profiles/audio"
+  alias ma = mpv -config-dir ~/.config/mpv/profiles/audio
 
   # mpv – filter
-  alias mx = mpv -config-dir="$XDG_CONFIG_HOME/mpv/profiles/filter"
+  alias mx = mpv -config-dir ~/.config/mpv/profiles/filter
 
   # https://ytdl-org.github.io/youtube-dl/
   alias y = youtube-dl
@@ -218,18 +218,6 @@ startup = [
 
 # Manual paths
 MANPATH = '/home/taupiqueur/.npm-packages/share/man:'
-
-# User identifier
-# Note: On Bash, UID is a read-only variable.
-UID = '1000'
-
-# Temporary folder
-TMPDIR = '/run/user/1000'
-
-# XDG
-XDG_CONFIG_HOME = '/home/taupiqueur/.config'
-XDG_CACHE_HOME = '/home/taupiqueur/.cache'
-XDG_DATA_HOME = '/home/taupiqueur/.local/share'
 
 # Applications
 EDITOR = 'kcr edit'

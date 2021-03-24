@@ -4,6 +4,9 @@
 # https://crystal-lang.org
 # https://crystal-lang.org/install/from_sources/
 
+# Environment variables
+export XDG_DATA_HOME=${XDG_DATA_HOME:-~/.local/share}
+
 # Fetch the latest Crystal release.
 crystal-fetch-latest
 
