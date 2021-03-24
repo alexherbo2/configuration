@@ -7,7 +7,6 @@ plug plug projects/plug.kak %{
   # Install plugins and build them.
   define-command plug-upgrade -docstring 'plug-upgrade' %{
     plug-install
-    plug-execute connect make install
     plug-execute lsp cargo build --release
   }
 }
@@ -249,13 +248,6 @@ plug chronic projects/chronic.kak %{
   map -docstring 'Chronic' global insert <c-t> '<esc>: enter-user-mode chronic-insert<ret>'
 }
 
-plug connect projects/connect.kak %{
-  # Modules
-  require-module connect-fzf
-  require-module connect-broot
-  require-module connect-dolphin
-}
-
 plug current-word-highlighter projects/current-word-highlighter.kak %{
   current-word-highlighter-enable
 }
@@ -347,8 +339,6 @@ plug phantom projects/phantom.kak %{
   phantom-enable
   phantom-add-mappings
 }
-
-plug prelude projects/prelude.kak
 
 plug rails projects/rails.kak %{
   rails-detect
@@ -457,10 +447,6 @@ plug word-select projects/word-select.kak %{
 }
 
 plug yank-ring projects/yank-ring.kak %{
-  # Modules
-  require-module yank-ring-connect
-
-  # Enable yank-ring
   yank-ring-enable
 }
 
