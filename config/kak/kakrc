@@ -11,7 +11,7 @@ plug plug projects/plug.kak %{
   }
 }
 
-plug tip projects/tip.kak %{
+nop plug tip projects/tip.kak %{
   # Display the tip of the day
   tip-of-the-day
 
@@ -226,8 +226,6 @@ plug auto-pairs projects/auto-pairs.kak %{
   auto-pairs-enable
 }
 
-plug batch projects/batch.kak
-
 plug bc projects/bc.kak %{
   map -docstring 'bc' global normal = ': bc-prompt<ret>'
   # map -docstring 'Repeat bc' global normal + ': bc-prompt<ret><up><ret>'
@@ -269,8 +267,8 @@ plug explore projects/explore.kak %{
   explore-enable
 
   # Configure the file explorer
-  alias global explore-files fzf-files
-  alias global explore-buffers fzf-buffers
+  define-command explore-files -params .. '+ kcr-fzf-files %arg{@}'
+  define-command explore-buffers -params .. '+ kcr-fzf-buffers %arg{@}'
 }
 
 plug-old find https://github.com/occivink/kakoune-find
@@ -446,7 +444,7 @@ plug word-select projects/word-select.kak %{
   word-select-add-mappings
 }
 
-plug yank-ring projects/yank-ring.kak %{
+nop plug yank-ring projects/yank-ring.kak %{
   yank-ring-enable
 }
 
