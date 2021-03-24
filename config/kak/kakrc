@@ -28,6 +28,11 @@ plug-core %{
   set-option -add global ui_options ncurses_assistant=cat
   set-option -add global ui_options ncurses_set_title=no
 
+  # Delete scratch message
+  hook -group delete-scratch-message global BufCreate '\Q*scratch*' %{
+    execute-keys '%d'
+  }
+
   # Color scheme
   # Dracula theme for Kakoune
   # https://draculatheme.com/kakoune
