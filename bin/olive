@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# Olive
+# https://olivevideoeditor.org
+
+appimage-run ~/Downloads/Olive-3c2da0a9-Linux-x86_64.AppImage
