@@ -1,4 +1,4 @@
-{ stdenv, appimageTools, fetchurl }:
+{ lib, appimageTools, fetchurl }:
 
 let
   pname = "olive-editor";
@@ -15,7 +15,7 @@ appimageTools.wrapType2 rec {
 
   extraInstallCommands = "mv $out/bin/${name} $out/bin/${pname}";
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "A free and open-source non-linear video editor";
     longDescription = ''
       A free and open-source non-linear video editor.

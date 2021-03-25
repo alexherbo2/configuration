@@ -1,4 +1,4 @@
-{ stdenv, appimageTools, fetchurl }:
+{ lib, appimageTools, fetchurl }:
 
 let
   pname = "ankama-launcher";
@@ -15,7 +15,7 @@ appimageTools.wrapType2 rec {
 
   extraInstallCommands = "mv $out/bin/${name} $out/bin/${pname}";
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "Ankama Launcher";
     longDescription = ''
       Ankama Launcher

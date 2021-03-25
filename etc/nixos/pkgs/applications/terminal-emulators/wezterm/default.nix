@@ -1,4 +1,4 @@
-{ stdenv, appimageTools, fetchurl }:
+{ lib, appimageTools, fetchurl }:
 
 let
   pname = "wezterm";
@@ -15,7 +15,7 @@ appimageTools.wrapType2 rec {
 
   extraInstallCommands = "mv $out/bin/${name} $out/bin/${pname}";
 
-  meta = with stdenv.lib; {
+  meta = with lib; {
     description = "A GPU-accelerated cross-platform terminal emulator and multiplexer";
     longDescription = ''
       A GPU-accelerated cross-platform terminal emulator and multiplexer written by @wez and implemented in Rust.
