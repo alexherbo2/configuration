@@ -367,6 +367,7 @@ in
     nushell
     obs-wlrobs
     ocaml
+    olive-editor
     opam
     openjdk
     openssl
