@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# Ankama Launcher
+# https://ankama.com
+
+appimage-run ~/Downloads/Ankama\ Launcher-Setup-x86_64.AppImage
