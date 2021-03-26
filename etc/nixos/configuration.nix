@@ -331,7 +331,7 @@ in
     light
     lispPackages.quicklisp
     llvm
-    lua
+    lua5_4
     luarocks
     lxc
     lxd
