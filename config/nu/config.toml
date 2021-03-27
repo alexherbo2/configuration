@@ -203,7 +203,7 @@ startup = [
   alias pg = password get
   alias pe = password edit
   def pm [] {
-    password get $(password menu | fzf --prompt='(p)>') |
+    password get $(password menu | fzf --header='Select a password to copy' --prompt='(p)>') |
     wl-copy
   }
 
