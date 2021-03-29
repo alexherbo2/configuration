@@ -29,8 +29,6 @@ servers:
   - '#crystal-lang'
   - '#css'
   - '#curl'
-  - '#emacs'
-  - '#evil-mode'
   - '#ffmpeg'
   - '#freebsd'
   - '#freebsd-fr'

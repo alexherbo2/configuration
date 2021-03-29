@@ -264,7 +264,6 @@ in
     dunst
     ecmtools
     elixir
-    emacs
     exa
     fceux
     fd
