@@ -349,8 +349,6 @@ in
     msmtp
     mupen64plus
     mysql
-    neovim
-    neovim-qt
     nestopia
     nettools
     networkmanager
@@ -435,8 +433,6 @@ in
     unrar
     unzip
     vanilla-dmz
-    vim
-    vimHugeX
     # Remove VirtualBox from systemPackages to start VMs as a user.
     # virtualbox
     vivaldi

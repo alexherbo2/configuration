@@ -46,7 +46,6 @@ servers:
   - '#lua'
   - '#mpv'
   - '#mpv-android'
-  - '#neovim'
   - '#nixos'
   - '#password'
   - '#ruby'
@@ -55,5 +54,3 @@ servers:
   - '#sway'
   - '#termux'
   - '#thelounge'
-  - '#vim'
-  - '#vim-fr'
