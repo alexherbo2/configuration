@@ -55,6 +55,5 @@ servers:
   - '#sway'
   - '#termux'
   - '#thelounge'
-  - '#tmux'
   - '#vim'
   - '#vim-fr'

@@ -132,7 +132,6 @@ plug-core %{
   define-command -docstring 'Open kakrc' edit-kakoune 'edit ~/.config/kak/kakrc'
   define-command -docstring 'Open krabby/config.js' edit-krabby 'edit ~/.config/krabby/config.js'
   define-command -docstring 'Open configuration.nix' edit-nixos 'edit /etc/nixos/configuration.nix'
-  define-command -docstring 'Open tmux.conf' edit-tmux 'edit ~/.tmux.conf'
   define-command -docstring 'Open git/config' edit-git 'edit ~/.config/git/config'
   define-command -docstring 'Open sway/config' edit-sway 'edit ~/.config/sway/config'
   define-command -docstring 'Open nu/config.toml' edit-nu 'edit ~/.config/nu/config.toml'

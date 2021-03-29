@@ -430,7 +430,6 @@ in
     tigervnc
     tiny
     tldr
-    tmux
     tor
     translate-shell
     unrar
