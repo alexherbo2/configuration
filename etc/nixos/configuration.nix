@@ -320,7 +320,6 @@ in
     kak-lsp
     kakoune
     kanshi
-    kdenlive
     kotlin
     lazygit
     leiningen
