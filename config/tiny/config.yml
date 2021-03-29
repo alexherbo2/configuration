@@ -22,7 +22,6 @@ servers:
   - '#archlinux'
   - '#bash'
   - '#batch'
-  - '#bspwc'
   - '#chromium'
   - '#chromium-extensions'
   - '#chromium-support'

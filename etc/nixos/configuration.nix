@@ -239,7 +239,6 @@ in
     blender
     brave
     broot
-    # bspwc
     cabal-install
     cachix
     cage
