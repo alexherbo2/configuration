@@ -444,7 +444,6 @@ in
     vivaldi
     vscode
     # waybar
-    # waybox
     wayland
     wev
     wezterm
