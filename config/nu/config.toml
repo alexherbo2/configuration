@@ -140,7 +140,7 @@ startup = [
 
   # GitHub CLI
   # https://cli.github.com
-  alias gist = gh gist create
+  alias gist = gh gist create --web
   alias gv = gh repo view --web
 
   def gc [repository] {
