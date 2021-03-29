@@ -135,7 +135,6 @@ plug-core %{
   define-command -docstring 'Open tmux.conf' edit-tmux 'edit ~/.tmux.conf'
   define-command -docstring 'Open git/config' edit-git 'edit ~/.config/git/config'
   define-command -docstring 'Open sway/config' edit-sway 'edit ~/.config/sway/config'
-  define-command -docstring 'Open wayfire.ini' edit-wayfire 'edit ~/.config/wayfire.ini'
   define-command -docstring 'Open nu/config.toml' edit-nu 'edit ~/.config/nu/config.toml'
   define-command -docstring 'Open alacritty/alacritty.yml' edit-alacritty 'edit ~/.config/alacritty/alacritty.yml'
   define-command -docstring 'Open kitty.conf' edit-kitty 'edit ~/.config/kitty/kitty.conf'

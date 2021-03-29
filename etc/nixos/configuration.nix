@@ -445,7 +445,6 @@ in
     vscode
     # waybar
     # waybox
-    wayfire
     wayland
     wev
     wezterm
