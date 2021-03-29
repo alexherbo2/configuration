@@ -47,13 +47,12 @@ startup = [
   # Keyboard
   alias kbd = swaymsg input 1:1:AT_Translated_Set_2_keyboard events toggle
 
-  # clone
-  # https://github.com/alexherbo2/clone
-  alias cp = clone
+  # rsync
+  # https://rsync.samba.org
+  alias cp = rsync --archive --compress --hard-links --info=progress2 --delete
 
-  # trash
-  # https://github.com/alexherbo2/trash
-  alias rm = trash
+  # rm
+  alias rm = rm -rf --trash
   alias rm! = rm -rf ~/.local/share/Trash
 
   # bat
@@ -144,10 +143,9 @@ startup = [
   alias gist = gh gist create
   alias gv = gh repo view --web
 
-  # git-hub
-  # https://github.com/alexherbo2/git-hub
-  alias gcp = git-hub-clone
-  alias gu = git-hub-update
+  def gc [repository] {
+    gh repo clone $repository `~/repositories/github.com/{{$repository}}`
+  }
 
   # Broot
   # https://dystroy.org/broot/
@@ -225,7 +223,6 @@ EDITOR = 'kcr edit'
 BROWSER = 'chromium'
 KAKOUNE_POSIX_SHELL = '/run/current-system/sw/bin/dash'
 MANPAGER = 'kak-man-pager'
-GIT_HUB = '/home/taupiqueur/repositories'
 
 # ripgrep
 RIPGREP_CONFIG_PATH = '/home/taupiqueur/.config/ripgrep/rc'
