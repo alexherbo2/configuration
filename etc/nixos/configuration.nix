@@ -442,7 +442,7 @@ in
     # virtualbox
     vivaldi
     vscode
-    # waybar
+    waybar
     wayland
     wev
     wezterm
