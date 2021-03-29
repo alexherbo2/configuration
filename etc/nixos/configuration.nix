@@ -428,7 +428,6 @@ in
     translate-shell
     unrar
     unzip
-    vanilla-dmz
     # Remove VirtualBox from systemPackages to start VMs as a user.
     # virtualbox
     vivaldi
