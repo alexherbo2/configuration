@@ -226,6 +226,7 @@ in
     aircrack-ng
     alacritty
     albert
+    amarok
     android-file-transfer
     apacheHttpd
     appimagekit
