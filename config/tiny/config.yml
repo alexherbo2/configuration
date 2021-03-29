@@ -23,7 +23,6 @@ servers:
   - '#bash'
   - '#batch'
   - '#bspwc'
-  - '#bspwm'
   - '#chromium'
   - '#chromium-extensions'
   - '#chromium-support'
