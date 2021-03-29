@@ -5,7 +5,6 @@
 path = [
   '/home/taupiqueur/configuration/bin',
   '/home/taupiqueur/configuration/local/bin',
-  '/home/taupiqueur/configuration/install/bin',
   '/home/taupiqueur/configuration/src/crystal/bin',
   '/home/taupiqueur/.bin',
   '/home/taupiqueur/.local/bin',
@@ -14,7 +13,14 @@ path = [
   '/home/taupiqueur/.cabal/bin',
   '/home/taupiqueur/go/bin',
   'node_modules/.bin',
-  '/home/taupiqueur/.npm-packages/bin'
+  '/home/taupiqueur/.npm-packages/bin',
+
+  # Tools
+  '/home/taupiqueur/projects/git-churn/bin',
+  '/home/taupiqueur/projects/git-gc-all-ferocious/bin',
+  '/home/taupiqueur/projects/kakoune/src',
+  '/home/taupiqueur/projects/pager.kak/bin',
+  '/home/taupiqueur/repositories/github.com/Blacksmoke16/oq/bin'
 ]
 
 # Options

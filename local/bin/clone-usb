@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sudo clone ~/root ~/Disk/USB
+sudo rsync -azH --info=progress2 --delete ~/root ~/Disk/USB
 status=$?
 if test -n "$DISPLAY"; then
   if test "$status" = 0; then

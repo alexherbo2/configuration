@@ -1,6 +1,6 @@
 #!/bin/sh
 
-sudo clone ~/root ~/downstream ~/Disk/Disk
+sudo rsync -azH --info=progress2 --delete ~/root ~/downstream ~/Disk/Disk
 status=$?
 if test -n "$DISPLAY"; then
   if test "$status" = 0; then
