@@ -438,7 +438,6 @@ in
     waybar
     wayland
     wev
-    wezterm
     wf-recorder
     wget
     winetricks
