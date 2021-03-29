@@ -11,14 +11,6 @@ plug plug projects/plug.kak %{
   }
 }
 
-nop plug tip projects/tip.kak %{
-  # Display the tip of the day
-  tip-of-the-day
-
-  # Browse tips
-  map -docstring 'Browse tips' global normal <F2> ': tip-browse<ret>'
-}
-
 plug-core %{
   # Options ────────────────────────────────────────────────────────────────────
 
