@@ -397,7 +397,6 @@ in
     sddm-kcm
     shards
     shellcheck
-    shotcut
     skim
     slurp
     smartmontools
