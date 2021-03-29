@@ -321,7 +321,6 @@ in
     kakoune
     kanshi
     kdenlive
-    kitty
     kotlin
     lazygit
     leiningen

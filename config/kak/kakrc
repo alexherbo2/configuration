@@ -128,7 +128,6 @@ plug-core %{
   define-command -docstring 'Open sway/config' edit-sway 'edit ~/.config/sway/config'
   define-command -docstring 'Open nu/config.toml' edit-nu 'edit ~/.config/nu/config.toml'
   define-command -docstring 'Open alacritty/alacritty.yml' edit-alacritty 'edit ~/.config/alacritty/alacritty.yml'
-  define-command -docstring 'Open kitty.conf' edit-kitty 'edit ~/.config/kitty/kitty.conf'
   define-command -docstring 'Open wezterm.lua' edit-wezterm 'edit ~/.config/wezterm/wezterm.lua'
   define-command -docstring 'Open mpv.conf' edit-mpv 'edit ~/.config/mpv/mpv.conf'
   define-command -docstring 'Open mpv/input.conf' edit-mpv-input 'edit ~/.config/mpv/input.conf'
