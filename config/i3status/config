@@ -1,5 +1,0 @@
-order = "time"
-
-time {
-  format = "%a %b %-d %Y · %-I:%M %p"
-}

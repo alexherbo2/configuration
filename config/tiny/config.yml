@@ -33,7 +33,6 @@ servers:
   - '#freebsd'
   - '#freebsd-fr'
   - '#html'
-  - '#i3'
   - '#inkscape'
   - '##javascript'
   - '#jq'
