@@ -373,7 +373,6 @@ in
     pdftk
     plan9port
     plasma-desktop
-    polybar
     procs
     pueue
     python39
