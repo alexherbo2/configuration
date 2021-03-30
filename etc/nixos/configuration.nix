@@ -403,7 +403,6 @@ in
     sqlitebrowser
     squashfsTools
     sshfs
-    st
     starship
     steam
     sway
