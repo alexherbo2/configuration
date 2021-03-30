@@ -436,14 +436,7 @@ in
     wlr-randr
     wofi
     xboxdrv
-    xclip
-    xcompmgr
     xdg_utils
-    xdotool
-    xorg.xev
-    xorg.xinit
-    xorg.xkbcomp
-    xorg.xmodmap
     xwayland
     yarn
     youtube-dl
