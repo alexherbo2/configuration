@@ -231,6 +231,10 @@ startup = [
 # Environment variables
 [env]
 
+# Current shell
+# Useful to open a new terminal in Kakoune.
+SHELL = '/run/current-system/sw/bin/nu'
+
 # Manual paths
 MANPATH = '/home/taupiqueur/.npm-packages/share/man:'
 
