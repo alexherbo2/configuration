@@ -1,5 +1,13 @@
 #!/bin/sh
 
-wl-copy https://youtube.com/channel/UCv9nzkds34PnGOu6u_QvVBQ/live
-password=$(password get alexherbo2@live.youtube.com)
-wf-recorder --audio --muxer flv -f "rtmp://a.rtmp.youtube.com/live2/$password"
+# YouTube Live Stream
+chromium https://studio.youtube.com/channel/UC/livestreaming
+
+# Go live?
+echo 'Press [y]es to go live'
+read key
+[ "$key" = 'y' ] || exit 1
+
+# Redirect output to hide stream key
+stream_key=$(password get alexherbo2@live.youtube.com)
+wf-recorder --audio --muxer flv -f "rtmp://a.rtmp.youtube.com/live2/$stream_key" > /dev/null 2>&1
