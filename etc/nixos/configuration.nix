@@ -262,7 +262,6 @@ in
     exa
     fceux
     fd
-    fdm
     feh
     ffmpeg-full
     figlet
@@ -337,7 +336,6 @@ in
     mongodb
     mosh
     mpv
-    msmtp
     mupen64plus
     mysql
     nestopia
@@ -350,7 +348,6 @@ in
     nmap
     nnn
     nodejs_latest
-    notmuch
     ntfs3g
     nushell
     obs-wlrobs
