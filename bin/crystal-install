@@ -5,25 +5,21 @@
 # Releases: https://github.com/crystal-lang/crystal/releases
 # Latest: https://github.com/crystal-lang/crystal/releases/latest
 
-# Install Crystal from sources
-# https://crystal-lang.org/install/from_sources/
-#
-# “To compile Crystal, you need Crystal :)”
-#
-
 # Usage:
 #
-# $ crystal-fetch-latest
+# $ crystal-install
 #
-# Add ~/.local/share/crystal/releases/latest/bin to your path when building Crystal.
+# Add ~/.local/share/crystal/releases/latest/bin to your path.
 
 # Environment variables ────────────────────────────────────────────────────────
 
 XDG_DATA_HOME=${XDG_DATA_HOME:-~/.local/share}
 XDG_CACHE_HOME=${XDG_CACHE_HOME:-~/.cache}
 
-DATA=$XDG_DATA_HOME/crystal/releases/latest
-CACHE=$XDG_CACHE_HOME/crystal/releases/latest
+DATA=$XDG_DATA_HOME/crystal
+
+STAGE=$(mktemp -d)
+trap 'rm -Rf "$STAGE"' EXIT
 
 # Main program ─────────────────────────────────────────────────────────────────
 
@@ -32,26 +28,43 @@ main() {
   os=$(get_os)
   arch=$(get_arch)
 
+  # Version
+  version=$(get_version)
+
+  # Releases
+  releases_path=$DATA/releases
+  release_path=$releases_path/$version
+  latest_release_path=$releases_path/latest
+
   # Download link
   download_link=$(get_download_link)
   archive_name=$(basename "$download_link")
   # crystal-{version}-1-{os}-{arch}.tar.gz ⇒ crystal-{version}-1
   file_name=$(basename "$archive_name" "-${os}-${arch}.tar.gz")
 
-  # Clean data and cache
-  rm -Rf "$DATA" "$CACHE"
-  mkdir -p "$DATA" "$CACHE"
+  # Print information
+  echo releases_path: "$releases_path"
+  echo release_path: "$release_path"
+  echo latest_release_path: "$latest_release_path"
+  echo download_link: "$download_link"
+  echo custom_path: "$latest_release_path/bin"
 
-  # Navigate into the cache directory and extract the latest release.
-  cd "$CACHE"
-  curl -sSL --remote-name "$download_link"
-  tar xf "$archive_name"
-  # Move to (not into) the destination:
-  rmdir "$DATA"
-  mv "$file_name" "$DATA"
+  # Create releases
+  mkdir -p "$releases_path"
 
-  # Output
-  find "$DATA/bin"
+  # Download the release
+  if ! test -e "$release_path"; then
+    # Navigate into the stage directory and extract the release.
+    cd "$STAGE"
+    curl -sSL --remote-name "$download_link"
+    tar xf "$archive_name"
+    mv "$file_name" "$release_path"
+  fi
+
+  # Symlink the latest release
+  cd "$releases_path"
+  rm -f latest
+  ln -s "$version" latest
 }
 
 # Utility functions ────────────────────────────────────────────────────────────

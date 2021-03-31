@@ -5,7 +5,7 @@
 path = [
   '/home/taupiqueur/configuration/bin',
   '/home/taupiqueur/configuration/local/bin',
-  '/home/taupiqueur/configuration/src/crystal/bin',
+  '/home/taupiqueur/.local/share/crystal/releases/latest/bin',
   '/home/taupiqueur/.bin',
   '/home/taupiqueur/.local/bin',
   '/home/taupiqueur/.gem/ruby/2.7.0/bin',
