@@ -1,5 +1,0 @@
-#!/bin/sh
-
-export NIXPKGS_ALLOW_UNFREE=1
-cd /etc/nixos/pkgs/games/ankama-launcher
-nix-build-nixpkgs
