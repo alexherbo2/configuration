@@ -1,7 +1,8 @@
 #!/bin/sh
 
-cat > shell.nix <<'EOF'
+cat > shell.nix <<EOF
 with import <nixpkgs> {};
+
 mkShell {
   buildInputs = [];
 }
