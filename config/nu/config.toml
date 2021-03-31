@@ -39,6 +39,10 @@ startup = [
   alias _ = rm -rf
   alias md = mkdir
 
+  # NixOS
+  # https://nixos.org
+  alias ns = nix-shell --command nu
+
   # Sleep
   alias z = systemctl suspend
   alias zz = swaymsg exit
