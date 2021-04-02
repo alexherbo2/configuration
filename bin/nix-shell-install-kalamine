@@ -1,3 +1,6 @@
 #!/bin/sh
 
-nix-shell --packages python38 python38Packages.pip python38Packages.setuptools libxml2 libxslt --run 'pip install --user kalamine'
+# Kalamine
+# https://github.com/fabi1cazenave/kalamine
+
+nix-shell --packages python39 python39Packages.pip python39Packages.setuptools libxml2 libxslt --run 'pip install --user kalamine'
