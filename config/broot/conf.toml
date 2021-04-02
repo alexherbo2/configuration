@@ -12,6 +12,11 @@ default_flags = 'gi'
 
 # Commands ─────────────────────────────────────────────────────────────────────
 
+# Quit
+[[verbs]]
+key = 'q'
+execution = ':quit'
+
 # Toggle hidden files
 [[verbs]]
 key = '.'
