@@ -1,10 +1,10 @@
 #!/bin/sh
 
+# Kakoune
+# https://kakoune.org
+
 cd ~/projects/kakoune
 git pull upstream master
 git push
 cd src
-nix-shell --packages pkg-config ncurses --run '
-  make -j 8
-  strip -s kak
-'
+nix-shell --packages pkg-config ncurses --run 'make -j 8'
