@@ -210,237 +210,343 @@ in
 
   # Packages ───────────────────────────────────────────────────────────────────
 
-  # Page: https://nixos.org/nixos/packages.html
-  # To search, run:
-  # $ nix search {query}
-  environment.systemPackages = with pkgs; [
-    _3mux
-    acpi
-    aegisub
-    aerc
-    aircrack-ng
-    alacritty
-    albert
-    amarok
-    android-file-transfer
-    apacheHttpd
-    appimagekit
-    appimage-run
-    archiver
-    asciidoc
-    asciinema
-    bash
-    bat
-    bc
-    blender
-    brave
-    broot
-    cabal-install
-    cachix
-    cage
-    # calibre
-    cargo
-    ccl
-    celluloid
-    chromium
-    clang
-    clojure
-    cockatrice
-    crystal
-    ctags
-    curl
-    dash
-    dejavu_fonts
-    desmume
-    discord
-    docker
-    dolphin
-    dolphinEmu
-    dunst
-    ecmtools
-    elixir
-    exa
-    fceux
-    fd
-    feh
-    ffmpeg-full
-    figlet
-    file
-    firefox
-    flow
-    font-awesome
-    fuse
-    fzf
-    fzy
-    gcc
-    gdb
-    ghc
-    gimp
-    git
-    gitAndTools.diff-so-fancy
-    gitAndTools.gh
-    gitAndTools.gitui
-    gitkraken
-    git-lfs
-    gitter
-    glow
-    gnumake
-    gnupg
-    go
-    google-chrome
-    gotty
-    gource
-    gparted
-    gptfdisk
-    graphviz
-    grim
-    gsmartcontrol
-    gtkpod
-    guile
-    heroku
-    hfsprogs
-    higan
-    htop
-    hugo
-    hunspell
-    hunspellDicts.en-us
-    img2pdf
-    inkscape
-    inotify-tools
-    iw
-    janet
-    jq
-    kak-lsp
-    kakoune
-    kanshi
-    kotlin
-    lazygit
-    leiningen
-    libnotify
-    light
-    lispPackages.quicklisp
-    llvm
-    lua5_4
-    luarocks
-    lxc
-    lxd
-    lzip
-    mako
-    maven
-    mediainfo
-    mednafen
-    mednaffe
-    meson
-    mgba
-    mkvtoolnix
-    mongodb
-    mosh
-    mpv
-    mupen64plus
-    mysql
-    nestopia
-    nettools
-    networkmanager
-    nginx
-    nim
-    ninja
-    nix-index
-    nmap
-    nnn
-    nodejs_latest
-    ntfs3g
-    nushell
-    obs-wlrobs
-    ocaml
-    olive-editor
-    opam
-    openjdk
-    openssl
-    opera
-    p7zip
-    pandoc
-    par
-    parted
-    pastel
-    pavucontrol
-    pcre
-    pcsx2
-    pcsxr
-    pdftk
-    plan9port
-    plasma-desktop
-    procs
-    pueue
-    python39
-    python39Packages.pip
-    qemu
-    redshift
-    retroarch
-    ripgrep
-    ruby_2_7
-    rustc
-    rustup
-    sbcl
-    scala
-    scry
-    sddm
-    sddm-kcm
-    shards
-    shellcheck
-    skim
-    slurp
-    smartmontools
-    snes9x-gtk
-    socat
-    solargraph
-    sox
-    spotify
-    sqlite
-    sqlitebrowser
-    squashfsTools
-    sshfs
-    starship
-    steam
-    sway
-    swaybg
-    swayidle
-    swaylock
-    synapse-bt
-    tdesktop
-    teamviewer
-    tectonic
-    thelounge
-    tigervnc
-    tiny
-    tldr
-    tor
-    translate-shell
-    unrar
-    unzip
-    # Remove VirtualBox from systemPackages to start VMs as a user.
-    # virtualbox
-    vivaldi
-    vscode
-    waybar
-    wayland
-    wev
-    wf-recorder
-    wget
-    winetricks
-    wine
-    wl-clipboard
-    wlogout
-    wlr-randr
-    wofi
-    xboxdrv
-    xdg_utils
-    xwayland
-    yarn
-    youtube-dl
-    zathura
-    zig
-    zip
-    zsnes
-  ];
+  # https://nixos.org/nixos/packages.html
 
+  environment.systemPackages = with pkgs; [
+
+    # Terminals ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+
+    alacritty # https://github.com/alacritty/alacritty
+
+    # Terminal multiplexers
+    # tab-rs
+    # https://github.com/austinjones/tab-rs
+    pueue # https://github.com/Nukesor/pueue
+
+    # Fuzzy finders
+    fzf # https://github.com/junegunn/fzf
+
+    # Terminal tools
+    tldr # man – https://tldr.sh
+    glow # Markdown – https://github.com/charmbracelet/glow
+
+    # Terminal utils
+    fd # find – https://github.com/sharkdp/fd
+    bat # cat – https://github.com/sharkdp/bat
+    pastel # https://github.com/sharkdp/pastel
+    ripgrep # grep – https://github.com/BurntSushi/ripgrep
+    procs # ps – https://github.com/dalance/procs
+
+    # Shells ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+
+    nushell # https://nushell.sh
+    dash # http://gondor.apana.org.au/~herbert/dash/
+
+    # Shell prompts
+    starship # https://starship.rs
+
+    # Text editors ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+
+    kakoune # https://kakoune.org
+    kak-lsp # https://github.com/kak-lsp/kak-lsp
+
+    # File managers ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+
+    dolphin # https://apps.kde.org/en/dolphin
+    broot # https://dystroy.org/broot/
+
+    # Git ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+
+    git # https://git-scm.com
+    gitAndTools.gh # https://cli.github.com
+    gitAndTools.gitui # https://github.com/extrawurst/gitui
+
+    # Email clients ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+
+    aerc # https://aerc-mail.org
+
+    # Torrents ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+
+    synapse-bt # https://synapse-bt.org
+
+    # IRC ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+
+    thelounge # https://thelounge.chat
+
+    # Web browsers ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+
+    chromium # https://chromium.org
+
+    # For testing
+    google-chrome # https://google.com/chrome/
+    firefox # https://mozilla.org/firefox/
+    opera # https://opera.com
+    vivaldi # https://vivaldi.com
+    brave # https://brave.com
+
+    # Media players ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+
+    mpv # https://mpv.io
+
+    # Dependencies for mpv scripts
+    translate-shell # https://www.soimort.org/translate-shell/
+
+    # Utils
+    ffmpeg-full # FFmpeg https://ffmpeg.org
+    youtube-dl # https://yt-dl.org
+
+    # Videos editors ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+
+    olive-editor # https://olivevideoeditor.org
+
+    # Image editors ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+
+    inkscape # https://inkscape.org
+    gimp # https://gimp.org
+
+    # Document viewers ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+
+    zathura # https://pwmt.org/projects/zathura/
+
+    # Document converters
+    pandoc # https://pandoc.org
+    tectonic # https://tectonic-typesetting.github.io
+    img2pdf # https://gitlab.mister-muffin.de/josch/img2pdf
+
+    # Desktop environments ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+
+    plasma-desktop # https://kde.org
+
+    # Login managers
+    sddm # https://github.com/sddm/sddm
+    sddm-kcm # https://github.com/KDE/sddm-kcm
+
+    # Networking
+    networkmanager # https://wiki.gnome.org/Projects/NetworkManager
+
+    # Audio
+    pavucontrol # https://freedesktop.org/software/pulseaudio/pavucontrol/
+
+    # Backlight
+    light # https://haikarainen.github.io/light/
+    redshift-wlr # http://jonls.dk/redshift/ (Wayland patch)
+
+    # Fonts
+    dejavu_fonts # https://dejavu-fonts.github.io
+    font-awesome # https://fontawesome.com
+
+    # Wayland ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+
+    # Wayland
+    wayland # https://wayland.freedesktop.org
+    xwayland # https://wayland.freedesktop.org/xserver.html
+
+    # Sway
+    sway # https://swaywm.org
+    swaybg # https://github.com/swaywm/swaybg
+    swayidle # https://github.com/swaywm/swayidle
+    swaylock # https://github.com/swaywm/swaylock
+
+    # Status bars
+    waybar # https://github.com/Alexays/Waybar
+
+    # Services
+    kanshi # Output configuration – https://wayland.emersion.fr/kanshi/
+    mako # Notifications – https://wayland.emersion.fr/mako/
+
+    # Clipboard
+    wl-clipboard # https://github.com/bugaevc/wl-clipboard
+
+    # Screenshots
+    grim # https://wayland.emersion.fr/grim/
+    slurp # https://wayland.emersion.fr/slurp/
+
+    # Screencast
+    wf-recorder # https://github.com/ammen99/wf-recorder
+
+    # Utils
+    wev # https://git.sr.ht/~sircmpwn/wev
+    wlr-randr # https://github.com/emersion/wlr-randr
+
+    # Messaging ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+
+    discord # https://discord.com
+    gitter # https://gitter.im
+
+    # Games ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+
+    steam # https://store.steampowered.com
+    retroarch # https://retroarch.com
+
+    # Game emulators
+    # https://emulation.gametechwiki.com
+    # mesen
+    # NES – https://mesen.ca
+    nestopia # NES – http://0ldsk00l.ca/nestopia/
+    higan # SNES – https://higan.dev (formerly bsnes)
+    mupen64plus # Nintendo 64 – https://mupen64plus.org
+    # m64p
+    # Mupen64Plus GUI – https://github.com/loganmc10/m64p
+    # sameboy
+    # Game Boy and Game Boy Color – https://sameboy.github.io
+    mgba # GBA – https://mgba.io
+    mednafen # PlayStation 1 – https://mednafen.github.io
+    mednaffe # Mednafen GUI – https://github.com/AmatCoder/mednaffe
+    pcsx2 # PlayStation 2 – https://pcsx2.net
+    dolphinEmu # GameCube – https://dolphin-emu.org
+    melonDS # Nintendo DS – http://melonds.kuribo64.net
+
+    # Game utils
+    xboxdrv # https://xboxdrv.gitlab.io
+    ecmtools # https://github.com/alucryd/ecm-tools
+
+    # Emulators ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+
+    wine # https://winehq.org
+
+    # Virtualization ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+
+    docker # https://docker.com
+    appimage-run # https://github.com/NixOS/nixpkgs/tree/master/pkgs/tools/package-management/appimage-run
+
+    # Android ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+
+    android-file-transfer # https://whoozle.github.io/android-file-transfer-linux/
+
+    # iPod ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+
+    gtkpod # http://gtkpod.org
+
+    # Tools ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+
+    # Archivers
+    archiver # https://github.com/mholt/archiver
+    zip # http://infozip.sourceforge.net/Zip.html
+
+    # Programming languages
+    jq # https://stedolan.github.io/jq/
+    bc # https://en.wikipedia.org/wiki/Bc_(programming_language)
+
+    # Utils ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+
+    file # https://darwinsys.com/file/
+    socat # http://www.dest-unreach.org/socat/
+
+    # Filesystem
+    gparted # https://gparted.org
+    gptfdisk # https://rodsbooks.com/gdisk/
+
+    # XDG
+    xdg_utils # https://freedesktop.org/wiki/Software/xdg-utils/ (provides xdg-open)
+
+    # Notifications
+    libnotify # https://developer.gnome.org/notification-spec/ (provides notify-send)
+
+    # Web ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+
+    # Static site generators
+    hugo # https://gohugo.io
+
+    # Services
+    heroku # https://heroku.com
+
+    # Servers
+    nginx # https://nginx.org
+
+    # Database
+    sqlite # https://sqlite.org
+    sqlitebrowser # https://sqlitebrowser.org
+
+    # Programming languages ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+
+    # C
+    clang # https://clang.llvm.org
+    llvm # https://llvm.org
+
+    # Build systems
+    gnumake # https://gnu.org/software/make/
+    meson # https://mesonbuild.com
+    ninja # https://ninja-build.org
+
+    # Rust
+    # https://rust-lang.org
+    rustc
+    cargo # https://crates.io
+    rustup # https://rustup.rs
+
+    # Crystal
+    # https://crystal-lang.org
+    crystal
+    shards # https://github.com/crystal-lang/shards
+    scry # https://github.com/crystal-lang-tools/scry
+
+    # Ruby
+    # https://ruby-lang.org
+    ruby_2_7
+    solargraph # https://solargraph.org
+
+    # Elixir
+    # https://elixir-lang.org
+    elixir
+
+    # JavaScript
+    nodejs_latest # https://nodejs.org
+    yarn # https://yarnpkg.com
+    flow # https://flow.org
+
+    # OCaml
+    # https://ocaml.org
+    ocaml
+    opam # https://opam.ocaml.org
+
+    # Lua
+    # https://lua.org
+    lua5_4
+    luarocks # https://luarocks.org
+
+    # Python
+    # https://python.org
+    python39
+    python39Packages.pip # https://pip.pypa.io
+
+    # Go
+    # https://golang.org
+    go
+
+    # Haskell
+    # https://haskell.org
+    ghc # https://haskell.org/ghc/
+    cabal-install # https://hackage.haskell.org/package/cabal-install
+
+    # Nim
+    # https://nim-lang.org
+    nim
+
+    # Zig
+    # https://ziglang.org
+    zig
+
+    # Common Lisp
+    ccl # https://ccl.clozure.com
+    sbcl # http://sbcl.org
+    lispPackages.quicklisp # https://quicklisp.org
+
+    # Clojure
+    # https://clojure.org
+    clojure # https://clojure.org
+    leiningen # https://leiningen.org
+
+    # Scala
+    # https://scala-lang.org
+    scala
+
+    # Kotlin
+    # https://kotlinlang.org
+    kotlin
+
+    # Janet
+    # https://janet-lang.org
+    janet
+
+  ];
 }
