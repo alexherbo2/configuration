@@ -154,9 +154,9 @@ startup = [
   # https://git-scm.com
   alias g = git
 
-  # lazygit
-  # https://github.com/jesseduffield/lazygit
-  alias G = lazygit
+  # gitui
+  # https://github.com/extrawurst/gitui
+  alias G = gitui
 
   # GitHub CLI
   # https://cli.github.com
