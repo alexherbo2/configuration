@@ -1,17 +1,19 @@
 #!/bin/sh
 
-nix-shell --packages zlib libxml2 --run 'gem install nokogiri'
-nix-shell --packages postgresql_12 --run 'gem install pg'
-nix-shell --packages ruby_2_7 sqlite postgresql_12 nodejs_latest yarn zlib libffi --run 'gem install rails'
+# Rails
+nix-shell --packages sqlite postgresql_12 yarn zlib libffi --run 'gem install rails'
 nix-shell --packages sqlite --run 'gem install sqlite3'
+nix-shell --packages postgresql_12 --run 'gem install pg'
 
-gem install activerecord
-gem install byebug
-gem install faker
+# REPL
 gem install pry
+gem install byebug
 gem install pry-byebug
-gem install rake
+
+# Tools
 gem install rspec
 gem install rubocop
-gem install sinatra
 gem install solargraph
+
+# Seed
+gem install faker
