@@ -1,0 +1,6 @@
+# Pandoc
+# https://pandoc.org
+
+# Tectonic
+# https://tectonic-typesetting.github.io
+pdf-engine: tectonic

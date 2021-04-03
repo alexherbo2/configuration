@@ -215,6 +215,10 @@ startup = [
   # https://ytdl-org.github.io/youtube-dl/
   alias y = youtube-dl
 
+  # Pandoc
+  # https://pandoc.org
+  alias pandoc = pandoc --defaults ~/.config/pandoc/config.yml
+
   # Password
   # https://github.com/alexherbo2/password
   alias pc = password create
