@@ -60,6 +60,10 @@ startup = [
   # Keyboard
   alias kbd = swaymsg input 1:1:AT_Translated_Set_2_keyboard events toggle
 
+  # procs
+  # https://github.com/dalance/procs
+  alias ps = procs
+
   # rsync
   # https://rsync.samba.org
   alias cp = rsync --archive --compress --hard-links --info=progress2 --delete
