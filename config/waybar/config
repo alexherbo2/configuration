@@ -24,7 +24,7 @@
   },
   "custom/media-player": {
     "format": "",
-    "on-click": "celluloid",
+    "on-click": "find -L videos torrents | dmenu | mpv -playlist -",
     "on-click-middle": "chromium --app=https://youtube.com",
     "on-click-right": "dolphin videos"
   },
