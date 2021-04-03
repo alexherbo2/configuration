@@ -6,6 +6,7 @@ home/thelounge/logs
 home/thelounge/packages
 home/thelounge/users
 home/thelounge/vapid.json
+config/gitui/theme.ron
 config/kak/autoload/plugins
 config/snippets/base
 config/broot/launcher

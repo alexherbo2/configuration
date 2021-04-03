@@ -1,0 +1,91 @@
+// gitui
+// https://github.com/extrawurst/gitui
+//
+// Keys: https://docs.rs/crossterm/latest/crossterm/event/enum.KeyCode.html
+
+(
+  focus_right: (
+    code: Char('l'),
+    modifiers: (
+      bits: 0,
+    ),
+  ),
+  focus_left: (
+    code: Char('h'),
+    modifiers: (
+      bits: 0,
+    ),
+  ),
+  focus_above: (
+    code: Char('k'),
+    modifiers: (
+      bits: 0,
+    ),
+  ),
+  focus_below: (
+    code: Char('j'),
+    modifiers: (
+      bits: 0,
+    ),
+  ),
+  open_help: (
+    code: F(1),
+    modifiers: (
+      bits: 0,
+    ),
+  ),
+  move_left: (
+    code: Char('h'),
+    modifiers: (
+      bits: 0,
+    ),
+  ),
+  move_right: (
+    code: Char('l'),
+    modifiers: (
+      bits: 0,
+    ),
+  ),
+  home: (
+    code: Char('g'),
+    modifiers: (
+      bits: 0,
+    ),
+  ),
+  end: (
+    code: Char('G'),
+    modifiers: (
+      bits: 1,
+    ),
+  ),
+  move_up: (
+    code: Char('k'),
+    modifiers: (
+      bits: 0,
+    ),
+  ),
+  move_down: (
+    code: Char('j'),
+    modifiers: (
+      bits: 0,
+    ),
+  ),
+  shift_up: (
+    code: Char('K'),
+    modifiers: (
+      bits: 1,
+    ),
+  ),
+  shift_down: (
+    code: Char('J'),
+    modifiers: (
+      bits: 1,
+    ),
+  ),
+  stash_open: (
+    code: Char('l'),
+    modifiers: (
+      bits: 0,
+    ),
+  ),
+)
