@@ -50,8 +50,8 @@
   },
   "custom/logout": {
     "format": "",
-    "on-click": "wlogout",
-    "on-click-right": "swaylock"
+    "on-click": "swaylock",
+    "on-click-right": "systemctl suspend"
   },
   "clock": {
     "format": "{:%I:%M %p}",
