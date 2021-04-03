@@ -39,9 +39,9 @@
   },
   "custom/screenshot": {
     "format": "",
-    "on-click": "sleep 1; grim-window $(new-file).webp",
+    "on-click": "sleep 1; sway-grim-window $(new-file).webp",
     "on-click-middle": "chromium --app=https://imgur.com/upload",
-    "on-click-right": "sleep 1; grim-output $(new-file).webp"
+    "on-click-right": "sleep 1; sway-grim-output $(new-file).webp"
   },
   "custom/network": {
     "format": "",

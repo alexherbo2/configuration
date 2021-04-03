@@ -1,7 +1,0 @@
-#!/bin/sh
-
-# https://wayland.emersion.fr/grim/
-# https://wayland.emersion.fr/slurp/
-
-region=$(slurp-window)
-grim -g "$region" "$@"
