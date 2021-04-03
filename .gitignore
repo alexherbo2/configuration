@@ -7,6 +7,7 @@ home/thelounge/packages
 home/thelounge/users
 home/thelounge/vapid.json
 config/kak/autoload/plugins
+config/snippets/base
 config/broot/launcher
 config/passwords.yml
 config/mpv/socket
