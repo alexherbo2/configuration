@@ -57,6 +57,10 @@ startup = [
     mkdir ~/.cache/ssh/sessions
   }
 
+  # nginx
+  # https://nginx.org
+  alias nginx = sudo nginx -c /etc/nginx/nginx.conf
+
   # Keyboard
   alias kbd = swaymsg input 1:1:AT_Translated_Set_2_keyboard events toggle
 
