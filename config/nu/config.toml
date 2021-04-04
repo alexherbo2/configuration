@@ -16,8 +16,6 @@ path = [
   '/home/taupiqueur/.npm-packages/bin',
 
   # Tools
-  '/home/taupiqueur/projects/git-churn/bin',
-  '/home/taupiqueur/projects/git-gc-all-ferocious/bin',
   '/home/taupiqueur/projects/kakoune/src',
   '/home/taupiqueur/projects/pager.kak/bin',
   '/home/taupiqueur/repositories/github.com/Blacksmoke16/oq/bin'
