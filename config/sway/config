@@ -202,8 +202,8 @@ bindsym --to-code {
   Mod4+Shift+b border pixel
 
   # Search window
-  Mod4+slash exec sway-commander dmenu
-  Mod4+Shift+slash exec echo move workspace current, focus | sway-commander dmenu
+  Mod4+slash exec sway-commander
+  Mod4+Shift+slash exec sway-commander move workspace current, focus
 
   # Marks
   Mod4+m exec swaymsg mark $(seq 0 9 | dmenu)
@@ -263,8 +263,7 @@ bindsym --to-code {
   Mod4+y exec snippets-to-clipboard
 
   # Screenshots
-  Print exec sway-grim-window $(new-file).webp
-  Shift+Print exec sway-grim-output $(new-file).webp
+  Print exec sway-grim $(new-file).webp
 
   # Multimedia-keys ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 

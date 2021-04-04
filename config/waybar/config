@@ -1,6 +1,6 @@
 {
   "layer": "top",
-  "modules-left": ["sway/workspaces", "custom/workspace-next", "sway/mode"],
+  "modules-left": ["sway/workspaces", "sway/mode"],
   "modules-center": ["sway/window"],
   "modules-right": ["custom/launcher", "custom/file-manager", "custom/media-player", "custom/browser", "custom/terminal", "custom/screenshot", "custom/network", "disk", "pulseaudio", "backlight", "battery", "clock", "custom/logout"],
   "sway/window": {
@@ -9,10 +9,6 @@
     "on-click-right": "swaymsg floating toggle",
     "on-scroll-up": "swaymsg workspace prev_on_output",
     "on-scroll-down": "swaymsg workspace next_on_output"
-  },
-  "custom/workspace-next": {
-    "format": "",
-    "on-click": "sway-workspace-next"
   },
   "custom/launcher": {
     "format": "",
@@ -38,9 +34,8 @@
   },
   "custom/screenshot": {
     "format": "",
-    "on-click": "sleep 1; sway-grim-window $(new-file).webp",
-    "on-click-middle": "chromium --app=https://imgur.com/upload",
-    "on-click-right": "sleep 1; sway-grim-output $(new-file).webp"
+    "on-click": "sleep 1; sway-grim $(new-file).webp",
+    "on-click-right": "chromium --app=https://imgur.com/upload"
   },
   "custom/network": {
     "format": "",
