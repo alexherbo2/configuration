@@ -436,6 +436,9 @@ in
     gparted # https://gparted.org
     gptfdisk # https://rodsbooks.com/gdisk/
 
+    # Watchers
+    inotify-tools # https://github.com/inotify-tools/inotify-tools
+
     # XDG
     xdg_utils # https://freedesktop.org/wiki/Software/xdg-utils/ (provides xdg-open)
 
