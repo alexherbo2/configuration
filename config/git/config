@@ -4,7 +4,6 @@
 
 [core]
   editor = kak
-  pager = diff-so-fancy | less --tabs=4 -R -F -X
 
 [pull]
   ff = only
@@ -29,26 +28,6 @@
 [pretty]
   ; Hash | Subject | (Date (Relative) (Committer) by Author) | References
   graph = %C(green)%h %C(reset)%s %C(blue)(%cr by %an) %C(yellow bold)%d %n
-
-[diff-so-fancy]
-  markEmptyLines = false
-
-[color]
-  ui = true
-
-[color "diff-highlight"]
-  oldNormal = red bold
-  oldHighlight = red bold 52
-  newNormal = green bold
-  newHighlight = green bold 52
-
-[color "diff"]
-  meta = yellow
-  frag = magenta bold
-  commit = yellow bold
-  old = red bold
-  new = green bold
-  whitespace = red reverse
 
 [alias]
 
