@@ -460,6 +460,7 @@ in
     # Database
     sqlite # https://sqlite.org
     sqlitebrowser # https://sqlitebrowser.org
+    redis # https://redis.io
 
     # Programming languages ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
