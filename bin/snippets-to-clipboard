@@ -1,9 +1,7 @@
 #!/bin/sh
 
 alacritty --class 'Alacritty · Floating' --command sh -c '
-  setsid wl-copy --trim-newline < $(
-    snippets get files |
-    jq --raw-output .[] |
-    fzf --preview "cat {}" --header="Select a snippet to copy" --prompt="(s)>"
-  )
+  snippets get files | jq --raw-output .[] |
+  fzf --preview "cat {}" --header="Select a snippet to copy" --prompt="(s)>" |
+  xargs cat -- | setsid wl-copy --trim-newline
 '
