@@ -171,8 +171,8 @@ startup = [
 
   # Broot
   # https://dystroy.org/broot/
-  def br [] {
-    let path = $(broot --out /dev/stdout | str trim)
+  def br [...rest] {
+    let path = $(broot --out /dev/stdout $rest | str trim)
     let is_empty = $(= $path | empty?)
     if $is_empty {} {
       cd $path
