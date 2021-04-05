@@ -178,6 +178,7 @@ startup = [
       cd $path
     }
   }
+  alias . = br .
 
   # exa
   # https://the.exa.website
