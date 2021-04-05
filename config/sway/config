@@ -9,7 +9,7 @@ set $terminal alacritty
 # Application launcher
 # Note: Pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $launcher swaymsg exec -- launcher run $(launcher menu | dmenu)
+set $launcher launcher menu | dmenu | xargs swaymsg exec launcher run --
 
 # Options ──────────────────────────────────────────────────────────────────────
 
@@ -209,7 +209,7 @@ bindsym --to-code {
   Mod4+Shift+slash exec sway-commander move workspace current, focus
 
   # Marks
-  Mod4+Shift+m exec swaymsg mark $(seq 0 9 | dmenu)
+  Mod4+Shift+m exec seq 0 9 | dmenu | xargs swaymsg mark --
 
   # Workspaces ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
@@ -252,7 +252,7 @@ bindsym --to-code {
   Mod4+Shift+equal move container to workspace number 12
 
   # Rename workspace
-  Mod4+Shift+r exec swaymsg rename workspace to $(seq 0 12 | dmenu)
+  Mod4+Shift+r exec seq 0 12 | dmenu | xargs swaymsg rename workspace to --
 
   # Desktop ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
@@ -266,7 +266,7 @@ bindsym --to-code {
   Mod4+r exec find -L documents | dmenu | xargs zathura --
 
   # Password manager
-  Mod4+p exec password get $(password menu | dmenu) | wl-copy
+  Mod4+p exec password menu | dmenu | xargs password get -- | wl-copy
 
   # Snippets
   Mod4+y exec snippets-to-clipboard
