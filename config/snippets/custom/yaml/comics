@@ -1,0 +1,8 @@
+Name: {{name}}
+Issues: {{issues}}
+Aired: {{aired}}
+Finished: {{finished}}
+Authors: {{authors}}
+Download: {{download}}
+
+Date: {{date}}
