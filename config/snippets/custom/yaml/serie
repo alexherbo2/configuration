@@ -1,0 +1,9 @@
+Name: {{name}}
+Season: {{season}}
+Episodes: {{episodes}}
+Aired: {{aired}}
+Finished: {{finished}}
+Download: {{download}}
+Resolution: {{resolution}}p
+
+Date: {{date}}
