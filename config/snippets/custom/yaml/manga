@@ -1,5 +1,6 @@
 Name: {{name}}
-Part: {{part}}
+Volumes: {{volumes}}
+Chapters: {{chapters}}
 Aired: {{aired}}
 Finished: {{finished}}
 Authors: {{authors}}
