@@ -207,6 +207,7 @@ startup = [
   # mpv
   # https://mpv.io
   alias m = mpv
+  alias ms = mpv -shuffle
 
   # mpv – image
   alias mi = mpv -config-dir ~/.config/mpv/profiles/image
