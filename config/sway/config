@@ -209,7 +209,7 @@ bindsym --to-code {
   Mod4+Shift+slash exec sway-commander move workspace current, focus
 
   # Marks
-  Mod4+Shift+m exec seq 0 9 | dmenu | xargs swaymsg mark --
+  # Mod4+Shift+m exec seq 0 9 | dmenu | xargs swaymsg mark --
 
   # Workspaces ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
@@ -261,6 +261,7 @@ bindsym --to-code {
 
   # mpv
   Mod4+m exec find -L videos torrents | dmenu | mpv -playlist -
+  Mod4+Shift+m exec find -L videos | dmenu | mpv -shuffle -playlist -
 
   # zathura
   Mod4+r exec find -L documents | dmenu | xargs zathura --

@@ -21,6 +21,7 @@
   "custom/media-player": {
     "format": "",
     "on-click": "find -L videos torrents | dmenu | mpv -playlist -",
+    "on-click-middle": "find -L videos | dmenu | mpv -shuffle -playlist -",
     "on-click-right": "chromium --app=https://youtube.com"
   },
   "custom/document-viewer": {
