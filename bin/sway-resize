@@ -1,7 +1,0 @@
-#!/bin/sh
-
-swaymsg --quiet "
-  floating enable,
-  resize set $1 $2,
-  move position center
-"
