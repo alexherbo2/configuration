@@ -252,7 +252,7 @@ bindsym --to-code {
   Mod4+Shift+equal move container to workspace number 12
 
   # Rename workspace
-  Mod4+r exec swaymsg rename workspace to $(seq 0 12 | dmenu)
+  Mod4+Shift+r exec swaymsg rename workspace to $(seq 0 12 | dmenu)
 
   # Desktop ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
@@ -261,6 +261,9 @@ bindsym --to-code {
 
   # mpv
   Mod4+m exec find -L videos torrents | dmenu | mpv -playlist -
+
+  # zathura
+  Mod4+r exec find -L documents | dmenu | xargs zathura --
 
   # Password manager
   Mod4+p exec password get $(password menu | dmenu) | wl-copy

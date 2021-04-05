@@ -2,7 +2,7 @@
   "layer": "top",
   "modules-left": ["sway/workspaces", "sway/mode"],
   "modules-center": ["sway/window"],
-  "modules-right": ["custom/launcher", "custom/file-manager", "custom/media-player", "custom/browser", "custom/terminal", "custom/screenshot", "custom/network", "disk", "pulseaudio", "backlight", "battery", "clock", "custom/logout"],
+  "modules-right": ["custom/launcher", "custom/file-manager", "custom/media-player", "custom/document-viewer", "custom/browser", "custom/terminal", "custom/screenshot", "custom/network", "disk", "pulseaudio", "backlight", "battery", "clock", "custom/logout"],
   "sway/window": {
     "on-click": "swaymsg scratchpad show",
     "on-click-middle": "swaymsg kill",
@@ -22,6 +22,10 @@
     "format": "",
     "on-click": "find -L videos torrents | dmenu | mpv -playlist -",
     "on-click-right": "chromium --app=https://youtube.com"
+  },
+  "custom/document-viewer": {
+    "format": "",
+    "on-click": "find -L documents | dmenu | xargs zathura --"
   },
   "custom/browser": {
     "format": "",
