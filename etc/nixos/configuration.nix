@@ -231,6 +231,7 @@ in
     glow # Markdown – https://github.com/charmbracelet/glow
 
     # Terminal utils
+    exa # ls – https://the.exa.website
     fd # find – https://github.com/sharkdp/fd
     bat # cat – https://github.com/sharkdp/bat
     pastel # https://github.com/sharkdp/pastel

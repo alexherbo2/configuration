@@ -179,10 +179,12 @@ startup = [
     }
   }
 
-  # Broot – Replace `ls` (and its clones)
-  # https://dystroy.org/broot#replace-ls-and-its-clones
-  alias l = broot --sizes --dates --permissions
-  alias la = broot --sizes --dates --permissions --hidden
+  # exa
+  # https://the.exa.website
+  alias l = exa --icons
+  alias la = exa --icons --all
+  alias ll = exa --icons --git --long
+  alias lla = exa --icons --git --long --all
 
   # Batch
   # https://github.com/alexherbo2/batch
