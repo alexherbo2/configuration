@@ -1,0 +1,10 @@
+Name: {{name}}
+Part: {{part}}
+Aired: {{aired}}
+Finished: {{finished}}
+Authors: {{authors}}
+MAL: {{https://myanimelist.net}}
+
+Download: {{download}}
+
+Date: {{date}}
