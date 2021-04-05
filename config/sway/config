@@ -206,7 +206,7 @@ bindsym --to-code {
   Mod4+Shift+slash exec sway-commander move workspace current, focus
 
   # Marks
-  Mod4+m exec swaymsg mark $(seq 0 9 | dmenu)
+  Mod4+Shift+m exec swaymsg mark $(seq 0 9 | dmenu)
 
   # Workspaces ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
@@ -255,6 +255,9 @@ bindsym --to-code {
 
   # Room
   Mod4+F2 exec room
+
+  # mpv
+  Mod4+m exec find -L videos torrents | dmenu | mpv -playlist -
 
   # Password manager
   Mod4+p exec password get $(password menu | dmenu) | wl-copy
