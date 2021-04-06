@@ -22,6 +22,11 @@ execution = ':quit'
 key = '.'
 execution = ':toggle_hidden'
 
+# Toggle sizes
+[[verbs]]
+key = 'i'
+execution = ':toggle_sizes'
+
 # kakoune.cr
 # https://github.com/alexherbo2/kakoune.cr
 [[verbs]]
