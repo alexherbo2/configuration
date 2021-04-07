@@ -1,1 +1,10 @@
+; npm
+; https://npmjs.com
+
+; npm install --global <package>
+;
+; Update your paths
+;
+; PATH=~/.npm-packages/bin:$PATH
+; MANPATH=~/.npm-packages/share/man:
 prefix = ${HOME}/.npm-packages
