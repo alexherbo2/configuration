@@ -142,14 +142,13 @@ startup = [
   alias qj = pueue parallel
   alias qa = pueue add
   alias qi = pueue status
+  alias qI = pueue clean
 
   alias ql = pueue-fzf log
   alias qL = pueue-fzf follow
 
   alias qp = pueue-fzf pause
   alias qP = pueue-fzf start
-
-  alias q5 = pueue clean
 
   alias qw = pueue-fzf kill
   alias qW = pueue shutdown
