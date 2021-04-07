@@ -267,7 +267,8 @@ startup = [
 
 # Current shell
 # Useful to open a new terminal in Kakoune.
-SHELL = '/run/current-system/sw/bin/nu'
+# Use the latest version of Nushell.
+SHELL = '/home/taupiqueur/repositories/github.com/nushell/nushell/target/release/nu'
 
 # Manual paths
 MANPATH = '/home/taupiqueur/.npm-packages/share/man:'

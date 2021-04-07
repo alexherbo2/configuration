@@ -3,6 +3,13 @@
 #
 # Theme: Dracula (https://draculatheme.com/alacritty)
 
+# Nushell
+# https://nushell.sh
+#
+# Use the latest version of Nushell.
+shell:
+  program: /home/taupiqueur/repositories/github.com/nushell/nushell/target/release/nu
+
 import:
   - /home/taupiqueur/projects/alacritty-extended-keys/keys.yml
   - /home/taupiqueur/repositories/github.com/dracula/alacritty/dracula.yml
