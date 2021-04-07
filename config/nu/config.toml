@@ -12,6 +12,7 @@ path = [
   '/home/taupiqueur/projects/kakoune/src',
   '/home/taupiqueur/projects/pager.kak/bin',
   '/home/taupiqueur/repositories/github.com/kak-lsp/kak-lsp/target/release',
+  '/home/taupiqueur/repositories/github.com/alacritty/alacritty/target/release',
   '/home/taupiqueur/repositories/github.com/nushell/nushell/target/release',
   '/home/taupiqueur/repositories/github.com/austinjones/tab-rs/target/release',
   '/home/taupiqueur/repositories/github.com/Nukesor/pueue/target/release',
