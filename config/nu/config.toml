@@ -62,6 +62,7 @@ startup = [
   alias nginx = sudo nginx -c /etc/nginx/nginx.conf
 
   # Keyboard
+  alias fr = swaymsg input type:keyboard xkb_file ~/repositories/github.com/fabi1cazenave/qwerty-lafayette/dist/qwerty-l.xkb
   alias kbd = swaymsg input 1:1:AT_Translated_Set_2_keyboard events toggle
 
   # procs
