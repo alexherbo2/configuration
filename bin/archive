@@ -1,10 +1,7 @@
 #!/bin/sh
 
-# Archive the current directory
-# By default, archive and export the current directory to your home
+# Archive the current directory to your home.
 
-root=${1:-~}
-directory=$(basename $PWD)
-
+name=$(basename "$PWD")
 cd ..
-zip --recurse-paths --symlinks $root/$directory.zip $directory
+zip -r -y "$HOME/$name.zip" "$name"
