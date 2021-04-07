@@ -15,7 +15,7 @@
 # https://synapse-bt.org
 # https://github.com/junegunn/fzf
 
-sycli list --output json | jq --raw-output '.[].name' | fzf |
+sycli list --output json | jq --raw-output '.[].name' | fzf --header='Select a torrent' --prompt='(synapse)>' |
 
 while read torrent; do
   sycli "$@" "$torrent"
