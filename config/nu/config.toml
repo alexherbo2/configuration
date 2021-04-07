@@ -127,15 +127,15 @@ startup = [
   alias qa = pueue add
   alias qi = pueue status
 
-  alias ql = pueue log
-  alias qL = pueue follow
+  alias ql = pueue-fzf log
+  alias qL = pueue-fzf follow
 
-  alias qp = pueue pause
-  alias qP = pueue start
+  alias qp = pueue-fzf pause
+  alias qP = pueue-fzf start
 
   alias q5 = pueue clean
 
-  alias qw = pueue kill
+  alias qw = pueue-fzf kill
   alias qW = pueue shutdown
 
   # synapse

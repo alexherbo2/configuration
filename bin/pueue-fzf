@@ -1,0 +1,25 @@
+#!/bin/sh
+
+# fzf integration for Pueue.
+#
+# Usage:
+#
+# pueue-fzf <command> [arguments]
+#
+# Examples:
+#
+# alias ql='pueue-fzf log'
+# alias qL='pueue-fzf follow'
+# alias qp='pueue-fzf pause'
+# alias qP='pueue-fzf start'
+# alias qw='pueue-fzf kill'
+#
+# https://github.com/Nukesor/pueue
+# https://github.com/junegunn/fzf
+
+pueue status | grep '^ [0-9]' | fzf |
+
+while read line; do
+  task_id=${line%% *}
+  pueue "$@" "$task_id"
+done
