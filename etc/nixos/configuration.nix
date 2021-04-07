@@ -470,6 +470,7 @@ in
 
     # Build systems
     gnumake # https://gnu.org/software/make/
+    pkg-config # https://freedesktop.org/wiki/Software/pkg-config/
     meson # https://mesonbuild.com
     ninja # https://ninja-build.org
 
