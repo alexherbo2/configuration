@@ -422,7 +422,6 @@ in
 
     # Archivers
     archiver # https://github.com/mholt/archiver
-    zip # http://infozip.sourceforge.net/Zip.html
 
     # Programming languages
     jq # https://stedolan.github.io/jq/
