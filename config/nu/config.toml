@@ -75,6 +75,10 @@ startup = [
   # https://github.com/dalance/procs
   alias ps = procs
 
+  # htop
+  # https://htop.dev
+  alias top = htop
+
   # rsync
   # https://rsync.samba.org
   alias cp = rsync --archive --compress --hard-links --info=progress2 --delete

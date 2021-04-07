@@ -237,6 +237,7 @@ in
     pastel # https://github.com/sharkdp/pastel
     ripgrep # grep – https://github.com/BurntSushi/ripgrep
     procs # ps – https://github.com/dalance/procs
+    htop # top – https://htop.dev
 
     # Shells ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
