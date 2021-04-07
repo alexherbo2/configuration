@@ -1,0 +1,22 @@
+#!/bin/sh
+
+# fzf integration for synapse.
+#
+# Usage:
+#
+# sycli-fzf <command> [arguments]
+#
+# Examples:
+#
+# alias sp='sycli-fzf pause'
+# alias sP='sycli-fzf resume'
+# alias sw='sycli-fzf del --files'
+#
+# https://synapse-bt.org
+# https://github.com/junegunn/fzf
+
+sycli list --output json | jq --raw-output '.[].name' | fzf |
+
+while read torrent; do
+  sycli "$@" "$torrent"
+done

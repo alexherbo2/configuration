@@ -1,4 +1,0 @@
-#!/bin/sh
-
-sycli list |
-rg '\b\d{1,2}\.\d{2}%'

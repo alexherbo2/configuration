@@ -136,6 +136,18 @@ startup = [
   alias qw = pueue kill
   alias qW = pueue shutdown
 
+  # synapse
+  # https://synapse-bt.org
+  alias s = sycli
+  alias S = synapse
+  alias sa = sycli add
+  alias si = sycli status
+  alias sl = sycli list
+  alias sp = sycli-fzf pause
+  alias sP = sycli-fzf resume
+  alias sw = sycli-fzf del --files
+  alias sW = pkill synapse
+
   # kakoune.cr
   # https://github.com/alexherbo2/kakoune.cr
   alias k = kcr edit
