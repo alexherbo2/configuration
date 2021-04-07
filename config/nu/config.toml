@@ -5,15 +5,8 @@
 path = [
   '/home/taupiqueur/configuration/bin',
   '/home/taupiqueur/configuration/local/bin',
-  '/home/taupiqueur/.local/share/crystal/releases/latest/bin',
-  '/home/taupiqueur/.bin',
   '/home/taupiqueur/.local/bin',
-  '/home/taupiqueur/.gem/ruby/2.7.0/bin',
-  '/home/taupiqueur/.cargo/bin',
-  '/home/taupiqueur/.cabal/bin',
-  '/home/taupiqueur/go/bin',
-  'node_modules/.bin',
-  '/home/taupiqueur/.npm-packages/bin',
+  '/home/taupiqueur/.local/share/crystal/releases/latest/bin',
 
   # Tools
   '/home/taupiqueur/projects/kakoune/src',
@@ -22,7 +15,15 @@ path = [
   '/home/taupiqueur/repositories/github.com/Nukesor/pueue/target/release',
   '/home/taupiqueur/repositories/github.com/extrawurst/gitui/target/release',
   '/home/taupiqueur/repositories/github.com/Luminarys/synapse/target/release',
-  '/home/taupiqueur/repositories/github.com/Blacksmoke16/oq/bin'
+  '/home/taupiqueur/repositories/github.com/Blacksmoke16/oq/bin',
+
+  # Packages
+  '/home/taupiqueur/.cargo/bin',
+  '/home/taupiqueur/.gem/ruby/2.7.0/bin',
+  'node_modules/.bin',
+  '/home/taupiqueur/.npm-packages/bin',
+  '/home/taupiqueur/go/bin',
+  '/home/taupiqueur/.cabal/bin'
 ]
 
 # Options
