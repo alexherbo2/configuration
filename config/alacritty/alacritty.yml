@@ -7,11 +7,8 @@
 # https://nushell.sh
 #
 # Use the latest version of Nushell.
-#
-# FIXME: Very high CPU usage.
-#
-# shell:
-#   program: /home/taupiqueur/repositories/github.com/nushell/nushell/target/release/nu
+shell:
+  program: /home/taupiqueur/repositories/github.com/nushell/nushell/target/release/nu
 
 import:
   - /home/taupiqueur/projects/alacritty-extended-keys/keys.yml
