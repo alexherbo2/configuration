@@ -78,6 +78,7 @@ plug-core %{
   alias global u enter-user-mode
 
   # Quick editing
+  define-command -docstring 'Open scratch' edit-scratch 'edit ~/documents/scratch.md'
   define-command -docstring 'Open kakrc' edit-kakoune 'edit ~/.config/kak/kakrc'
   define-command -docstring 'Open krabby/config.js' edit-krabby 'edit ~/.config/krabby/config.js'
   define-command -docstring 'Open configuration.nix' edit-nixos 'edit /etc/nixos/configuration.nix'
@@ -94,6 +95,7 @@ plug-core %{
   define-command -docstring 'Open words.txt' edit-words 'edit ~/documents/words.txt'
 
   # Aliases
+  alias global S edit-scratch
   alias global ek edit-kakoune
   alias global en edit-nixos
   alias global ed edit-diary
