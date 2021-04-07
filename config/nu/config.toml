@@ -141,7 +141,7 @@ startup = [
   # synapse
   # https://synapse-bt.org
   alias s = sycli
-  alias S = synapse
+  alias S = pueue add synapse
   alias sa = sycli add
   alias si = sycli status
   alias sl = sycli list
