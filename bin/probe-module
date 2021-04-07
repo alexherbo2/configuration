@@ -1,4 +1,0 @@
-#!/bin/sh
-
-rmmod $1
-modprobe $1
