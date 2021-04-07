@@ -1,3 +1,8 @@
+# Alacritty
+# https://github.com/alacritty/alacritty
+#
+# Theme: Dracula (https://draculatheme.com/alacritty)
+
 import:
   - /home/taupiqueur/projects/alacritty-extended-keys/keys.yml
   - /home/taupiqueur/repositories/github.com/dracula/alacritty/dracula.yml
