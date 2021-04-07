@@ -3,7 +3,6 @@
 # receptor
 # https://git.sr.ht/~sircmpwn/receptor
 
-# Update receptor
 cd ~/repositories/git.sr.ht/~sircmpwn/receptor
 git pull
 git submodule update --init --recursive

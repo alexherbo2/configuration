@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Krabby
+# https://krabby.netlify.app
+
 cd ~/.config/krabby/packages
 cp -R ~/projects/krabby/src/. .
 cp ~/projects/modal.js/src/modal.js .
