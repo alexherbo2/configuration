@@ -12,7 +12,8 @@ path = [
   '/home/taupiqueur/projects/kakoune/src',
   '/home/taupiqueur/projects/pager.kak/bin',
   '/home/taupiqueur/repositories/github.com/kak-lsp/kak-lsp/target/release',
-  '/home/taupiqueur/repositories/github.com/nushell/nushell/target/release',
+  # FIXME: Very high CPU usage.
+  # '/home/taupiqueur/repositories/github.com/nushell/nushell/target/release',
   '/home/taupiqueur/repositories/github.com/austinjones/tab-rs/target/release',
   '/home/taupiqueur/repositories/github.com/Nukesor/pueue/target/release',
   '/home/taupiqueur/repositories/github.com/extrawurst/gitui/target/release',
@@ -269,7 +270,9 @@ startup = [
 # Current shell
 # Useful to open a new terminal in Kakoune.
 # Use the latest version of Nushell.
-SHELL = '/home/taupiqueur/repositories/github.com/nushell/nushell/target/release/nu'
+# FIXME: Very high CPU usage.
+# SHELL = '/home/taupiqueur/repositories/github.com/nushell/nushell/target/release/nu'
+SHELL = '/run/current-system/sw/bin/nu'
 
 # Manual paths
 MANPATH = '/home/taupiqueur/.npm-packages/share/man:'
