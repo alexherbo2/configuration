@@ -18,6 +18,7 @@ path = [
   # Tools
   '/home/taupiqueur/projects/kakoune/src',
   '/home/taupiqueur/projects/pager.kak/bin',
+  '/home/taupiqueur/repositories/github.com/Luminarys/synapse/target/release',
   '/home/taupiqueur/repositories/github.com/Blacksmoke16/oq/bin'
 ]
 
