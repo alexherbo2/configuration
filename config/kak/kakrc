@@ -98,6 +98,9 @@ plug-core %{
   alias global S edit-scratch
   alias global ek edit-kakoune
   alias global en edit-nixos
+  alias global ew edit-sway
+  alias global es edit-nu
+  alias global et edit-alacritty
   alias global ed edit-diary
 
   # Mappings ───────────────────────────────────────────────────────────────────
