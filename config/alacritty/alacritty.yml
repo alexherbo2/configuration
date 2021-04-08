@@ -24,6 +24,9 @@ font:
   normal:
     family: PragmataPro
 
+# Background opacity
+background_opacity: 0.9
+
 # Enable cursor blinking
 cursor:
   style:
