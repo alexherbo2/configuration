@@ -47,8 +47,8 @@ startup = [
 
   # NixOS
   # https://nixos.org
-  alias ns = nix-shell --command nu
   alias na = nix-shell-attr
+  alias ns = nix-shell --command nu
   alias np = nix-shell --command nu --packages
   alias nrs = nix-shell --command nu --packages pkg-config rustup rustc cargo
   alias ncr = nix-shell --command nu --packages pcre libevent libyaml
