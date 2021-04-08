@@ -48,6 +48,7 @@ startup = [
   # NixOS
   # https://nixos.org
   alias ns = nix-shell --command nu
+  alias na = nix-shell-attr
   alias nrs = nix-shell --command nu --packages pkg-config rustup rustc cargo
   alias ncr = nix-shell --command nu --packages pcre libevent libyaml
   alias nrb = nix-shell --command nu --packages rubyPackages_2_7.railties
