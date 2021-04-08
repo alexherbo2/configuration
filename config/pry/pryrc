@@ -10,7 +10,7 @@ Pry.config.prompt = Pry::Prompt.new(
   ]
 )
 
-Pry.config.output_prefix = '→ '
+Pry.config.output_prefix = '⇒ '
 
 Pry.config.editor = ->(file, line) do
   "kak #{file} +#{line}"
