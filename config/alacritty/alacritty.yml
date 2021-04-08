@@ -38,4 +38,4 @@ bell:
     args: ['-no-config', '-no-video', '-no-terminal', '/home/taupiqueur/repositories/gitlab.freedesktop.org/xdg/xdg-sound-theme/stereo/bell.oga']
 
 key_bindings:
-  - { key: Return, mods: Control|Shift, action: SpawnNewInstance }
+  - { key: N, mods: Control|Shift, action: SpawnNewInstance }
