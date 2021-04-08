@@ -215,6 +215,7 @@ startup = [
   alias la = exa --icons --all
   alias ll = exa --icons --git --long
   alias lla = exa --icons --git --long --all
+  alias T = exa --tree
 
   # Batch
   # https://github.com/alexherbo2/batch
