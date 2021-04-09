@@ -171,6 +171,10 @@ startup = [
   alias sw = sycli-fzf del --files
   alias sW = pkill synapse
 
+  # The Lounge
+  # https://thelounge.chat
+  alias irc = pueue add thelounge start
+
   # kakoune.cr
   # https://github.com/alexherbo2/kakoune.cr
   alias k = kcr edit
