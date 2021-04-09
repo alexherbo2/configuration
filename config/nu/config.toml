@@ -54,6 +54,10 @@ startup = [
   alias ncr = nix-shell --command nu --packages pcre libevent libyaml
   alias nrb = nix-shell --command nu --packages rubyPackages_2_7.railties
 
+  # KDE
+  # https://kde.org
+  alias kcm = kcmshell5-fzf
+
   # Sleep
   alias z = systemctl suspend
   alias zz = swaymsg exit

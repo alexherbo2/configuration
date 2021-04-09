@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# fzf integration for KDE settings.
+#
+# Usage:
+#
+# kcmshell5-fzf [options]
+#
+# https://kde.org
+
+kcmshell5 --list | tail +2 | fzf --header='Select a module to open' --prompt='(kcmshell5)>' |
+
+while read line; do
+  module=${line%% *}
+  kcmshell5 "$@" "$module"
+done
