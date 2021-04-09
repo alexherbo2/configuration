@@ -173,15 +173,11 @@ in
   # Waybar
   # programs.waybar.enable = true;
 
-  # X11
+  # Desktop environment
+  # https://kde.org
+  # https://nixos.org/nixos/manual#sec-profile-graphical
   services.xserver.enable = true;
-
-  # Display manager
   services.xserver.displayManager.sddm.enable = true;
-
-  # Desktop managers
-  # Plasma
-  # Note: Required for icons
   services.xserver.desktopManager.plasma5.enable = true;
 
   # Backlight
@@ -319,9 +315,8 @@ in
 
     plasma-desktop # https://kde.org
 
-    # Login managers
+    # Display managers
     sddm # https://github.com/sddm/sddm
-    sddm-kcm # https://github.com/KDE/sddm-kcm
 
     # Networking
     networkmanager # https://wiki.gnome.org/Projects/NetworkManager
