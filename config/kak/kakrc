@@ -175,7 +175,6 @@ plug-autoload chmod
 
 plug chronic projects/chronic.kak %{
   map -docstring 'Chronic' global normal t ': enter-user-mode chronic<ret>'
-  map -docstring 'Chronic' global insert <c-t> '<esc>: enter-user-mode chronic-insert<ret>'
 }
 
 plug current-word-highlighter projects/current-word-highlighter.kak %{
@@ -362,7 +361,6 @@ plug toggle-highlighter projects/toggle-highlighter.kak %{
   map -docstring 'Toggle wrap highlighter' global user w ': toggle-highlighter global/wrap wrap -word<ret>'
 }
 
-plug type-expand projects/type-expand.kak
 plug-old vertical-selection https://github.com/occivink/kakoune-vertical-selection
 plug view-mode projects/view-mode.kak
 
