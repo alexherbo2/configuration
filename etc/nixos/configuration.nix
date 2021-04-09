@@ -1,7 +1,7 @@
 # NixOS
-# https://nixos.org/nixos/manual/
-# https://nixos.org/nixos/packages.html
-# https://nixos.org/nixos/options.html
+# https://nixos.org/manual/nixos/stable/
+# https://search.nixos.org/packages
+# https://search.nixos.org/options
 
 { config, pkgs, ... }:
 let
@@ -41,7 +41,7 @@ in
 
   # Options ────────────────────────────────────────────────────────────────────
 
-  # Page: https://nixos.org/nixos/options.html
+  # Page: https://search.nixos.org/options
 
   networking.hostName = "kanto";
   # Generate the 32-bit host ID of the machine with:
@@ -52,7 +52,7 @@ in
 
   # Firewall
   # Allow incoming connections
-  # https://nixos.org/nixos/manual#sec-firewall
+  # https://nixos.org/manual/nixos/stable#sec-firewall
   # Hugo: 1313
   # receptor: 3000
   # Rails: 5000
@@ -94,11 +94,11 @@ in
   # systemd.services.nix-daemon.serviceConfig.CPUQuota = "10%";
 
   # Automatic Upgrades
-  # https://nixos.org/nixos/manual#idm140737316591792
+  # https://nixos.org/manual/nixos/stable#sec-upgrading-automatic
   # system.autoUpgrade.enable = true;
 
   # Cleaning the Nix Store
-  # https://nixos.org/nixos/manual#sec-nix-gc
+  # https://nixos.org/manual/nixos/stable#sec-nix-gc
   nix.gc.automatic = true;
 
   # Clean temporary files during boot
@@ -126,7 +126,7 @@ in
     uid = 1000;
     # Indicates whether this is an account for a real user.
     # In other words, set a bunch of options for us.
-    # https://nixos.org/nixos/options.html#isNormalUser
+    # https://search.nixos.org/options?query=isNormalUser
     isNormalUser = true;
     shell = pkgs.nushell;
     extraGroups = [
@@ -175,7 +175,7 @@ in
 
   # Desktop environment
   # https://kde.org
-  # https://nixos.org/nixos/manual#sec-profile-graphical
+  # https://nixos.org/manual/nixos/stable#sec-profile-graphical
   services.xserver.enable = true;
   services.xserver.displayManager.sddm.enable = true;
   services.xserver.desktopManager.plasma5.enable = true;
@@ -199,14 +199,14 @@ in
 
   # PostgreSQL
   # https://postgresql.org
-  # https://nixos.org/nixos/manual#module-postgresql
+  # https://nixos.org/manual/nixos/stable#module-postgresql
   services.postgresql.enable = true;
   services.postgresql.package = pkgs.postgresql_12;
   services.postgresql.dataDir = "/data/postgresql";
 
   # Packages ───────────────────────────────────────────────────────────────────
 
-  # https://nixos.org/nixos/packages.html
+  # https://search.nixos.org/packages
 
   environment.systemPackages = with pkgs; [
 
