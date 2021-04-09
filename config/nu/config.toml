@@ -286,6 +286,10 @@ startup = [
 # Environment variables
 [env]
 
+# Desktop environment
+# https://kde.org
+XDG_CURRENT_DESKTOP = 'kde'
+
 # Current shell
 # Useful to open a new terminal in Kakoune.
 # Use the latest version of Nushell.
