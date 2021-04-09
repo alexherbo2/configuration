@@ -168,10 +168,8 @@ in
 
   # Wayland compositors
   # Sway
+  # https://swaywm.org
   programs.sway.enable = true;
-
-  # Waybar
-  # programs.waybar.enable = true;
 
   # Desktop environment
   # https://kde.org
