@@ -66,6 +66,7 @@ client.background $white
 
 bar {
   position top
+  status_command crystal ~/.config/sway/status.cr
   colors {
     background $white
     statusline $black
