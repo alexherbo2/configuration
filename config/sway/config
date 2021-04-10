@@ -66,7 +66,6 @@ client.background $white
 
 bar {
   position top
-  swaybar_command waybar
   colors {
     background $white
     statusline $black

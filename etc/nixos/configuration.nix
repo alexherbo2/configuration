@@ -342,9 +342,6 @@ in
     swayidle # https://github.com/swaywm/swayidle
     swaylock # https://github.com/swaywm/swaylock
 
-    # Status bars
-    waybar # https://github.com/Alexays/Waybar
-
     # Services
     kanshi # Output configuration – https://wayland.emersion.fr/kanshi/
     mako # Notifications – https://wayland.emersion.fr/mako/
