@@ -12,7 +12,7 @@ require "json"
 
 # Write the status line to standard output.
 spawn do
-  header = { version: 1 }
+  header = { version: 1, click_events: true }
 
   puts(header.to_json, "[")
 
@@ -29,6 +29,20 @@ end
 
 # Read events from standard input.
 spawn do
+  # Skips "["
+  STDIN.gets
+
+  STDIN.each_line do |line|
+    # Strips "," to parse a valid chunk.
+    click_event = JSON.parse(line.strip(','))
+
+    case { click_event["name"], click_event["button"] }
+    when { "time", 1 }
+      Process.run("notify-send", { "time clicked" })
+    when { "battery", 1 }
+      Process.run("notify-send", { "battery clicked" })
+    end
+  end
 end
 
 sleep
