@@ -1,9 +1,0 @@
-#!/bin/sh
-
-GIT_ROOT=$(git rev-parse --show-toplevel)
-NIX_PATH=$NIX_PATH:local=$GIT_ROOT
-
-nix-build --expr '
-  with import <local> {};
-  callPackage ./default.nix {}
-'

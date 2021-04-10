@@ -1,6 +1,19 @@
 #!/bin/sh
 
-nix-build --expr '
-  with import <nixpkgs> {};
-  callPackage ./default.nix {}
-'
+# Build a Nix package.
+#
+# Usage:
+#
+# nix-build-nixpkgs
+#
+# Examples:
+#
+# git clone https://github.com/NixOS/nixpkgs
+# cd nixpkgs/pkgs/applications/terminal-emulators/alacritty
+# nix-build-nixpkgs
+# result/bin/alacritty
+#
+# NixOS
+# https://nixos.org
+
+nix-build --expr 'with import <nixpkgs> {}; callPackage ./default.nix {}'
