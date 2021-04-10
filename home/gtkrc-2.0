@@ -2,4 +2,4 @@ gtk-theme-name = "Breeze"
 gtk-icon-theme-name = "breeze"
 gtk-cursor-theme-name = "breeze_cursors"
 gtk-cursor-theme-size = 16
-gtk-font-name = "DejaVu Sans 11"
+gtk-font-name = "DejaVu 11"

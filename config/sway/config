@@ -13,7 +13,7 @@ set $launcher launcher menu | dmenu | xargs swaymsg exec launcher run --
 
 # Options ──────────────────────────────────────────────────────────────────────
 
-font pango:DejaVu
+font pango:DejaVu 11
 gaps inner 10
 workspace_layout default
 default_border pixel
