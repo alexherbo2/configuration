@@ -124,6 +124,7 @@ bindsym --to-code {
   # Logout
   Mod4+BackSpace exec swaylock
   Mod4+Shift+BackSpace exec systemctl suspend
+  Mod4+Control+BackSpace exit
 
   # Mouse bindings ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
