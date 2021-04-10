@@ -6,7 +6,6 @@ path = [
   '/home/taupiqueur/configuration/bin',
   '/home/taupiqueur/configuration/local/bin',
   '/home/taupiqueur/.local/bin',
-  '/home/taupiqueur/.local/share/crystal/releases/latest/bin',
 
   # Tools
   '/home/taupiqueur/projects/kakoune/src',
@@ -51,7 +50,7 @@ startup = [
   alias ns = nix-shell --command nu
   alias np = nix-shell --command nu --packages
   alias nrs = nix-shell --command nu --packages pkg-config rustup rustc cargo
-  alias ncr = nix-shell --command nu --packages pcre libevent libyaml
+  alias ncr = nix-shell --command 'PATH=~/.local/share/crystal/releases/latest/bin:$PATH nu' --packages pcre libevent libyaml
   alias nrb = nix-shell --command nu --packages rubyPackages_2_7.railties
 
   # KDE
