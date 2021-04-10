@@ -19,7 +19,7 @@ spawn do
   loop do
     status_line = [
       { :name => "battery", :full_text => "%s%%" % File.open("/sys/class/power_supply/BAT1/capacity").gets },
-      { :name => "time", :full_text => "%s" % Time.local.to_s("%F %R") }
+      { :name => "time", :full_text => "%s" % Time.local.to_s("%A %F %R") }
     ]
 
     puts(status_line.to_json, ",")
