@@ -1,8 +1,15 @@
 # Alacritty
 # https://github.com/alacritty/alacritty
-# https://github.com/alacritty/alacritty/blob/master/alacritty.yml
-#
-# Theme: Dracula (https://draculatheme.com/alacritty)
+
+import:
+
+  # Color scheme – https://draculatheme.com/alacritty
+  - /home/taupiqueur/repositories/github.com/dracula/alacritty/dracula.yml
+
+  # CSI u mode – https://github.com/alexherbo2/alacritty-extended-keys
+  - /home/taupiqueur/projects/alacritty-extended-keys/keys.yml
+
+# General ──────────────────────────────────────────────────────────────────────
 
 # Nushell
 # https://nushell.sh
@@ -11,28 +18,27 @@
 shell:
   program: /home/taupiqueur/repositories/github.com/nushell/nushell/target/release/nu
 
-import:
-  - /home/taupiqueur/projects/alacritty-extended-keys/keys.yml
-  - /home/taupiqueur/repositories/github.com/dracula/alacritty/dracula.yml
-
+# Initial terminal size:
 window:
   dimensions:
     columns: 80
     lines: 24
 
+# Appearance ───────────────────────────────────────────────────────────────────
+
+background_opacity: 0.9
+
 font:
   normal:
     family: PragmataPro
 
-# Background opacity
-background_opacity: 0.9
-
-# Enable cursor blinking
 cursor:
   style:
     blinking: On
 
-# Enable audio bell.
+# Sound ────────────────────────────────────────────────────────────────────────
+
+# Audio bell
 #
 # XDG sound theme
 # https://gitlab.freedesktop.org/xdg/xdg-sound-theme
@@ -41,5 +47,8 @@ bell:
     program: mpv
     args: ['-no-config', '-no-video', '-no-terminal', '/home/taupiqueur/repositories/gitlab.freedesktop.org/xdg/xdg-sound-theme/stereo/bell.oga']
 
+# Keyboard ─────────────────────────────────────────────────────────────────────
+
 key_bindings:
+  - { key: F1, mods: Shift, command: { program: chromium, args: ['https://github.com/alacritty/alacritty/blob/master/alacritty.yml'] } }
   - { key: N, mods: Control|Shift, action: SpawnNewInstance }
