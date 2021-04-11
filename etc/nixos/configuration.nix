@@ -327,6 +327,7 @@ in
     redshift-wlr # http://jonls.dk/redshift/ (Wayland patch)
 
     # Fonts
+    terminus_font # http://terminus-font.sourceforge.net
     dejavu_fonts # https://dejavu-fonts.github.io
     font-awesome # https://fontawesome.com
 
