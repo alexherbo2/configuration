@@ -166,6 +166,13 @@ in
   sound.enable = true;
   hardware.pulseaudio.enable = true;
 
+  # Fonts
+  # https://nixos.wiki/wiki/Fonts
+  fonts.fonts = with pkgs; [
+    dejavu_fonts # https://dejavu-fonts.github.io
+    font-awesome # https://fontawesome.com
+  ];
+
   # Wayland compositors
   # Sway
   # https://swaywm.org
@@ -325,15 +332,6 @@ in
     # Backlight
     light # https://haikarainen.github.io/light/
     redshift-wlr # http://jonls.dk/redshift/ (Wayland patch)
-
-    # Fonts
-    iosevka # https://typeof.net/Iosevka/
-    source-code-pro # https://adobe-fonts.github.io/source-code-pro/
-    fira-code # https://github.com/tonsky/FiraCode
-    ubuntu_font_family # https://design.ubuntu.com/font/
-    terminus_font # http://terminus-font.sourceforge.net
-    dejavu_fonts # https://dejavu-fonts.github.io
-    font-awesome # https://fontawesome.com
 
     # Wayland ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
