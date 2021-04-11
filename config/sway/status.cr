@@ -2,6 +2,8 @@ require "json"
 
 # Status line for Sway.
 #
+# It was written in Crystal with the goal of using as few syscalls as possible.
+#
 # Usage:
 #
 # bar {

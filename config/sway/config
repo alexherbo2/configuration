@@ -44,39 +44,42 @@ exec mako
 # Colors ───────────────────────────────────────────────────────────────────────
 
 # Color palette:
-# – Default
-# – macOS
-# – Dracula – https://draculatheme.com
-set {
-  $black #202020
-  $red #ff5555
-  $blue #2e9ef4
-  $white #eaeaea
-}
+# – Default (blue)
+# – macOS (black, white)
+# – Dracula (red)
+set $black #202020
+set $red #ff5555
+set $blue #2e9ef4
+set $white #eaeaea
 
-# Color class | Border | Background | Text | Indicator | Child border
-client.focused $white $white $black $blue $white
-client.focused_inactive $black $black $white $black $black
-client.unfocused $black $black $white $black $black
-client.urgent $red $red $white $black $red
-client.placeholder $black $black $white $black $black
-client.background $white
+# client.<class> <border> <background> <text>
+# https://github.com/swaywm/sway/raw/master/sway/sway.5.scd#:~:text=client.
+client.focused $white $white $black
+client.focused_inactive $black $black $white
+client.unfocused $black $black $white
+client.urgent $red $red $white
 
 # Bar ──────────────────────────────────────────────────────────────────────────
 
 bar {
   position top
+
+  # Status line
+  # It was written in Crystal with the goal of using as few syscalls as possible.
   status_command crystal ~/.config/sway/status.cr
+
+  # https://github.com/swaywm/sway/raw/master/sway/sway-bar.5.scd#:~:text=colors
   colors {
     background $white
     statusline $black
-    separator $white
-    # Color class | Border | Background | Text
+    separator $blue
+
+    # <class> <border> <background> <text>
     focused_workspace $black $black $white
     active_workspace $black $black $white
     inactive_workspace $white $white $black
     urgent_workspace $red $red $white
-    binding_mode $black $black $white
+    binding_mode $blue $blue $white
   }
 }
 
