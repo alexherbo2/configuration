@@ -9,7 +9,6 @@ path = [
 
   # Tools
   '/home/taupiqueur/projects/kakoune/src',
-  '/home/taupiqueur/projects/pager.kak/bin',
   '/home/taupiqueur/repositories/github.com/kak-lsp/kak-lsp/target/release',
   '/home/taupiqueur/repositories/github.com/alacritty/alacritty/target/release',
   '/home/taupiqueur/repositories/github.com/nushell/nushell/target/release',
@@ -301,7 +300,9 @@ MANPATH = '/home/taupiqueur/.npm-packages/share/man:'
 EDITOR = 'kcr edit'
 BROWSER = 'chromium'
 KAKOUNE_POSIX_SHELL = '/run/current-system/sw/bin/dash'
-MANPAGER = 'kak-man-pager'
+MANPAGER = '''
+  sh -c 'col -b -x | kak -e "set-option buffer filetype man"'
+'''
 
 # ripgrep
 RIPGREP_CONFIG_PATH = '/home/taupiqueur/.config/ripgrep/rc'
