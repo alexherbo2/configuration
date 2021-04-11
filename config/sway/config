@@ -7,7 +7,7 @@
 set $terminal alacritty
 
 # Application launcher
-# Note: Pass the final command to swaymsg so that the resulting window can be opened
+# Note: Pass the final command to `swaymsg` so that the resulting window can be opened
 # on the original workspace that the command was run on.
 set $launcher launcher menu | dmenu | xargs swaymsg exec launcher run --
 

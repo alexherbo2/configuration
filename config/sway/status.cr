@@ -55,8 +55,8 @@ spawn do
     # Strips "," to parse a valid chunk.
     click_event = JSON.parse(line.strip(','))
 
-    # Application launcher
-    # Note: Pass the final command to swaymsg so that the resulting window can be opened
+    # Pinned applications
+    # Note: Pass the command to `swaymsg` so that the resulting window can be opened
     # on the original workspace that the command was run on.
     case { click_event["name"], click_event["button"] }
     when { "terminal", 1 }
