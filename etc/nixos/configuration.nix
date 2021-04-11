@@ -327,6 +327,7 @@ in
     redshift-wlr # http://jonls.dk/redshift/ (Wayland patch)
 
     # Fonts
+    iosevka # https://typeof.net/Iosevka/
     source-code-pro # https://adobe-fonts.github.io/source-code-pro/
     fira-code # https://github.com/tonsky/FiraCode
     ubuntu_font_family # https://design.ubuntu.com/font/
