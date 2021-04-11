@@ -327,6 +327,7 @@ in
     redshift-wlr # http://jonls.dk/redshift/ (Wayland patch)
 
     # Fonts
+    fira-code # https://github.com/tonsky/FiraCode
     ubuntu_font_family # https://design.ubuntu.com/font/
     terminus_font # http://terminus-font.sourceforge.net
     dejavu_fonts # https://dejavu-fonts.github.io
