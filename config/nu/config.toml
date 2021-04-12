@@ -38,9 +38,16 @@ prompt = 'starship prompt'
 # Startup
 startup = [
   '''
-  # Color scheme
-  # https://draculatheme.com/tty
-  if $(= linux == $nu.env.TERM) { sh ~/repositories/github.com/dracula/tty/dracula-tty.sh } {}
+  # TTY settings
+  if $(= linux != $nu.env.TERM) {} {
+    # Color scheme
+    # https://draculatheme.com/tty
+    sh ~/repositories/github.com/dracula/tty/dracula-tty.sh
+
+    # Fonts
+    # /run/current-system/sw/share/consolefonts
+    setfont Lat2-Terminus16
+  }
 
   # Aliases
   alias @ = fork
