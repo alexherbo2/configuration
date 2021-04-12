@@ -172,11 +172,10 @@
   # https://swaywm.org
   programs.sway.enable = true;
 
-  # Desktop environment
+  # Desktop environments
   # https://kde.org
-  # https://nixos.org/manual/nixos/stable#sec-profile-graphical
-  services.xserver.enable = true;
-  services.xserver.displayManager.sddm.enable = true;
+  #
+  # Note: KDE apps need `XDG_CURRENT_DESKTOP=kde` for non-KDE desktops.
   services.xserver.desktopManager.plasma5.enable = true;
 
   # Backlight

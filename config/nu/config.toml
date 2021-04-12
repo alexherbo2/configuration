@@ -304,6 +304,8 @@ startup = [
 
 # Desktop environment
 # https://kde.org
+#
+# Note: KDE apps need this for non-KDE desktops.
 XDG_CURRENT_DESKTOP = 'kde'
 
 # Current shell
