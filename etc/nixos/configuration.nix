@@ -169,6 +169,7 @@ in
   # Fonts
   # https://nixos.wiki/wiki/Fonts
   fonts.fonts = with pkgs; [
+    terminus # http://terminus-font.sourceforge.net
     dejavu_fonts # https://dejavu-fonts.github.io
     font-awesome # https://fontawesome.com
   ];
