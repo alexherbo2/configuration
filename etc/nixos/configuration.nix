@@ -222,6 +222,7 @@ in
     # Terminal multiplexers
     # tab-rs
     # https://github.com/austinjones/tab-rs
+    _3mux # https://github.com/aaronjanse/3mux
     pueue # https://github.com/Nukesor/pueue
 
     # Fuzzy finders
