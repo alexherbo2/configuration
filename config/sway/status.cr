@@ -37,6 +37,7 @@ spawn do
       { :name => "terminal", :full_text => "", :color => black },
       { :name => "file-manager", :full_text => "", :color => pink },
       { :name => "web-browser", :full_text => "", :color => purple },
+      { :name => "volume", :full_text => "", :color => gray },
       { :name => "battery", :full_text => "%s%%" % File.open("/sys/class/power_supply/BAT1/capacity").gets },
       { :name => "time", :full_text => Time.local.to_s("%A %F %R") }
     ]
@@ -65,6 +66,12 @@ spawn do
       Process.run("swaymsg", { "exec", "dolphin" })
     when { "web-browser", 1 }
       Process.run("swaymsg", { "exec", "chromium" })
+    when { "volume", 1 }
+      Process.run("amixer", { "set", "Master", "toggle" })
+    when { "volume", 4 }
+      Process.run("amixer", { "set", "Master", "5%+" })
+    when { "volume", 5 }
+      Process.run("amixer", { "set", "Master", "5%-" })
     end
   end
 end
