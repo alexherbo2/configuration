@@ -224,6 +224,12 @@
       bits: 0,
     ),
   ),
+  stash_apply: (
+    code: Char('a'),
+    modifiers: (
+      bits: 0,
+    ),
+  ),
   stash_open: (
     code: Char('l'),
     modifiers: (
