@@ -298,3 +298,6 @@ for_window [app_id="Alacritty · Floating"] floating enable
 for_window [app_id="Alacritty · Popup"] floating enable
 for_window [title="Picture in picture"] floating enable
 for_window [instance="dofus.exe"] layout tabbed
+
+# Add a bit of transparency to reduce eye strain.
+for_window [app_id="org.kde.dolphin"] opacity set 0.99
