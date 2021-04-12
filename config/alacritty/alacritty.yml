@@ -26,7 +26,8 @@ window:
 
 # Appearance ───────────────────────────────────────────────────────────────────
 
-background_opacity: 0.9
+# Add a bit of transparency to reduce eye strain.
+background_opacity: 0.99
 
 font:
   size: 11.0
