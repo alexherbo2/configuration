@@ -223,6 +223,7 @@ in
     # tab-rs
     # https://github.com/austinjones/tab-rs
     _3mux # https://github.com/aaronjanse/3mux
+    mtm # https://github.com/deadpixi/mtm
     pueue # https://github.com/Nukesor/pueue
 
     # Fuzzy finders
