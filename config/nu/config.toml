@@ -151,6 +151,12 @@ startup = [
   alias tw = tab --close
   alias tW = tab --shutdown
 
+  # mtm
+  # https://github.com/deadpixi/mtm
+  def mux [] {
+    ESCDELAY=0 mtm
+  }
+
   # Pueue
   # https://github.com/Nukesor/pueue
   alias q = pueue
