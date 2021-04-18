@@ -81,6 +81,13 @@ bar {
     urgent_workspace $red $red $white
     binding_mode $blue $blue $white
   }
+
+  # Mouse bindings
+  bindsym {
+    # Show title bar
+    # Useful with the opposite action on a title bar.
+    button3 border normal
+  }
 }
 
 # Bindings ─────────────────────────────────────────────────────────────────────
@@ -132,8 +139,12 @@ bindsym --to-code {
 
   # Mouse bindings ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
+  # Close window
   button2 kill
-  button3 move scratchpad
+
+  # Hide title bar
+  # Useful with the opposite action on the status bar.
+  button3 border pixel
 
   # Move your focus around
   --whole-window Mod4+button4 focus left
