@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Create a PDF from images of the current directory.
+#
+# img2pdf
+# https://gitlab.mister-muffin.de/josch/img2pdf
+
+name=$(basename "$PWD")
+img2pdf --output "$name.pdf" *
