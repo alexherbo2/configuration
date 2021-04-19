@@ -27,6 +27,23 @@ execution = ':toggle_hidden'
 key = 'i'
 execution = ':toggle_sizes'
 
+# Open a terminal here
+[[verbs]]
+key = '$'
+invocation = 'terminal'
+shortcut = '$'
+execution = 'sh'
+set_working_dir = true
+leave_broot = false
+
+# Move to home
+[[verbs]]
+key = '~'
+invocation = 'home'
+shortcut = '~'
+execution = ':focus ~'
+leave_broot = false
+
 # kakoune.cr
 # https://github.com/alexherbo2/kakoune.cr
 [[verbs]]
