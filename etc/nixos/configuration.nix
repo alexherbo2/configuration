@@ -213,6 +213,8 @@
     alacritty # https://github.com/alacritty/alacritty
 
     # Terminal multiplexers
+    # zellij
+    # https://zellij.dev
     # tab-rs
     # https://github.com/austinjones/tab-rs
     mtm # https://github.com/deadpixi/mtm
@@ -251,6 +253,8 @@
 
     dolphin # https://apps.kde.org/en/dolphin
     broot # https://dystroy.org/broot/
+    # xplr
+    # https://github.com/sayanarijit/xplr
 
     # Git ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
