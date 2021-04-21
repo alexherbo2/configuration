@@ -13,6 +13,8 @@ path = [
   '/home/taupiqueur/repositories/github.com/alacritty/alacritty/target/release',
   '/home/taupiqueur/repositories/github.com/nushell/nushell/target/release',
   '/home/taupiqueur/repositories/github.com/Canop/broot/target/release',
+  '/home/taupiqueur/repositories/github.com/sayanarijit/xplr/target/release',
+  '/home/taupiqueur/repositories/github.com/zellij-org/zellij/target/release',
   '/home/taupiqueur/repositories/github.com/austinjones/tab-rs/target/release',
   '/home/taupiqueur/repositories/github.com/deadpixi/mtm',
   '/home/taupiqueur/repositories/github.com/Nukesor/pueue/target/release',
