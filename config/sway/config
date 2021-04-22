@@ -165,6 +165,7 @@ bindsym --to-code {
   Mod4+d layout toggle split
   Mod4+f fullscreen toggle
   Mod4+x sticky toggle
+  Mod4+c exec pkill sway-spiral || sway-spiral
 
   # Distraction-free
   Mod4+Shift+d bar mode dock
