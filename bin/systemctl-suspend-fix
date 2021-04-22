@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# Power management – Suspend and hibernate – Instantaneous wakeups from suspend
+# https://wiki.archlinux.org/index.php/Power_management/Suspend_and_hibernate#Instantaneous_wakeups_from_suspend
+echo EHC1 > /proc/acpi/wakeup
+echo EHC2 > /proc/acpi/wakeup
+echo XHC > /proc/acpi/wakeup
