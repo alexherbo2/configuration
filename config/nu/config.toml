@@ -205,7 +205,7 @@ startup = [
   alias kl = kcr list
   alias a = kcr attach
   alias : = kcr send
-  alias :br = kcr-fzf-shell --working-directory . broot
+  alias :st = kcr-fzf-shell --working-directory . sidetree
   alias :cat = kcr cat --raw
 
   alias val = kcr get --value
