@@ -217,7 +217,6 @@
     # https://zellij.dev
     # tab-rs
     # https://github.com/austinjones/tab-rs
-    mtm # https://github.com/deadpixi/mtm
     pueue # https://github.com/Nukesor/pueue
 
     # Fuzzy finders

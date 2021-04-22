@@ -17,7 +17,6 @@ path = [
   '/home/taupiqueur/repositories/github.com/topisani/sidetree/target/release',
   '/home/taupiqueur/repositories/github.com/zellij-org/zellij/target/release',
   '/home/taupiqueur/repositories/github.com/austinjones/tab-rs/target/release',
-  '/home/taupiqueur/repositories/github.com/deadpixi/mtm',
   '/home/taupiqueur/repositories/github.com/Nukesor/pueue/target/release',
   '/home/taupiqueur/repositories/github.com/extrawurst/gitui/target/release',
   '/home/taupiqueur/repositories/github.com/Luminarys/synapse/target/release',
@@ -151,6 +150,10 @@ startup = [
     let-env QT_QPA_PLATFORM = xcb
   }
 
+  # Zellij
+  # https://zellij.dev
+  alias mux = zellij
+
   # tab
   # https://github.com/austinjones/tab-rs
   alias t = tab
@@ -158,12 +161,6 @@ startup = [
   alias tl = tab --list
   alias tw = tab --close
   alias tW = tab --shutdown
-
-  # mtm
-  # https://github.com/deadpixi/mtm
-  def mux [] {
-    ESCDELAY=0 mtm
-  }
 
   # Pueue
   # https://github.com/Nukesor/pueue
