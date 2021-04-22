@@ -1,0 +1,11 @@
+#!/bin/sh
+
+for repository in ~/repositories/github.com/*/* ~/repositories/gitlab.com/*/* ~/repositories/gitlab.freedesktop.org/*/*
+do
+  cd $repository
+  pwd | pastel paint green
+  git add .
+  git discard
+  git-gc-all-ferocious
+  git pull
+done
