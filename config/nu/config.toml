@@ -61,6 +61,10 @@ startup = [
 
   # NixOS
   # https://nixos.org
+  alias nix-update = sudo nixos-rebuild switch
+  alias nix-upgrade = sudo nixos-rebuild switch --upgrade --keep-going --fallback
+  alias nix-gc = sudo nix-collect-garbage --delete-old
+
   alias na = nix-shell-attr
   alias ns = nix-shell --command nu
   alias np = nix-shell --command nu --packages
