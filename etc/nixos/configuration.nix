@@ -255,6 +255,8 @@
     broot # https://dystroy.org/broot/
     # xplr
     # https://github.com/sayanarijit/xplr
+    # sidetree
+    # https://github.com/topisani/sidetree
 
     # Git ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
