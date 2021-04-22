@@ -1,0 +1,7 @@
+#!/bin/sh
+
+git add .
+git discard
+git-gc-all-ferocious
+git push
+git pull
