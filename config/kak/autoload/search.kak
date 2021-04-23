@@ -1,0 +1,18 @@
+# Configuration:
+#
+# map -docstring 'Search' global normal / ':search<ret>(?i)\Q'
+#
+# Search highlighter:
+#
+# set-face global Search black,yellow+uf
+#
+# hook global RegisterModified '/' %{
+#   add-highlighter -override global/search regex "%reg{/}" 0:Search
+# }
+
+define-command -override search -docstring 'Search' %{
+  set-register X %reg{/}
+  prompt search: '' -on-change 'set-register / %val{text}' -on-abort 'set-register / %reg{X}'
+}
+
+map -docstring 'Search' global normal / ':search<ret>(?i)\Q'
