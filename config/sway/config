@@ -29,7 +29,10 @@ workspace_auto_back_and_forth yes
 # Output configuration ─────────────────────────────────────────────────────────
 
 output * {
-  bg ~/images/wallpapers/jojo-no-kimyou-na-bouken/josuke-higashikata-crazy-diamond.png fill
+  # DuckTales Finale by AKHTS
+  # https://akhts.carrd.co
+  # https://bloggingboutburgers.tumblr.com/image/645856359657717761
+  bg ~/images/wallpapers/akhts/ducktales-finale.jpg fill
 }
 
 # Idle configuration ───────────────────────────────────────────────────────────
