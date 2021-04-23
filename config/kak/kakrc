@@ -38,7 +38,7 @@ plug-core %{
   set-option global modelinefmt '{yellow}%opt{out_of_view_status_line}{default} {{mode_info}} {magenta}%val{client}{default} at {yellow}%val{session}{default} on {green}%val{bufname}{default} {{context_info}} {cyan}U+%sh{printf ''%04x'' "$kak_cursor_char_value"}{default} {cyan}%val{cursor_line}{default}:{cyan}%val{cursor_char_column}{default}'
 
   # Highlighters
-  add-highlighter global/number-lines number-lines
+  add-highlighter global/number-lines number-lines -hlcursor
   add-highlighter global/show-matching show-matching
   add-highlighter global/show-whitespaces show-whitespaces
 

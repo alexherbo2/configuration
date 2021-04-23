@@ -9,6 +9,10 @@
 # hook global RegisterModified '/' %{
 #   add-highlighter -override global/search regex "%reg{/}" 0:Search
 # }
+#
+# Show line numbers with the cursor line:
+#
+# add-highlighter global/number-lines number-lines -hlcursor
 
 define-command -override search -docstring 'Search' %{
   set-register X %reg{/}
