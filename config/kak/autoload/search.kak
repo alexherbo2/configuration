@@ -1,22 +1,52 @@
+# Search something.
+#
+# Usage:
+#
+# Enter `search` and start typing to search.
+# Press `Tab` to skim through the occurrences.
+#
 # Configuration:
 #
-# map -docstring 'Search' global user f ':search<ret>(?i)\Q'
+# map -docstring 'Search plain text' global normal f ':search<ret>(?i)\Q'
+# map -docstring 'Search' global normal F ':search<ret>'
 #
-# Search highlighter:
+# Faces:
 #
-# set-face global Search black,yellow+uf
-#
-# hook global RegisterModified '/' %{
-#   add-highlighter -override global/search regex "%reg{/}" 0:Search
-# }
-#
-# Show line numbers with the cursor line:
-#
-# add-highlighter global/number-lines number-lines -hlcursor
+# - SearchBackground
+# - SearchOccurrence
 
+# Internal variables
+declare-option -hidden str-list search_register
+declare-option -hidden str-list search_selections
+
+# Public faces
+set-face global SearchBackground white
+set-face global SearchOccurrence yellow+b
+
+# Search command
 define-command -override search -docstring 'Search' %{
-  set-register X %reg{/}
-  prompt search: '' -on-change 'set-register / %val{text}' -on-abort 'set-register / %reg{X}'
+  # Save values
+  set-option window search_register %reg{/}
+  set-option window search_selections %val{selections_desc}
+
+  # Paint background
+  add-highlighter window/search-background fill SearchBackground
+
+  # Internal mappings
+  map window prompt <tab> '<a-;>n'
+  map window prompt <s-tab> '<a-;><a-n>'
+
+  # Clean up when leaving the prompt
+  hook -once window ModeChange pop:prompt:normal %{
+    unmap window prompt
+    remove-highlighter window/search-occurrence
+    remove-highlighter window/search-background
+  }
+
+  # Enter search
+  prompt search: 'set-register / %val{text}' -on-change 'set-register / %val{text}; add-highlighter -override window/search-occurrence regex %val{text} 0:SearchOccurrence' -on-abort 'set-register / %opt{search_register}; select %opt{search_selections}'
 }
 
-map -docstring 'Search' global user f ':search<ret>(?i)\Q'
+# Mappings
+map -docstring 'Search plain text' global normal f ':search<ret>(?i)\Q'
+map -docstring 'Search' global normal F ':search<ret>'
