@@ -1,6 +1,6 @@
 # Configuration:
 #
-# map -docstring 'Search' global normal / ':search<ret>(?i)\Q'
+# map -docstring 'Search' global user f ':search<ret>(?i)\Q'
 #
 # Search highlighter:
 #
@@ -19,4 +19,4 @@ define-command -override search -docstring 'Search' %{
   prompt search: '' -on-change 'set-register / %val{text}' -on-abort 'set-register / %reg{X}'
 }
 
-map -docstring 'Search' global normal / ':search<ret>(?i)\Q'
+map -docstring 'Search' global user f ':search<ret>(?i)\Q'
