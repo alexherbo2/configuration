@@ -3,8 +3,7 @@
 # Kakoune
 # https://kakoune.org
 
-cd ~/projects/kakoune
-git pull upstream master
-git push
+cd ~/repositories/github.com/mawww/kakoune
+git pull
 cd src
 nix-shell --packages pkg-config ncurses --run 'make -j 8'

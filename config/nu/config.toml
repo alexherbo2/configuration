@@ -8,7 +8,7 @@ path = [
   '/home/taupiqueur/.local/bin',
 
   # Tools
-  '/home/taupiqueur/projects/kakoune/src',
+  '/home/taupiqueur/repositories/github.com/mawww/kakoune/src',
   '/home/taupiqueur/repositories/github.com/kak-lsp/kak-lsp/target/release',
   '/home/taupiqueur/repositories/github.com/alacritty/alacritty/target/release',
   '/home/taupiqueur/repositories/github.com/nushell/nushell/target/release',
