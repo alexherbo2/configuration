@@ -178,6 +178,7 @@ plug chronic projects/chronic.kak %{
 }
 
 plug current-word-highlighter projects/current-word-highlighter.kak %{
+  set-face global CurrentWord "default,%opt{dimmed_background}"
   current-word-highlighter-enable
 }
 
