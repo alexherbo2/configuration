@@ -93,6 +93,7 @@ plug-core %{
   define-command -docstring 'Open mpv.conf' edit-mpv 'edit ~/.config/mpv/mpv.conf'
   define-command -docstring 'Open mpv/input.conf' edit-mpv-input 'edit ~/.config/mpv/input.conf'
   define-command -docstring 'Open broot/conf.toml' edit-broot 'edit ~/.config/broot/conf.toml'
+  define-command -docstring 'Open sidetreerc' edit-sidetree 'edit ~/.config/sidetree/sidetreerc'
   define-command -docstring 'Open starship.toml' edit-starship 'edit ~/.config/starship.toml'
   define-command -docstring 'Open diary/YYYY.md' edit-diary %(edit "~/documents/diary/%sh(date '+%Y').md")
   define-command -docstring 'Open passwords.yml' edit-passwords 'edit ~/.config/passwords.yml'
