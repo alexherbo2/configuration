@@ -228,8 +228,7 @@ bindsym --to-code {
   Mod4+Shift+slash exec sway-commander move workspace current, focus
 
   # Mark window
-  Mod4+m exec swaymsg --type get_marks | jq --raw-output .[] | dmenu | xargs -I {} swaymsg "[con_mark=^{}$]" focus
-  Mod4+Shift+m exec seq 0 99 | dmenu | xargs swaymsg mark --
+  Mod4+m exec seq 0 99 | dmenu | xargs swaymsg mark --
 
   # Workspaces ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
