@@ -119,40 +119,6 @@ mode mouse {
   }
 }
 
-mode workspace {
-  bindsym --to-code {
-    Mod4+grave [con_mark="^(0)$"] focus
-    Mod4+1 [con_mark="^(1)$"] focus
-    Mod4+2 [con_mark="^(2)$"] focus
-    Mod4+3 [con_mark="^(3)$"] focus
-    Mod4+4 [con_mark="^(4)$"] focus
-    Mod4+5 [con_mark="^(5)$"] focus
-    Mod4+6 [con_mark="^(6)$"] focus
-    Mod4+7 [con_mark="^(7)$"] focus
-    Mod4+8 [con_mark="^(8)$"] focus
-    Mod4+9 [con_mark="^(9)$"] focus
-    Mod4+0 [con_mark="^(10)$"] focus
-    Mod4+minus [con_mark="^(11)$"] focus
-    Mod4+equal [con_mark="^(12)$"] focus
-
-    Mod4+Shift+grave mark 0
-    Mod4+Shift+1 mark 1
-    Mod4+Shift+2 mark 2
-    Mod4+Shift+3 mark 3
-    Mod4+Shift+4 mark 4
-    Mod4+Shift+5 mark 5
-    Mod4+Shift+6 mark 6
-    Mod4+Shift+7 mark 7
-    Mod4+Shift+8 mark 8
-    Mod4+Shift+9 mark 9
-    Mod4+Shift+0 mark 10
-    Mod4+Shift+minus mark 11
-    Mod4+Shift+equal mark 12
-
-    Mod4+Escape mode default
-  }
-}
-
 bindsym --to-code {
 
   # Basics ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
@@ -192,7 +158,7 @@ bindsym --to-code {
   --whole-window Mod4+Shift+button5 move right
 
   # Enter mouse mode
-  Mod4+Shift+Escape mode mouse
+  Mod4+Escape mode mouse
 
   # Layouts ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
@@ -261,8 +227,9 @@ bindsym --to-code {
   Mod4+slash exec sway-commander
   Mod4+Shift+slash exec sway-commander move workspace current, focus
 
-  # Enter workspace mode
-  Mod4+Escape mode workspace
+  # Mark window
+  Mod4+m exec swaymsg --type get_marks | jq --raw-output .[] | dmenu | xargs -I {} swaymsg [con_mark="^{}$"] focus
+  Mod4+Shift+m exec seq 0 99 | dmenu | xargs swaymsg mark --
 
   # Workspaces ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
