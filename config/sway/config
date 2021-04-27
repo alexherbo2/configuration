@@ -119,39 +119,35 @@ mode mouse {
   }
 }
 
-mode mark {
-  bindsym --to-code {
-    F1 mark 1
-    F2 mark 2
-    F3 mark 3
-    F4 mark 4
-    F5 mark 5
-    F6 mark 6
-    F7 mark 7
-    F8 mark 8
-    F9 mark 9
-    F10 mark 10
-    F11 mark 11
-    F12 mark 12
-
-    Escape mode default
-  }
-}
-
 mode workspace {
   bindsym --to-code {
-    F1 [con_mark="^(1)$"] focus
-    F2 [con_mark="^(2)$"] focus
-    F3 [con_mark="^(3)$"] focus
-    F4 [con_mark="^(4)$"] focus
-    F5 [con_mark="^(5)$"] focus
-    F6 [con_mark="^(6)$"] focus
-    F7 [con_mark="^(7)$"] focus
-    F8 [con_mark="^(8)$"] focus
-    F9 [con_mark="^(9)$"] focus
-    F10 [con_mark="^(10)$"] focus
-    F11 [con_mark="^(11)$"] focus
-    F12 [con_mark="^(12)$"] focus
+    Mod4+grave [con_mark="^(0)$"] focus
+    Mod4+1 [con_mark="^(1)$"] focus
+    Mod4+2 [con_mark="^(2)$"] focus
+    Mod4+3 [con_mark="^(3)$"] focus
+    Mod4+4 [con_mark="^(4)$"] focus
+    Mod4+5 [con_mark="^(5)$"] focus
+    Mod4+6 [con_mark="^(6)$"] focus
+    Mod4+7 [con_mark="^(7)$"] focus
+    Mod4+8 [con_mark="^(8)$"] focus
+    Mod4+9 [con_mark="^(9)$"] focus
+    Mod4+0 [con_mark="^(10)$"] focus
+    Mod4+minus [con_mark="^(11)$"] focus
+    Mod4+equal [con_mark="^(12)$"] focus
+
+    Mod4+Shift+grave mark 0
+    Mod4+Shift+1 mark 1
+    Mod4+Shift+2 mark 2
+    Mod4+Shift+3 mark 3
+    Mod4+Shift+4 mark 4
+    Mod4+Shift+5 mark 5
+    Mod4+Shift+6 mark 6
+    Mod4+Shift+7 mark 7
+    Mod4+Shift+8 mark 8
+    Mod4+Shift+9 mark 9
+    Mod4+Shift+0 mark 10
+    Mod4+Shift+minus mark 11
+    Mod4+Shift+equal mark 12
 
     Mod4+Escape mode default
   }
@@ -264,9 +260,6 @@ bindsym --to-code {
   # Search window
   Mod4+slash exec sway-commander
   Mod4+Shift+slash exec sway-commander move workspace current, focus
-
-  # Mark window
-  Mod4+m mode mark
 
   # Enter workspace mode
   Mod4+Escape mode workspace
