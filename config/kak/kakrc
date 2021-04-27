@@ -19,6 +19,10 @@ plug-core %{
   set-option -add global ui_options ncurses_assistant=cat
   set-option -add global ui_options ncurses_set_title=no
 
+  # Buffer padding
+  set-option -add global ui_options ncurses_padding_char=╱
+  set-option -add global ui_options ncurses_padding_fill=yes
+
   # Delete scratch message
   hook -group delete-scratch-message global BufCreate '\Q*scratch*' %{
     execute-keys '%d'
