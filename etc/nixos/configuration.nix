@@ -480,7 +480,7 @@
 
     # Ruby
     # https://ruby-lang.org
-    ruby_2_7
+    ruby_3_0
     solargraph # https://solargraph.org
 
     # Elixir

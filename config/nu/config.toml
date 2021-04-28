@@ -24,7 +24,7 @@ path = [
 
   # Packages
   '/home/taupiqueur/.cargo/bin',
-  '/home/taupiqueur/.gem/ruby/2.7.0/bin',
+  '/home/taupiqueur/.gem/ruby/3.0.0/bin',
   'node_modules/.bin',
   '/home/taupiqueur/.npm-packages/bin',
   '/home/taupiqueur/go/bin',
@@ -69,7 +69,7 @@ startup = [
   alias np = nix-shell --command nu --packages
   alias nrs = nix-shell --command nu --packages pkg-config rustup rustc cargo
   alias ncr = nix-shell --command 'PATH=~/.local/share/crystal/releases/latest/bin:$PATH nu' --packages pcre libevent libyaml libxml2
-  alias nrb = nix-shell --command nu --packages rubyPackages_2_7.railties
+  alias nrb = nix-shell --command nu --packages rubyPackages_3_0.railties
 
   # KDE
   # https://kde.org
