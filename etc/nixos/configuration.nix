@@ -65,7 +65,7 @@
   location.longitude = 2.3522;
 
   # Unfree
-  # Allow VirtualBox, Discord, drivers for Wi-Fi…
+  # Allow VirtualBox, Discord…
   nixpkgs.config.allowUnfree = true;
 
   # Security
@@ -105,16 +105,6 @@
 
   # Fix Linux slow CPU
   boot.kernelParams = [ "intel_pstate=active" ];
-
-  boot.kernelModules = [
-    # Wi-Fi (Unfree)
-    "wl"
-  ];
-
-  boot.extraModulePackages = [
-    # Wi-Fi (Unfree)
-    config.boot.kernelPackages.broadcom_sta
-  ];
 
   # Users ──────────────────────────────────────────────────────────────────────
 
