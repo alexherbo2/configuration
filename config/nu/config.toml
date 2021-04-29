@@ -27,6 +27,7 @@ path = [
   '/home/taupiqueur/.gem/ruby/3.0.0/bin',
   'node_modules/.bin',
   '/home/taupiqueur/.npm-packages/bin',
+  '/home/taupiqueur/.yarn/bin',
   '/home/taupiqueur/go/bin',
   '/home/taupiqueur/.cabal/bin'
 ]
