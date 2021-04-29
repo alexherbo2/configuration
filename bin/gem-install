@@ -1,9 +1,9 @@
 #!/bin/sh
 
 # Rails
-nix-shell --packages sqlite postgresql_12 yarn zlib libffi --run 'gem install rails'
+nix-shell --packages sqlite postgresql_13 yarn zlib libffi --run 'gem install rails'
 nix-shell --packages sqlite --run 'gem install sqlite3'
-nix-shell --packages postgresql_12 --run 'gem install pg'
+nix-shell --packages postgresql_13 --run 'gem install pg'
 
 # REPL
 gem install pry
