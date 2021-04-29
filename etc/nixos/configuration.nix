@@ -282,7 +282,7 @@
     # For testing
     google-chrome # https://google.com/chrome/
     firefox # https://mozilla.org/firefox/
-    opera # https://opera.com
+    # opera # https://opera.com
     vivaldi # https://vivaldi.com
     brave # https://brave.com
 
