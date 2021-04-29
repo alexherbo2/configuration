@@ -1,3 +1,4 @@
+set file_icons true
 map <c-c> quit
 map H cd ..
 map L cd
