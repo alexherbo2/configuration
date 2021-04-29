@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# Fix Linux slow CPU
+# https://reddit.com/r/linux/comments/ihdozd/linux_kernel_58_defaults_to_passive_mode_for/
+sudo sh -c '
+  echo active > /sys/devices/system/cpu/intel_pstate/status
+'
