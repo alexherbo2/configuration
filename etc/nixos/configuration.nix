@@ -199,9 +199,9 @@
   # PostgreSQL
   # https://postgresql.org
   # https://nixos.org/manual/nixos/stable#module-postgresql
-  services.postgresql.enable = true;
-  services.postgresql.package = pkgs.postgresql_13;
-  services.postgresql.dataDir = "/data/postgresql";
+  # services.postgresql.enable = true;
+  # services.postgresql.package = pkgs.postgresql_13;
+  # services.postgresql.dataDir = "/data/postgresql";
 
   # Packages ───────────────────────────────────────────────────────────────────
 
