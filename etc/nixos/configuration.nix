@@ -313,7 +313,7 @@
     # Document converters
     pandoc # https://pandoc.org
     tectonic # https://tectonic-typesetting.github.io
-    img2pdf # https://gitlab.mister-muffin.de/josch/img2pdf
+    # img2pdf # https://gitlab.mister-muffin.de/josch/img2pdf
 
     # Desktop environments ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
