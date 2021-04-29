@@ -103,6 +103,9 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # Fix Linux slow CPU
+  boot.kernelParams = [ "intel_pstate=active" ];
+
   boot.kernelModules = [
     # Wi-Fi (Unfree)
     "wl"
