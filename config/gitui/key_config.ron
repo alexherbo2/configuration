@@ -170,6 +170,12 @@
       bits: 0,
     ),
   ),
+  blame: (
+    code: Char('B'),
+    modifiers: (
+      bits: 1,
+    ),
+  ),
   edit_file: (
     code: Char('e'),
     modifiers: (
@@ -288,12 +294,6 @@
     code: Char('D'),
     modifiers: (
       bits: 1,
-    ),
-  ),
-  toggle_remote_branches: (
-    code: Char('t'),
-    modifiers: (
-      bits: 0,
     ),
   ),
   push: (
