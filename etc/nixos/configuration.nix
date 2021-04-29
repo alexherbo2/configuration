@@ -104,6 +104,7 @@
   boot.loader.efi.canTouchEfiVariables = true;
 
   # Fix Linux slow CPU
+  # https://discourse.nixos.org/t/browsers-unbearably-slow-after-update/9414
   boot.kernelParams = [ "intel_pstate=active" ];
 
   # Users ──────────────────────────────────────────────────────────────────────
