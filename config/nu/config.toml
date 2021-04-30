@@ -207,6 +207,7 @@ startup = [
   alias a = kcr attach
   alias : = kcr send
   alias :cd = kcr send cd "$PWD"
+  def cd: [] { cd $(kcr get --raw --shell pwd | str trim) }
   alias :st = kcr-fzf-shell --working-directory . sidetree
   alias :cat = kcr cat --raw
 
