@@ -271,6 +271,7 @@ plug palette projects/palette.kak %{
 }
 
 plug phantom projects/phantom.kak %{
+  set-face global Phantom "default,%opt{dimmed_background}"
   phantom-enable
   phantom-add-mappings
 }
