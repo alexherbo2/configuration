@@ -205,6 +205,7 @@
     # Terminals ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
     alacritty # https://github.com/alacritty/alacritty
+    konsole # https://konsole.kde.org
 
     # Terminal multiplexers
     # zellij
