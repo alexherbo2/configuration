@@ -77,9 +77,9 @@ startup = [
   alias kcm = kcmshell5-fzf
 
   # Sleep
-  alias z = systemctl suspend
+  alias z = sudo systemctl suspend
   alias zz = swaymsg exit
-  alias zzz = shutdown now
+  alias zzz = sudo shutdown now
 
   # SSH
   def ssh! [] {
