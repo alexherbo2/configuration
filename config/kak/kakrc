@@ -295,8 +295,8 @@ plug replace-mode projects/replace-mode.kak %{
 }
 
 plug-old search projects/search.kak %{
-  map -docstring 'Search plain text' global normal f ':search<ret>(?i)\Q'
-  map -docstring 'Search' global normal F ':search<ret>'
+  map -docstring 'Search' global normal f ':search<ret>(?i)\Q'
+  map -docstring 'Jump backward' global normal F <c-o>
 }
 
 plug search-highlighter projects/search-highlighter.kak %{
