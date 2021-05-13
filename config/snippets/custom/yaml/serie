@@ -3,6 +3,7 @@ Season: {{season}}
 Episodes: {{episodes}}
 Aired: {{aired}}
 Finished: {{finished}}
+Page: {{page}}
 Download: {{download}}
 Resolution: {{resolution}}p
 

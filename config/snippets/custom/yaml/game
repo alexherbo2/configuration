@@ -1,6 +1,7 @@
 Name: {{name}}
 Release: {{release}}
 Region: {{region}}
+Page: {{page}}
 Download: {{download}}
 
 Date: {{date}}
