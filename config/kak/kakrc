@@ -307,7 +307,7 @@ plug-autoload show-characters %{
   add-highlighter global/show-characters ref show-characters
 
   # Faces
-  set-face global ShowCharactersBackground "%opt{background}+f"
+  set-face global ShowCharactersBackground "%opt{dimmed_background}+f"
   set-face global ShowCharactersDimmedBackground "%opt{dimmed_background}+f"
 }
 
