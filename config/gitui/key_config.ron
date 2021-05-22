@@ -116,6 +116,18 @@
       bits: 0,
     ),
   ),
+  tree_collapse_recursive: (
+    code: Char('H'),
+    modifiers: (
+      bits: 1,
+    ),
+  ),
+  tree_expand_recursive: (
+    code: Char('L'),
+    modifiers: (
+      bits: 1,
+    ),
+  ),
   home: (
     code: Char('g'),
     modifiers: (
@@ -306,6 +318,12 @@
     code: Char('p'),
     modifiers: (
       bits: 0,
+    ),
+  ),
+  open_file_tree: (
+    code: Char('F'),
+    modifiers: (
+      bits: 1,
     ),
   ),
   force_push: (
