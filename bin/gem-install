@@ -5,6 +5,9 @@ nix-shell --packages sqlite postgresql_13 yarn zlib libffi --run 'gem install ra
 nix-shell --packages sqlite --run 'gem install sqlite3'
 nix-shell --packages postgresql_13 --run 'gem install pg'
 
+# Sinatra
+gem install sinatra
+
 # REPL
 gem install pry
 gem install byebug
