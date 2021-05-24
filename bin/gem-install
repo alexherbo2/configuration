@@ -8,13 +8,9 @@ nix-shell --packages postgresql_13 --run 'gem install pg'
 # Sinatra
 gem install sinatra
 
-# REPL
-gem install pry
-gem install byebug
-gem install pry-byebug
-
 # Tools
 gem install rspec
+gem install byebug
 gem install rubocop
 gem install solargraph
 
