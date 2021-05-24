@@ -440,6 +440,7 @@
     hugo # https://gohugo.io
 
     # Services
+    ngrok # https://ngrok.com
     heroku # https://heroku.com
 
     # Servers
