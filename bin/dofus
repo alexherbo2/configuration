@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# Dofus
+# https://dofus.com
+wine ~/.config/Ankama/zaap/dofus/Dofus.exe
