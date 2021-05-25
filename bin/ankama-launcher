@@ -1,0 +1,5 @@
+#!/bin/sh
+
+# Ankama games
+# https://ankama.com/en/games
+appimage-run "$HOME/Downloads/Ankama Launcher-Setup-x86_64.AppImage"
