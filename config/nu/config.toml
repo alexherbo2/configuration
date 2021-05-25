@@ -219,6 +219,11 @@ startup = [
   # https://git-scm.com
   alias g = git
 
+  # Change the working directory to the Git root:
+  def @cd [] {
+    cd $(git rev-parse --show-toplevel | str trim)
+  }
+
   # gitui
   # https://github.com/extrawurst/gitui
   alias G = gitui
