@@ -8,6 +8,7 @@ path = [
   '/home/taupiqueur/.local/bin',
 
   # Tools
+  '/home/taupiqueur/repositories/github.com/facundoolano/rpg-cli/target/release',
   '/home/taupiqueur/repositories/github.com/mawww/kakoune/src',
   '/home/taupiqueur/repositories/github.com/kak-lsp/kak-lsp/target/release',
   '/home/taupiqueur/repositories/github.com/alacritty/alacritty/target/release',
@@ -58,6 +59,13 @@ startup = [
   alias p = echo
   alias _ = rm -rf
   alias md = mkdir
+
+  # rpg-cli — your filesystem as a dungeon!
+  # https://github.com/facundoolano/rpg-cli
+  def rpg [...rest] {
+    rpg-cli $rest
+    cd $(rpg-cli --pwd | str trim)
+  }
 
   # NixOS
   # https://nixos.org
