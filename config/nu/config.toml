@@ -73,12 +73,14 @@ startup = [
   alias nix-upgrade = sudo nixos-rebuild switch --upgrade --keep-going --fallback
   alias nix-gc = sudo nix-collect-garbage --delete-old
 
+  # Shell
   alias na = nix-shell-attr
   alias ns = nix-shell --command nu
   alias np = nix-shell --command nu --packages
-  alias nrs = nix-shell --command nu --packages pkg-config rustup rustc cargo
-  alias ncr = nix-shell --command 'PATH=~/.local/share/crystal/releases/latest/bin:$PATH nu' --packages pcre libevent libyaml libxml2
-  alias nrb = nix-shell --command nu --packages rubyPackages_3_0.railties
+
+  # Compiling
+  alias nix-cargo = nix-shell --run 'cargo build --release' --packages pkg-config rustup rustc cargo openssl
+  alias nix-shards = shards build --release --production
 
   # KDE
   # https://kde.org
