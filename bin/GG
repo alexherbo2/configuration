@@ -1,6 +1,6 @@
 #!/bin/sh
 
-for repository in ~/repositories/github.com/*/* ~/repositories/gitlab.com/*/* ~/repositories/gitlab.freedesktop.org/*/*
+for repository in ~/projects/* ~/projects/fork/* ~/projects/dracula/* ~/gist/* ~/repositories/github.com/*/* ~/repositories/gitlab.com/*/* ~/repositories/gitlab.freedesktop.org/*/*
 do
   cd $repository
   pwd | pastel paint green
