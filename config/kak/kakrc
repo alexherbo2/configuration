@@ -180,6 +180,7 @@ plug-autoload chmod
 
 plug chronic projects/chronic.kak %{
   map -docstring 'Chronic' global normal t ': enter-user-mode chronic<ret>'
+  map -docstring 'Convert date from clipboard' global insert <c-d> '<a-;>!wl-paste --primary | chronic "%F"<ret><backspace>'
 }
 
 plug current-word-highlighter projects/current-word-highlighter.kak %{
