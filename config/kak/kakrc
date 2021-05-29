@@ -321,7 +321,7 @@ plug snippets projects/snippets.kak %{
   snippets-enable
 
   # Options
-  set-option global snippets_scope global global/arrows global/bullets global/dashes global/punctuation
+  set-option global snippets_scope global global/arrows global/bullets global/dashes global/math global/punctuation
 
   # Mappings
   # Create new snippets
