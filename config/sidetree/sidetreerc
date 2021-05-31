@@ -1,3 +1,5 @@
+set show_hidden false
+set quit_on_open false
 set file_icons true
 set open_cmd 'xdg-open "$sidetree_entry"'
 map <c-c> quit
