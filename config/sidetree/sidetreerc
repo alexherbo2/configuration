@@ -1,4 +1,5 @@
 set file_icons true
+set open_cmd xdg-open "$sidetree_entry"
 map <c-c> quit
 map H cd ..
 map L cd
