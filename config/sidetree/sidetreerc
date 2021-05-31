@@ -3,6 +3,7 @@ map <c-c> quit
 map H cd ..
 map L cd
 map / shell kcr send cd "$sidetree_entry"
+map e shell kcr edit "$sidetree_entry"
 map m shell mpv "$sidetree_entry"
 map x shell arc unarchive "$sidetree_entry"
 map $ shell alacritty --working-directory "$sidetree_entry"
