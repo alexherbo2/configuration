@@ -15,13 +15,13 @@ plug-core %{
   # Options ────────────────────────────────────────────────────────────────────
 
   # User interface
-  set-option -add global ui_options ncurses_status_on_top=yes
-  set-option -add global ui_options ncurses_assistant=cat
-  set-option -add global ui_options ncurses_set_title=no
+  set-option -add global ui_options terminal_status_on_top=yes
+  set-option -add global ui_options terminal_assistant=cat
+  set-option -add global ui_options terminal_set_title=no
 
   # Buffer padding
-  set-option -add global ui_options ncurses_padding_char=╱
-  set-option -add global ui_options ncurses_padding_fill=yes
+  set-option -add global ui_options terminal_padding_char=╱
+  set-option -add global ui_options terminal_padding_fill=yes
 
   # Delete scratch message
   hook -group delete-scratch-message global BufCreate '\Q*scratch*' %{

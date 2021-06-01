@@ -6,4 +6,4 @@
 cd ~/repositories/github.com/mawww/kakoune
 git pull
 cd src
-nix-shell --packages pkg-config ncurses --run 'make -j 8'
+nix-shell --packages pkg-config --run 'make -j 8'
