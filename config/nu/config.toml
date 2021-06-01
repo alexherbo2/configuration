@@ -7,6 +7,33 @@ path = [
   '/home/taupiqueur/configuration/local/bin',
   '/home/taupiqueur/.local/bin',
 
+  # Projects
+  # Krabby – https://krabby.netlify.app
+  '/home/taupiqueur/projects/krabby/bin',
+
+  # kakoune.cr – https://github.com/alexherbo2/kakoune.cr
+  '/home/taupiqueur/projects/kakoune.cr/bin',
+  '/home/taupiqueur/projects/kakoune.cr/share/kcr/commands/edit',
+  '/home/taupiqueur/projects/kakoune.cr/share/kcr/commands/fzf',
+
+  # Batch – https://github.com/alexherbo2/batch
+  '/home/taupiqueur/projects/batch/bin',
+  '/home/taupiqueur/projects/batch/share/batch/scripts',
+  '/home/taupiqueur/projects/batch.kak/bin',
+
+  # Chronic – https://github.com/alexherbo2/chronic
+  '/home/taupiqueur/projects/chronic/bin',
+
+  # Tools – https://github.com/alexherbo2/{tool}
+  '/home/taupiqueur/projects/snippets/bin',
+  '/home/taupiqueur/projects/launcher/bin',
+  '/home/taupiqueur/projects/password/bin',
+
+  # Tools – https://github.com/alexherbo2/{tool}
+  '/home/taupiqueur/projects/git-tools/bin',
+  '/home/taupiqueur/projects/ffmpeg-tools/bin',
+  '/home/taupiqueur/projects/sway-tools/bin',
+
   # Tools
   '/home/taupiqueur/repositories/github.com/facundoolano/rpg-cli/target/release',
   '/home/taupiqueur/repositories/github.com/mawww/kakoune/src',
