@@ -454,6 +454,7 @@
     # Programming languages ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
     # C
+    gcc # https://gcc.gnu.org
     clang # https://clang.llvm.org
     llvm # https://llvm.org
 
