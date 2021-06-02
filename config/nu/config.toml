@@ -38,6 +38,7 @@ path = [
   '/home/taupiqueur/repositories/github.com/facundoolano/rpg-cli/target/release',
   '/home/taupiqueur/repositories/github.com/mawww/kakoune/src',
   '/home/taupiqueur/repositories/github.com/kak-lsp/kak-lsp/target/release',
+  '/home/taupiqueur/repositories/github.com/helix-editor/helix/target/release',
   '/home/taupiqueur/repositories/github.com/alacritty/alacritty/target/release',
   '/home/taupiqueur/repositories/github.com/nushell/nushell/target/release',
   '/home/taupiqueur/repositories/github.com/Canop/broot/target/release',
