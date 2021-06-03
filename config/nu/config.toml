@@ -241,6 +241,7 @@ startup = [
   alias K = kcr-fzf-shell
   alias KK = kcr-fzf-shell --working-directory .
   alias ks = kcr shell --session
+  def ksa [] { kcr shell --session $(basename "$PWD") }
   alias kl = kcr list
   alias a = kcr attach
   alias : = kcr send
