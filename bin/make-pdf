@@ -6,4 +6,4 @@
 # https://gitlab.mister-muffin.de/josch/img2pdf
 
 name=$(basename "$PWD")
-img2pdf --output "$name.pdf" *
+img2pdf --output "../$name.pdf" *
