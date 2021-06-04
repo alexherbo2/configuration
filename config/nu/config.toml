@@ -318,6 +318,10 @@ startup = [
   alias m = mpv
   alias ms = mpv -shuffle
 
+  # mpv – streams
+  alias mp = mpv ~/.config/streams.m3u
+  alias mpe = kak ~/.config/streams.m3u
+
   # mpv – image
   alias mi = mpv -config-dir ~/.config/mpv/profiles/image
 

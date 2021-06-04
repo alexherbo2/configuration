@@ -98,6 +98,7 @@ plug-core %{
   define-command -docstring 'Open diary/YYYY.md' edit-diary %(edit "~/documents/diary/%sh(date '+%Y').md")
   define-command -docstring 'Open passwords.yml' edit-passwords 'edit ~/.config/passwords.yml'
   define-command -docstring 'Open words.txt' edit-words 'edit ~/documents/words.txt'
+  define-command -docstring 'Open streams.m3u' edit-streams 'edit ~/.config/streams.m3u'
 
   # Aliases
   alias global S edit-scratch

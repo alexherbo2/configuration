@@ -1,0 +1,12 @@
+# Play streams.
+#
+# Usage:
+#
+# mpv ~/.config/streams.m3u
+#
+# Configuration:
+#
+# alias mp='mpv ~/.config/streams.m3u'
+# alias mpe='kak ~/.config/streams.m3u'
+https://twitch.tv/huzounet
+https://youtube.com/c/Kerzian/live
