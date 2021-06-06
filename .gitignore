@@ -13,3 +13,4 @@ config/mpv/socket
 config/mpv/watch_later
 config/cachix/cachix.dhall
 local/share/icons/candy-icons
+local/share/konsole
