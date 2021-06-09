@@ -16,12 +16,15 @@ plug-core %{
 
   # User interface
   set-option -add global ui_options terminal_status_on_top=yes
-  set-option -add global ui_options terminal_assistant=cat
+  set-option -add global ui_options terminal_assistant=none
   set-option -add global ui_options terminal_set_title=no
 
   # Buffer padding
   set-option -add global ui_options terminal_padding_char=╱
   set-option -add global ui_options terminal_padding_fill=yes
+
+  # Remove startup info version
+  set-option global startup_info_version 2147483647
 
   # Delete scratch message
   hook -group delete-scratch-message global BufCreate '\Q*scratch*' %{
