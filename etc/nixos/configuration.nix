@@ -242,6 +242,9 @@
 
     kakoune # https://kakoune.org
     kak-lsp # https://github.com/kak-lsp/kak-lsp
+    vscode # https://code.visualstudio.com
+    neovim # https://neovim.io
+    emacs # https://gnu.org/software/emacs/
 
     # File managers ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
