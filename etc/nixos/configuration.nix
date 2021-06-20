@@ -238,6 +238,9 @@
     # Shell prompts
     starship # https://starship.rs
 
+    # Shell history
+    mcfly # https://github.com/cantino/mcfly
+
     # Text editors ┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
 
     kakoune # https://kakoune.org
