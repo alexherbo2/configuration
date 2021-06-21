@@ -3,7 +3,7 @@
 # Snippets
 # https://github.com/alexherbo2/snippets
 
-alacritty --class 'Alacritty · Floating' --command sh -c '
+alacritty --class 'popup' --command sh -c '
   snippets get files | jq --raw-output .[] |
   fzf --preview "cat {}" --header="Select a snippet to copy" --prompt="(s)>" |
   xargs cat -- | setsid wl-copy --trim-newline

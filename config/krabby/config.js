@@ -35,7 +35,7 @@ settings['hint-selectors'] = ':not(.krabby)'
 // External editor
 editor.send('set', {
   editor: `
-    alacritty --class 'Alacritty · Floating' --command \\
+    alacritty --class 'popup' --command \\
       kak "$file" -e "
         select $anchor_line.$anchor_column,$cursor_line.$cursor_column
       "
