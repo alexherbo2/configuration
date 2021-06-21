@@ -7,6 +7,8 @@ try %sh{
 
 try lsp-enable
 
+source ~/projects/alacritty.kak/rc/alacritty.kak
+
 # Options ──────────────────────────────────────────────────────────────────────
 
 # UI options
@@ -60,9 +62,7 @@ set-option global makecmd 'make -j 8'
 set-option global grepcmd 'rg --column'
 
 # Windowing
-remove-hooks global terminal
-hook -group terminal global ModuleLoaded wayland %{ alias global popup wayland-terminal }
-hook -group terminal global ModuleLoaded x11 %{ alias global popup x11-terminal }
+alacritty-integration-enable
 
 # Mappings ─────────────────────────────────────────────────────────────────────
 
