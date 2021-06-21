@@ -307,10 +307,7 @@ bindsym --to-code {
 
 # Rules ────────────────────────────────────────────────────────────────────────
 
-# Alacritty · [Fullscreen|Floating]
-for_window [app_id="Alacritty · Fullscreen"] fullscreen enable
-for_window [app_id="Alacritty · Floating"] floating enable
-for_window [app_id="Alacritty · Popup"] floating enable
+for_window [app_id="popup"] floating enable
 for_window [title="Picture in picture"] floating enable
 for_window [class="Ankama Launcher"] layout tabbed, border none, gaps inner current set 0
 
