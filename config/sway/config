@@ -115,6 +115,10 @@ mode mouse {
     Control+4 exec sway-click button4
     Control+5 exec sway-click button5
 
+    # Move your focus around
+    Tab focus right
+    Shift+Tab focus left
+
     Mod4+Escape mode default
   }
 }
