@@ -149,6 +149,11 @@ bindsym --to-code {
   # Useful with the opposite action on the status bar.
   button3 border pixel
 
+  # Click all windows in the currently focused workspace
+  --whole-window Mod4+button1 exec sway-click-windows-in-current-workspace button1
+  --whole-window Mod4+button2 exec sway-click-windows-in-current-workspace button2
+  --whole-window Mod4+button3 exec sway-click-windows-in-current-workspace button3
+
   # Move your focus around
   --whole-window Mod4+button4 focus left
   --whole-window Mod4+button5 focus right
