@@ -115,6 +115,11 @@ mode mouse {
     Control+4 exec sway-click button4
     Control+5 exec sway-click button5
 
+    # Click all windows in the currently focused workspace
+    --whole-window Shift+button1 exec sway-click-windows-in-current-workspace button1
+    --whole-window Shift+button2 exec sway-click-windows-in-current-workspace button2
+    --whole-window Shift+button3 exec sway-click-windows-in-current-workspace button3
+
     # Move your focus around
     Tab focus right
     Shift+Tab focus left
