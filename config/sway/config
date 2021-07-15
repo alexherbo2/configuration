@@ -229,8 +229,12 @@ bindsym --to-code {
   Mod4+Shift+g gaps inner current plus 10
 
   # Change border styles
-  Mod4+b border toggle
-  Mod4+Shift+b border pixel
+  Mod4+b border pixel
+  Mod4+Shift+b border normal
+
+  # Change border size
+  Mod4+v border pixel 10
+  Mod4+Shift+V border pixel 2
 
   # Search window
   Mod4+slash exec sway-commander
