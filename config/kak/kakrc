@@ -46,6 +46,8 @@ show-selected-text
 add-highlighter -override global/show-whitespaces show-whitespaces
 add-highlighter -override global/show-trailing-whitespaces regex '\h+$' '0:red+f'
 add-highlighter -override global/show-non-breaking-spaces regex ' +' '0:red+f'
+add-highlighter -override global/show-multiple-whitespaces regex '\h{2,}' '0:red+f'
+add-highlighter -override global/show-indent regex '^\h+' '0:Whitespace'
 
 # Show characters
 add-highlighter -override global/show-unicode-2013 regex '–' '0:green+f'
